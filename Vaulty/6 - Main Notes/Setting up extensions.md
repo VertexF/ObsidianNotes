@@ -12,7 +12,8 @@ Vulkan doesn't know what platform it's running on, so you plan on displaying gra
     {
         VK_KHR_SURFACE_EXTENSION_NAME,
         VK_KHR_WIN32_SURFACE_EXTENSION_NAME,
-        VK_EXT_DEBUG_REPORT_EXTENSION_NAME
+        VK_EXT_DEBUG_REPORT_EXTENSION_NAME,
+        VK_EXT_DEBUG_UTILS_EXTENSION_NAME
     };
         VkInstanceCreateInfo createInfo{};
 	createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;

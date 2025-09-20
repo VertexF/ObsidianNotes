@@ -11,24 +11,10 @@
             "id": "64cb0265c2aefa91",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 - Indexes/vulkan.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "vulkan"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -193,17 +179,17 @@
   },
   "active": "64cb0265c2aefa91",
   "lastOpenFiles": [
-    "6 - Main Notes/How we learn basics.md",
-    "3 - Tags/learning.md",
-    "4 - Indexes/vulkan.md",
-    "2 - Source Material/Article/Vulkan-Tutorial.md",
+    "6 - Main Notes/Checking for supported extensions.md",
     "6 - Main Notes/First Step for setting up Vulkan.md",
+    "4 - Indexes/vulkan.md",
     "6 - Main Notes/Cleaning a Vulkan Instance.md",
     "6 - Main Notes/Setting up extensions.md",
+    "2 - Source Material/Article/Vulkan-Tutorial.md",
+    "6 - Main Notes/How we learn basics.md",
+    "3 - Tags/learning.md",
     "6 - Main Notes/What is Vulkan.md",
     "1 - Rough Notes/TODO.md",
     "1 - Rough Notes/Things to look into.md",
-    "6 - Main Notes/Checking for supported extensions.md",
     "6 - Main Notes/Running Vulkan on Mac.md",
     "3 - Tags/vulkan instance.md",
     "4 - Indexes",

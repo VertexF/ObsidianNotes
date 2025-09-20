@@ -116,3 +116,91 @@ Cleaning up the instance should be the LAST thing you do before existing the win
 ```c++
 	vkDestroyInstance(instance, nullptr);
 ```
+
+#### Validation Layers
+
+Vulkan was designed to have as little to do with with driver as possible, which has some draw back. Simple, complex, easy to miss mistakes aren't handled at all. If you get something wrong with Vulkan it will continue with undefined behaviour, or simply just crash. The worst case is it works on your graphics card but doesn't work on other people. So in comes the validation layer. 
+
+Vulkan is layered meaning that different layers can sit between functions calls and proxy out function calls while doing extra work underneath. These are all completely optional.
+
+The validation layer will do thing such as checking values for arguments. Tracing, profiling and replying different calls. Checking thread safety by keeping track of the creation of that thread and what it's up to. It check the creation and deletion order of objects is create, making sure resource leaks aren't happening. Logging all the errors and none errors to standard out or error out streams.
+
+These layers can be stacked on each other or completely removed for a release build. LunarG provided validation layers as part of the SDK. 
+
+There were once instance level and device level. Device validation was meant to check things against GPU specifically. Now device validation have been completely deprecated and only global instance level validation layers are now used.
+
+It is recommend that you turn on device level validation anyway for combability reasons with older GPU this can be done easily enough when you create the logical device.
+
+##### How to use validation layers
+
+When you are turning on validation layers you only really need to turn on the **"VK_LAYER_KHRONOS_validation"** as a const char*.
+
+It's important to note that the validation layers need to be turn on at VkInstance creation and at logical device creation. You likely don't want this is you're compiling for release so a good system is to turn on and off setting the validation layers based on NDEBUG or a "#define" of your own, like I have done.
+
+```c++
+	const char* REQUESTED_LAYERS[] =
+    {
+#if defined(VULKAN_DEBUG_REPORT)
+        "VK_LAYER_KHRONOS_validation"
+#else
+        ""
+#endif
+    };
+
+        VkInstanceCreateInfo createInfo = {};
+        createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+        createInfo.pNext = nullptr;
+        createInfo.flags = 0;
+        createInfo.pApplicationInfo = &applicationInfo;
+#if defined(VULKAN_DEBUG_REPORT)
+        createInfo.enabledLayerCount = ArraySize(REQUESTED_LAYERS);
+        createInfo.ppEnabledLayerNames = REQUESTED_LAYERS;
+#else
+        createInfo.enabledLayerCount = 0;
+        createInfo.ppEnabledLayerNames = nullptr;
+#endif //VULKAN_DEBUG_REPORT
+        createInfo.enabledExtensionCount = ArraySize(REQUESTED_EXTENSIONS);
+        createInfo.ppEnabledExtensionNames = REQUESTED_EXTENSIONS;
+```
+
+Please pay attention to the fact that these layers are **enabledLayerCount** and **ppEnabledLayerNames** these are layers NOT extensions so they set up as a different part of the struct. Another thing to note that is check if the validation layer is there is pointless as any vulkan developer should have vulkan SDK installed and if you're running this on someone else computer should turn off the validation layers.
+
+#### How to set up message callbacks
+The validation layer will print stuff to the standard output stream by default, but adding a function callback is a good idea as you can add more stuff and format the output to fit your needs. Filter messages out is often something you will want to do so you don't see literally everything. 
+
+Okay so what do you need to do? First thing is get the function callback extension and turn it on. **VK_EXT_DEBUG_REPORT_EXTENSION_NAME** it might be worth checking if this is available, but again if you have the SDK installed you will also have this extension installed. Note this is exactly like setting any other extension. 
+
+Now we have to write the right function to match the callback. This should be a static function that contains both **VKAPI_ATTR** and **VKAPI_CALL** the function should look something like this.
+
+```c++
+	static VKAPI_ATTRI VkBool32 VKAPI_CALL debugCallback
+	(VkKDebugUtilsMessageSeverityFlagBitsEXT messageSeverity,
+	VkDebugUtilsMessageTypeFlagsEXT messageType,
+	cosnt VkDebugUtilsMessengerCallbackDataEXT* callbackData,
+	void* userData)
+	{
+		std::cerr << "Validation error :" << callbackData->pMessage << std::endl;
+		
+		return VK_FALSE;
+	}
+```
+
+Now the function can be named anything but this is the structure it has to follow. The first argument **VkKDebugUtilsMessageSeverityFlagBitsEXT** and this can be any in four states. 
+- `VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT` Diagnostic info not meant for you.
+- `VK_DEBUG_UTILS_MESSAGE_SEVERITY_INFO_BIT_EXT`General normal info of things working.
+- `VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT` Like a bug, but not fatal.
+- `VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT` A fatal bug that needs to be solved.
+
+You can simply do a comparison on these values in the debug function callback to only print stuff you're interested. I personally cause `__debugbreak();` function called with both warning and error.
+
+The next argument is can tell use what the message is, there are three things this can be.
+- `VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT` This is for any old event unrelated to performance or the specification. 
+- `VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT` This is for when you've done something wrong against the specification.
+- `VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT`This is for when there is a potential performance issue.
+
+The third argument **VkDebugUtilsMessengerCallbackDataEXT** is the most useful as this contains the error message itself. This struct contains
+- `pMessage` The debug message in a null-terminated string (aka const char*)
+- `pObjects` This is a flat array of objects that are related to the message.
+- `objectCount` This contains the number of objects in the array.
+
+Finally the final pointer contains a pointer to data the user created on setup of this function.
