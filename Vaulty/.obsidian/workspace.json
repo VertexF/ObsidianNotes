@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "d66c50f5a4aad3db",
+        "id": "7b72f78c6c405793",
         "type": "tabs",
         "children": [
           {
@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Article/Vulkan-Tutorial.md",
+                "file": "4 - Indexes/vulkan.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Vulkan-Tutorial"
+              "title": "vulkan"
             }
           }
         ]
@@ -176,33 +176,44 @@
       }
     ],
     "direction": "horizontal",
-    "width": 317.5
+    "width": 317.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false,
       "obsidian-git:Open Git source control": false
     }
   },
   "active": "64cb0265c2aefa91",
   "lastOpenFiles": [
-    "1 - Rough Notes/Test Bed.md",
-    "1 - Rough Notes/Things to look into.md",
-    "1 - Rough Notes/Pasted image 20250920080120.png",
+    "6 - Main Notes/How we learn basics.md",
+    "3 - Tags/learning.md",
+    "4 - Indexes/vulkan.md",
     "2 - Source Material/Article/Vulkan-Tutorial.md",
+    "6 - Main Notes/First Step for setting up Vulkan.md",
+    "6 - Main Notes/Cleaning a Vulkan Instance.md",
+    "6 - Main Notes/Setting up extensions.md",
+    "6 - Main Notes/What is Vulkan.md",
+    "1 - Rough Notes/TODO.md",
+    "1 - Rough Notes/Things to look into.md",
+    "6 - Main Notes/Checking for supported extensions.md",
+    "6 - Main Notes/Running Vulkan on Mac.md",
+    "3 - Tags/vulkan instance.md",
+    "4 - Indexes",
+    "6 - Main Notes/Untitled.md",
+    "1 - Rough Notes/Test Bed.md",
+    "1 - Rough Notes/Pasted image 20250920080120.png",
     "6 - Main Notes/Why study at all.md",
     "2 - Source Material/Article",
     "6 - Main Notes/Why are we making these notes.md",
     "6 - Main Notes/Studying using your own words.md",
-    "6 - Main Notes/How we learn basics.md",
-    "1 - Rough Notes/TODO.md",
-    "3 - Tags/learning.md",
     "2 - Source Material/What is this used for..md",
     "2 - Source Material/Video/Effective Note-Taking to Remember More + Create New Ideas.md",
     "2 - Source Material/Video/How to Learn Pretty Much Anything.md",
@@ -213,19 +224,11 @@
     "2 - Source Material/Video",
     "2 - Source Material/How to study - Explained by someone who doesn't know how to study..md",
     "4 - Indexes/Render Pass.md",
-    "6 - Main Notes/Vulkan is bad.md",
-    "3 - Tags/Render Pass.md",
-    "6 - Main Notes/Vulkan is Good.md",
-    "6 - Main Notes/Vulkan is Life.md",
-    "6 - Main Notes/Untitled.md",
-    "1 - Rough Notes/What this is used for..md",
-    "this is tag.md",
     "6 - Main Notes",
     "5 - Template",
     "4 - Indexes",
     "3 - Tags",
     "2 - Source Material",
-    "Welcome.md",
     "1 - Rough Notes",
     "desktop.ini"
   ]
