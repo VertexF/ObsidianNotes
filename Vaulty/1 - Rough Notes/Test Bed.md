@@ -24,3 +24,5 @@ int main()
 ```
 
 ![[Pasted image 20250920080120.png|245x234]]
+
+How do this work with git? What?
