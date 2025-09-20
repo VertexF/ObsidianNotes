@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "23713e56d0793011",
+    "type": "split",
+    "children": [
+      {
+        "id": "d39d493e6632f223",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6b22859289bfe56e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/What is this used for..md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "What is this used for."
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "33d7fd28ca023f95",
+    "type": "split",
+    "children": [
+      {
+        "id": "701fb1caddf25d32",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9c702ce9bcf102ba",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a3d14720c35abf78",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "dae6856652142210",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "382a5e9c395ed957",
+    "type": "split",
+    "children": [
+      {
+        "id": "e3caadf6e726ae7a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "24027f465dcfd355",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2 - Source Material/What is this used for..md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for What is this used for."
+            }
+          },
+          {
+            "id": "6485ccf9024810dd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2 - Source Material/What is this used for..md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from What is this used for."
+            }
+          },
+          {
+            "id": "7443f3a4d91d725b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "469b789172766b66",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2 - Source Material/What is this used for..md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of What is this used for."
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "6b22859289bfe56e",
+  "lastOpenFiles": [
+    "2 - Source Material/Video",
+    "2 - Source Material/Untitled",
+    "3 - Tags/learning.md",
+    "6 - Main Notes/Why study at all.md",
+    "2 - Source Material/How to study - Explained by someone who doesn't know how to study..md",
+    "4 - Indexes/Render Pass.md",
+    "6 - Main Notes/Vulkan is bad.md",
+    "3 - Tags/Render Pass.md",
+    "6 - Main Notes/Vulkan is Good.md",
+    "6 - Main Notes/Vulkan is Life.md",
+    "6 - Main Notes/Untitled.md",
+    "1 - Rough Notes/What this is used for..md",
+    "5 - Template/Full Note.md",
+    "5 - Template/Source Material Note.md",
+    "2 - Source Material/What is this used for..md",
+    "this is tag.md",
+    "6 - Main Notes",
+    "5 - Template",
+    "4 - Indexes",
+    "3 - Tags",
+    "2 - Source Material",
+    "Welcome.md",
+    "1 - Rough Notes",
+    "desktop.ini"
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "main": {
+    "id": "23713e56d0793011",
+    "type": "split",
+    "children": [
+      {
+        "id": "ce28be4d7788a056",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0673adb6ac4cc2ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Rough Notes/Test Bed.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Test Bed"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "33d7fd28ca023f95",
+    "type": "split",
+    "children": [
+      {
+        "id": "701fb1caddf25d32",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9c702ce9bcf102ba",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a3d14720c35abf78",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "dae6856652142210",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "382a5e9c395ed957",
+    "type": "split",
+    "children": [
+      {
+        "id": "e3caadf6e726ae7a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "24027f465dcfd355",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "6 - Main Notes/Why study at all.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Why study at all"
+            }
+          },
+          {
+            "id": "6485ccf9024810dd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "6 - Main Notes/Why study at all.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Why study at all"
+            }
+          },
+          {
+            "id": "7443f3a4d91d725b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "469b789172766b66",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "6 - Main Notes/Why study at all.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Why study at all"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "0673adb6ac4cc2ce",
+  "lastOpenFiles": [
+    "Pasted image 20250920080120.png",
+    "1 - Rough Notes/Test Bed.md",
+    "1 - Rough Notes/Things to look into.md",
+    "3 - Tags/learning.md",
+    "2 - Source Material/What is this used for..md",
+    "6 - Main Notes/How we learn basics.md",
+    "6 - Main Notes/Studying using your own words.md",
+    "6 - Main Notes/Why are we making these notes.md",
+    "6 - Main Notes/Why study at all.md",
+    "2 - Source Material/Video/Effective Note-Taking to Remember More + Create New Ideas.md",
+    "2 - Source Material/Video/How to Learn Pretty Much Anything.md",
+    "5 - Template/Full Note.md",
+    "6 - Main Notes/2025-09-20.md",
+    "Untitled.canvas",
+    "5 - Template/Source Material Note.md",
+    "1 - Rough Notes/TODO.md",
+    "2 - Source Material/Video",
+    "2 - Source Material/Untitled",
+    "2 - Source Material/How to study - Explained by someone who doesn't know how to study..md",
+    "4 - Indexes/Render Pass.md",
+    "6 - Main Notes/Vulkan is bad.md",
+    "3 - Tags/Render Pass.md",
+    "6 - Main Notes/Vulkan is Good.md",
+    "6 - Main Notes/Vulkan is Life.md",
+    "6 - Main Notes/Untitled.md",
+    "1 - Rough Notes/What this is used for..md",
+    "this is tag.md",
+    "6 - Main Notes",
+    "5 - Template",
+    "4 - Indexes",
+    "3 - Tags",
+    "2 - Source Material",
+    "Welcome.md",
+    "1 - Rough Notes",
+    "desktop.ini"
+  ]
+}
