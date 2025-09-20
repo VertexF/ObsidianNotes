@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ce28be4d7788a056",
+        "id": "d66c50f5a4aad3db",
         "type": "tabs",
         "children": [
           {
-            "id": "0673adb6ac4cc2ce",
+            "id": "64cb0265c2aefa91",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Rough Notes/Test Bed.md",
+                "file": "2 - Source Material/Article/Vulkan-Tutorial.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Test Bed"
+              "title": "Vulkan-Tutorial"
             }
           }
         ]
@@ -132,6 +132,16 @@
             }
           },
           {
+            "id": "459976abcc2661de",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
             "id": "7443f3a4d91d725b",
             "type": "leaf",
             "state": {
@@ -152,21 +162,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 - Main Notes/Why study at all.md",
+                "file": "2 - Source Material/Article/Vulkan-Tutorial.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Why study at all"
+              "title": "Outline of Vulkan-Tutorial"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 317.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,18 +190,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0673adb6ac4cc2ce",
+  "active": "64cb0265c2aefa91",
   "lastOpenFiles": [
-    "6 - Main Notes/Why study at all.md",
-    "6 - Main Notes/Studying using your own words.md",
-    "6 - Main Notes/How we learn basics.md",
     "1 - Rough Notes/Test Bed.md",
     "1 - Rough Notes/Things to look into.md",
+    "1 - Rough Notes/Pasted image 20250920080120.png",
+    "2 - Source Material/Article/Vulkan-Tutorial.md",
+    "6 - Main Notes/Why study at all.md",
+    "2 - Source Material/Article",
+    "6 - Main Notes/Why are we making these notes.md",
+    "6 - Main Notes/Studying using your own words.md",
+    "6 - Main Notes/How we learn basics.md",
     "1 - Rough Notes/TODO.md",
-    "Pasted image 20250920080120.png",
     "3 - Tags/learning.md",
     "2 - Source Material/What is this used for..md",
-    "6 - Main Notes/Why are we making these notes.md",
     "2 - Source Material/Video/Effective Note-Taking to Remember More + Create New Ideas.md",
     "2 - Source Material/Video/How to Learn Pretty Much Anything.md",
     "5 - Template/Full Note.md",
@@ -199,7 +211,6 @@
     "Untitled.canvas",
     "5 - Template/Source Material Note.md",
     "2 - Source Material/Video",
-    "2 - Source Material/Untitled",
     "2 - Source Material/How to study - Explained by someone who doesn't know how to study..md",
     "4 - Indexes/Render Pass.md",
     "6 - Main Notes/Vulkan is bad.md",
