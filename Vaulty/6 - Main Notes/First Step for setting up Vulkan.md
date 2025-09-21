@@ -1,9 +1,9 @@
 2025-09-20 16:04
-Status: #baby 
+Status: #adult 
 Tags: [[vulkan]] [[vulkan instance]]
 # First Step for setting up Vulkan
 
-Before you start creating anything with Vulkan it's best to set up the optional struct that helps with optimisation of the graphics driver.
+Before you start creating anything with Vulkan it's best to set up the optional struct that helps with optimisation of the graphics driver. If for example the graphics driver knows what engine is using Vulkan is change how it behaves.
 
 If this is your first time learning about how to set up Vulkan note that the .sType and the .pNext and used constantly in setting up these structs. .sType sets the type of the struct and .pNext is used to extend the struct.
 

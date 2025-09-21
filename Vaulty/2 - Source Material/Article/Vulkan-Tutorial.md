@@ -204,3 +204,68 @@ The third argument **VkDebugUtilsMessengerCallbackDataEXT** is the most useful a
 - `objectCount` This contains the number of objects in the array.
 
 Finally the final pointer contains a pointer to data the user created on setup of this function.
+
+You should always return VK_FALSE when running this function and abort when the message validation error has been triggered. If you return true, you will get a **VK_ERROR_VALIDATION_FAILED_EXT** which is meant for testing the validation layer themselves which is completely useless to you.
+
+To actually set this up correctly you need to set up and tear down the function callback. You can have more than one if you want to be part of the debug messenger.
+
+```c++
+        VkDebugUtilsMessengerCreateInfoEXT creationInfo = {};
+        creationInfo.sType =                                                                               VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;
+        creationInfo.pNext = nullptr;
+        creationInfo.pfnUserCallback = debugUtilsCallback;
+        creationInfo.messageSeverity =                                                                     VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT |
+                        VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT |
+                        VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT;
+         creationInfo.messageType =                                                                        VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT |                                  VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT;
+         createInfo.pUserData = nullptr;
+```
+
+This is what I've set up in the past. **messageSeverity** will tell vulkan what message severity you're interested in. **messageType** tells vulkan what type of messages you want to know about under the different levels of severity. **pfnUserCallback** is just a handle to the function pointer you should've already set up. **pUserData** can take in a pointer to a struct or class what can provide extra info. So if you have a 1 big struct with everything in, you can pass structs pointer in here and access it later when an error happens.
+
+To actually run this function you need to load a function before you can run it as it's part of the debug utils extensions and not part of core vulkan. This is similar to what you need to do for OpenGL with glew that loads all the functions.
+
+```c++
+            PFN_vkCreateDebugUtilsMessengerEXT vkCreateDebugUtilsMessengerEXT =(PFN_vkCreateDebugUtilsMessengerEXT)vkGetInstanceProcAddr(vulkanInstance, "vkCreateDebugUtilsMessengerEXT");
+```
+
+To do this you need to the vkGetInstanceProcAddr function, the instance and the correct string that gives you the function you're interested in running, in this case **"vkCreateDebugUtilsMessengerEXT"** Once you've done that you can then simply use the variable **vkCreateDebugUtilsMessengerEXT** in the above code as a function call. If this fails it's likely due to the fact you haven't set up the **VK_EXT_DEBUG_UTILS_EXTENSION_NAME** extension up.
+
+After that you just run the function with all the details needed
+
+```c++
+vkCreateDebugUtilsMessengerEXT(vulkanInstance, &debugMessenegerCreateInfo, vulkanAllocationCallbacks, &vulkanDebugUtilsMessenger);
+```
+
+Every argument here is pretty standard apart from the last one. You have a vulkan instance first, second you have the debug messenger struct you have already set up, then the vulkan allocator. Finally you get a **VkDebugUtilsMessengerEXT** output variable which seems to keep track of the life span of the vulkan message callback. This is used for decollate and destroy the function.
+
+If you've ran this function with no errors the validation layer should now report back to your custom function. 
+
+Finally you can clean up the debug extension callback with a similar idea. The destruction of the debug util messenger also needs a function to be loaded, just like it's creation, but it's very similar as creation.
+
+```c++
+        auto vkDestroyDebugUtilsMessengerEXT = (PFN_vkDestroyDebugUtilsMessengerEXT)vkGetInstanceProcAddr(vulkanInstance, "vkDestroyDebugUtilsMessengerEXT");
+        vkDestroyDebugUtilsMessengerEXT(vulkanInstance, vulkanDebugUtilsMessenger, vulkanAllocationCallbacks);
+```
+
+Okay so we have the **vkDestroyDebugUtilsMessengerEXT** with 3 arguments the vulkan instance, the vulkanDebugUtilsMessenger is a variable of the **VkDebugUtilsMessengerEXT** which tells vulkan to deload all the debug function callbacks. Finally we have the allocator again, remember with the allocator you allocate and deallocate in the same way. 
+
+When setting up this you will notice that VkCreateInstance and VkDestroyInstance can't be debugged because you need the instance is created before the callback is created. However Khronos designed something for this.
+
+If you create the **VkDebugUtilsMessengerCreateInfoEXT** first and then pass this into the **VkInstanceCreateInfo** .pNext variable with the enabling of the validation layer and debug util extension and you'll get validation layer feedback on the creation and deletion on the VkInstance.
+
+```c++
+        createInfo.enabledLayerCount = ArraySize(REQUESTED_LAYERS);
+        createInfo.ppEnabledLayerNames = REQUESTED_LAYERS;
+        createInfo.enabledExtensionCount = ArraySize(REQUESTED_EXTENSIONS);
+        createInfo.ppEnabledExtensionNames = REQUESTED_EXTENSIONS;
+		//Creation of the VkDebugUtilsMessengerCreateInfoEXT in the function call.
+        const VkDebugUtilsMessengerCreateInfoEXT debugCreateInfo = createDebugUtilsMessengerInfo();
+        createInfo.pNext = &debugCreateInfo;
+```
+
+#### Configuration
+You can configure the validation layers in different ways beyond the VkDebugUtilsMessengerCreateInfoEXT flags contains in that struct. If you go your vulkan SDK and look for the **Config** directory, you will find a file called **vk_layer_settings.txt** that file should explain how to configure things.
+
+You'll need to do some project configuration to customise your validation layer usage. You will need to copy your layer settings to debug and/or release directories in your project once you've changed things. If you don't do that you'll be running with the debug set of validation layers, which is totally chill.
+

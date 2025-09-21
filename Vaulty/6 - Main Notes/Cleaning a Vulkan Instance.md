@@ -1,5 +1,5 @@
 2025-09-20 15:54
-Status: #baby 
+Status: #adult 
 Tags: [[vulkan]] [[vulkan instance]]
 # Cleaning a Vulkan Instance
 
@@ -13,6 +13,6 @@ If you've allocated the instance with a custom allocator with VMA or something e
 
 # References
 ##### Main Notes
-
+[[Creating a vulkan instance]]
 #### Source Notes
 [[Vulkan-Tutorial]]

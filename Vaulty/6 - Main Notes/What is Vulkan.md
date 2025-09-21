@@ -1,5 +1,5 @@
 2025-09-20 16:33
-Status: #baby 
+Status: #adult 
 Tags: [[vulkan]]
 # What is Vulkan
 
@@ -10,7 +10,6 @@ As it's new it easily support computer and graphics as separate as it's unified 
 Vulkan also support multithreading much easier now as it's more up to date with modern hardware and doesn't do just global context switch between states.
 
 It's verbose and a difficult API to learn. With all the power come a lot more things to code yourself and on top of that it's platform agnostic which compounds the issue.
-
 # References
 ##### Main Notes
 [[First Step for setting up Vulkan]]

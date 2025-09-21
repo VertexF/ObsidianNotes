@@ -1,5 +1,5 @@
 2025-09-20 16:11
-Status: #baby 
+Status: #adult 
 Tags: [[vulkan]] [[vulkan instance]]
 # Setting up extensions
 
@@ -27,5 +27,6 @@ The **REQUESTED_EXTENSIONS** contains a list of const char* to different extensi
 ##### Main Notes
 [[First Step for setting up Vulkan]]
 [[Checking for supported extensions]]
+[[Loading extended functions dynamically]]
 #### Source Notes
 [[Vulkan-Tutorial]]

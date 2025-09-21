@@ -1,5 +1,5 @@
 2025-09-20 16:19
-Status: #baby 
+Status: #adult 
 Tags: [[vulkan]] [[vulkan instance]]
 # Checking for supported extensions
 
@@ -28,6 +28,7 @@ Otherwise the last argument is null, you get the count. If it's not null the fun
 Then you can check the list in the for loop to see if the optional extension you want is part of the list, if it is add it to your extensions and vkCreateInstance so work fine.
 # References
 ##### Main Notes
+[[Creating a vulkan instance]]
 [[Setting up extensions]]
 #### Source Notes
 [[Vulkan-Tutorial]]
