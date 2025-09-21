@@ -269,3 +269,18 @@ You can configure the validation layers in different ways beyond the VkDebugUtil
 
 You'll need to do some project configuration to customise your validation layer usage. You will need to copy your layer settings to debug and/or release directories in your project once you've changed things. If you don't do that you'll be running with the debug set of validation layers, which is totally chill.
 
+#### Setting up Physical Device
+After we have initialised the vulkan instances we need to select a physical device we will do all the GPU work on. You can select more than 1 to do different things in parallel but this complicated the things, but could be worth it.
+
+To select the physical device, you need to use **vkEnumeratePhysicalDevices** once to get the amount of physical and second to get the actual list of physical device. If you have listed the extensions before it's the same process.
+
+```c++
+        uint32_t numPhysicalDevice;
+        result = vkEnumeratePhysicalDevices(vulkanInstance, &numPhysicalDevice, nullptr);
+        check(result);
+
+        VkPhysicalDevice* gpus = reinterpret_cast<VkPhysicalDevice*>(air_alloca(sizeof(VkPhysicalDevice) * numPhysicalDevice, stackTempAllocator));
+        result = vkEnumeratePhysicalDevices(vulkanInstance, &numPhysicalDevice, gpus);
+        check(result);
+```
+With the list of physical device in a flat array you can now select which one you want from a for loop.

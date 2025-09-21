@@ -11,10 +11,24 @@
             "id": "4db52aaf3a4d084b",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Article/Vulkan-Tutorial.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Vulkan-Tutorial"
             }
           },
           {
@@ -94,8 +108,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -204,11 +217,13 @@
   },
   "active": "4db52aaf3a4d084b",
   "lastOpenFiles": [
+    "6 - Main Notes/Creating a vulkan instance.md",
+    "2 - Source Material/Article/Vulkan-Tutorial.md",
+    "4 - Indexes/vulkan.md",
     "6 - Main Notes/Running Vulkan on Mac.md",
     "6 - Main Notes/Why are we making these notes.md",
     "6 - Main Notes/Setting up extensions.md",
     "6 - Main Notes/What is Vulkan.md",
-    "4 - Indexes/vulkan.md",
     "6 - Main Notes/Dealing with VK_EXTENSION_NOT_PRESENT error.md",
     "6 - Main Notes/Instance and device level validation.md",
     "6 - Main Notes/How to debug instance creation.md",
@@ -221,10 +236,8 @@
     "6 - Main Notes/Enabling Validation layers.md",
     "6 - Main Notes/Vulkan Layers aren't extensions.md",
     "6 - Main Notes/Loading extended functions dynamically.md",
-    "6 - Main Notes/Creating a vulkan instance.md",
     "6 - Main Notes/Checking for supported extensions.md",
     "6 - Main Notes/First Step for setting up Vulkan.md",
-    "2 - Source Material/Article/Vulkan-Tutorial.md",
     "3 - Tags/vulkan validation.md",
     "3 - Tags/vulkan instance.md",
     "6 - Main Notes/How we learn basics.md",
