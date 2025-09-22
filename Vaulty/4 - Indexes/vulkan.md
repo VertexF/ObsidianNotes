@@ -20,3 +20,7 @@
 [[Connecting custom debug function to Vulkan]]
 [[How to debug instance creation]]
 [[Customising validation layers externally]]
+### Physical Device
+[[What is a vulkan physical device]]
+[[Listing the GPUs in Vulkan]]
+[[Checking for hardware suitability]]

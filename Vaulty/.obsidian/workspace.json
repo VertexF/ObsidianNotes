@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "79a40a1cf1100ce3",
+        "id": "107a3f4597801282",
         "type": "tabs",
         "children": [
           {
@@ -30,29 +30,21 @@
               "icon": "lucide-file",
               "title": "Vulkan-Tutorial"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "8b45f9467a93ad5c",
+        "type": "tabs",
+        "children": [
           {
-            "id": "d7900d57f0dc2142",
+            "id": "ab4517c3a9417433",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Dealing with VK_EXTENSION_NOT_PRESENT error.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Dealing with VK_EXTENSION_NOT_PRESENT error"
+              "title": "New tab"
             }
           }
         ]
@@ -217,32 +209,32 @@
   },
   "active": "4db52aaf3a4d084b",
   "lastOpenFiles": [
-    "6 - Main Notes/Creating a vulkan instance.md",
     "2 - Source Material/Article/Vulkan-Tutorial.md",
+    "6 - Main Notes/Dealing with VK_EXTENSION_NOT_PRESENT error.md",
+    "6 - Main Notes/Loading extended functions dynamically.md",
+    "6 - Main Notes/PACER - Evidence information.md",
+    "2 - Source Material/Video/How to remember Everything You Read.md",
+    "6 - Main Notes/The two reading stages.md",
+    "6 - Main Notes/PACER system overview.md",
+    "6 - Main Notes/PACER - Analogous information.md",
+    "6 - Main Notes/PACER - Conceptual information.md",
+    "6 - Main Notes/PACER - Reference information.md",
+    "6 - Main Notes/PACER - Procedural information.md",
+    "6 - Main Notes/How to remember what we've learnt.md",
+    "6 - Main Notes/Studying using your own words.md",
+    "2 - Source Material/Video/How to Learn Pretty Much Anything.md",
+    "3 - Tags/studying.md",
     "4 - Indexes/vulkan.md",
+    "6 - Main Notes/Checking for hardware suitability.md",
+    "6 - Main Notes/Listing the GPUs in Vulkan.md",
+    "6 - Main Notes/What is a vulkan physical device.md",
+    "6 - Main Notes/Checking for supported extensions.md",
+    "6 - Main Notes/Setting up extensions.md",
+    "3 - Tags/vulkan physical device.md",
+    "2 - Source Material/Video/Vulkanised 2023 Tutorial An Introduction to Vulkan.md",
+    "6 - Main Notes/Creating a vulkan instance.md",
     "6 - Main Notes/Running Vulkan on Mac.md",
     "6 - Main Notes/Why are we making these notes.md",
-    "6 - Main Notes/Setting up extensions.md",
-    "6 - Main Notes/What is Vulkan.md",
-    "6 - Main Notes/Dealing with VK_EXTENSION_NOT_PRESENT error.md",
-    "6 - Main Notes/Instance and device level validation.md",
-    "6 - Main Notes/How to debug instance creation.md",
-    "6 - Main Notes/Customising validation layers externally.md",
-    "6 - Main Notes/What are validation layers.md",
-    "6 - Main Notes/Cleaning a Vulkan Instance.md",
-    "6 - Main Notes/Connecting custom debug function to Vulkan.md",
-    "6 - Main Notes/Creating the custom callback function for validation.md",
-    "6 - Main Notes/Why set up debug callbacks for vulkan validation.md",
-    "6 - Main Notes/Enabling Validation layers.md",
-    "6 - Main Notes/Vulkan Layers aren't extensions.md",
-    "6 - Main Notes/Loading extended functions dynamically.md",
-    "6 - Main Notes/Checking for supported extensions.md",
-    "6 - Main Notes/First Step for setting up Vulkan.md",
-    "3 - Tags/vulkan validation.md",
-    "3 - Tags/vulkan instance.md",
-    "6 - Main Notes/How we learn basics.md",
-    "3 - Tags/learning.md",
-    "1 - Rough Notes/TODO.md",
     "4 - Indexes",
     "1 - Rough Notes/Pasted image 20250920080120.png",
     "2 - Source Material/Article",

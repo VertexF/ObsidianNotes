@@ -283,4 +283,87 @@ To select the physical device, you need to use **vkEnumeratePhysicalDevices** on
         result = vkEnumeratePhysicalDevices(vulkanInstance, &numPhysicalDevice, gpus);
         check(result);
 ```
+
 With the list of physical device in a flat array you can now select which one you want from a for loop.
+
+#### Checking hardware combability for our Vulkan application.
+We will want to check the Vulkan support version, GPU type and properties so we can get the right GPU we want. This is done with the **vkGetPhysicalDeviceProperties** function.
+
+```c++
+VkPhysicalDeviceProperties properties;
+vkGetPhysicalDeviceProperties(hardwareDevice, &properties);
+```
+
+It's important to note though if you want to support optional feature like texture compression and doubles and halfs you need to query with the **vkGetPhysicalDeviceFeatures** and **VkPhysicalDeviceFeatures**. 
+
+```c++
+VkPhysicalDeviceFeatures features;
+vkGetPhysicalDeviceFeatures(hardwareDevice, &features);
+```
+
+There additional things that can be queried like GPU memory but will will talk about the later in this source note.
+
+**vkGetPhysicalDeviceProperties** and **vkGetPhysicalDeviceFeatures** are just structs that contain a list of data members that are true or false depending on the queried function. An example let see if device is discrete and can support geometry shaders.
+
+```c++
+bool isDeviceSuitable(VkPhysicalDevice device)
+{
+	VkPhysicalDeviceProperties properties;
+	VkPhysicalDeviceFeatures features;
+	vkGetPhysicalDeviceProperties(hardwareDevice, &properties);
+	vkGetPhysicalDeviceFeatures(hardwareDevice, &features);
+	
+	return properties.deviceType == VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU && features.geometryShader;
+}
+```
+
+It's very common for people to have more than one GPU in there computer. So what you can do is loop through all the hardware and pick the best one to operate on if you're planning on using just 1. You can go through the features and properties you care about, give them a score based on what properties and features the GPUs have and pick the one with the highest score to use. Just make sure you have a fallback if you don't find one with the properties want.
+#### Queue Families
+Vulkan works with commands and these commands are submitted to a queue. The different type of queues that we can use for different commands come from queue families. So a queue that comes from a queue family can only use a subset of commands. For example, if I have a queue that handles memory transfer commands, then this queue can't handle graphics or computer commands.
+
+To be able to set up the queues to submit commands, we need to check what queues families are supported by the graphics card, as it's possible to have a GPU that only support memory transfer or compute. So this wouldn't be good for rendering.
+
+To list all the queue families from a physical device we do the same old get function thing **vkGetPhysicalDeviceQueueFamilyProperties** we run this once to get the count and again to the the actual list.
+
+```c++
+uint32_t queueFamilyCount = 0;
+vkGetPhysicalDeviceQueueFamilyProperties(vulkanPhysicalDevice, &queueFamilyCount, nullptr);
+
+VkQueueFamilyProperties* queueFamilies = reinterpret_cast<VkQueueFamilyProperties*>(air_alloca(sizeof(VkQueueFamilyProperties) * queueFamilyCount, stackTempAllocator));
+
+vkGetPhysicalDeviceQueueFamilyProperties(vulkanPhysicalDevice, &queueFamilyCount, queueFamilies);
+```
+
+After you've extracted thing the struct **VkQueueFamilyProperties** contains the properties of the queue families. Just like with getting the physical device we need to loop through them all and selected on we want. For rendering you at least need a queue family type that has **VK_QUEUE_GRAPHICS_BIT**. 
+
+Here's some code on how to do this, but if you don't know how use this as example and code the stuff yourself. You need practice if you don't know how.
+
+```c++
+uint32_t mainQueueFamilyIndex = UINT32_MAX;
+uint32_t computeQueueFamilyIndex = UINT32_MAX;
+uint32_t computeQueueIndex = UINT32_MAX;
+for (uint32_t familyIndex = 0; familyIndex < queueFamilyCount; ++familyIndex)
+{
+	//Get the queue family we are working on.
+	VkQueueFamilyProperties queueFamily = queueFamilies[familyIndex];
+	//Reject that queue family if he has nothing in it.
+    if (queueFamily.queueCount == 0)
+    {
+	    continue;
+    }
+    
+    //Main queue is the one with both graphics and compute
+    if ((queueFamily.queueFlags & (VK_QUEUE_GRAPHICS_BIT | VK_QUEUE_COMPUTE_BIT)) == (VK_QUEUE_GRAPHICS_BIT | VK_QUEUE_COMPUTE_BIT))
+    {
+	    //The index of main and compute are the family next.
+        mainQueueFamilyIndex = familyIndex;
+
+        if (queueFamily.queueCount > 1)
+        {
+            computeQueueFamilyIndex = familyIndex;
+            computeQueueIndex = 1;
+        }
+        continue;
+    }
+}
+```
