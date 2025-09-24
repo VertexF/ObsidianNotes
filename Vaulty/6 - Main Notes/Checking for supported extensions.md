@@ -3,7 +3,7 @@ Status: #adult
 Tags: [[vulkan]] [[vulkan instance]]
 # Checking for supported extensions
 
-When you try to run the vkCreateInstance function you can run into the error **VK_ERROR_EXTENSION_NOT_PRESENT** this might be fine to exit with that error if you're trying to support Window System Interface extension on a computer doesn't have it, like a server or something.
+When you try to run the vkCreateInstance function you can run into the error **VK_ERROR_EXTENSION_NOT_PRESENT** you'll find your missing an extension. When you get this error it might be okay to exit the program if you're trying to support Window System Interface extension on a computer doesn't have it, like a server or something.
 
 There are optional extensions that you might want to check for before adding to the list to see if they are available. You do with with the **vkEnumerateInstanceExtensionProperties**
 
@@ -30,5 +30,6 @@ Then you can check the list in the for loop to see if the optional extension you
 ##### Main Notes
 [[Creating a vulkan instance]]
 [[Setting up extensions]]
+[[Device level extensions]]
 #### Source Notes
 [[Vulkan-Tutorial]]

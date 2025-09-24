@@ -367,3 +367,97 @@ for (uint32_t familyIndex = 0; familyIndex < queueFamilyCount; ++familyIndex)
     }
 }
 ```
+#### Logical Device
+The logical device is the interface between the physic device and Vulkan commands, you can have more than one logical device if you need it. 
+
+When creating the logical device you should the **VkPhysicalDevice** and the queue family indices you've gotten from GPU. After you've done that you need to set up the **VkDeviceQueueCreateInfo** this with that struct you can create the queues with the given queue family index. Then you can create the queues with the **VkDevice** creation.
+#### Setting up the queues
+So you simply say how many queues you want to create from a given queue family and that's how you create it.
+
+```c++
+VkDeviceQueueCreateInfo queueCreateInfo{};
+queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
+//This is our main index we found from going over the queue families eariler.
+queueCreateInfo.queueFamilyIndex = mainQueueFamilyIndex;
+//You can create more than 1 queue if you need it here.
+queueCreateInfo.queueCount = 1;
+```
+
+You often don't want to create more than 1 queue from a given queue family. This because the drivers only really let you create a few and having more than 1 causes more graphic driver overhead. If you want to handle a lot of commands can create the command buffers on multiple threads and submit all at once on the main thread.
+
+You also need the priorities these queues with a value from 1.f to 0.f. These values helps with scheduling of the command buffer execution. You have to do this even if you only have one queue.
+
+```c++
+queueCreateInfo.pQueuePriorities = 1.f;
+```
+#### Activating device features
+When you're trying to use features that you have access to when you query the physical device with **vkGetPhysicalDeviceFeatures** function you need to create structs that turn them on for the logical device. 
+#### Creating the local device
+If you've created the **VkDeviceQueueCreateInfo** and the **VkPhysicalDeviceFeatures2** you're finally ready to create the local device with the creation struct **VkDeviceCreateInfo**.
+
+```c++
+VkDeviceCreateInfo createInfo{};
+createInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
+createInfo.pQueueCreateInfos = &queueCreateInfo;
+createInfo.queueCreateInfoCount = 1;
+createInfo.pEnabledFeatures = &deviceFeatures;
+```
+
+The queue is the number of queues that belong your **VkDeviceQueueCreateInfo** for example in my engine I have a static array of 3, **BUT** it's not always 3 because the GPU might only have 1, 2 or 3 separate queue families for me to use for a given type. 
+
+The rest is a little tricky conceptually. You need to now turn on device specific extensions in the struct. It's important to not that global based extensions which you have been turned on earlier are different from device level extension. It's possible that we are on a Windows machine, with the instance level Windows extension turned but the GPU we've selected doesn't have the ability to display any output and only uses compute. This is why we need to turn on device level extensions, which can't be known at instance level creation.
+
+The most important device level extension we need for rendering is the **VK_KHR_swapchain** this allows us to render things to rendering things to the screen.
+
+Layer are also strange remember when I said talked about [[Instance and device level validation]] well this is were would would turn on device level validation which will most likely be ignored. 
+
+This is snippet of what I've done to turn on device level extensions. 
+
+```c++
+        Array<const char*> deviceExtensions;
+        deviceExtensions.init(tempAllocator, 2);
+        deviceExtensions.push(VK_KHR_SWAPCHAIN_EXTENSION_NAME);
+        deviceExtensions.push(VK_KHR_SHADER_DRAW_PARAMETERS_EXTENSION_NAME);
+        
+        VkDeviceCreateInfo deviceCreateInfo = {};
+        deviceCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
+        deviceCreateInfo.queueCreateInfoCount = queueCount;
+        deviceCreateInfo.pQueueCreateInfos = queueInfo;
+        deviceCreateInfo.enabledExtensionCount = deviceExtensions.size;
+        deviceCreateInfo.ppEnabledExtensionNames = deviceExtensions.data;
+        deviceCreateInfo.pNext = &physicalDeviceFeature2;
+```
+
+After you've done that you can finally create the logical device with **vkCreateDevice** Just make sure to check if it worked or not.
+
+```c++
+result = vkCreateDevice(vulkanPhysicalDevice, &deviceCreateInfo, vulkanAllocationCallbacks, &vulkanDevice);
+
+check(result);
+```
+
+Arguments are 
+- 1) The VkPhysicalDevice 
+- 2) The VkDeviceCreateInfo 
+- 3) The VMA/allocator callbacks.
+- 4) The VkDevice
+
+Clean up is like **VkPhysicaDevice** with **VkQueueFamily's** The **VkQueue's** you created are implicitly created with the **VkDevice** meaning when you clean up the device the queues are implicitly destroyed. You do with **VkDestroyDevice** 
+
+```c++
+vkDestroyDevice(device, vulkanAllocationCallbacks);
+```
+#### Getting the queue handles
+As the Queue are automatically created with the creation of the logical device, you don't have access to them straight away. You do need to create **VkQueue** for the different queues you have created with the logical device. 
+
+So to load the VkQueue into memory to be used you would so something like
+```c++
+vkGetDeviceQueue(vulkanDevice, computeQueueFamilyIndex, computeQueueIndex, &vulkanComputeQueue);
+```
+
+The arguments in order are:
+- 1) The VkDevice
+- 2) The family queue index value. 
+- 3) The queue index
+- 4) The VkQueue
+It's important to make sure that the queue index you got from queue family index are being used together in this argument or you'll likely get a validation error when trying to create the VkQueue. 

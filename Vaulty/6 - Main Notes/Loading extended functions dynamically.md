@@ -12,7 +12,7 @@ I will use the example of Vulkan Debug utils extension but the same pattern appl
 I would personally look up the documentation of the extension you're trying to use to make sure you get the names correct. So here is how you load the debug util extension function being loaded.
 
 ```c++
-            PFN_vkCreateDebugUtilsMessengerEXT vkCreateDebugUtilsMessengerEXT =(PFN_vkCreateDebugUtilsMessengerEXT)vkGetInstanceProcAddr(vulkanInstance, "vkCreateDebugUtilsMessengerEXT");
+PFN_vkCreateDebugUtilsMessengerEXT vkCreateDebugUtilsMessengerEXT =(PFN_vkCreateDebugUtilsMessengerEXT)vkGetInstanceProcAddr(vulkanInstance, "vkCreateDebugUtilsMessengerEXT");
 ```
 
 Every dynamically loaded function follows the pattern of **PFN_** followed by the name of the function you want. So in this case we want to run the **vkCreateDebugUtilsMessengerEXT** function to create a debug message callback.

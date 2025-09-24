@@ -28,5 +28,6 @@ The **REQUESTED_EXTENSIONS** contains a list of const char* to different extensi
 [[First Step for setting up Vulkan]]
 [[Checking for supported extensions]]
 [[Loading extended functions dynamically]]
+[[Device level extensions]]
 #### Source Notes
 [[Vulkan-Tutorial]]
