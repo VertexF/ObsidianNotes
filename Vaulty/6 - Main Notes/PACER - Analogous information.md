@@ -19,7 +19,7 @@ Analogous is special as both [[PACER - Procedural information]]  and [[PACER - C
 # References
 ##### Main Notes
 [[PACER system overview]]
-[[PACER - Analogous information]]
+[[PACER - Procedural information]]
 [[PACER - Conceptual information]]
 #### Source Notes
 [[How to remember Everything You Read]]

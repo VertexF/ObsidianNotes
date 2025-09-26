@@ -35,10 +35,24 @@
             "id": "ec3b26f48fe1e1b3",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/PACER - Reference information.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "PACER - Reference information"
             }
           }
         ],
@@ -204,6 +218,11 @@
   },
   "active": "ec3b26f48fe1e1b3",
   "lastOpenFiles": [
+    "6 - Main Notes/PACER system overview.md",
+    "6 - Main Notes/PACER - Evidence information.md",
+    "6 - Main Notes/PACER - Conceptual information.md",
+    "6 - Main Notes/PACER - Analogous information.md",
+    "6 - Main Notes/PACER - Procedural information.md",
     "4 - Indexes/vulkan.md",
     "6 - Main Notes/Setting up extensions.md",
     "6 - Main Notes/Overview on how to create the simplest vulkan app.md",
@@ -225,11 +244,6 @@
     "6 - Main Notes/What are queue families.md",
     "6 - Main Notes/What is vulkan logical device.md",
     "6 - Main Notes/What is a vulkan physical device.md",
-    "6 - Main Notes/Dealing with VK_EXTENSION_NOT_PRESENT error.md",
-    "6 - Main Notes/Checking for supported extensions.md",
-    "6 - Main Notes/Cleaning up a physical device and queue families.md",
-    "1 - Rough Notes/Things to look into.md",
-    "1 - Rough Notes/TODO.md",
     "4 - Indexes",
     "1 - Rough Notes/Pasted image 20250920080120.png",
     "2 - Source Material/Article",
