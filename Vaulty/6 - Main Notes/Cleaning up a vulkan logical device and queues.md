@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[logical device]]
 # Cleaning up a vulkan logical device and queues
 
-Clean up is like **VkPhysicaDevice** with **VkQueueFamily's** The **VkQueue's** you created are implicitly created with the **VkDevice** meaning when you clean up the device the queues are implicitly destroyed. You do with **VkDestroyDevice** 
+Cleaning up is like **VkPhysicaDevice** with **VkQueueFamily's** The **VkQueue's** you created are implicitly created with the **VkDevice** meaning when you clean up the device the queues are implicitly destroyed. You do with **VkDestroyDevice** 
 
 ```c++
 vkDestroyDevice(device, vulkanAllocationCallbacks);

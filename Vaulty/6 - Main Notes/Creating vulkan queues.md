@@ -21,5 +21,6 @@ The queue index is needed here if you have set up more than 1 VkQueue of the sam
 ##### Main Notes
 [[Setting up vulkan queues]]
 [[Create the logical device]]
+[[Creating a separate queue]]
 #### Source Notes
 [[Vulkan-Tutorial]]

@@ -4,7 +4,7 @@ Tags: [[vulkan]] [[logical device]]
 # Create the logical device
 
 So when creating the logical device you need to have the 3 things ready: 
-- The queue indices [[Setting up vulkan queues]]
+- The queue indices [[Setting up vulkan queues]] and [[Creating vulkan queues]]
 - The physical device features struct [[Making GPU features usable]]
 - A list device level extensions you need [[Device level extensions]] we will talk more about this here.
 

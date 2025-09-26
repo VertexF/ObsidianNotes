@@ -461,3 +461,118 @@ The arguments in order are:
 - 3) The queue index
 - 4) The VkQueue
 It's important to make sure that the queue index you got from queue family index are being used together in this argument or you'll likely get a validation error when trying to create the VkQueue. 
+#### Window surface
+Since Vulkan is platform agnostic it doesn't directly touch the windowing system. To get Vulkan to be able to present result to the screen we need to turn on the Window System Integration (WSI) extension. There are at least two and one of them is the **VK_KHR_surface**. It allows use to use the **VkSurfaceKHR** object which is an abstract object that allows use to present rendered images to. 
+
+The window surface actually needs to be created right after instance creation, because it will influence what physical device you want to use. The window surface is actually completely optional in Vulkan, if you want to do offscreen rendering you just don't create any surface to deal with the images. Unlike OpenGL which requires you to hack an invisible window.
+#### Window surface creation.
+We are going to create the **VkSurfaceKHR**. This swapchain is platform agnostic meaning that we need to use a platform specific to get thing working with our swapchain and since we're on Windows we need to use the **VK_KHR_win32_surface** which is found in the **VK_KHR_WIN32_SURFACE_EXTENSION_NAME** name.
+
+In my code I've been using this extension list for agers
+
+```c++
+    const char* REQUESTED_EXTENSIONS[] =
+    {
+        VK_KHR_SURFACE_EXTENSION_NAME,
+        VK_KHR_WIN32_SURFACE_EXTENSION_NAME,
+#if defined(VULKAN_DEBUG_REPORT)
+        VK_EXT_DEBUG_REPORT_EXTENSION_NAME,
+        VK_EXT_DEBUG_UTILS_EXTENSION_NAME
+#endif//VULKAN_DEBUG_REPORT
+    };
+```
+
+You can create the surface yourself or with SDL or GLFW. If you create it yourself you'll have to do it for all the platforms what you'll end up supporting. To do this for windows you need to get the window instance and the window handle. 
+
+```c++
+//get this from SDL/GLFW or the Win32 API
+HINSTANCE windowInstance;
+HWND window;
+VkWin32SurfaceCreateInfoKHR createInfo{};
+createInfo.sType = VK_STRUCTURE_TYPE_WIN32_SURFACE_CREATE_INFO_KHR;
+createInfo.hwnd = window;
+createInfo.hinstance = windowInstance;
+
+VkResult result = vkCreateWin32SurfaceKHR(instance, &createInfo, vulkanAllocatorCallback, &surface);
+```
+
+If you do everything right you should end up with a surface. However you can just use GLFW or SDL to do the work for you.
+
+```c++
+glfwCreateWindowSurface(instance, window, nullptr, &surface);
+
+SDL_Window* window = reinterpret_cast<SDL_Window*>(creation.window);
+if (SDL_Vulkan_CreateSurface(window, vulkanInstance, &vulkanWindowSurface) == SDL_FALSE)
+{
+    aprint("Failed to create Vulkan surface.\n");
+}
+SDLWindow = window;
+```
+
+Destroying the surface is pretty straight forward, just do it before the instance destruction.
+
+```c++
+vkDestroySurfaceKHR(vulkanInstance, vulkanWindowSurface, vulkanAllocationCallbacks);
+```
+#### Seeing if presentation is supported.
+This is a queue family thing. When you're looking for if the has draw command support for graphics you also need to look for presentation support. It's possible for a graphics queue family to **NOT** support presentation. 
+
+To do this you need to check with the function **vkGetPhysicalDeviceSurfaceSupportKHR** this takes in the physical device, the surface you've created and check against the queue family index you've found to see if it has presentation support.
+
+Here's what I've done. In this code assume that we've already done the work to extract the queue families from the hardware.
+```c++
+VkBool32 surfaceSupport = VK_FALSE;
+for (uint32_t familyIndex = 0; familyIndex < queueFamilyCount; ++familyIndex)
+{
+	VkQueueFamilyProperties queueFamily = queueFamilies[familyIndex];
+	if (queueFamily.queueCount > 0 && queueFamily.queueFlags &                            (VK_QUEUE_GRAPHICS_BIT | VK_QUEUE_COMPUTE_BIT))
+        {
+            check(vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, familyIndex, vulkanWindowSurface, &surfaceSupport));
+
+                // If we have some how found a queue family 
+                // that support graphics and compute commands 
+                // but not presention we need to skip that one.
+                if (surfaceSupport)
+                {
+                    vulkanMainQueueFamily = familyIndex;
+                    break;
+                }
+            }
+        }
+```
+
+In my code we are looking for a queue family index that has graphic, queue and presentation support. The variable **surfaceSupport** returns true or false depending if presentation queues are supported.
+
+Why am I looking for a queue family that has graphics, compute and presentation and setting that as the "main" family queue index. Simple, performance. It's faster for graphics commands to happen on the same queue were handle images.
+
+In my code if I don't find a queue family index that has presentation, graphics and compute I close the program out right. This might not be the best idea, but it make sure I get the best performance.
+#### Creating the presentation queue
+When creating the logical device it's important to remember that the VKQueue's are created with the VkDevice. We now have the queue family index that has presentation support now we need to create the VkQueue that support presentation.
+
+Okay so this is going to be very dependent on that fact you've already worked out that the presentation family queue **IS PART** of the graphics queue family. If this is true then the main family index that contains presentation, graphics and queue will have been created with the VkDevice already. 
+
+```c++
+VkDeviceQueueCreateInfo& mainQueue = queueInfo[queueCount++];
+mainQueue.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
+mainQueue.queueFamilyIndex = mainQueueFamilyIndex;
+mainQueue.queueCount = computeQueueFamilyIndex == mainQueueFamilyIndex ? 2 : 1;
+mainQueue.pQueuePriorities = queuePriority;
+```
+
+If you have **NOT** don't do this you'll need create a separate presentation VkQueue that's not part of the graphics queue because you don't know if the GPU has a queue family that supports both.
+
+```c++
+float queuePriority = 1.f;
+std::vector<VkDeviceQueueCreateInfo> queueFamilyList;
+for (uint32_t queueFamily : uniqueQueueFamilies)
+{
+	VkDeviceQueueCreateInfo& queueInfo = queueInfo[queueCount++];
+	queueInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
+	queueInfo.queueFamilyIndex = queueFamily;
+	queueInfo.queueCount = 1;
+	queueInfo.pQueuePriorities = queuePriority;
+	queueFamilyList.push_back(queueInfo);
+}
+```
+
+Then you can add either version of the **VkDeviceQueueCreateInfo** to the VkDevice creation. Remember if you're doing graphics queues and presentation queues you'll need to retrieve the presentation queue.

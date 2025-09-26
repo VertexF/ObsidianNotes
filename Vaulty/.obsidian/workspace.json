@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e1055ecefa3b7ff0",
+        "id": "93dd0079cf1433db",
         "type": "tabs",
         "children": [
           {
-            "id": "4db52aaf3a4d084b",
+            "id": "bde1f5e2216c8910",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,75 +32,13 @@
             }
           },
           {
-            "id": "3557bc4d8bf670f4",
+            "id": "ec3b26f48fe1e1b3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 - Indexes/vulkan.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "vulkan"
-            }
-          },
-          {
-            "id": "e01f16a479e14880",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/What is a vulkan physical device.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "What is a vulkan physical device"
-            }
-          },
-          {
-            "id": "76ed12b465608e1f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Cleaning up a physical device and queue families.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Cleaning up a physical device and queue families"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ],
@@ -264,34 +202,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3557bc4d8bf670f4",
+  "active": "ec3b26f48fe1e1b3",
   "lastOpenFiles": [
-    "6 - Main Notes/Setting up vulkan queues.md",
-    "6 - Main Notes/Creating vulkan queues.md",
-    "6 - Main Notes/Device level extensions.md",
     "4 - Indexes/vulkan.md",
+    "6 - Main Notes/Setting up extensions.md",
+    "6 - Main Notes/Overview on how to create the simplest vulkan app.md",
     "2 - Source Material/Article/Vulkan-Tutorial.md",
     "6 - Main Notes/Create the logical device.md",
+    "6 - Main Notes/Setting up vulkan queues.md",
+    "6 - Main Notes/Creating vulkan queues.md",
+    "6 - Main Notes/Creating a separate queue.md",
+    "6 - Main Notes/Checking to see if presentation is supported.md",
+    "6 - Main Notes/Vulkan surface extensions.md",
+    "6 - Main Notes/What is a vulkan surface.md",
+    "6 - Main Notes/Creating a vulkan surface.md",
+    "6 - Main Notes/Destroying a vulkan surface.md",
+    "3 - Tags/vulkan surface.md",
     "6 - Main Notes/Cleaning up a vulkan logical device and queues.md",
-    "6 - Main Notes/Cleaning up a physical device and queue families.md",
-    "6 - Main Notes/What is a vulkan physical device.md",
-    "6 - Main Notes/Checking for family queue suitability.md",
-    "6 - Main Notes/Checking for hardware suitability.md",
     "6 - Main Notes/Making GPU features usable.md",
-    "6 - Main Notes/Setting up extensions.md",
-    "6 - Main Notes/Checking for supported extensions.md",
-    "6 - Main Notes/What is vulkan logical device.md",
-    "3 - Tags/vulkan queue.md",
-    "5 - Template/Full Note.md",
+    "6 - Main Notes/Checking for hardware suitability.md",
+    "6 - Main Notes/Device level extensions.md",
     "6 - Main Notes/What are queue families.md",
-    "6 - Main Notes/Running Vulkan on Mac.md",
+    "6 - Main Notes/What is vulkan logical device.md",
+    "6 - Main Notes/What is a vulkan physical device.md",
     "6 - Main Notes/Dealing with VK_EXTENSION_NOT_PRESENT error.md",
-    "6 - Main Notes/Connecting custom debug function to Vulkan.md",
-    "6 - Main Notes/Why set up debug callbacks for vulkan validation.md",
-    "6 - Main Notes/Loading extended functions dynamically.md",
-    "6 - Main Notes/Creating the custom callback function for validation.md",
-    "6 - Main Notes/Listing the GPUs in Vulkan.md",
-    "3 - Tags/logical device.md",
+    "6 - Main Notes/Checking for supported extensions.md",
+    "6 - Main Notes/Cleaning up a physical device and queue families.md",
+    "1 - Rough Notes/Things to look into.md",
+    "1 - Rough Notes/TODO.md",
     "4 - Indexes",
     "1 - Rough Notes/Pasted image 20250920080120.png",
     "2 - Source Material/Article",
