@@ -576,3 +576,5 @@ for (uint32_t queueFamily : uniqueQueueFamilies)
 ```
 
 Then you can add either version of the **VkDeviceQueueCreateInfo** to the VkDevice creation. Remember if you're doing graphics queues and presentation queues you'll need to retrieve the presentation queue.
+#### Swapchain
+Vulkan doesn't have a default framebuffer is. The buffer handling for double/triple buffer we will need to handled by you. This is what a swapchain is for. All that a vulkan swapchain is a series of images waiting to be rendered in a queue. How it works is that we acquire and image, render on it and return it to the swapchain.
