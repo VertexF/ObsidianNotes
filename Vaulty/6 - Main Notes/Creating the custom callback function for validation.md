@@ -6,16 +6,15 @@ Tags: [[vulkan]] [[vulkan validation]]
 When you create this function it needs to follow the vulkan specification to work. This is what a barebones one should look like.  
 
 ```c++
-	static VKAPI_ATTRI VkBool32 VKAPI_CALL debugCallback
-	(VkKDebugUtilsMessageSeverityFlagBitsEXT messageSeverity,
-	VkDebugUtilsMessageTypeFlagsEXT messageType,
-	cosnt VkDebugUtilsMessengerCallbackDataEXT* callbackData,
-	void* userData)
-	{
-		std::cerr << "Validation error :" << callbackData->pMessage << std::endl;
-		
-		return VK_FALSE;
-	}
+static VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback (VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity,
+VkDebugUtilsMessageTypeFlagsEXT messageType,
+const VkDebugUtilsMessengerCallbackDataEXT* callbackData,
+void* userData)
+{
+	printf("Validation error: %s", callbackData->pMessage);
+
+	return VK_FALSE;
+}
 ```
 
 The function signature needs to match exactly like this. It needs to be **static**, have a return type of **VkBool32** and have **VKAPI_ATTRI** **VKAPI_CALL**. I've made a function without these last two things but I think that's a mistake on my end. You can call the function whatever you want.

@@ -578,3 +578,231 @@ for (uint32_t queueFamily : uniqueQueueFamilies)
 Then you can add either version of the **VkDeviceQueueCreateInfo** to the VkDevice creation. Remember if you're doing graphics queues and presentation queues you'll need to retrieve the presentation queue.
 #### Swapchain
 Vulkan doesn't have a default framebuffer is. The buffer handling for double/triple buffer we will need to handled by you. This is what a swapchain is for. All that a vulkan swapchain is a series of images waiting to be rendered in a queue. How it works is that we acquire and image, render on it and return it to the swapchain.
+
+This is a device level extension you might want to check is supported, if it's not supported then it's okay to close the application right away. You do this in the standard way.
+
+```c++
+	uint32_t extensionCount = 0;
+	vkEnumerateDeviceExtensionProperties(physicalDevice, nullptr, &extensionCount, nullptr);
+	std::vector<VkExtensionProperties> availableExtensions(extensionCount);
+	vkEnumerateDeviceExtensionProperties(physicalDevice, nullptr, &extensionCount, availableExtensions.data());
+```
+
+Now you have to check if what you have is in the list of availableExtensions. You can do this anyway you want for example: 
+
+```c++
+std::vector<const char*> deviceExtensions;
+for (uint32_t i = 0; i < availableExtensions.size(); ++i) 
+{
+	if (strcmp(availableExtensions[i].extensionName, VK_KHR_SWAPCHAIN_EXTENSION_NAME))
+	{
+		deviceExtensions.push_back(VK_KHR_SWAPCHAIN_EXTENSION_NAME);
+		continue;
+	}
+}
+```
+
+#### Checking swap chain support
+You're not done you need to make sure that the swapchain is compatible with our window surface. We do this by querying the details.
+You need to check:
+- Basice surface capabilities
+	- min/max number of images the swapchain has.
+	- height/width and of the swapchain images.
+- Surface formats
+	- pixel format
+	- Colour space
+- Available presentation modes
+
+To get all these detials you'll need to fill in the structs **VKSurfaceCapabilitiesKHR** **VkSurfaceFormatKHR** and **VkPresentModeKHR**. 
+
+```c++
+	VkSurfaceCapabilitiesKHR surfaceCapabilities;
+	vkGetPhysicalDeviceSurfaceCapabilitiesKHR(physicalDevice, surface, &surfaceCapabilities);
+```
+
+The VkSurfaceCapabilitiesKHR has the basic capabilities which are the min/max swapchain images for example. You need to query with the surface with a given surface and physical device. 
+
+Now we need to query the surface format with this very fimilar pattern. So this will be the pixel format and the colour space that's supported.
+
+```c++
+	uint32_t formatCount = 0;
+	vkGetPhysicalDeviceSurfaceFormatsKHR(physicalDevice, surface, &formatCount, nullptr);
+	std::vector<VkSurfaceFormatKHR> surfaceFormats(formatCount);
+	if (formatCount != 0) 
+	{
+		vkGetPhysicalDeviceSurfaceFormatsKHR(physicalDevice, surface, &formatCount, surfaceFormats.data());
+	}
+
+```
+
+#### Chosing the right swapchain format
+So after you have all the information now you need to create the swapchain and pick the right one for your currently set up. To pick the best swapchain mode we need to consider these three factors.
+- Prensentation mode. How are we going to wait on the swapchain for images.
+- Colour format which is the colour depth, so SRGB or SBGR 
+- Swapchain extends so the width and heigh of the images.
+##### Surface format
+You'll need to check the formats of all the **VkSurfaceFormatKHR** to make sure you get a surface format you want for your swapchain. The default and first choose should be the **VK_FORMAT_B8G8R8A8_SRGB** this is the mostly widely supported colour space out there and it's non-linear allowing more accurate colours when your blending. Any **...A8_SRGB** should be the default for any texture too.
+
+```c++
+	VkSurfaceFormatKHR swapchainSurface{};
+	for (const auto& availableSurface : surfaceFormats)
+	{
+		if (availableSurface.format == VK_FORMAT_B8G8R8A8_SRGB) 
+		{
+			swapchainSurface = availableSurface;
+		}
+	}
+	swapchainSurface = surfaceFormats[0];
+```
+
+Note at the bottom we just select the first surface we find if there is no **VK_FORMAT_B8G8R8A8_SRGB** which is fine typically. 
+##### Presentation mode
+This is tided to presentation of the images when it comes to submitting drawn frames in vulkan. So for now we are only going to give a light overview of the different types of presentation modes and **NOT** how it works for now.
+
+There are two things you have to understand about how things are rendered before you can understand the presentention mode. 
+
+One the screen rasters from top the bottom based on the monitors Hz. So most standard monitors are at 60Hz which means it will take roughly 16.66ms to scan from top to bottom.
+
+Two we are drawing to an image in vulkan, this has to me presented to the monitor so it can raster the image. 
+
+- VK_PRESENT_MODE_IMMEDIATE_KHR - This very simply just takes an image that has been drawn to with the draw commands and presents it to the monitor as soon as it's down. This can result in screen tearing.
+- VK_PRESENT_MODE_FIFO_KHR - This uses the queue inside the swapchain. If an image has been rendered to it gets inserted into the back of the queue. Then we waits until the monitor has rastered the image and then top pop an image off the queue to raster. If the swapchain queue is full the application has to wait. This avoid any chance of v-tearing and is often called v-sync because we are vertically synced with the monitor.
+- VK_PRESENT_MODE_RELAXED_KHR - Similar to the FIFO but lets say the vertical blank was finished, the queue is empty at the last of vertical blank. Then we just submits it, this can end up with v-tearing
+- VK_PRESENT_MODE_MAILBOX_KHR - This is pretty simpy if the application is fast enough that the swapchain vertical blank is taking too long we just replace the current frame in the queue.
+
+Only VK_PRESENT_MODE_FIFO_KHR is the only that's supported. That being said MAILBOX is a good one to go for if it's available.
+
+This is how you might want to select the presentation mode
+```c++
+	uint32_t presentationModeCount = 0;
+	vkGetPhysicalDeviceSurfacePresentModesKHR(physicalDevice, surface, &presentationModeCount, nullptr);
+	std::vector<VkPresentModeKHR> presentationModes(presentationModeCount);
+	vkGetPhysicalDeviceSurfacePresentModesKHR(physicalDevice, surface, &presentationModeCount, presentationModes.data());
+	
+	VkPresentModeKHR presentationMode = VK_PRESENT_MODE_MAX_ENUM_KHR;
+	for (uint32_t i = 0; i < presentationModes.size(); ++i)
+	{
+		if (presentationModes[i] == VK_PRESENT_MODE_MAILBOX_KHR)
+		{
+			presentationMode = VK_PRESENT_MODE_MAILBOX_KHR;
+			break;
+		}
+
+		presentationMode = VK_PRESENT_MODE_FIFO_KHR;
+	}
+```
+
+##### Swapchain extents
+Okay so we need to get the swapchain extents to match the current window. This is a little weird because of the fact that some window managers allow different values than the size of the window. So we are looking for is the window width and height of **minImageExtents** and **maxImageExtent**. 
+
+Why do we need to do this? For high DPI settings, which changes how many pixels are in a resolution. Like Apple's Retian display has more pixels for the given resolution meaning if you just read the pixel values you're swapchain extents will be off. 
+
+So to get this right you need to use the https://wiki.libsdl.org/SDL2/SDL_Vulkan_GetDrawableSize SDL_Vulkan_GetDrawableSize or the GLFW glfwGetFramebufferSize. But return the true drawable area in pixels account for high DPI screens. **NOTE:** In SDL3 this function doesn't exists.
+##### Creating the swapchain
+After you've found the correct properties for a given swapchain, you need to select how many images you want to deal with. You can do this by querying **VkSurfaceCapabilitiesKHR** minimum image count + 1. 
+
+```c++
+	uint32_t imageCount = surfaceCapabilities.minImageCount + 1;
+```
+
+The reason you don't want just the minimum is that the graphics driver might be doing we have to wait around for, so it's better to have 1 more than the minimum so we don't have to wait.
+
+We also need to make sure we didn't exceed the maximum number of images used. You can't always say that you can use three or four, as that might be bigger than the maximum allowed. If there is 0 then we are being told there is **NO** maximum image value.
+
+```c++
+	if (surfaceCapabilities.maxImageCount > 0 && imageCount > surfaceCapabilities.maxImageCount)
+	{
+		imageCount = surfaceCapabilities.maxImageCount;
+	}
+```
+
+After you've done that you start filling up the swapchain creation struct.
+
+Starting with the basics we have
+
+```c++
+	VkSwapchainCreateInfoKHR createSwapchain{};
+	createSwapchain.sType = VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR;
+	createSwapchain.surface = surface;
+	createSwapchain.minImageCount = imageCount;
+	createSwapchain.imageFormat = swapchainSurface.format;
+	createSwapchain.imageColorSpace = swapchainSurface.colorSpace;
+	createSwapchain.imageExtent = swapchainExtent;
+	createSwapchain.imageArrayLayers = 1;
+	createSwapchain.imageUsage = VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT;
+```
+
+- **imageArrayLayers** should be 1 unless you're doing something with stereoscopic 3D application.
+- **imageUsage** is about what you're going to be writing to the swapchain, if you're writing to an image first to then do post-processing you might want to use **VK_IMAGE_USAGE_TRANSFER_DST_BIT** instead of the colour bit version which means we are writing directly to the swapchain images.
+
+Now we have to worry about the two different modes for dealing with queues. `VK_SHARING_MODE_EXCLUSIVE` and `VK_SHARING_MODE_CONCURRENT` for out 
+**.imageSharingMode** of the struct.
+
+These are to do with queue families and if you have more than 1 for the presentation and graphics. If the presentation queue and graphics queue are the same, then you use `MODE_EXCLUSIVE`, if they are different then you use `MODE_CONCURRENT`.
+
+By far the most common is when the presentation queue and the graphics queue are on the same queue family. This is more performant so this is what you want. The code below shows you the difference but it's dummy code. We are assuming that **presentationQueueFamily** and **graphicsQueueFamily** have been acquired earlier in the code base.
+
+```c++
+	uint32_t presentationQueueFamily = 0;
+	uint32_t graphicsQueueFamily = 0;
+	std::vector<uint32_t> queueFamilyProps;
+	queueFamilyProps.push_back(presentationQueueFamily);
+	queueFamilyProps.push_back(graphicsQueueFamily);
+	if (queueFamilyProps.size() == 1 || queueFamilyProps[0] != queueFamilyProps[1])
+	{
+		createSwapchain.imageSharingMode = VK_SHARING_MODE_CONCURRENT;
+		createSwapchain.queueFamilyIndexCount = 2;
+		createSwapchain.pQueueFamilyIndices = queueFamilyProps.data();
+	}
+	else 
+	{
+		createSwapchain.imageSharingMode = VK_SHARING_MODE_EXCLUSIVE;
+		createSwapchain.queueFamilyIndexCount = 0;
+		createSwapchain.pQueueFamilyIndices = nullptr;
+	}
+```
+
+You also need to specify if the images you're dealing with require rotation or not. If you don't want rotation you just query the surface supported capalities with **.currentTransform**
+
+```c++
+createSwapchain.preTransform = surfaceCapabilities.currentTransform;
+```
+
+Next you need to say if you want images alpha values to be blended with other windows in the window system. You almost always want to ingore this with **VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR**
+
+Next week need to set the presentation mode for our swapchain. We can also say that for our swapchain if we want to keep the pixels that are behind a window. So if you have firefox partly in the way of your game do you want to clip those pixels or not. You might want to keep them if you need them for graphical effects but if you don't need the pixels clip them.
+
+```c++
+	createSwapchain.presentMode = presentationMode;
+	createSwapchain.clipped = VK_TRUE;
+```
+
+You also have the **.oldSwapchain** which needs to be feed with the old swapchain when you need to reconstruct the swapchain after a window resize event. If you don't care about resize windows then set it to null.
+
+After that you can create the swapchain with the struct you just made. Destroying follows the same pattern as other destruction functions too. The first arguments of both functions is the logical device.
+
+```c++
+	VkSwapchainKHR swapchain;
+	vkCreateSwapchainKHR(device, &createSwapchain, nullptr, &swapchain);
+	
+	vkDestroySwapchainKHR(device, swapchain, nullptr);
+```
+##### Getting the swapchain images
+Now we have created the swapchain we now need a container to store the swapchain **VKImage's** These images will be created from the swapchain itself and like VkQueue's and VkPhysicalDevice they doesn't need cleaning up and will be destroy the swapchain is.
+
+We have specified the minimum number of swapchain images that can exist with the **VkSurfaceCapabilitiesKHR** struct with the code
+
+```c++
+surfaceCapabilities.minImageCount + 1;
+```
+
+The swapchain has that information and now it can create a larger number of VKImages. It's the same pattern you've seen before.
+
+```c++
+	uint32_t imageCount = 0;
+	vkGetSwapchainImagesKHR(device, swapchain, &imageCount, nullptr);
+	std::vector<VkImage> swapchainImages(imageCount);
+	vkGetSwapchainImagesKHR(device, swapchain, &imageCount, swapchainImages.data());
+```
+
+If you don't have access to the **VkFormat** from the **VkSurfaceFormatKHR** struct or the **VkExtent2D** from the **VkSurfaceCapabilitiesKHR** struct you'll need both values stored for later.

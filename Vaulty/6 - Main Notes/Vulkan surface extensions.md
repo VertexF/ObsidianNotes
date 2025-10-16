@@ -5,7 +5,7 @@ Tags: [[vulkan]] [[vulkan surface]]
 
 When you're rendering you need at least 2 extensions. One for accessing the **VkSurfaceKHR** which is a platform agnostic surface. Two the platform specific extension.  
 
-These are for Windows **VK_KHR_surface** with the macro **VK_KHR_SURFACE_EXTENSION_NAME** and **VK_KHR_win32_surface** with the macro **VK_KHR_WIN32_SURFACE_EXTENSION_NAME**.
+These are 2 for Windows **VK_KHR_surface** with the macro **VK_KHR_SURFACE_EXTENSION_NAME** and **VK_KHR_win32_surface** with the macro **VK_KHR_WIN32_SURFACE_EXTENSION_NAME**.
 
 These are the extensions I would consider foundational to rendering on Windows.
 
@@ -20,6 +20,17 @@ These are the extensions I would consider foundational to rendering on Windows.
 #endif//VULKAN_DEBUG_REPORT
     };
 ```
+
+If you want to use the **VK_KHR_WIN32_SURFACE_EXTENSION_NAME** you'll need the the **vulkan_32.h** include along with the **window.h** include. Don't forget the WIN32_LEAN_AND_MEAN
+
+```c++
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+
+#include <vulkan/vulkan.h>
+#include <vulkan/vulkan_win32.h>
+```
+
 # References
 ##### Main Notes
 [[What is a vulkan surface]]

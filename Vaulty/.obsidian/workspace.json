@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bde1f5e2216c8910",
+            "id": "1fb8341a87e47ac4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,12 +32,12 @@
             }
           },
           {
-            "id": "ec3b26f48fe1e1b3",
+            "id": "3c5b6b7422ea0565",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Listing the queue families.md",
+                "file": "6 - Main Notes/Creating the custom callback function for validation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,106 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Listing the queue families"
+              "title": "Creating the custom callback function for validation"
+            }
+          },
+          {
+            "id": "fae9099aa827071f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Loading extended functions dynamically.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Loading extended functions dynamically"
+            }
+          },
+          {
+            "id": "9e5bb22a08cd3de0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Enabling Validation layers.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Enabling Validation layers"
+            }
+          },
+          {
+            "id": "43f0d20197379f9d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Checking for supported extensions.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Checking for supported extensions"
+            }
+          },
+          {
+            "id": "ec3b26f48fe1e1b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Setting up extensions.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Setting up extensions"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -162,8 +257,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           },
           {
@@ -216,34 +311,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ec3b26f48fe1e1b3",
+  "active": "1fb8341a87e47ac4",
   "lastOpenFiles": [
-    "6 - Main Notes/What are queue families.md",
-    "6 - Main Notes/Listing the queue families.md",
+    "6 - Main Notes/Cleaning up a physical device and queue families.md",
     "4 - Indexes/vulkan.md",
-    "6 - Main Notes/Checking for family queue suitability.md",
     "2 - Source Material/Article/Vulkan-Tutorial.md",
-    "2 - Source Material/Video/How to Learn Pretty Much Anything.md",
-    "3 - Tags/vulkan physical device.md",
-    "6 - Main Notes/Creating a vulkan instance.md",
-    "6 - Main Notes/Checking for supported extensions.md",
     "6 - Main Notes/What is a vulkan surface.md",
-    "6 - Main Notes/PACER - Reference information.md",
-    "6 - Main Notes/PACER system overview.md",
-    "6 - Main Notes/PACER - Evidence information.md",
-    "6 - Main Notes/PACER - Conceptual information.md",
-    "6 - Main Notes/PACER - Analogous information.md",
-    "6 - Main Notes/PACER - Procedural information.md",
-    "6 - Main Notes/Setting up extensions.md",
-    "6 - Main Notes/Overview on how to create the simplest vulkan app.md",
-    "6 - Main Notes/Create the logical device.md",
-    "6 - Main Notes/Setting up vulkan queues.md",
-    "6 - Main Notes/Creating vulkan queues.md",
-    "6 - Main Notes/Creating a separate queue.md",
-    "6 - Main Notes/Checking to see if presentation is supported.md",
-    "6 - Main Notes/Vulkan surface extensions.md",
     "6 - Main Notes/Creating a vulkan surface.md",
+    "6 - Main Notes/Vulkan surface extensions.md",
+    "6 - Main Notes/What is vulkan logical device.md",
+    "6 - Main Notes/Creating the custom callback function for validation.md",
+    "6 - Main Notes/Creating vulkan queues.md",
+    "6 - Main Notes/Checking for hardware suitability.md",
+    "6 - Main Notes/Checking to see if presentation is supported.md",
+    "6 - Main Notes/Setting up vulkan queues.md",
+    "6 - Main Notes/Device level extensions.md",
+    "6 - Main Notes/Making GPU features usable.md",
+    "6 - Main Notes/Creating a separate queue.md",
+    "6 - Main Notes/Create the logical device.md",
+    "6 - Main Notes/What is a vulkan physical device.md",
     "6 - Main Notes/Destroying a vulkan surface.md",
+    "6 - Main Notes/Checking for family queue suitability.md",
+    "6 - Main Notes/Listing the queue families.md",
+    "6 - Main Notes/What are queue families.md",
+    "6 - Main Notes/Listing the GPUs in Vulkan.md",
+    "6 - Main Notes/How to debug instance creation.md",
+    "6 - Main Notes/Loading extended functions dynamically.md",
+    "6 - Main Notes/Connecting custom debug function to Vulkan.md",
+    "6 - Main Notes/Enabling Validation layers.md",
     "4 - Indexes",
     "1 - Rough Notes/Pasted image 20250920080120.png",
     "2 - Source Material/Article",
