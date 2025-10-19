@@ -4,11 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "93dd0079cf1433db",
+        "id": "3d9c4883c2474d15",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
-            "id": "1fb8341a87e47ac4",
+            "id": "d8852b69272ee703",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,12 +33,12 @@
             }
           },
           {
-            "id": "3c5b6b7422ea0565",
+            "id": "3abcdc6e188778f2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Creating the custom callback function for validation.md",
+                "file": "4 - Indexes/vulkan.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +53,48 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Creating the custom callback function for validation"
+              "title": "vulkan"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "0de9e84f3ac65d7a",
+        "type": "tabs",
+        "dimension": 50,
+        "children": [
+          {
+            "id": "24941c42fd676be7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Destroying a image view.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Destroying a image view"
             }
           },
           {
-            "id": "fae9099aa827071f",
+            "id": "69d6699ae26ca583",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Loading extended functions dynamically.md",
+                "file": "6 - Main Notes/Creating an image view.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,79 +109,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Loading extended functions dynamically"
-            }
-          },
-          {
-            "id": "9e5bb22a08cd3de0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Enabling Validation layers.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Enabling Validation layers"
-            }
-          },
-          {
-            "id": "43f0d20197379f9d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Checking for supported extensions.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Checking for supported extensions"
-            }
-          },
-          {
-            "id": "ec3b26f48fe1e1b3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Setting up extensions.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Setting up extensions"
+              "title": "Creating an image view"
             }
           }
         ]
@@ -311,34 +272,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1fb8341a87e47ac4",
+  "active": "3abcdc6e188778f2",
   "lastOpenFiles": [
-    "6 - Main Notes/Cleaning up a physical device and queue families.md",
-    "4 - Indexes/vulkan.md",
+    "6 - Main Notes/Destroying a image view.md",
     "2 - Source Material/Article/Vulkan-Tutorial.md",
+    "6 - Main Notes/Creating an image view.md",
+    "6 - Main Notes/What are image views.md",
+    "4 - Indexes/vulkan.md",
+    "3 - Tags/vulkan image views.md",
+    "6 - Main Notes/Getting swapchain images.md",
+    "6 - Main Notes/Creating the swapchain.md",
+    "6 - Main Notes/Checking for family queue suitability.md",
+    "3 - Tags/queue families.md",
+    "6 - Main Notes/Querying surface capabilities.md",
+    "6 - Main Notes/Selecting a presentation mode.md",
+    "6 - Main Notes/Checking surface format.md",
+    "6 - Main Notes/Setting up the swapchain extension.md",
+    "6 - Main Notes/What is a swapchain.md",
+    "6 - Main Notes/Checking surface and swapchain compability.md",
+    "6 - Main Notes/Setting up extensions.md",
+    "6 - Main Notes/Device level extensions.md",
+    "3 - Tags/vulkan swapchain.md",
+    "6 - Main Notes/Loading extended functions dynamically.md",
+    "6 - Main Notes/Creating the custom callback function for validation.md",
+    "6 - Main Notes/Cleaning up a physical device and queue families.md",
     "6 - Main Notes/What is a vulkan surface.md",
     "6 - Main Notes/Creating a vulkan surface.md",
     "6 - Main Notes/Vulkan surface extensions.md",
     "6 - Main Notes/What is vulkan logical device.md",
-    "6 - Main Notes/Creating the custom callback function for validation.md",
-    "6 - Main Notes/Creating vulkan queues.md",
-    "6 - Main Notes/Checking for hardware suitability.md",
-    "6 - Main Notes/Checking to see if presentation is supported.md",
-    "6 - Main Notes/Setting up vulkan queues.md",
-    "6 - Main Notes/Device level extensions.md",
-    "6 - Main Notes/Making GPU features usable.md",
-    "6 - Main Notes/Creating a separate queue.md",
-    "6 - Main Notes/Create the logical device.md",
-    "6 - Main Notes/What is a vulkan physical device.md",
-    "6 - Main Notes/Destroying a vulkan surface.md",
-    "6 - Main Notes/Checking for family queue suitability.md",
-    "6 - Main Notes/Listing the queue families.md",
-    "6 - Main Notes/What are queue families.md",
-    "6 - Main Notes/Listing the GPUs in Vulkan.md",
-    "6 - Main Notes/How to debug instance creation.md",
-    "6 - Main Notes/Loading extended functions dynamically.md",
-    "6 - Main Notes/Connecting custom debug function to Vulkan.md",
-    "6 - Main Notes/Enabling Validation layers.md",
     "4 - Indexes",
     "1 - Rough Notes/Pasted image 20250920080120.png",
     "2 - Source Material/Article",

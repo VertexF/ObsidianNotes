@@ -602,7 +602,7 @@ for (uint32_t i = 0; i < availableExtensions.size(); ++i)
 }
 ```
 
-#### Checking swap chain support
+#### Checking swapchain support
 You're not done you need to make sure that the swapchain is compatible with our window surface. We do this by querying the details.
 You need to check:
 - Basice surface capabilities
@@ -806,3 +806,66 @@ The swapchain has that information and now it can create a larger number of VKIm
 ```
 
 If you don't have access to the **VkFormat** from the **VkSurfaceFormatKHR** struct or the **VkExtent2D** from the **VkSurfaceCapabilitiesKHR** struct you'll need both values stored for later.
+##### Image views
+To be able to use VkImage's including those in the swapchain you need to create VkImageView's objects. This object has information about the VkImage and how to use it. For example, it might tell you that a VkImage is a 2D depth texture that has mipmap, this would might be used for shadows or something similar.
+
+So for the swapchain you'll need to create VkImageView's for every VkImage so you can use them as a colour target. These image views but for a swapchain images that's simply meant, but remember you can do a lot with VkImageView's. 
+
+So for the swapchain images you need to create a **VkImageViewCreateInfo** struct for each VkImage that the swapchain has.
+
+You would want to start out with something like this were the **.image** is equal to a swapchain image.
+```c++
+std::vector<VkImageView> swapchainImageViews(swapchainImages.size());
+for(uint32_t i = 0; i < swapchainImages.size(); ++i)
+{
+	VkImageViewCreateInfo createImageViewInfo{};
+	createImageViewInfo.sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO;
+	createImageViewInfo.image = swapchainImages[i];
+}
+```
+
+Next we'll want to specify how the data should be interpreted with the **.viewType** and **.format** we get the **VK_IMAGE_VIEW_TYPE_1D|2D|3D|CUBE** for different types of data, we want 2D for a swapchain image. We also need to set it format in the **.format** and we can simply get this from our swapchain struct. 
+
+```c++
+	createImageViewInfo.viewType = VK_IMAGE_VIEW_TYPE_2D;
+	createImageViewInfo.format = swapchain.format;
+```
+
+Next we want to set the components for the colour which allows us to swizzle the colour channels around. This means we can rearrange the colour channels around, set them to monochromic or even set them from a map from 1 to 0. In the swapchain context you'll want them as default. 
+
+```c++
+	createImageViewInfo.components.r = VK_COMPONENT_SWIZZLE_IDENTITY;
+	createImageViewInfo.components.g = VK_COMPONENT_SWIZZLE_IDENTITY;
+	createImageViewInfo.components.b = VK_COMPONENT_SWIZZLE_IDENTITY;
+	createImageViewInfo.components.a = VK_COMPONENT_SWIZZLE_IDENTITY;
+```
+
+Next we need to set the **.subresourceRange** this explains what the purpose of the image is and how much of the VkImage are we doing to access. So this is were the mip levels are set. For the context of a swapchain image you'll want this set up
+
+```c++
+	createImageViewInfo.subresourceRange.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+	createImageViewInfo.subresourceRange.baseMipLevel = 0;
+	createImageViewInfo.subresourceRange.levelCount = 1;
+	createImageViewInfo.subresourceRange.baseArrayLayer = 0;
+	createImageViewInfo.subresourceRange.layerCount = 1;
+```
+
+Just a word of warning about **.levelCount** and **.layerCount** they can't be 0 and it's a very common mistake to type out layerCount or levelCount twice and leave the other one as 0. So be careful.
+
+You then can simply run the **vkCreateImageView** function with the struct and fill up the array.
+```c++
+	if (vkCreateImageView(device, &createImageViewInfo, nullptr, &swapchainImageViews[i]) != VK_SUCCESS)
+	{
+		printf("Failed to create image view at index: %d", i);
+		assert(false);
+	}
+```
+
+Unlike VkImage's which are destroyed with the logical device, you have to clean up the image view's yourself.
+
+```c++
+	for (VkImageView imageView : swapchainImageViews) 
+	{
+		vkDestroyImageView(device, imageView, nullptr);
+	}
+```
