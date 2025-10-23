@@ -7,11 +7,11 @@ After creating the application struct, you will want to try and create an instan
 
 ```c++
 VkInstanceCreateInfo createInfo{};
-	createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
-	createInfo.pApplicationInfo = &applicationInfo; //The basic app set up struct
+createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+createInfo.pApplicationInfo = &applicationInfo; //The basic app set up struct
     
-    VkInstance instance;
-    vkCreateInstance(&createInfo, nullptr, &instance);
+VkInstance instance;
+vkCreateInstance(&createInfo, nullptr, &instance);
 ```
 
 This is how pretty much everything is created in vulkan a struct then a create function. Destroying is very similar. 

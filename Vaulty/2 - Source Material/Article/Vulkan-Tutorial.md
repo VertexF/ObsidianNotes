@@ -869,3 +869,56 @@ Unlike VkImage's which are destroyed with the logical device, you have to clean 
 		vkDestroyImageView(device, imageView, nullptr);
 	}
 ```
+
+Khronos SDK has a **vender-independent** compiler. The compiler checks your code is correct and when it's compiled you can **ship that code** with your game. If you use the glslc.exe compiler it fits closer with the paramter formats with GCC and Clang, not only that you get `#includes` for free. These are both with the vulkan SDK.
+#### Creating the shader modules
+This is going to part of the graphics pipeline as a **VkShaderModule**. You need to create with the good old creation struct pattern. 
+
+Assuming you've aligned the char* pointer to a uint32_t* by [[Reading in compiled shaders]] correctly you should okay. I'm only going to show the vertex shader but any shader has the same idea.
+
+```c++
+VkShaderModule vertexShader;
+
+VkShaderModuleCreateInfo vertexCreateInfo{};
+vertexCreateInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
+vertexCreateInfo.codeSize = sizeOfVertexCode;
+vertexCreateInfo.pCode = reinterpret_cast<const uint32_t*>(binVertCode);
+
+if (vkCreateShaderModule(device, &vertexCreateInfo, nullptr, &vertexShader) != VK_SUCCESS) 
+{
+	printf("Failed to create the vertex shader module");
+}
+```
+
+Once we have created the **VkShaderModule** we don't need to keep the binary shader code around. So don't forget to free that
+
+```c++
+free((void*)binVertCode);
+binVertCode = nullptr;
+```
+
+The **VkShaderModule** is a thin wrapper that is going to be uploaded to the GPU to be compiled into GPU machine code. This means that it's part of the graphics pipeline meaning we can have **destroy** the **VkShaderModules** at the end of the creation of the graphics pipeline.
+
+```c++
+//... Above this comment is all the code needed to create a graphics pipeline.
+
+vkDestroyShaderModule(device, vertexShaderModule, nullptr);
+```
+##### Shader stage creation
+To complete and add the shader modules to the graphics pipeline you'll need to fill the **VkPipelineShaderStageCreateInfo**. To be able to do this you'll need to have first completed the [[Creation of the shader module]] because you'll be using them here. I will do this for the vertex shader but it's very similar with other shaders.
+
+```c++
+VkPipelineShaderStageCreateInfo vertShaderModuleInfo{};
+vertShaderModuleInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
+vertShaderModuleInfo.stage = VK_SHADER_STAGE_VERTEX_BIT;
+vertShaderModuleInfo.module = vertexShaderModule;
+vertShaderModuleInfo.pName = "main";
+```
+
+So we have 3 things here:
+1) The **.stage** which takes an enum for a given shader type.
+2) The **.module** this takes the coorisponding shader module
+3) The **.name** which takes the name of the entry point of the shader, which is pretty much always main.
+The **.name** is a little interesting. It's possible to have muiltiple shaders combined in a **VkShaderModule**. If this happens we need to tell the struct what entry point depends on what shader.
+
+**.pSpecializationInfo** is interesting because this is a value that can be used to help split the shader up into parts, as this can be used in the shader a constants value that can effectively if-def out parts of shader at compile time which is faster to do at render time. If you don't any constant values then you just leave this null.

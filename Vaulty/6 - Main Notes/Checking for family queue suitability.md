@@ -5,7 +5,7 @@ Tags: [[vulkan]] [[queue families]]
 
 Now if you've selected a good GPU you'll need to select the correct queue family. If you want to render you'll need at least to use the **VK_QUEUE_GRAPHICS_BIT**
 
-The downside of just using a graphics queue for things is that it can be a little slower if a draw command takes a long time to submit, then the transfer command has to wait. It's normally good enough for most things.
+The downside of just using a graphics queue for everything is that it can be a little slower if a draw command takes a long time to submit, then the transfer command has to wait. It's normally good enough for most things. With the exception of the presentation queue, you'll want the graphics queue and the presentation queue to be the same for speed.
 
 What you want to is get the index of the queue family you are interested which is a uint32_t. For example, we want the index of the our main queue family index to be the one that contain both graphics and computer capability, so we can set up the VkQueue from the main queue family. 
 ```c++

@@ -3,6 +3,8 @@ Status: #baby
 Tags: [[vulkan]]
 # Overview on how to create the simplest vulkan app
 
+##### **NOTE**: This is imcomplete and needs a rewrite
+
 First you need to create the instance and step up the instance level extensions which are on Windows. Check that these are available for Windows. 
 
 ```c++
