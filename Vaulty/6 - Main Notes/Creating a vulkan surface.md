@@ -8,7 +8,7 @@ Creating a surface can go two different ways. One you write the platform specifi
 It's not that difficult to write the code for Windows you would do something like.
 
 ```c++
-//get this from SDL/GLFW or the Win32 API
+//get these from SDL/GLFW or the Win32 API
 HINSTANCE windowInstance;
 HWND window;
 VkWin32SurfaceCreateInfoKHR createInfo{};

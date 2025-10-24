@@ -31,9 +31,10 @@ for (uint32_t familyIndex = 0; familyIndex < queueFamilyCount; ++familyIndex)
         }
 ```
 
-You see here I'm looking for a queue family that has compute and only then checking if there is a presentation flag. If that's found with the **surfaceSupport** this become our **vulkanMainQueueFamily** which is used to create the main VkQueue where graphics and presentation commands run on.
+You see here I'm looking for a queue family that has compute and only then checking if there is a presentation flag. If that's found that the **surfaceSupport** bool becomes true and our **vulkanMainQueueFamily** (which is just an uint32_t) is assigned the current index in the for loop. This is later used to create the main VkQueue where graphics and presentation commands run on.
 # References
 ##### Main Notes
+[[What are queue families]]
 [[Listing the queue families]]
 #### Source Notes
 [[Vulkan-Tutorial]]

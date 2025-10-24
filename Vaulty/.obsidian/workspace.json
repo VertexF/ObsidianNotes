@@ -6,14 +6,15 @@
       {
         "id": "3d9c4883c2474d15",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
-            "id": "3abcdc6e188778f2",
+            "id": "d2e4fd32147e9bb0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Querying surface capabilities.md",
+                "file": "2 - Source Material/Article/Vulkan-Tutorial.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +29,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Querying surface capabilities"
+              "title": "Vulkan-Tutorial"
             }
           },
           {
-            "id": "0ca51e1718305451",
+            "id": "d176f47972a3fbdd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Video/Welcome to Performance Aware.md",
+                "file": "6 - Main Notes/Creating the swapchain.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +53,66 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Welcome to Performance Aware"
+              "title": "Creating the swapchain"
+            }
+          }
+        ]
+      },
+      {
+        "id": "0de9e84f3ac65d7a",
+        "type": "tabs",
+        "dimension": 50,
+        "children": [
+          {
+            "id": "24941c42fd676be7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Compiling shaders with vulkan.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Compiling shaders with vulkan"
             }
           },
           {
-            "id": "d8852b69272ee703",
+            "id": "b9bfb1a4a4b208e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Adding shaders to the graphics pipeline.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Adding shaders to the graphics pipeline"
+            }
+          },
+          {
+            "id": "c97a64966119057b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -77,6 +133,30 @@
               },
               "icon": "lucide-file",
               "title": "Creation of the shader module"
+            }
+          },
+          {
+            "id": "714c55f9be2ca4b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/What is the graphics pipeline.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "What is the graphics pipeline"
             }
           }
         ],
@@ -112,7 +192,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "#bab",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -240,35 +320,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0ca51e1718305451",
+  "active": "d2e4fd32147e9bb0",
   "lastOpenFiles": [
-    "6 - Main Notes/Compiling shaders with vulkan.md",
+    "6 - Main Notes/Creating the swapchain.md",
+    "4 - Indexes/vulkan.md",
+    "6 - Main Notes/Creating a vulkan surface.md",
+    "6 - Main Notes/Destroying a vulkan surface.md",
+    "6 - Main Notes/Cleaning up a physical device and queue families.md",
+    "6 - Main Notes/Creating vulkan queues.md",
+    "6 - Main Notes/Checking to see if presentation is supported.md",
+    "6 - Main Notes/What is a swapchain.md",
+    "6 - Main Notes/Setting up the swapchain extension.md",
+    "6 - Main Notes/What are image views.md",
+    "6 - Main Notes/Creating an image view.md",
+    "6 - Main Notes/Destroying a image view.md",
+    "6 - Main Notes/Adding shaders to the graphics pipeline.md",
+    "2 - Source Material/Article/Vulkan-Tutorial.md",
     "6 - Main Notes/Creation of the shader module.md",
-    "6 - Main Notes/What is the graphics pipeline.md",
+    "6 - Main Notes/Compiling shaders with vulkan.md",
+    "6 - Main Notes/Querying surface capabilities.md",
     "2 - Source Material/Video/Welcome to Performance Aware.md",
     "6 - Main Notes/Checking surface and swapchain compability.md",
-    "4 - Indexes/vulkan.md",
-    "6 - Main Notes/What is a swapchain.md",
     "6 - Main Notes/Reading in compiled shaders.md",
-    "6 - Main Notes/Creating an image view.md",
-    "2 - Source Material/Article/Vulkan-Tutorial.md",
-    "6 - Main Notes/Setting up the swapchain extension.md",
     "6 - Main Notes/Checking for family queue suitability.md",
     "6 - Main Notes/Listing the queue families.md",
     "6 - Main Notes/What are queue families.md",
     "6 - Main Notes/Setting up vulkan queues.md",
     "6 - Main Notes/Creating the custom callback function for validation.md",
     "6 - Main Notes/Why set up debug callbacks for vulkan validation.md",
-    "6 - Main Notes/What are validation layers.md",
-    "6 - Main Notes/Dealing with VK_EXTENSION_NOT_PRESENT error.md",
-    "6 - Main Notes/Overview on how to create the simplest vulkan app.md",
-    "6 - Main Notes/Creating a vulkan instance.md",
     "vulkan_simplified_pipeline.svg",
-    "3 - Tags/vulkan graphic pipeline.md",
-    "1 - Rough Notes/TODO.md",
-    "3 - Tags/vulkan shaders.md",
-    "6 - Main Notes/Destroying a image view.md",
-    "6 - Main Notes/What are image views.md",
     "4 - Indexes",
     "1 - Rough Notes/Pasted image 20250920080120.png",
     "2 - Source Material/Article",

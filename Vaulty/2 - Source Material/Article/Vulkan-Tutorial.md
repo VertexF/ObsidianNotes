@@ -922,3 +922,57 @@ So we have 3 things here:
 The **.name** is a little interesting. It's possible to have muiltiple shaders combined in a **VkShaderModule**. If this happens we need to tell the struct what entry point depends on what shader.
 
 **.pSpecializationInfo** is interesting because this is a value that can be used to help split the shader up into parts, as this can be used in the shader a constants value that can effectively if-def out parts of shader at compile time which is faster to do at render time. If you don't any constant values then you just leave this null.
+
+To actually use these you need to load the **VkPipelineShaderStageCreateInfo** into a flat array to be used in the graphics pipeline. 
+
+```c++
+	VkPipelineShaderStageCreateInfo  shaderStages[] = { vertShaderModuleInfo, fragShaderModuleInfo };
+```
+##### Graphics Pipeline
+In older APIs the graphics pipeline there are default values for the graphics pipeline but in vulkan we specify all of them. 
+##### Dynamic state
+Not all states of the graphics pipeline in vulkan are static you have the
+- Viewport size and scissor size
+- Line width
+- Blend constants
+All of which are things that can be changed at draw time. If you want to use these features at draw time you need to tell vulkan with the **VkPipelineDynamicStateCreateInfo**. It's very common to block out the viewport and the scissor state from the static graphics pipeline, as it allows to resizable windows.
+
+```c++
+std::vector<VkDynamicState> dynamicStates = 
+{
+	VK_DYNAMIC_STATE_VIEWPORT,
+	VK_DYNAMIC_STATE_SCISSOR
+};
+
+VkPipelineDynamicStateCreateInfo dynamicState{};
+dynamicState.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
+dynamicState.dynamicStateCount = uint32_t(dynamicStates.size());
+dynamicState.pDynamicStates = dynamicStates.data();
+```
+
+If you do this though you'll be required at draw time to specify the viewport state and scissor state.
+##### Vertex Input
+This is all to do with the vertex buffer and how this should be interpreted at the vertex shader stage of the pipeline. There are 2 ways this is described
+1) **Bindings** This is the spacing between the data. This tells us if the vertex data needs to be per-vertex or per-instance for instanced rendering.
+2) **Attribute descriptions** This is concerned with where and how we pass the attributes of the vertex buffer to the shader and what the offset is for each attribute.
+
+Note since this from the Vulkan-Tutorial it actually skips over how specify a vertex buffer for later. However we still have to specify the **VkPipelineVertexInputStateCreateInfo** and add it to the graphice pipeline even if we don't plan on uploading any data to the shaders.
+
+```c++
+VkPipelineVertexInputStateCreateInfo vertexInputState{};
+vertexInputState.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
+vertexInputState.vertexBindingDescriptionCount = 0;
+vertexInputState.pVertexBindingDescriptions = nullptr;
+vertexInputState.vertexAttributeDescriptionCount = 0;
+vertexInputState.pVertexAttributeDescriptions = nullptr;
+```
+
+**.pVertexBindingDescriptions** and **.pVertexAttributeDescriptions** are both array of structs that describe the binding and the attribute descriptions and the others data members is just the count of these arrays.
+
+NOTE: vertex attributes and bindings get a lot more complex if you require the faster bindless set up.
+##### Input assembly
+This is involved in specifying the topology and if the primitive restarted. The primitive can be:
+- VK_PRIMITIVE_TOPOLOGY_POINT_LIST - points from the vertices
+- VK_PRIMITIVE_TOPOLOGY_LINE_LIST - line from every 2 vertices without reuse
+- VK_PRIMITIVE_TOPOLOGY_LINE_STRIP - the end vertex of every line is used as start vertex for the next line.
+- 

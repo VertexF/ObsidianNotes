@@ -35,6 +35,8 @@ The **VkShaderModule** is a thin wrapper that is going to be uploaded to the GPU
 
 vkDestroyShaderModule(device, vertexShaderModule, nullptr);
 ```
+
+It's important to note that you can add more than one shader to a shader module.
 # References
 ##### Main Notes
 [[Reading in compiled shaders]]
