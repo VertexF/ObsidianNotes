@@ -9,8 +9,11 @@ The vulkan graphic pipeline set up the graphics pipeline used in any API.
 
 ![[vulkan_simplified_pipeline.svg]]
 
-It's important to note in vulkan the graphics pipeline is set up in one go in the set up part of the application and is completely immutable. Meaning the driver can do optimisation but with the restriction if you want a different blend mode or something like that, you'll need a seperate graphics pipeline. 
+It's important to note in vulkan the graphics pipeline is set up in one go in the set up part of the application and is completely immutable. Meaning the driver can do optimisation but with the restriction if you want a different shaders to be used or something like that, you'll need a seperate graphics pipeline. 
 # References
 ##### Main Notes
+[[Setting up the dynamic states]]
+[[Setting up the vertex inputs]]
+[[Setting up the input assembly]]
 #### Source Notes
 [[Vulkan-Tutorial]]

@@ -78,10 +78,10 @@ When you resize the window you need to reconstruct the swapchain. So when you ar
 Finally you can make the swapchain with the struct and the logical device.
 
 ```c++
-	VkSwapchainKHR swapchain;
-	vkCreateSwapchainKHR(device, &createSwapchain, nullptr, &swapchain);
+VkSwapchainKHR swapchain;
+vkCreateSwapchainKHR(device, &createSwapchain, nullptr, &swapchain);
 	
-	vkDestroySwapchainKHR(device, swapchain, nullptr);
+vkDestroySwapchainKHR(device, swapchain, nullptr);
 ```
 # References
 ##### Main Notes

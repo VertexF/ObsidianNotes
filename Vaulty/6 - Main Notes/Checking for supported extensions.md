@@ -10,15 +10,15 @@ There are optional extensions that you might want to check for before adding to 
 You actually run this twice first to get the number of extensions and second to get the list of those numbered extensions.
 
 ```c++
-        uint32_t numInstanceExtensions;
-        vkEnumerateInstanceExtensionProperties(nullptr, &numInstanceExtensions, nullptr);
-        std::vector<VkExtensionProperties> extensions(numInstanceExtensions); 
-        vkEnumerateInstanceExtensionProperties(nullptr, &numInstanceExtensions, extensionsDebug);
+uint32_t numInstanceExtensions;
+vkEnumerateInstanceExtensionProperties(nullptr, &numInstanceExtensions, nullptr);
+std::vector<VkExtensionProperties> extensions(numInstanceExtensions); 
+vkEnumerateInstanceExtensionProperties(nullptr, &numInstanceExtensions, extensionsDebug);
 
-        for (size_t i = 0; i < numInstanceExtensions; ++i)
-        {
-	        //Check for extensions by accessing the flat extensions[i] to see if you're thing is supported
-        }
+for (size_t i = 0; i < numInstanceExtensions; ++i)
+{
+	//Check for extensions by accessing the flat extensions[i] to see if you're thing is supported
+}
 ```
 
 The first argument of **vkEnumerateInstanceExtensionProperties** is null so it's checking all the extensions on every layer, meaning that you can filter the search for a layer if you want.

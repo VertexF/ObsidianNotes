@@ -12,4 +12,6 @@ When you write an add operation in language you have to do something like this o
 
 If you break a break point in VS. You can left click and in that menu click on `Go To Disassembly` and VS will bring up a window for you to look at the assembly and the code in the same window.
 
-9:02
+You know that python is slow. If you are performance aware you'll be able to notice and find way to do stuff in python faster than normal, by pulling in a module.
+
+Waste just by itself can be x100 to x1000 speed slow down. 

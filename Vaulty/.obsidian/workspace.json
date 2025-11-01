@@ -4,17 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3d9c4883c2474d15",
+        "id": "497274fd804d6c2f",
         "type": "tabs",
-        "dimension": 50,
         "children": [
           {
-            "id": "d176f47972a3fbdd",
+            "id": "77021487e7712e40",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Video/Waste.md",
+                "file": "2 - Source Material/Article/Vulkan-Tutorial.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,23 +28,47 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Waste"
+              "title": "Vulkan-Tutorial"
+            }
+          },
+          {
+            "id": "169be6e977b27837",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 - Indexes/vulkan.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "vulkan"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
-        "id": "0de9e84f3ac65d7a",
+        "id": "cfcc2d27a87447dc",
         "type": "tabs",
-        "dimension": 50,
         "children": [
           {
-            "id": "d2e4fd32147e9bb0",
+            "id": "fe67cdd2c7502440",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Performance Awareness Overview.md",
+                "file": "6 - Main Notes/What is a render pass.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -60,16 +83,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Performance Awareness Overview"
+              "title": "What is a render pass"
             }
           },
           {
-            "id": "24941c42fd676be7",
+            "id": "93da59b727f182db",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Compiling shaders with vulkan.md",
+                "file": "6 - Main Notes/Setting up the subpass.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -84,16 +107,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Compiling shaders with vulkan"
+              "title": "Setting up the subpass"
             }
           },
           {
-            "id": "b9bfb1a4a4b208e3",
+            "id": "a725336cc67acd55",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Adding shaders to the graphics pipeline.md",
+                "file": "6 - Main Notes/Setting up the render pass.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -108,58 +131,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Adding shaders to the graphics pipeline"
-            }
-          },
-          {
-            "id": "c97a64966119057b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Creation of the shader module.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Creation of the shader module"
-            }
-          },
-          {
-            "id": "714c55f9be2ca4b2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/What is the graphics pipeline.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "What is the graphics pipeline"
+              "title": "Setting up the render pass"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -319,35 +295,36 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d176f47972a3fbdd",
+  "active": "169be6e977b27837",
   "lastOpenFiles": [
-    "2 - Source Material/Video/Welcome to Performance Aware.md",
-    "2 - Source Material/Video/Waste.md",
-    "6 - Main Notes/Performance Awareness Overview.md",
-    "6 - Main Notes/Creating the swapchain.md",
-    "2 - Source Material/Article/Vulkan-Tutorial.md",
+    "6 - Main Notes/Setting up the vertex inputs.md",
     "4 - Indexes/vulkan.md",
-    "6 - Main Notes/Creating a vulkan surface.md",
-    "6 - Main Notes/Destroying a vulkan surface.md",
-    "6 - Main Notes/Cleaning up a physical device and queue families.md",
-    "6 - Main Notes/Creating vulkan queues.md",
-    "6 - Main Notes/Checking to see if presentation is supported.md",
-    "6 - Main Notes/What is a swapchain.md",
+    "6 - Main Notes/Setting up the dynamic states.md",
+    "6 - Main Notes/Setting up the pipeline layout.md",
+    "2 - Source Material/Article/Vulkan-Tutorial.md",
+    "6 - Main Notes/Setting up the render pass.md",
+    "6 - Main Notes/Setting up the subpass.md",
+    "6 - Main Notes/What is a render pass.md",
+    "6 - Main Notes/Setting up the attachment reference.md",
+    "6 - Main Notes/Setting up the colour attachment descriptions.md",
+    "6 - Main Notes/Customising validation layers externally.md",
     "6 - Main Notes/Setting up the swapchain extension.md",
-    "6 - Main Notes/What are image views.md",
-    "6 - Main Notes/Creating an image view.md",
-    "6 - Main Notes/Destroying a image view.md",
-    "6 - Main Notes/Adding shaders to the graphics pipeline.md",
-    "6 - Main Notes/Creation of the shader module.md",
-    "6 - Main Notes/Compiling shaders with vulkan.md",
-    "6 - Main Notes/Querying surface capabilities.md",
+    "6 - Main Notes/What is a swapchain.md",
     "6 - Main Notes/Checking surface and swapchain compability.md",
-    "6 - Main Notes/Reading in compiled shaders.md",
-    "6 - Main Notes/Checking for family queue suitability.md",
-    "6 - Main Notes/Listing the queue families.md",
+    "6 - Main Notes/Checking surface format.md",
+    "3 - Tags/render pass.md",
+    "6 - Main Notes/Querying surface capabilities.md",
     "6 - Main Notes/What are queue families.md",
-    "6 - Main Notes/Setting up vulkan queues.md",
+    "6 - Main Notes/Checking for family queue suitability.md",
+    "6 - Main Notes/Device level extensions.md",
+    "6 - Main Notes/What are validation layers.md",
+    "6 - Main Notes/Creation of the shader module.md",
+    "6 - Main Notes/Getting swapchain images.md",
+    "6 - Main Notes/What is a vulkan surface.md",
+    "6 - Main Notes/Creating vulkan queues.md",
+    "6 - Main Notes/What is the graphics pipeline.md",
     "vulkan_simplified_pipeline.svg",
+    "viewports_scissors-2294964527.png",
     "4 - Indexes",
     "1 - Rough Notes/Pasted image 20250920080120.png",
     "2 - Source Material/Article",

@@ -5,7 +5,7 @@ Tags: [[vulkan]] [[vulkan swapchain]]
 
 If you've created the swapchain you also need to create the VkImage's that you're going to use with the swapchain. These get destroyed with the swapchain so you don't need to worry about destroying them.
 
-You just assume the number of VkImage's will be 4 or 3 or whatever. We did this in the note [[Querying surface capabilities]] at the end of the note we had with the image acount. 
+You **CAN'T** just assume the number of VkImage's will be 4 or 3 or whatever. We explain this in the note [[Querying surface capabilities]] at the end of the note we get the **imageCount** which is the minimum number of images the swapchain can support while giving us double buffering.
 
 We follow the very standard querying pattern with this to get a container of images we are going to use. 
 

@@ -8,7 +8,7 @@ In vulkan there are instance level extensions [[Setting up extensions]] and devi
 So if you plan on rendering something you need to check for the swapchain extensions called the **VK_KHR_swapchain**. If this is present on the GPU then we are able to render images to a monitor. 
 # References
 ##### Main Notes
-Swapchain note is needed here
+[[What is a swapchain]]
 [[Setting up extensions]]
 [[Instance and device level validation]]
 [[Making GPU features usable]]

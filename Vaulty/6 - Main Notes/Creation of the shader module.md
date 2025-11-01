@@ -13,7 +13,7 @@ VkShaderModule vertexShader;
 VkShaderModuleCreateInfo vertexCreateInfo{};
 vertexCreateInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
 vertexCreateInfo.codeSize = sizeOfVertexCode;
-vertexCreateInfo.pCode = reinterpret_cast<const uint32_t*>(binVertCode);
+vertexCreateInfo.pCode = reinterpret_cast<const uint32_t*>(binaryVertCode);
 
 if (vkCreateShaderModule(device, &vertexCreateInfo, nullptr, &vertexShader) != VK_SUCCESS) 
 {
@@ -24,8 +24,8 @@ if (vkCreateShaderModule(device, &vertexCreateInfo, nullptr, &vertexShader) != V
 Once we have created the **VkShaderModule** we don't need to keep the binary shader code around. So don't forget to free that
 
 ```c++
-free((void*)binVertCode);
-binVertCode = nullptr;
+free((void*)binaryVertCode);
+binaryVertCode = nullptr;
 ```
 
 The **VkShaderModule** is a thin wrapper that is going to be uploaded to the GPU to be compiled into GPU machine code. This means that it's part of the graphics pipeline meaning we can have **destroy** the **VkShaderModules** at the end of the creation of the graphics pipeline.

@@ -972,7 +972,395 @@ vertexInputState.pVertexAttributeDescriptions = nullptr;
 NOTE: vertex attributes and bindings get a lot more complex if you require the faster bindless set up.
 ##### Input assembly
 This is involved in specifying the topology and if the primitive restarted. The primitive can be:
-- VK_PRIMITIVE_TOPOLOGY_POINT_LIST - points from the vertices
-- VK_PRIMITIVE_TOPOLOGY_LINE_LIST - line from every 2 vertices without reuse
-- VK_PRIMITIVE_TOPOLOGY_LINE_STRIP - the end vertex of every line is used as start vertex for the next line.
-- 
+- **VK_PRIMITIVE_TOPOLOGY_POINT_LIST** - points from the vertices
+- **VK_PRIMITIVE_TOPOLOGY_LINE_LIST** - line from every 2 vertices without reuse
+- **VK_PRIMITIVE_TOPOLOGY_LINE_STRIP** - Basically a big continous line has reuse
+- **VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST** - triangle from every 3 vertices without any reuse
+- **VK_PRIMITIVE_TOPOLOGY_TRIANGLE_STRIP** - the second and third vertex of every triangle are used as the first two vertices of the next triangle
+
+```c++
+VkPipelineInputAssemblyStateCreateInfo inputAssembly{};
+inputAssembly.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;	
+inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
+inputAssembly.primitiveRestartEnable = VK_FALSE;
+```
+
+Normally vertices are loaded by vertex buffer and index buffer in sequential order. However, you can element buffer you can specify the indices yourself. This allows you to optimise reuse of vertices. If **primitiveRestartEnable** to be true then it's possible to use `_STRIP` topologies and break then up with special index breaks `0xFFFF`or `0xFFFFFFFF` in the buffer.
+##### Viewports and scissors
+A viewport basically decides what part of the framebuffer is outputted for rendering. Unless said otherwise just do from 0, 0 to swapchain's min and max values.
+
+```c++
+	VkViewport viewport{};
+	viewport.x = 0.f;
+	viewport.y = 0.f;
+	viewport.width = float(swapchainExtent.width);
+	viewport.height = float(swapchainExtent.height);
+	viewport.minDepth = 0.f;
+	viewport.maxDepth = 1.f;
+```
+
+Remember that swapchain VkImage's can have a different size to the window. So we use the extents over the size of the application window size. 
+
+Maximum and minimum depth are for the swapchain. If you aren't doing anything special then setting **minDepth** 0.f and **maxDepth** to 1.f is a good idea unless your doing reverse perspective.
+
+The viewport defines the transformation from the image to the framebuffer but the scissor rectangles define what's actually stored. Any pixel outside of the scissor will be discarded by the rasteriser. 
+
+![[viewports_scissors-2294964527.png]]
+
+As you can see here the scissor rectangle chops the image, while the viewport scales it. If you want the scissor to stretch the entire viewport you just do this.
+
+```c++
+	VkRect2D scissor{};
+	scissor.offset = { 0, 0 };
+	scissor.extent = swapchainExtent;
+```
+
+It's important to note that the viewport and the scissor most of the time should be set up a run time. You need to the dynamic state set up to have this feature enabled and it's important to note too that this cost 0 performance to do at draw time.
+
+If you want to do that you just need to set up the **VkPipelineViewportStateCreateInfo** and set the viewport count and scissor count to see like is.
+
+```c++
+VkPipelineViewportStateCreateInfo viewportCreateInfo{};
+viewportCreateInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
+viewportCreateInfo.viewportCount = 1;
+//viewportCreateInfo.pViewports = &viewports;
+viewportCreateInfo.scissorCount = 1;
+//viewportCreateInfo.pScissors = &scissors;
+```
+
+If you need a static viewport you'll want to use set them here were I've commented out the code. In the command buffers you can actually set things up so you have a different number of viewports if you want. If you do want to have more than 1 viewport and scissor you'll need to turn on a device level extension.
+##### Rasteriser
+The rasteriser takes geometry 3D or 2D and turns them into fragments (pixel custers) that get written to by the framgment shader. It is performs depth testing, face culling, and the scissor test. It can be configured to just do the wireframe or full polygons. You configure this with the **VkPipelineRasterizationStateCreateInfo** struct.
+
+```c++
+VkPipelineRasterizationStateCreateInfo rasteriser{};
+rasteriser.sType = VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO;
+rasteriser.depthClampEnable = VK_FALSE;
+```
+
+If you set the **.depthClampEnable** to VK_TRUE you'll clamp the fragments that are beyond the near and far planes rather than discarding them. This is useful to have with shadow mapping but requires a GPU feature to be turned on to use.
+
+```c++
+rasteriser.rasterizerDiscardEnable = VK_FALSE;
+```
+
+If this is set to VK_TRUE all the geometry gets completely thrown out, this rendering nothing. This will be useful if you want to profile how fast your vertex/mesh shaders are.
+
+```c++
+rasteriser.polygonMode = VK_POLYGON_MODE_FILL;
+```
+
+Next we have the polygon mode. This can be set to 3 settings and one exclusive to Nvidia cards which I will skip and requires enableding a GPU feature.
+- VK_POLYGONE_MODE_FILL - This is the normal fille the entire polygon.
+- VK_POLYGONE_MODE_LINE - This will only save the lines between each of the vertices.
+- VK_POLYGONE_MODE_POINT - This will only render the vertices as points.
+
+```c++
+rasteriser.lineWidth = 1.f;
+```
+
+This sets the line width the rasteriser will output. Anything more than 1.f requires the GPU feature `wideLines` to be enabled. Note the different GPUs support different line widths.
+
+```c++
+rasteriser.cullMode = VK_CULL_MODE_BACK_BIT;
+rasteriser.frontFace = VK_FRONT_FACE_CLOCKWISE;
+```
+
+The **cullMode** is set up to cull the back facing polygones or the front facing polygones. The **.frontFace** tells vulkan which way the polygons are facing based on it's winding. 
+
+```c++
+rasteriser.depthBiasEnable = VK_FALSE;
+rasteriser.depthBiasConstantFactor = 0.f;
+rasteriser.depthBiasClamp = 0.f;
+rasteriser.depthBiasSlopeFactor = 0.f;
+```
+
+This four lines of code set things up so there is a bias for the depth values. This can be useful for shadow mapping but if you're not doing that you can just leave them all to 0.
+##### Multisampling
+Multisampling is a way you can reduce anti-aliasing effects. It takes the work of the fragment shader that rasters to the same pixel and samples it mutliple times and does some kind of averaging to get a blend of the pixel colours around a given pixel. This is only really meant for the edges which is were aliasing effects happen. To use this feature you need to turn on GPU feature. To set this up you use the **VkPipelineMultisampleStateCreateInfo** and for this example we'll show what a multisampling set up looks like for no multisampling.
+
+```c++
+VkPipelineMultisampleStateCreateInfo multisamplingState{};
+multisamplingState.sType = VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;
+multisamplingState.sampleShadingEnable = VK_FALSE;
+multisamplingState.rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
+multisamplingState.minSampleShading = 1.f; //optional
+multisamplingState.pSampleMask = nullptr; //optional
+multisamplingState.alphaToCoverageEnable = VK_FALSE; //optional
+multisamplingState.alphaToOneEnable = VK_FALSE; //optional
+```
+
+##### Depth testing and stencil testing
+Note at this point in the tutorial it is skiped for later. You do need this for anything 3D including 2D rendering with a layered 2D rendering system.
+##### Colour blending
+After the fragment buffer has returned a colour we need to know what to do with the colours that have already have been generated. This is know as the colour blending and there are two ways to do it
+1) Mix the old and new colours to make the final colour.
+2) Combine the old and new values using bitwise operations.
+
+There are two structs you have to set up for colour blending. 
+1) **VkPipelineColorBlendAttachmentState** is configuring things per framebuffer attachment.
+2) **VkPipelineColorBlendStateCreateInfo** is only interested in teh global blending settings.
+
+This is what **VkPipelineColourBlendAttachmentState** construction looks like for 1 framebuffer, with the default blending you would want for most cases.
+
+```c++
+VkPipelineColorBlendAttachmentState colourBlendAttachment{};
+colourBlendAttachment.colorWriteMask = VK_COLOR_COMPONENT_R_BIT | VK_COLOR_COMPONENT_G_BIT | VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT;
+
+colourBlendAttachment.blendEnable = VK_FALSE;
+colourBlendAttachment.srcColorBlendFactor = VK_BLEND_FACTOR_ONE;
+colourBlendAttachment.dstColorBlendFactor = VK_BLEND_FACTOR_ZERO;
+colourBlendAttachment.colorBlendOp = VK_BLEND_OP_ADD;
+colourBlendAttachment.srcAlphaBlendFactor = VK_BLEND_FACTOR_ONE;
+colourBlendAttachment.dstAlphaBlendFactor = VK_BLEND_FACTOR_ZERO;
+colourBlendAttachment.alphaBlendOp = VK_BLEND_OP_ADD;
+```
+
+If you look at the above struct with it's variables like **.blendEnable** this is basically what is happening in the pseudocode.
+```c++
+if(blendEnable)
+{
+	finalColour.rgb = (srcColourBlendFactor * newColour.rgb) <colorBlendOp> (dstColorBlendFactor * oldColour.rgb);
+	
+	finalColour.a = (srcAlphaBlendFactor * newColour.rgb) <alphaBlendOp> (dstAlphaBlendFactor * oldColour.a);
+}
+else
+{
+	finalColour = newColour;
+}
+
+finalColour = finalColour & colourWriteMask;
+```
+
+What the final the final line here does is it's determinting the colour channel that gets outputted.
+
+What you might actually want to do with this is alpha blending. Will look like this.
+
+```c++
+colourBlendAttachment.blendEnable = VK_TRUE;
+colourBlendAttachment.srcColorBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+colourBlendAttachment.dstColorBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
+colourBlendAttachment.colorBlendOp = VK_BLEND_OP_ADD;
+colourBlendAttachment.srcAlphaBlendFactor = VK_BLEND_FACTOR_ONE;
+colourBlendAttachment.dstAlphaBlendFactor = VK_BLEND_FACTOR_ZERO;
+colourBlendAttachment.alphaBlendOp = VK_BLEND_OP_ADD;
+```
+
+What that achieves is it that the you want the new colour to blend with the old colour based on the opacity. This is the operation that ends up happening with this set up in pseudocode.
+
+```c++
+finalColour.rgb = newAlpha * newColour + (1 - newAlpha) * oldColour;
+finalColour.a = newAlpha.a;
+```
+
+**VkPipelineColorBlendStateCreateInfo** takes in a array of structures for all the framebuffers and allows you to set blend constants that you can use for blend factors in the above calculations. This is what this would look like.
+
+```c++
+VkPipelineColorBlendStateCreateInfo colourBlending{};
+colourBlending.sType = VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_STATE_CREATE_INFO;
+colourBlending.logicOpEnable = VK_FALSE;
+colourBlending.logicOp = VK_LOGIC_OP_COPY; //optional
+colourBlending.attachmentCount = 1;
+colourBlending.pAttachments = &colourBlendAttachment;
+colourBlending.blendConstants[0] = 0.f; //optional
+colourBlending.blendConstants[1] = 0.f; //optional
+colourBlending.blendConstants[2] = 0.f; //optional
+colourBlending.blendConstants[3] = 0.f; //optional
+```
+
+If you want to use this second type of blending the bitwase combination, you need to set the **.logicOpEnable** to VK_TRUE. You need to have need to have the **.pAttachments** which takes the colour blend operation via the **VkPipelineColorBlendAttachmentState** to have a value for it's **.blendEnable** VK_TRUE for at least some of the framebuffers or that blending wont happen. Then you can set the **.logicOp** to have that bitwase operation to blend.
+
+In the same struct **VkPipelineColorBlendAttachmentState** the colour mask **.colorWriteMask** change what's being effected by this bitwase combination operation. In the above struct we've disabled both blending operations here.
+##### Pipeline layout
+This is were the shader **uniforms** and **push constants** are set up to be used. These are like global variables in the shader. Think about the transformation matrix and the texture samplers from a texture type thing. These are all things you can set up here.
+
+If you want to use uniform you need to set them up with the **VkPIpelineLayout** vulkan type. To create that you need to use the creation struct **VkPipelineLayoutCreateInfo**. With no uniforms or push constants this is want you'll want for this set.
+
+```c++
+VkPipelineLayout pipelineLayout;
+VkPipelineLayoutCreateInfo pipelineLayoutCreateInfo{};
+pipelineLayoutCreateInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
+pipelineLayoutCreateInfo.setLayoutCount = 0;
+pipelineLayoutCreateInfo.pSetLayouts = nullptr;
+pipelineLayoutCreateInfo.pushConstantRangeCount = 0;
+pipelineLayoutCreateInfo.pPushConstantRanges = nullptr;
+
+if (vkCreatePipelineLayout(device, &pipelineLayoutCreateInfo, nullptr, &pipelineLayout) != VK_SUCCESS) 
+{
+	assert(false);
+	printf("Failed to create the layout pipeline.\n");
+}
+```
+
+Clean up is also required.
+
+```c++
+vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
+```
+##### Render passes
+Now we have done the fixed function part of the graphics pipeline we need to tell vulkan about the framebuffer attachments that we will use while rendering. We need to set up a couple of things.
+- The colour and depth buffers
+- How many samples there be for each buffer
+- How should we handle both the buffer and the samples for rendering operation.
+All this information is set up in the **render pass**. 
+##### Attachment descriptions
+Attachments change depending on the buffers, the samples and what you want to do with them. Attachments are set up with a **VkAttachmentDescription**. For a simple rendering of triangle you just need to worry about 1 colour attachment.
+
+```c++
+VkAttachmentDescription colourAttachment{};
+colourAttachment.format = swapchainFormat;
+colourAttachment.samples = VK_SAMPLE_COUNT_1_BIT;
+```
+
+Here we set the format to the swapchain image format and we set the samples to **VK_SAMPLE_COUNT_1_BIT** because we aren't doing any sampling.
+
+Attachments have **loadOp**, **storeOp**, **stencilLoadOp** and **stencilStoreOp** ones for stencil and the other one isn't. The loadOp and storeOp apply to colour and depth values and the stencil apply to stencil.
+
+For **loadOp** we have these options:
+- **VK_ATTACHMENT_LOAD_OP_LOAD** preserve the existing contents of the attachment.
+- **VK_ATTACHMENT_LOAD_OP_CLEAR** clear the values to a constant at the start.
+- **VK_ATTACHMENT_LOAD_OP_DONT_CARE** existing contents are undefined we don't care about them. 
+For **storeOp** we have these options:
+- **VK_ATTACHMENT_STORE_OP_STORE** rendered content will be stored in memory and can still be read later
+- **VK_ATTACHMENT_STORE_OP_DONT_CARE** Contents fo the framebuffer will be undefined after rendering operation
+
+In the case were you have a framebuffer colour attachment and the format is part of the swapchain you'll want to clear the **loadOp** to black. Meaning that the beginning of every frame you have a clean framebuffer to draw to.
+
+For the **storeOp** we want to set this to be store because we are interesting in seeing the content on screen.
+
+```c++
+colourAttachment.loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR;
+colourAttachment.storeOp = VK_ATTACHMENT_STORE_OP_STORE;
+```
+
+Since we aren't using any stencil data we can set **.stencilLoadOp** and **.stencilStoreOP** to the most memory efficent (for performance) DONT_CARE
+
+```c++
+colourAttachment.stencilLoadOp = VK_ATTACHMENT_LOAD_OP_DONT_CARE;
+colourAttachment.stencilStoreOp = VK_ATTACHMENT_STORE_OP_DONT_CARE;
+```
+
+Textures and framebuffer are just VkImage's which just contains pixel data. The images can be layed out in memory differently depending on the usage. The most common layouts you'll transition to are:
+- **VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL** images are used as a colour attachment
+- **VK_IMAGE_LAYOUT_PRESENT_SRC_KHR** this is used for when you want to present an image.
+- **VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL** this is used when you need to do something like a memory copy operation.
+These are more important when you need to start texturing objects. It's important to know that images need to be transitioned into a specific layout that's suitable for the type of operation they are needed to do next.
+
+So for our colour attachment that's just meant to render a triangle and be presented to the screen after the VkImage has been drawn to. This is what you'll want to to transition to.
+
+```c++
+colourAttachment.initialLayout = VK_IMAGE_LAYOUT_UNDEFINED;
+colourAttachment.finalLayout = VK_IMAGE_LAYOUT_PRESENT_SRC_KHR;
+```
+
+So this is for the render pass and the **.initialLayout** tells vulkan what the layout is before the render pass begins and the **.finalLayout** tells vulkan what needs to transitioned to when render pass finishes. 
+
+Using the **VK_IMAGE_LAYOUT_UNDEFINED** value for the **.intialLayout** says we don't care what the the VkImage's layout was before this. If a VkImage is in this memory layout anything could happen to it, it shouldn't be considered as "cleared" but "unitialised memory" as the graphics card could anything to that piece of memory.
+##### Subpasses and attachment references
+A subpass sub divides render passes into seperate logical phases. The benefit of using mulitple subpasses is that the GPU can do some optimisations. 
+
+A single render pass can have muitple subpasses. A subpass is a basically just a collection of rendering operation that are sequential that depend on the framebuffer previous passes. For example a sequence of post-processing effect that are applied to each other. 
+
+If you group all these operations in a render pass vulkan will be able to reorder the operations which will conserve memory bandwidth for possible better performance. For drawing a triangle you need only one subpass.
+
+Every subpass references one or more attachment that we've described above. The subpass needs another struct to actually reference the attachments correct called **VkAttachmentReference**.
+
+```c++
+VkAttachmentReference colourAttachmentRef{};
+colourAttachmentRef.attachment = 0;
+colourAttachmentRef.layout = VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL;
+```
+
+The **.attachment** is an index that ties the subpass to the 
+```glsl
+layout(location = 0) out vec4 outColour
+```
+in the fragment shader. This is **EXTREMELY** important to make sure you match the indices up properly.
+
+The **.layout** specifies which what type of layout attachment we would like to have for a given reference. Vulkan will automatically transition the attachment to whatever we specified in the layout, when the subpass starts. When using **VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL**
+you're effectively making a colour buffer and when drawing a triangle that's the case.
+
+Next we need to create the subpass with **VkSubpassDescription**
+
+```c++
+VkSubpassDescription subpass{};
+subpass.pipelineBindPoint = VK_PIPELINE_BIND_POINT_GRAPHICS;
+```
+
+Vulkan in the future will support compute subpasses so for now we have to be explicit that we are using this for graphics. 
+
+```c++
+subpass.colorAttachmentCount = 1;
+subpass.pColorAttachments = &colourAttachmentRef;
+```
+
+This is how the fragment shader knows that `layout(location = 0) out vec4 outColour` and the subpass line up, **for colour**. 
+
+There are 4 others that match to a different attachments for shaders:
+- **.pInputAttachment** This attachment is for reading things from a shader.
+- **.pResolveAttachment** This attachment is for multisampling colour attachments.
+- **.pDepthStencilAttachment** This attachment is for depth and stecil data.
+- **.pPreserveAttachments** This attachment is for things that aren't used by the subpass but the data much be preserved. 
+##### Creation of the render pass
+When creating the render pass, you need to use the creation struct **VkRenderPassCreateInfo** which makes the **VkRenderPass** object. The creation struct takes array's of **VkAttachmentDescription**'s and **VkSubpass**'s. 
+
+This is what a basic render pass set up looks like
+```c++
+VkRenderPass renderPass;
+VkRenderPassCreateInfo renderPassCreateInfo{};
+renderPassCreateInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_CREATE_INFO;
+renderPassCreateInfo.attachmentCount = 1;
+renderPassCreateInfo.pAttachments = &colourAttachment;
+renderPassCreateInfo.subpassCount = 1;
+renderPassCreateInfo.pSubpasses = &subpass;
+
+if (vkCreateRenderPass(device, &renderPassCreateInfo, nullptr, &renderPass) != VK_SUCCESS) 
+{
+	printf("Failed to create a render pass.");
+}
+```
+
+Deletion is done in the same was a normal
+
+```c++
+vkDestroyRenderPass(device, renderPass, nullptr);
+```
+##### Completing the graphics pipeline.
+To complete the graphics pipeline we need to combine all the structures in the **VkGraphicsPipelineCreateInfo** to complete things. Here are the main cliff notes on what you need to do to complete this.
+- **Shader stages**: You need the shader modules that define the functionality of the programmable stages of the graphics pipeline.
+- **Fixed function states:** You need all the structures that set up the fixed function graphics pipeline stuff.
+- **Pipeline Layout**: which sets up the uniforms and the push constants you'll be using for your shaders.
+- **Render pass**: These are the attachment referenced by the pipeline stages and their usage.
+
+Remember don't delete the shader modules with **vkDestroyShaderModule** before you create this graphics pipeline.
+
+We start off with setting the shader stage and their count.
+```c++
+VkGraphicsPipelineCreateInfo pipelineInfo{};
+pipelineInfo.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
+pipelineInfo.stageCount = 2;
+pipelineInfo.pStages = shaderStages;
+```
+
+Then you'll want all the fixed function stuff
+```c++
+pipelineInfo.pVertexInputState = &vertexInputState;
+pipelineInfo.pInputAssemblyState = &inputAssembly;
+pipelineInfo.pViewportState = &viewportCreateInfo;
+pipelineInfo.pRasterizationState = &rasteriser;
+pipelineInfo.pMultisampleState = &multisamplingState;
+pipelineInfo.pDepthStencilState = nullptr; //TODO add depth and stencil support
+pipelineInfo.pColorBlendState = &colourBlending;
+pipelineInfo.pDynamicState = &dynamicState;
+```
+
+Then you want the pipeline layout.
+```c++
+pipelineInfo.layout = &pipelineLayout;
+```
+
+Then you want to add your render pass with the subpass index of 0.
+```c++
+pipelineInfo.renderPass = renderPass;
+pipelineInfo.subpass = 0;
+```

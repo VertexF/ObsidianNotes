@@ -18,15 +18,15 @@ if (formatCount != 0)
 Then you'll want to loop through the array of **VkSurfaceFormatKHR** and select the that has the colour pixel format you want. The most widely supported on is **VK_FORMAT_B8G8R8A8_SRGB** which is a good default to select for.
 
 ```c++
-	VkSurfaceFormatKHR swapchainSurface{};
-	for (const auto& availableSurface : surfaceFormats)
+VkSurfaceFormatKHR swapchainSurface{};
+for (const auto& availableSurface : surfaceFormats)
+{
+	if (availableSurface.format == VK_FORMAT_B8G8R8A8_SRGB) 
 	{
-		if (availableSurface.format == VK_FORMAT_B8G8R8A8_SRGB) 
-		{
-			swapchainSurface = availableSurface;
-		}
+		swapchainSurface = availableSurface;
 	}
-	swapchainSurface = surfaceFormats[0];
+}
+swapchainSurface = surfaceFormats[0];
 ```
 
 Notice the last time of this code snippet. It's totally fine here to select the first format in the list of you can't find the one you want.
