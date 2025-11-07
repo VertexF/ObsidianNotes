@@ -81,3 +81,31 @@
 >[[Setting up the attachment reference]]
 >[[Setting up the subpass]]
 >[[Setting up the render pass]]
+>**Graphics Pipeline Creation**
+>[[Creating the graphics pipeline]]
+>[[Creating derived graphic pipelines]]
+
+### Subpass
+[[What is a subpass]]
+[[What are subpass dependencies]]
+[[Setting up subpass dependencies with one subpass]]
+### Framebuffers
+[[What is a framebuffer]]
+[[Creating the framebuffers]]
+### Command Buffers
+[[What are command buffers]]
+[[Setting up the command pool]]
+[[Setting up the command buffers]]
+[[Recording commands]]
+[[Using a render pass]]
+[[Setting up and running the vkCmdDraw command]]
+### Synchronisation
+[[What is synchronisation in vulkan]]
+[[What are semaphores]]
+[[What are fences]]
+[[What you need to synchronise a frame]]
+[[Setting up the synchronisation objects]]
+[[Using a fence to synchronise the previous frame]]
+[[Acquirng an image from the swapchain]]
+[[Submitting the command buffer for rendering]]
+[[Setting the synchronisation with the subpass dependencies]]

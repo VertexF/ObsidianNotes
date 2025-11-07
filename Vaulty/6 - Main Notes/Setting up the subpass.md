@@ -5,7 +5,7 @@ Tags: [[vulkan]] [[render pass]]
 
 A subpass sub divides render passes into seperate logical phases. The benefit of using mulitple subpasses is that the GPU can do some optimisations rather than adding a tonne of render passes.
 
-A subpass is a collection of render operation that happen in sequence and that also depend on the framebuffer previous frame/pass. Foe example sequence of post-processing events can happen within a subpass.
+A subpass is a collection of render operation that happen in sequence and that also depend on the framebuffer previous frame/pass. For example sequence of post-processing events can happen within a subpass.
 
 Once you've finished [[Setting up the attachment reference]] you can create the subpass with the **VkSubpassDescription** 
 

@@ -13,7 +13,7 @@ rasteriser.sType = VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO;
 rasteriser.depthClampEnable = VK_FALSE;
 ```
 
-If you set the **.depthClampEnable** to VK_TRUE you'll clamp the fragments that a beyong the near and far planes rather than discarding them. This might be useful if you're doing shadow mapping, but this requires a GPU feature to be turned on.
+If you set the **.depthClampEnable** to VK_TRUE you'll clamp the fragments that a beyond the near and far planes rather than discarding them. This might be useful if you're doing shadow mapping, but this requires a GPU feature to be turned on.
 
 ```c++
 rasteriser.rasterizerDiscardEnable = VK_FALSE;

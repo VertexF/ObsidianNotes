@@ -8,10 +8,10 @@ To start with you need to set up the swapchain extention at the physical device 
 To check you would use the standard checking method. First we get the list of extensions for that physical device
 
 ```c++
-	uint32_t extensionCount = 0;
-	vkEnumerateDeviceExtensionProperties(physicalDevice, nullptr, &extensionCount, nullptr);
-	std::vector<VkExtensionProperties> availableExtensions(extensionCount);
-	vkEnumerateDeviceExtensionProperties(physicalDevice, nullptr, &extensionCount, availableExtensions.data());
+uint32_t extensionCount = 0;
+vkEnumerateDeviceExtensionProperties(physicalDevice, nullptr, &extensionCount, nullptr);
+std::vector<VkExtensionProperties> availableExtensions(extensionCount);
+vkEnumerateDeviceExtensionProperties(physicalDevice, nullptr, &extensionCount, availableExtensions.data());
 ```
 
 Then we check if the **VK_KHR_SWAPCHAIN_EXTENSION_NAME** is in the list. If it is we check add to a list for a struct later on.

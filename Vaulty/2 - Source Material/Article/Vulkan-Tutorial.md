@@ -1364,3 +1364,603 @@ Then you want to add your render pass with the subpass index of 0.
 pipelineInfo.renderPass = renderPass;
 pipelineInfo.subpass = 0;
 ```
+
+You can set things up to work with more than 1 render pass but they all have to be compatible with each other.
+
+Then you can create everything with the **vkCreateGraphicsPipelines**
+
+```c++
+VkPipeline mainPipeline{};
+if (vkCreateGraphicsPipelines(device, VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &mainPipeline) != VK_SUCCESS) 
+{
+	assert(false);
+}
+```
+
+Now the parameters are a little more detailed here. First you have the second argument which takes in a **VkPipelineCache** value. This is really useful if you need to recreate a pipeline you've already made before. For example, if you're running a game and you make all the graphics pipelines needed you actually save them to disk and load this caches next time saving pipeline create time.
+
+The rest of the arguments are as list
+1) The logical device
+2) The pipeline cache value which can be null.
+3) The amount of **VkGraphicsPipelineCreateInfo** you are passing in.
+4) The **VkGraphicsPipelineCreateInfo** themselves
+5) The vulkan allocator callback
+6) The final **VkPipeline**
+
+The destruction is pretty straight forward, you just need to destroy this before anything in the pipeline is destroy.
+
+```c++
+vkDestroyPipeline(device, mainPipeline, nullptr);
+```
+##### Derived graphics pipelines
+There are two new parameters **.basePipelineHandle** and **.basePipelineIndex** with these you can make graphics pipelines that are derived from an existing pipeline. The upside of this is that if they share common functionality it's faster to create a graphics pipeline, and it's faster to switch between child and parent graphics pipelines.
+
+To do this you either use **.basePipelineHandle** to refer to a graphics pipeline object or **.basePipelineIndex** to refer to a graphics pipeline with an index. 
+
+For both the parent and the child graphics pipeline the **.flag** setting needs to be **VK_PIPELINE_CREATE_DERIVATIVE_BIT** of the VkGraphicsPipelineCreateInfo struct. The child needs all the mandatory just like it's parent. 
+
+If you want to do this via the **.basePipelineIndex** you have to create the parent and child together in one function call. If you want to use the **.basePipelineHandle** you have to create parent first. You have to use one **OR** the other. You can't use both. you have to turn off other version by setting **.basePipelineHandle** to VK_NULL_HANDLE or the **.basePipelineIndex** to -1
+ 
+This the index version set up.
+
+```c++
+VkGraphicsPipelineCreateInfo pipelineInfo{};
+pipelineInfo.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
+pipelineInfo.stageCount = 2;
+pipelineInfo.flags = VK_PIPELINE_CREATE_ALLOW_DERIVATIVES_BIT;
+pipelineInfo.pStages = shaderStages;
+pipelineInfo.pVertexInputState = &vertexInputState;
+pipelineInfo.pInputAssemblyState = &inputAssembly;
+pipelineInfo.pViewportState = &viewportCreateInfo;
+pipelineInfo.pRasterizationState = &rasteriser;
+pipelineInfo.pMultisampleState = &multisamplingState;
+pipelineInfo.pDepthStencilState = nullptr;
+pipelineInfo.pColorBlendState = &colourBlending;
+pipelineInfo.pDynamicState = &dynamicState;
+pipelineInfo.layout = pipelineLayout;
+pipelineInfo.renderPass = renderPass;
+pipelineInfo.subpass = 0;
+pipelineInfo.basePipelineHandle = VK_NULL_HANDLE;
+pipelineInfo.basePipelineIndex = 1;
+
+VkGraphicsPipelineCreateInfo childPipelineInfo{};
+childPipelineInfo.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
+childPipelineInfo.flags = VK_PIPELINE_CREATE_DERIVATIVE_BIT;
+childPipelineInfo.stageCount = 2;
+childPipelineInfo.pStages = shaderStages;
+childPipelineInfo.pVertexInputState = &vertexInputState;
+childPipelineInfo.pInputAssemblyState = &inputAssembly;
+childPipelineInfo.pViewportState = &viewportCreateInfo;
+childPipelineInfo.pRasterizationState = &rasteriser;
+childPipelineInfo.pMultisampleState = &multisamplingState;
+childPipelineInfo.pDepthStencilState = nullptr;
+childPipelineInfo.pColorBlendState = &colourBlending;
+childPipelineInfo.pDynamicState = &dynamicState;
+childPipelineInfo.layout = pipelineLayout;
+childPipelineInfo.renderPass = renderPass;
+childPipelineInfo.subpass = 0;
+childPipelineInfo.basePipelineHandle = VK_NULL_HANDLE;
+childPipelineInfo.basePipelineIndex = pipelineInfo.basePipelineIndex - 1;
+
+VkGraphicsPipelineCreateInfo structs[] = { pipelineInfo, childPipelineInfo };
+
+VkPipeline pipelines[2]{};
+if (vkCreateGraphicsPipelines(device, VK_NULL_HANDLE, 2, pipelines, nullptr, childPipeline) != VK_SUCCESS)
+{
+	assert(false);
+	printf("Failed to create pipeline.");
+}
+```
+
+You have to set the child's **.basePipelineIndex** to one minus the parent's **.basePipelineIndex** with the line `childPipelineInfo.basePipelineIndex = pipelineInfo.basePipelineIndex - 1;`
+
+Then you create both pipelines using array's instead of seperately. 
+
+Creation of the using VkPipeline reference is much simpiler
+```c++
+VkGraphicsPipelineCreateInfo pipelineInfo{};
+pipelineInfo.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
+pipelineInfo.flags = VK_PIPELINE_CREATE_ALLOW_DERIVATIVES_BIT;
+//... All the pipeline creation
+pipelineInfo.basePipelineHandle = VK_NULL_HANDLE;
+pipelineInfo.basePipelineIndex = -1;
+
+VkPipeline mainPipeline;
+if (vkCreateGraphicsPipelines(device, VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &mainPipeline) != VK_SUCCESS) 
+{
+	assert(false);
+}
+
+VkGraphicsPipelineCreateInfo childPipelineInfo{};
+childPipelineInfo.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
+childPipelineInfo.flags = VK_PIPELINE_CREATE_DERIVATIVE_BIT;
+//... All the pipeline creation
+childPipelineInfo.basePipelineHandle = mainPipeline;
+childPipelineInfo.basePipelineIndex = -1;
+	
+VkPipeline childPipeline;
+if (vkCreateGraphicsPipelines(device, VK_NULL_HANDLE, 1, &childPipelineInfo, nullptr, &childPipeline) != VK_SUCCESS)
+{
+	assert(false);
+}
+```
+
+We actually don't care about the parent index or handle here, these can be ignored. The rest of the code I think in explain everything. Just look at the **.basePipelineHandle** in the childPipelineCreateInfo to see the different.
+##### Framebuffers
+The framebuffers set up is very much dependent on how you set up the render pass, as the render pass handles the framebuffer.
+
+Attachments specified during the render pass are bound by wrapping them into a VkFramebuffer object. So the framebuffer contains all the VkImageView object that we created in the render pass via the **VkAttachmentDescription**. 
+
+For each swapchain image you'll want to create a framebuffer for it. This will contain the render pass, subpass, attachment description and reference.
+
+The framebuffer images after set up are used within a command. When you're trying to use the render pass to do the drawing operations you need to give the render pass the framebuffer image it's going to use, from the list of framebuffers you have already created. 
+
+The image index that selects the correct framebuffer is controlled by the swapchain. It tells us what image index is safe to draw to as the swapchain operates. This is all done at draw time.
+
+The setup for the framebuffers looks something like
+```c++
+std::vector<VkFramebuffer> swapchainFramebuffers(swapchainImageViews.size());
+
+for (uint32_t i = 0; i < swapchainImageViews.size(); ++i) 
+{
+	VkImageView attachments[] =
+	{
+		swapchainImageViews[i]
+	};
+	
+	VkFramebufferCreateInfo framebufferInfo{};
+	framebufferInfo.sType = VK_STRUCTURE_TYPE_FRAMEBUFFER_CREATE_INFO;
+	framebufferInfo.renderPass = renderPass;
+	framebufferInfo.attachmentCount = 1;
+	framebufferInfo.pAttachments = attachments;
+	framebufferInfo.width = swapchainExtent.width;
+	framebufferInfo.height = swapchainExtent.height;
+	framebufferInfo.layers = 1;
+	
+	if (vkCreateFramebuffer(device, &framebufferInfo, nullptr, &swapchainFramebuffers[i]) != VK_SUCCESS)
+	{
+		assert(false);
+	}
+}
+```
+
+So we planning on using this framebuffer a draw time with the render pass at draw time, the **.renderPass** need to match the render pass we are going to use at draw time.
+
+The **.pAttachments** are the swapchain images. Note we only have 1 attachment description which described the a colour image. So when we are making attachments we wrap things up in `attachments[]` as in the future we might a tonne more attachments descriptions. The **.attachmentCount** is the totally number of attachments we have in our render pass and framebuffer.
+
+When setting up the the framebuffer with a basic swapchain that contains a single image per image, you want set the **.layers** to 1.
+
+Deletion is pretty straight forward.
+
+```c++
+for (uint32_t i = 0; i < swapchainFramebuffers.size(); ++i)
+{
+	vkDestroyFramebuffer(device, swapchainFramebuffers[i], nullptr);
+}
+```
+##### Command buffers
+You can't individually run commands in vulkan you need recorded and ran in bulk. These are recorded on command buffer objects. The advantage of this is that Vulkan and efficiently rework things to be more efficent. You can also record commands on command buffer on different threads if you want.
+
+Command buffer are executed by submitting them every frame to the device queue. Such a the graphics or presentation queue. 
+##### Command pools
+You'll need to create a command pool before you can create the command pools. The command pools manages the memory of the command buffers that are allcoated from them. 
+
+```c++
+VkCommandPoolCreateInfo poolCreateInfo{};
+poolCreateInfo.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;
+poolCreateInfo.flags = VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT;
+poolCreateInfo.queueFamilyIndex = mainQueueFamilyIndex;
+```
+
+There are two flags for **.flags**
+- **VK_COMMAND_POOL_CREATE_TRANSIENT_BIT** This says that the buffers are rerecorded with new commands very often, which means that there might be a lot allocation behaviour.
+- **VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT** This command buffers to be rerecorded individually, without this flag they all have be reset together.
+If you want to record the command buffer you want the **VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT** as you'll be able to reset it and rerecord it.
+
+Command buffer are executed by submitting them every frame to the device queue. Such a the graphics or presentation queue. So in the **.queueFamilyIndex** we have choosen to use the **mainQueueFamilyIndex** which has been used to create the graphics device queue.
+
+Creation and destruction are pretty straight forward.
+```c++
+VkCommandPool commandPool;
+if (vkCreateCommandPool(device, &poolCreateInfo, nullptr, &commandPool))
+{
+	printf("Failed to create a command pool.");
+}
+```
+
+```c++
+vkDestroyCommandPool(device, commandPool, nullptr);
+```
+
+The command pool is going to be used throughout the program so it needs to be delete at the end.
+###### Command buffer allocation
+Creating the command buffer object with **VkCommandBuffer** will be automatically destroyed with the command pool.
+
+To allocate command buffer you use the specialised function **vkAllocateCommandBuffers** along with a creation struct. 
+
+```c++
+VkCommandBufferAllocateInfo allocateInfo{};
+allocateInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
+allocateInfo.commandPool = commandPool;
+allocateInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
+allocateInfo.commandBufferCount = 1;
+
+VkCommandBuffer commandBuffer;
+if (vkAllocateCommandBuffers(device, &allocateInfo, &commandBuffer)) 
+{
+	printf("Failed to create a command buffer.");
+}
+```
+
+You have two different levels of command buffers in vulkan that get set with **.level**. These are:
+-  **VK_COMMAND_BUFFER_LEVEL_PRIMARY** These **CAN** be submitted to a queue for execution but cannot call other command buffers.
+- **VK_COMMAND_BUFFER_LEVEL_SECONDARY** These **CAN'T** be submitted directly, but can be called from primary command buffers.
+
+Secondary command buffer usage helps with command reuse which can help with performance. They can't however have anything to do with presentation commands as these are things that just get submitted.
+###### Recording commands
+Recording a command buffer is all about writing commands into the command buffer to be executed later. With a graphics command buffer you'll need to record an image to draw into, whether than that be a separate VkImage or one straight from the swapchain.
+
+This should be happening at the beginning of frame but not necessarily rerecorded every frame. You create the command buffer with the fuction **vkBeginCommandBuffer** and with the struct **VkCommandBufferBeginInfo**.
+
+```c++
+VkCommandBufferBeginInfo beginInfo{};
+beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
+beginInfo.flags = 0;
+beginInfo.pInheritanceInfo = 0;
+
+if (vkBeginCommandBuffer(commandBuffer, &beginInfo) != VK_SUCCESS) 
+{
+	printf("Failed to begin recording command buffer.");
+}
+```
+
+The **.flags** parameter specified how we're going to use the command buffer. These values can be:
+- **VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT** The command buffer will be rerecorded right after exection.
+- **VK_COMMAND_BUFFER_RENDER_PASS_CONTINUE_BIT** This is used for the secondary command buffer will be used entirely within a single render pass.
+- **VK_COMMAND_BUFFER_USAGE_SIMULTANEOUS_USE_BIT** This is for a command buffer that is resubmitted while it is already pending for execution.
+
+**.pInheritanceInfo** is used for secondary command buffers. It specifies which state to inherit from calling primary command buffers.
+
+**vkBeginCommandBuffer** clears the previously recorded command buffer, you can't append command buffers.
+##### Starting a render pass
+To start drawing you'll need to begin the render pass using the **vkCmdBeginRenderPass** using the **VkRenderPassBeginInfo** struct.
+
+```c++
+VkRenderPassBeginInfo renderPassBeginInfo{};
+renderPassBeginInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;
+renderPassBeginInfo.renderPass = renderPass;
+renderPassBeginInfo.framebuffer = swapchainFramebuffers[imageIndex];
+```
+
+**.renderPass** is the render pass with the attachments description and references along with the subpass.
+
+The idea here with **.framebuffer** using the swapchain images we created eariler we aquire the image index value with the uint32_t **imageIndex** from the swapchain image, to directly draw on to. You may need to do something differently if you're not directly drawing on to the swapchain images.
+
+Then we have to tell vulkan the areas were the load operations and and the store operation which get set up with the attachment description which are bundled with the render pass.
+
+```c++
+renderPassBeginInfo.renderArea.offset = { 0, 0 };
+renderPassBeginInfo.renderArea.extent = swapchainExtent;
+```
+
+Since we are drawing straight onto a swapchain image we just take thoughs, pixels outside this range are undefined. You want your attachment description bounds to be the same as the **.renderArea** for better performance.
+
+```c++
+VkClearValue clearColour = { { { 0.218f, 0.f, 0.265f, 1.f } } };
+renderPassBeginInfo.clearValueCount = 1;
+renderPassBeginInfo.pClearValues = &clearColour;
+```
+
+Remember when we set the **.loadOp** in the VkAttachmentDescription to be **VK_ATTACHMENT_LOAD_OP_CLEAR** clearing the screen for a basic colour attachment? Well this is what the colour attachmen clears to. It's better to not make it black because you wont know if you're clearing is just working hence this dark purple. NOTE: Here we aren't clearing the depths.
+
+```c++
+vkCmdBeginRenderPass(commandBuffer, &renderPassBeginInfo, VK_SUBPASS_CONTENTS_INLINE);
+```
+
+With this command the render pass begins. This is a command because you can tell with the **vkCmd** part of the function. These return void and there is no error checking with them.
+
+Commands in vulkan always take the command buffer to which the command you've written gets recorded to. The last paramter is interesting because that defines how the drawing commands will be provided.
+- **VK_SUBPASS_CONTENTS_INLINE** The commands will be in the primary command buffer, there will be no secondary command buffer. 
+- **VK_SUBPASS_CONTENTS_SECONDARY_COMMAND_BUFFERS** The render pass be will executed from a secondary command buffer.
+##### The drawing commands
+
+Before drawing anything you'll want to bind a graphics pipeline. 
+
+```c++
+vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, mainPipeline);
+```
+
+The second argument tells vulkan what type of pipeline are you binding. Which tells vulkan what attachment to use in the fragment shader which we set up with the **VkAttachmentReference**. It also tells vulkan what type of operations are we doing to use.
+
+Normally you'll want to set up the viewport and scissor if you've made them dynamic when creating the graphics pipeline.
+
+```c++
+VkViewport viewport{};
+viewport.x = 0.f;
+viewport.y = 0.f;
+viewport.width = float(swapchainExtent.width);
+viewport.height = float(swapchainExtent.height);
+viewport.minDepth = 0.f;
+viewport.maxDepth = 1.f;
+vkCmdSetViewport(commandBuffer, 0, 1, &viewport);
+
+VkRect2D scissor{};
+scissor.offset = { 0, 0 };
+scissor.extent = swapchainExtent;
+vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
+```
+
+This basically the same way you would set up the scissor and the viewport if you were making it statically in the pipeline set up.
+
+After all that you can simply run the draw command, this is for drawing a triangle. Note it's not index because we have no index buffer.
+```c++
+vkCmdDraw(commandBuffer, 3, 1, 0, 0);
+```
+
+The arguments are after the command buffer:
+- **vertexCount** This is for the amount of vertices you want to render. 
+- **instanceCount** This is for used fro instanced rendering. We have 1 instance so it's 1.
+- **firstVertex** This is the offset into a vertex buffer. This defined the lowest value of **gl_VertexIndex**
+- **firstInstance** This is used for instance redering and defines the lowest value of **gl_Instance**
+
+Finally you'll want to end the render pass with
+```c++
+vkCmdEndRenderPass(commandBuffer);
+if (vkEndCommandBuffer(commandBuffer) != VK_SUCCESS) 
+{
+	printf("Failed to record a command buffer");
+}
+```
+
+##### Rendering and presentation
+When you actually want to render a frame you need to do these things:
+1) Wait for the previous frame to finish.
+2) Acquire an image from the swapchain.
+3) Record a command buffer which draws the scene onto that image.
+4) Submit the recorded command buffer
+5) Present the swapchain image.
+
+This is the overview you need to keep in mind while other things are mentioned.
+
+##### Synchronisation
+With synchronisation everything explicit meaning that order of operation is up to us. We need to tell the driver what to do with all the synchronisation primitive. It's important to note that the GPU and CPU are asynchronous, meaning that a lot of vulkan functions will return before the work on the GPU is done.
+
+There are 3 major things with need to synchronise
+- Acquire an image from the swap chain.
+- Execute commands that draw onto the acquired image.
+- Present that image to the screen for presentation, returning it to the swapchain.
+
+This is great but the order of this function finishing on the GPU is undefined, so you'll need to wait for them to finish to get everything working correctly.
+##### Semaphores
+Semaphores are used order between operations. These are used to order commands within a queue and synchronise different queues together. There is also functions outside of commands that also need semaphores.
+
+There are two types of semaphores **binary** and **timeline**. To use timeline you need an extension to get this working. Binary semaphores are the simpliest and require less set up but can do less. Here I will only talk about binary semaphores as they are simplest.
+
+A binary semaphore is either unsignalled or signalled. It begins as unsignaled. This works by one command in a queue signalling the semaphore when the command is complete, another command will wait on that semaphore until it is singled to go on and do it's worked. Once the second command has started the semaphore goes back to unsignaled.
+1) Semaphore unsignalled
+2) Command one begins running and will signal **AFTER** it's done.
+3) Command two wait for that signal in the semaphore.
+4) Command two runs when the signal is received.
+5) Semaphore automatically goes back to unsignalled after command two **STARTS**.
+
+With the semaphores the synchronisation is **ONLY** for commands running that run on the GPU. The CPU is free to continue on while semaphores are doing their thing.
+##### Fences
+Fences are used to synchronise between the host (CPU) and the GPU. If host needs to know when the GPU is done we use fences.
+
+Fences work similarly to binary semaphores. They are either signalled or unsignalled. When work is finished with a fense we can signal it which means the host can continue on because we know the GPU is up to date.
+
+If you can avoid fences it's best to because the CPU will just wait until it gets a signal from the fence which isn't useful work. You also need to reset fences manually. 
+##### What to choose?
+You'll need a fence to pause the host, to make sure that we are rendering 1 image because we can't rerecord command buffers this would overwrite the command buffer while it's being used.
+
+You'll need two semaphores to order the operations that are happening with in the swapchain. One for acquiring the next image that's ready to be draw to. Another semaphore for making sure that we wait for things to finish rendering, before we present the image to the screen.
+##### Setting up the synchronisation objects.
+So to handle drawing to a screen we will need 2 semaphores and 1 fence.
+
+```c++
+VkSemaphore imageAvailableSemaphore;
+VkSemaphore renderFinishSemaphore;
+VkFence framesInFlight;
+
+VkSemaphoreCreateInfo semaphoreInfo{};
+semaphoreInfo.sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO;
+
+VkFenceCreateInfo fenceInfo{};
+fenceInfo.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
+fenceInfo.flags = VK_FENCE_CREATE_SIGNALED_BIT;
+
+if (vkCreateSemaphore(device, &semaphoreInfo, nullptr, &imageAvailableSemaphore) != VK_SUCCESS)
+{
+		printf("Failed to create image available semaphore");
+}
+
+if (vkCreateSemaphore(device, &semaphoreInfo, nullptr, &renderFinishSemaphore) != VK_SUCCESS)
+{
+	printf("Failed to create render finished semaphore");
+}
+
+if (vkCreateFence(device, &fenceInfo, nullptr, &framesInFlight) != VK_SUCCESS)
+{
+	printf("Failed to create the fence.");
+}
+```
+
+The only important part is the **VkCreateFenceInfo** **.flags** this is set to **VK_FENCE_CREATE_SIGNALED_BIT** meaning we set up the fence to be signalled from the start. You want to do this because we are waiting for the fence to be signled before we begin our next frame. Well what about the first frame? There wasn't a previous frame to wait for. If we don't set up the fence at the beginning we will dead locked immediately. 
+
+Destroying them is pretty simple too.
+
+```c++
+vkDestroySemaphore(device, imageAvailableSemaphore, nullptr);
+vkDestroySemaphore(device, renderFinishSemaphore, nullptr);
+vkDestroyFence(device, framesInFlight, nullptr);
+```
+##### Waiting for the previous frame.
+At the beginning of the drawing routine you'll need to wait for the previous frame.  You do this with the **vkWaitForFence**
+
+```c++
+vkWaitForFences(device, 1, &framesInFlight, VK_TRUE, UINT64_MAX);
+```
+
+The **vkWaitForFence** can wait more muiltple fences. The secound argument is the amount of fences in the array, the next is the VkFence array and the **VK_TRUE** here is a bool that says should the host wait for all the fences. Since we are using 1 fence this doesn't matter to use a lot. The last argument is the timeout, using UINT64_MAX pretty much disables this wait timing out. 
+
+Remember you have to reset the fence manually so after the wait is over from **vkWaitForFences** we need to reset the fence back it's unsignlled state with.
+
+```c++
+vkResetFences(device, 1, &framesInFlight);
+```
+
+##### Acquirng an image from the swapchain.
+Next we need to get the image from the swapchain. 
+
+```c++
+uint32_t imageIndex;
+vkAcquireNextImageKHR(device, swapchain, UINT64_MAX, imageAvailableSemaphore, VK_NULL_HANDLE, &imageIndex);
+```
+
+The first two parameters are telling vulkan were we get the image from. The third argument is the timeout for this command which we disable again with the UINT64_MAX.
+
+The 4th and 5th argument are to do with waiting for the presentation engine to finish it's work. We are only using a semaphore which will be signalled when the presentation is done. 
+
+The last argument tells us which VkImage is usable in the swapchain array. We use this value to later use to access the correct swapchain image in our render pass as the framebuffer.
+##### Submitting the command buffer
+Queue submission and synchronisation is configured with **VkSubmitInfo**. 
+
+```c++
+VkSubmitInfo submitInfo{};
+submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
+
+VkSemaphore waitSemaphores[] = { imageAvailableSemaphore };
+VkPipelineStageFlags waitStages[] = { VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT };
+submitInfo.waitSemaphoreCount = 1;
+submitInfo.pWaitSemaphores = waitSemaphores;
+submitInfo.pWaitDstStageMask = waitStages;
+```
+
+What we are doing here is setting up part of the pipeline stages that need to wait. We need to wait on the **VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT** This is the part of that handles the output of the final colour. This stop things writing to an image until it is ready.
+
+This means that we can run the vertex shader and other stages of the pipeline before we have to wait. We explain why we are doing this in the subpass dependency section.
+
+```c++
+submitInfo.commandBufferCount = 1;
+submitInfo.pCommandBuffers = &commandBuffer;
+```
+
+Here we submit the command buffer for execution.
+
+```c++
+VkSemaphore signalSemaphores[] = { renderFinishSemaphore };
+submitInfo.signalSemaphoreCount = 1;
+submitInfo.pSignalSemaphores = signalSemaphores;
+```
+
+This is simply the set up to signal the semaphore when the command buffer has finished executing.
+
+```c++
+if (vkQueueSubmit(mainQueue, 1, &submitInfo, framesInFlight) != VK_SUCCESS) 
+{
+	printf("Failed to submit the command buffer to draw with the current queue.");
+}
+```
+
+For this function we have
+- **mainQueue** which is queue we are submitting the command buffer on.
+- **1** which is the total count of **VkSubmitInfo** in an array.
+- **&submitInfo** is the struct itself or an array of them. Having an array can help with efficiency if the work load is large enough.
+- **frameInFlight** is our fence (which is optional) this will signal the fence to wait for the command buffer to finish executing. This is so our frames don't over draw each other causing all sort of issues.
+##### Setting up subpass dependencies
+The later brings up subpass dependences which we need to solve. This is done with the **VkSubpassDependency** struct which needs to be set up as part of the render pass creation.
+
+```c++
+VkSubpassDependency dependency{};
+dependency.srcSubpass = VK_SUBPASS_EXTERNAL;
+dependency.dstSubpass = 0;
+```
+
+The first two fields specify the indices of the dependency and dependend subpass. 
+
+The indices of the dependencies work so that the **.srcSubpass** takes in a index that is **SMALLER** than the **.dstSupass** (unless **VK_SUBPASS_EXTERNAL** is used). These connect other subpass dependencies together. 
+
+**VK_SUBPASS_EXTERNAL** tells if the dependency starts at the beginning or end of the render pass depending if it's assigned to **.srcSubpass** (which is the beginning) or the **.dstSubpass** (which is the end). You can image a subpass depedency chain being set up like this:
+
+```c++
+VkSubpassDependency dependencyOne{};
+dependencyOne.srcSubpass = VK_SUBPASS_EXTERNAL;
+dependencyOne.dstSubpass = 0;
+
+VkSubpassDependency dependencyTwo{};
+dependencyTwo.srcSubpass = 0;
+dependencyTwo.dstSubpass = 1;
+```
+
+Next we set up what pipeline stages and image attachments we are waiting. When we are using the **.src** paramters we are telling vulkan that **THIS** subpass need to wait on before any operations can begin within that subpass. The **.dst** is all about what needs to be completed before we can pass over this over to the NEXT subpass.
+
+Here we only using 1 subpass within a render pass so these are self dependences. 
+
+```c++
+dependency.srcStageMask = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT;
+dependency.dstStageMask = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT;
+```
+
+For the **.srcStageMask** stage dependencence we are waiting on the swapchain to finish reading the image before we can access it from the previous frame, which is done with the **VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT** then we can begin writing the final colour of the frame to the swapchain's framebuffer's image.
+
+For **.dstStageMask** the subpass and we need to have completed any work that involves the  **VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT** which in our case is writing our final colours to the swapchain's framebuffer's image.
+
+```c++
+dependency.srcAccessMask = 0;
+dependency.dstAccessMask = VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT;
+```
+
+For **.srcAccessMask** we don't care what we came in as for our attachments so it's zero. The second one is making sure that subpass attachment has transitioned to a **VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT** before we move on. Meaning we have written to the image.
+
+```c++
+renderPassCreateInfo.dependencyCount = 1;
+renderPassCreateInfo.pDependencies = &dependency;
+```
+
+Then when create the render pass we set up the subpass dependencies for our 1 subpass. 
+##### Setting the sychronisation with the subpass dependencies
+Without this synchronisation when submitting our command buffer we are assuming that the memory transition goes from undefined to colour attach optimial at the beginning of the render pass, this is WRONG. We haven't acquired the image yet to begin this transition.
+
+This is what this code is set up to do.
+```c++
+VkSubmitInfo submitInfo{};
+submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
+
+VkSemaphore waitSemaphores[] = { imageAvailableSemaphore };
+VkPipelineStageFlags waitStages[] = { VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT };
+submitInfo.waitSemaphoreCount = 1;
+submitInfo.pWaitSemaphores = waitSemaphores;
+submitInfo.pWaitDstStageMask = waitStages;
+```
+
+There are actually two way to wait for the image, in the **waitStages[]** array
+1) If you set a semaphore the flag is set to **VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT** the ensure that the render passes don't begin until the image is available, avoiding setting up the subpass dependencies. This blocks the pre-colour outputting stages of the graphics pipeline.
+2) If you set a semaphore the flag is set to **VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT** which forces the render pass to wait until this part of the graphics pipeline has been finished. However you need to have set up the subpass dependencies within the render pass correctly for this to work, which you should have already done to match the semaphore.
+##### Presentation
+If you've done everything needed to take the image to the submit your command buffer, the final to is tell the swapchain to submit your image to the screen. This is done with the **VkPresentInfoKHR** struct.
+
+This code should all go at the end of the drawing a frame.
+
+```c++
+VkPresentInfoKHR presentInfo{};
+presentInfo.sType = VK_STRUCTURE_TYPE_PRESENT_INFO_KHR;
+presentInfo.waitSemaphoreCount = 1;
+presentInfo.pWaitSemaphores = signalSemaphores;
+```
+
+Here we are waiting on the signalSemaphore which was used when we submitted the command buffer. Meaning we are waiting for everything to render and write that result out.
+
+```c++
+VkSwapchainKHR swapchains[] = { swapchain };
+presentInfo.swapchainCount = 1;
+presentInfo.pSwapchains = swapchains;
+presentInfo.pImageIndices = &imageIndex;
+presentInfo.pResults = nullptr;
+```
+
+Here we actually present the specify swapchain with **.pSwapchains** to present the images. The index of the image also needs to be presented with **.pImageIndices**. **.pResults** takes an array of VkResults which is useful if your using multiple swapchains because it will tell you if the images were presented successfully.
+
+```c++
+vkQueuePresentKHR(mainQueue, &presentInfo);
+```
+

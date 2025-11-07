@@ -17,7 +17,7 @@ PFN_vkCreateDebugUtilsMessengerEXT vkCreateDebugUtilsMessengerEXT =(PFN_vkCreate
 
 Every dynamically loaded function follows the pattern of **PFN_** followed by the name of the function you want. So in this case we want to run the **vkCreateDebugUtilsMessengerEXT** function to create a debug message callback.
 
-The **vkGetInstanceProcAddr** returns a void* so you need to case this into the function pointer you want. The arguments are just vulkan instance and the string name of the function you want to create. 
+The **vkGetInstanceProcAddr** returns a void* so you need to cast this into the function pointer you want. The arguments are just vulkan instance and the string name of the function you want to create. 
 
 Then you can just run it like normal.
 ```c++

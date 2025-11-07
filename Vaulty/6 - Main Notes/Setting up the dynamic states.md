@@ -20,7 +20,7 @@ std::vector<VkDynamicState> dynamicStates =
 };
 
 VkPipelineDynamicStateCreateInfo dynamicState{};
-dynamicState.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
+dynamicState.sType = VK_STRUCTURE_TYPE_PIPELINE_DYNAMIC_STATE_CREATE_INFO;
 dynamicState.dynamicStateCount = uint32_t(dynamicStates.size());
 dynamicState.pDynamicStates = dynamicStates.data();
 ```

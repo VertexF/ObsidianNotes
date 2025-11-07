@@ -19,7 +19,7 @@ Remeber that that swapchain images (VkImage) can be larger than the application 
 
 If you're using a standard set up you'll want min and max depth to be 0.f to 1.f. If you're doing reverse perspective you'll want the opposite.
 
-The viewport defines the transformation from image to the framebuffer, but the scissort defines the rectangle that's actually stored. Meaning pixels outside the scissor will be discards.
+The viewport defines the transformation from image to the framebuffer, but the scissort defines the rectangle that's actually stored. Meaning pixels outside the scissor will be discarded.
 
 ![[viewports_scissors-2294964527.png]]
 
@@ -45,6 +45,6 @@ viewportCreateInfo.scissorCount = 1;
 # References
 ##### Main Notes
 [[Setting up the dynamic states]]
-What is a framebuffer <- This needs creating for this note.
+[[What is a framebuffer]]
 #### Source Notes
 [[Vulkan-Tutorial]]

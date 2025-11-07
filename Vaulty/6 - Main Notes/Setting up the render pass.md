@@ -11,7 +11,7 @@ When you have finished:
 You can now create a render pass with the **VkRenderPassCreateInfo** this struct takes in the struct
 - **VkAttachmentDescription**
 - **VkSubpassDescription**
-It can take more than 1 of each types so if you need more subpasses and attachment descriptions to pair with them you'll use a flat array to store and link them to the struct.
+It can take more than 1 of each types so if you need more subpasses and attachment descriptions  you'll just want to add them a flat array.
 
 If all goes well you'll end up with this
 
@@ -30,6 +30,8 @@ if (vkCreateRenderPass(device, &renderPassCreateInfo, nullptr, &renderPass) != V
 }
 ```
 
+By the end of this you'll have a **VkRenderPass** object which will be used for creating framebuffer and recording commands into a command buffer.
+
 Destruction is simple, you just destroy **VkRenderPass** at some point before the VkDevice
 
  ```c++
@@ -37,6 +39,7 @@ vkDestroyRenderPass(device, renderPass, nullptr);
 ```
 # References
 ##### Main Notes
+[[What is a framebuffer]]
 [[Setting up the colour attachment descriptions]]
 [[Setting up the attachment reference]]
 [[Setting up the subpass]]

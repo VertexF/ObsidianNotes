@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[render pass]]
 # Setting up the colour attachment descriptions
 
-The attachment description describes what needs to be changed within a buffer and samples. So a colour attachment description is going to be different to a depth attechment description for example.
+The attachment description describes what needs to be changed within a buffer and samples within a render pass. So a colour attachment description is going to be different to a depth attachment description for example.
 
 You do this by setting creating the **VkAttachmentDescription**. I will show how to set up a simple colour attachment description but other types require different set up.
 
@@ -15,7 +15,7 @@ colourAttachment.samples = VK_SAMPLE_COUNT_1_BIT;
 
 I'm using the swapchain format to set the colour attachment format. The samples at set to **1_BIT** because we aren't doing any type of multisampling.
 
-When creating description you need to descripe how your doing to store and load the data. We do this with **.loadOp** and **.storeOp** for colour and depth data and **.stencilLoadOp** and **.stencilStoreOp** for stencil values only.
+When creating attachment descriptions you need to describe how your doing to store and load the data. We do this with **.loadOp** and **.storeOp** for colour and depth data and **.stencilLoadOp** and **.stencilStoreOp** for stencil values only.
 
 For **loadOp** we have these options:
 - **VK_ATTACHMENT_LOAD_OP_LOAD** perserve the previous content of the attachment
@@ -25,7 +25,7 @@ For **storeOp** we have these options:
 - **VK_ATTACHMENT_STORE_OP_STORE** we store rendered data in memory to read later.
 - **VK_ATTACHMENT_STORE_OP_DONT_CARE** stuff in the framebuffer will be undefined after rendering operations.
 
-For a standard colour attachment description you'll want to clear the framebuffer at the beginning of swapchain which will be the **loadOp** setting. The want to store the result of the operation so we can see what's rendered, this is the **storeOp**. 
+For a standard colour attachment description you'll want to clear the framebuffer at the beginning of swapchain which will be the **loadOp** setting. For **storeOp** you'll want to store the result of the operation so we can see what's rendered.
 
 We don't care about the stencil data because we're not using it.
 
@@ -52,6 +52,7 @@ colourAttachment.finalLayout = VK_IMAGE_LAYOUT_PRESENT_SRC_KHR;
 
 When you use **VK_IMAGE_LAYOUT_UNDEFINED** you are saying you don't care what the format is in before rendering. When a VkImage is in an UNDEFINED layout treat the VkImage as a unitialised memory and **NOT** cleared.
 
+For all the render passes you end up using you'll be wanting to swap the attachments around.
 # References
 ##### Main Notes
 [[What is a render pass]]

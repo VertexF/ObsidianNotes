@@ -4,35 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "497274fd804d6c2f",
+        "id": "fa917daf52f3b369",
         "type": "tabs",
+        "dimension": 49.87309644670051,
         "children": [
           {
-            "id": "77021487e7712e40",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/Article/Vulkan-Tutorial.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Vulkan-Tutorial"
-            }
-          },
-          {
-            "id": "169be6e977b27837",
+            "id": "c4d2b20627c56919",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -54,21 +31,46 @@
               "icon": "lucide-file",
               "title": "vulkan"
             }
+          },
+          {
+            "id": "e6f344743abd577a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Article/Vulkan-Tutorial.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Vulkan-Tutorial"
+            }
           }
         ],
         "currentTab": 1
       },
       {
-        "id": "cfcc2d27a87447dc",
+        "id": "acaf321eb0789184",
         "type": "tabs",
+        "dimension": 50.1269035532995,
         "children": [
           {
-            "id": "fe67cdd2c7502440",
+            "id": "7a17ec18f3ab537b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/What is a render pass.md",
+                "file": "6 - Main Notes/Setting the synchronisation with the subpass dependencies.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -83,16 +85,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "What is a render pass"
+              "title": "Setting the synchronisation with the subpass dependencies"
             }
           },
           {
-            "id": "93da59b727f182db",
+            "id": "7fe83f1e06744e16",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Setting up the subpass.md",
+                "file": "6 - Main Notes/What are semaphores.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -107,35 +109,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Setting up the subpass"
-            }
-          },
-          {
-            "id": "a725336cc67acd55",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Setting up the render pass.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Setting up the render pass"
+              "title": "What are semaphores"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -295,34 +272,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "169be6e977b27837",
+  "active": "e6f344743abd577a",
   "lastOpenFiles": [
-    "6 - Main Notes/Setting up the vertex inputs.md",
+    "6 - Main Notes/Submitting the command buffer for rendering.md",
     "4 - Indexes/vulkan.md",
-    "6 - Main Notes/Setting up the dynamic states.md",
-    "6 - Main Notes/Setting up the pipeline layout.md",
+    "6 - Main Notes/What are command buffers.md",
+    "6 - Main Notes/What you need to synchronise a frame.md",
+    "6 - Main Notes/Setting the synchronisation with the subpass dependencies.md",
     "2 - Source Material/Article/Vulkan-Tutorial.md",
-    "6 - Main Notes/Setting up the render pass.md",
-    "6 - Main Notes/Setting up the subpass.md",
-    "6 - Main Notes/What is a render pass.md",
-    "6 - Main Notes/Setting up the attachment reference.md",
+    "6 - Main Notes/Setting up subpass dependencies with one subpass.md",
+    "2 - Source Material/Video/Render Passes in Vulkan.md",
+    "6 - Main Notes/What is a subpass.md",
+    "6 - Main Notes/What are subpass dependencies.md",
+    "6 - Main Notes/What are semaphores.md",
+    "3 - Tags/vulkan subpass.md",
     "6 - Main Notes/Setting up the colour attachment descriptions.md",
-    "6 - Main Notes/Customising validation layers externally.md",
-    "6 - Main Notes/Setting up the swapchain extension.md",
-    "6 - Main Notes/What is a swapchain.md",
-    "6 - Main Notes/Checking surface and swapchain compability.md",
-    "6 - Main Notes/Checking surface format.md",
-    "3 - Tags/render pass.md",
+    "6 - Main Notes/Setting up the synchronisation objects.md",
+    "6 - Main Notes/Acquirng an image from the swapchain.md",
+    "6 - Main Notes/Using a fence to synchronise the previous frame.md",
+    "6 - Main Notes/What is synchronisation in vulkan.md",
+    "6 - Main Notes/What are fences.md",
+    "6 - Main Notes/Setting up the command buffers.md",
+    "6 - Main Notes/Setting up and running the vkCmdDraw command.md",
+    "6 - Main Notes/Using a render pass.md",
+    "3 - Tags/vulkan sychronisation.md",
+    "6 - Main Notes/Recording commands.md",
+    "3 - Tags/vulkan validation.md",
+    "6 - Main Notes/Setting up the rasteriser.md",
     "6 - Main Notes/Querying surface capabilities.md",
-    "6 - Main Notes/What are queue families.md",
-    "6 - Main Notes/Checking for family queue suitability.md",
-    "6 - Main Notes/Device level extensions.md",
-    "6 - Main Notes/What are validation layers.md",
-    "6 - Main Notes/Creation of the shader module.md",
-    "6 - Main Notes/Getting swapchain images.md",
-    "6 - Main Notes/What is a vulkan surface.md",
-    "6 - Main Notes/Creating vulkan queues.md",
-    "6 - Main Notes/What is the graphics pipeline.md",
     "vulkan_simplified_pipeline.svg",
     "viewports_scissors-2294964527.png",
     "4 - Indexes",
