@@ -44,4 +44,4 @@ vkDestroyRenderPass(device, renderPass, nullptr);
 [[Setting up the attachment reference]]
 [[Setting up the subpass]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

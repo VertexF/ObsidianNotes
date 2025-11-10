@@ -22,7 +22,7 @@ The function signature needs to match exactly like this. It needs to be **static
 The first argument tracks the severity of the message being received. These can be:
 - `VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT` Diagnostic info not meant for you.
 - `VK_DEBUG_UTILS_MESSAGE_SEVERITY_INFO_BIT_EXT`General normal info of things working.
-- `VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT` Like a bug, but not fatal.
+- `VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT` Likely a bug, but not fatal.
 - `VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT` A fatal bug that needs to be solved.
 
 The second argument track the type of message you'll be receiving which can be any of these:
@@ -43,4 +43,4 @@ Finally this should **ALWAYS** return VK_FALSE. Returning anything else will res
 [[Why set up debug callbacks for vulkan validation]]
 [[Connecting custom debug function to Vulkan]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

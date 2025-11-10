@@ -34,4 +34,4 @@ Notice the last time of this code snippet. It's totally fine here to select the 
 ##### Main Notes
 [[Checking surface and swapchain compability]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

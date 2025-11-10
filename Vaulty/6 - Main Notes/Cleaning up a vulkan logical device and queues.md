@@ -16,4 +16,4 @@ vkDestroyDevice(device, vulkanAllocationCallbacks);
 [[Create the logical device]]
 [[Cleaning up a physical device and queue families]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

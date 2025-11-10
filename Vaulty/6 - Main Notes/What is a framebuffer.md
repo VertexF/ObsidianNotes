@@ -22,4 +22,4 @@ The image index that selects the correct framebuffer is controlled by the swapch
 [[Setting up the subpass]]
 [[Setting up the attachment reference]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

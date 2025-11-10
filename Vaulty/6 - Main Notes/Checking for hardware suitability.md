@@ -29,4 +29,4 @@ A common way to select a good GPU is to use a scoring system that adds points ba
 [[Listing the GPUs in Vulkan]]
 [[What is a vulkan physical device]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

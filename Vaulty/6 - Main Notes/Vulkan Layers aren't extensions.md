@@ -5,11 +5,11 @@ Tags: [[vulkan]] [[vulkan validation]]
 
 Layers and extensions are set up pretty much in the same way, however it's important to not that extensions and layers do different things.
 
-Extensions extend vulkan core functionality, layers are a proxy between vulkan function calls and the driver. Why this is important to know is that layers have an overhead cost that slows your renderer down, extensions just add features for you to use and don't slow things down.
+Extensions extend vulkan core functionality, layers are a proxy between vulkan function calls and the driver. This is important because layers have an overhead cost that slows your renderer down, extensions just add features for you to use and don't slow things down but change how things might be used.
 # References
 ##### Main Notes
 [[Enabling Validation layers]]
 [[Setting up extensions]]
 [[What are validation layers]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

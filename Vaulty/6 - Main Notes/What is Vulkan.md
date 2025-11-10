@@ -14,4 +14,4 @@ It's verbose and a difficult API to learn. With all the power come a lot more th
 ##### Main Notes
 [[First Step for setting up Vulkan]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

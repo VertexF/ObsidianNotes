@@ -1,4 +1,4 @@
-# Reference https://vulkan-tutorial.com/
+# Reference https://vulkan-tutorial.com/Drawing_a_triangle/Setup/Base_code
 
 #### Overview
 Vulkan is a graphics API from khronos and it's a successor to OpenGL. It's cross-platform works across all the GPUs. 
@@ -1962,5 +1962,247 @@ Here we actually present the specify swapchain with **.pSwapchains** to present 
 
 ```c++
 vkQueuePresentKHR(mainQueue, &presentInfo);
+```
+
+All this function is tell the swapchain to present the image to the screen. 
+
+When closing you need to remember that GPU is asynchronous from the CPU meaning that operations on the GPU might be still happening so you'll need to add
+
+```c++
+vkDeviceWaitIdle(device);
+```
+
+all to pause operations. This is a very creud way of performaning synchronisations between the GPU and CPU but while closing this is enough.
+##### Frame in flight
+Frames in flight is to do with how many frames are currently processing at the same time. In newer version of vulkan you can't just handle 1 frame at a time if your swapchain image count is more than 1.
+
+Earlier on when you had extracted the minimum and maximum amount of swapchain images through checking it's capability. We can that we had this number of images.
+
+```c++
+uint32_t imageCount = surfaceCapabilities.minImageCount + 1;
+```
+
+This is the totally number of frame in flight you should have. 
+
+Since we want to process these frames at the same time we also need to duplicated the command buffer and the synchronisation object.
+
+This is what creation would look like the command buffer.
+```c++
+std::vector<VkCommandBuffer> commandBuffers(imageCount);
+VkCommandBufferAllocateInfo allocateInfo{};
+allocateInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
+allocateInfo.commandPool = commandPool;
+allocateInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
+allocateInfo.commandBufferCount = uint32_t(commandBuffers.size());
+
+if (vkAllocateCommandBuffers(device, &allocateInfo, commandBuffers.data())) 
+{
+	printf("Failed to create a command buffer.");
+}
+
+std::vector<VkSemaphore> imageAvailableSemaphore(imageCount);
+std::vector<VkSemaphore> renderFinishSemaphore(imageCount);
+std::vector<VkFence> framesInFlight(imageCount);
+```
+
+Since you know how to use flat arrays I'm sure you figure out the reset.
+
+To do the rest we need to keep track of the current frame at run time. 
+
+```c++
+uint32_t currentFrame = 0;
+bool running = true;
+while(running)
+{
+	///... All event handling code here.
+	
+	vkWaitForFences(device, 1, &framesInFlight[currentFrame], VK_TRUE, UINT64_MAX);
+	vkResetFences(device, 1, &framesInFlight[currentFrame]);
+
+	//... All other drawing code here.
+
+	currentFrame = (currentFrame + 1) % maxFramesInFlight;
+}
+```
+
+
+The **currentFrame** should be set to 0 and index into command buffers, semaphores and fences as each frame needs it's own seperate synchronisation objects and command buffer. The last line caps the the current to cycle through 0, to n, where n is equal to how many images are in the swapchain.
+##### Swapchain recreation
+Note before I start I did things slightly differently from the tutorial the information is sourced from but the information is sourced from the tutorial.
+
+There is an issue that if not dealt with can cause some issues. If you resize the the window the window surface changes which means the swapchain and surface aren't compatible anymore. So event were the window surface changes we need to recreate the swapchain.
+
+To recreate the swapchain you'll need to reconstruct everything to do with the swapchain, the VkImageViews that need to be created for each swapchain image, and the framebuffers that use those swapchain images to be created.
+
+It's important to note that you might want to even create the renderpass. It's possible that a monitor has lower DPI and then the window gets dragged to a higher DPI monitor.
+
+```c++
+static void recreateSwapchain()
+{
+    vkDeviceWaitIdle(device);
+
+    vkGetPhysicalDeviceSurfaceCapabilitiesKHR(physicalDevice, surface, &surfaceCapabilities);
+    swapchainExtent = surfaceCapabilities.currentExtent;
+
+    if(swapchainExtent.width == 0 || swapchainExtent.height == 0) 
+    {
+        return;
+    }
+
+    cleanupSwapchain();
+
+    createSwapchain();
+    createImageViews();
+    createFramebuffers();
+}
+```
+
+First thing we need to do is wait for the GPU with **vkDeviceWaitIdle(device);** It's not a good idea ever to change resources still in use so when we are recreating the swapchain we are doing to recerate the VkImageViews which might be in use somewhere.
+
+The next thing we do is guard against the viewport degrading to 0 height or width. You can't when recreating the swapchain because we are not allowed to create a swapchain with an **.imageExtent** in the **VkSwapchainCreateInfoKHR** creation struct with either 0 in height or width. That's why we are quering the **surfaceCapabilities** early which will be used in the **createSwapchain();** function if we aren't at 0 height or width.
+
+The 0 height and width also guards against minimised windows.
+
+Next we have to destroy the old framebuffers, old swapchain ImageView's and the swapchain, all before we start recreating them. This is done the **cleanupSwapchain();**
+
+```c++
+static void cleanupSwapchain() 
+{
+    for (auto framebuffer : swapchainFramebuffers)
+    {
+        vkDestroyFramebuffer(device, framebuffer, nullptr);
+    }
+
+    for (auto imageView : swapchainImageViews)
+    {
+        vkDestroyImageView(device, imageView, nullptr);
+    }
+
+    vkDestroySwapchainKHR(device, swapchain, nullptr);
+}
+```
+
+The reset of the functions all are part of the swapchain create which you can read about here
+
+Creating the swapchain happens in the **createSwapchain();** below is everything you need to write that function.
+[[What is a swapchain]]
+[[Checking surface and swapchain compability]]
+[[Setting up the swapchain extension]]
+[[Querying surface capabilities]]
+[[Checking surface format]]
+[[Selecting a presentation mode]]
+[[Creating the swapchain]]
+[[Getting swapchain images]]
+
+Creation of the swapchain image views is done in the **createImageViews();** below is everything you need to write that function.
+[[What are image views]]
+[[Creating an image view]]
+[[Destroying a image view]]
+ 
+Creation of the framebuffers which come from the swapchain are in the **createFramebuffers();** below is everything you need to write that function.
+[[What is a framebuffer]]
+[[Creating the framebuffers]]
+
+You can do better than this because we aren't going to use the **.oldSwapchain** feature in the creation of the new swapchain. This allows us to still deal with frames in flight while the swapchain is being recreated. 
+##### Suboptimal or out-of-date swapchain.
+If you have a function that recreate a swapchain now you just need to know were to apply it. This should be applied when you **vkAcquireNextImageKHR** and when you submit things to be presented with the function **vkQueuePresentKHR**. These both return values you can check for:
+1) **VK_ERROR_OUT_OF_DATE_KHR** The swapchain become incompatible with the surface and ca no longer be used for rendering. This typical means the window has window resize.
+2) **VK_SUBOPTIMAL_KHR** The swapchain can still be used successfully present to the surface, but the swapchain properties no longer match.
+
+```c++
+uint32_t imageIndex;
+VkResult result = vkAcquireNextImageKHR(device, swapchain, UINT64_MAX, imageAvailableSemaphore[currentFrame], VK_NULL_HANDLE, &imageIndex);
+if (result == VK_ERROR_OUT_OF_DATE_KHR)
+{
+    recreateSwapchain();
+    continue;
+}
+else if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR) 
+{
+    printf("Failed to acquire swapchain image at image index %d", imageIndex);
+}
+```
+
+If the swapchain is **VK_ERROR_OUT_OF_DATE_KHR** when acquiring an image then it's no longer to present it. If that's the case we recreate the swapchain. If the swapchain **VK_SUBOPTIMAL_KHR** we can still present it so it's considered a success, you can recreate the swapchain if you like.
+
+```c++
+result = vkQueuePresentKHR(mainQueue, &presentInfo);
+if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR) 
+{
+    recreateSwapchain();
+
+    currentFrame = (currentFrame + 1) % maxFramesInFlight;
+    continue;
+}
+else if(result != VK_SUCCESS)
+{
+    printf("Failed or present swapchain image!");
+}
+```
+
+This is similar to before but we want to recreate the swapchain if it's **VK_SUBOPTIMAL_KHR** too here to have the best possible result. 
+
+Since we are at the bottom of the render loop here and if you resize the window and hit this case you'll want to advance to the frame here since we have already submitted things to the presentation queue, we should be on the next frame by now.
+##### Fixing a deadlock
+It's possible to end up resetting the fence too early in the render loop if the **vkAcquireNextImageKHR** as returned **VK_ERROR_OUT_OF_DATE_KHR**. If you reset before this happens the you recreate the swapchain, meaning you didn't submit anything so the fence doesn't get signalled to move past **vkAcquireNextImageKHR**.
+
+So we simply reset the fence after the recreation of the swapchain:
+```c++
+vkWaitForFences(device, 1, &framesInFlight[currentFrame], VK_TRUE, UINT64_MAX);
+        
+uint32_t imageIndex;
+VkResult result = vkAcquireNextImageKHR(device, swapchain, UINT64_MAX, imageAvailableSemaphore[currentFrame], VK_NULL_HANDLE, &imageIndex);
+if (result == VK_ERROR_OUT_OF_DATE_KHR)
+{
+    recreateSwapchain();
+    continue;
+}
+else if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR) 
+{
+    printf("Failed to acquire swapchain image at image index %d", imageIndex);
+}
+
+vkResetFences(device, 1, &framesInFlight[currentFrame]);
+```
+
+Meaning that we definitely reach submission we have submitted something so the fence is signalled OR we return early with a signalled fence still active.
+##### VK_ERROR_OUT_OF_DATE isn't always supported
+Sometimes the VK_ERROR_OUT_OF_DATE is returned out of the **vkQueuePresentKHR** so in SDL you'll need to make sure a resize event is explicitly. 
+
+```c++
+bool running = true;
+bool framebufferResize = false;
+while (running)
+{
+    while (SDL_PollEvent(&event))
+    {
+        switch (event.type)
+        {
+        case SDL_EVENT_WINDOW_RESIZED:
+        {
+            framebufferResize = true;
+            break;
+        }
+        }
+    }
+}
+```
+
+Then you'll want to add an extra condition to the present VK_ERROR_OUT_OF_DATE if statement with the bool we added which gets flipped in the **SDL_EVENT_WINDOW_RESIZED** event.
+
+```c++
+result = vkQueuePresentKHR(mainQueue, &presentInfo);
+if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR || framebufferResize) 
+{
+    framebufferResize = false;
+    recreateSwapchain();
+
+    currentFrame = (currentFrame + 1) % maxFramesInFlight;
+    continue;
+}
+else if(result != VK_SUCCESS)
+{
+    printf("Failed or present swapchain image!");
+}
 ```
 

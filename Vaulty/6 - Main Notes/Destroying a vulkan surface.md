@@ -12,4 +12,4 @@ vkDestroySurfaceKHR(vulkanInstance, vulkanWindowSurface, vulkanAllocationCallbac
 ##### Main Notes
 [[Creating a vulkan surface]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

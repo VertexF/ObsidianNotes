@@ -39,11 +39,11 @@ Remember when we set the **.loadOp** in the VkAttachmnetDescription to be **VK_A
 
 With all that we can begin the render pass, record draw commands and end the render pass.
 ```c++
-vkCmdBeginRenderPass(commandBuffer, &renderPassBeginInfo, VK_SUBPASS_CONTENTS_INLINE);
+vkCmdBeginRenderPass(commandBuffers[currentFrame], &renderPassBeginInfo, VK_SUBPASS_CONTENTS_INLINE);
 
 //... Draw commands here
 
-vkCmdEndRenderPass(commandBuffer);
+vkCmdEndRenderPass(commandBuffers[currentFrame]);
 ```
 
 As you can see in the comments that's where all the draw commands. The last parameter in the **vkCmdBeginRenderPass** can be two different values:
@@ -57,5 +57,6 @@ Note that these values can change for each render pass you are using. If you're 
 [[Recording commands]]
 [[Setting up the render pass]]
 [[Setting up the colour attachment descriptions]]
+[[Handling frames in flight]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

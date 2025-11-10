@@ -31,4 +31,4 @@ Command Buffer note needed here.
 [[Making GPU features usable]]
 [[What is vulkan logical device]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

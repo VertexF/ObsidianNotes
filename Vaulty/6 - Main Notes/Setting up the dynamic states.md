@@ -28,4 +28,4 @@ dynamicState.pDynamicStates = dynamicStates.data();
 ##### Main Notes
 [[What is the graphics pipeline]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

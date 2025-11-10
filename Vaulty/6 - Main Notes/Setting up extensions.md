@@ -30,4 +30,4 @@ The **REQUESTED_EXTENSIONS** contains a list of const char* to different extensi
 [[Loading extended functions dynamically]]
 [[Device level extensions]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

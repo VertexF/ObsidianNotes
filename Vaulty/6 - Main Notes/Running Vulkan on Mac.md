@@ -27,4 +27,4 @@ with the flag **VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_KHR** for VkInstanceCre
 [[First Step for setting up Vulkan]]
 [[Setting up extensions]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

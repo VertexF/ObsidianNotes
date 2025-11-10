@@ -8,4 +8,4 @@ A vulkan physical device is the direct connection from vulkan to a GPU. This is 
 ##### Main Notes
 [[Listing the GPUs in Vulkan]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

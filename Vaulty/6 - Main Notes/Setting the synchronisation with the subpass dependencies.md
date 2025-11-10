@@ -5,12 +5,12 @@ Tags: [[vulkan]] [[vulkan subpass]] [[vulkan sychronisation]]
 
 You should have finished [[Setting up subpass dependencies with one subpass]] which will allow our subpass to behavour properly within our render pass instance. 
 
-To actually get the dependecy within the subpass to work correctly this how you should be setting things up:
+To actually get the dependency within the subpass to work correctly this how you should be setting things up:
 ```c++
 VkSubmitInfo submitInfo{};
 submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
 
-VkSemaphore waitSemaphores[] = { imageAvailableSemaphore };
+VkSemaphore waitSemaphores[] = { imageAvailableSemaphore[currentFrame]};
 VkPipelineStageFlags waitStages[] = { VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT };
 submitInfo.waitSemaphoreCount = 1;
 submitInfo.pWaitSemaphores = waitSemaphores;
@@ -28,5 +28,5 @@ There are actually two way to wait for the image, in the **waitStages[]** array
 [[What are subpass dependencies]]
 [[Setting up subpass dependencies with one subpass]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]
 [[Render Passes in Vulkan]]

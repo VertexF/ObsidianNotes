@@ -21,4 +21,4 @@ If you don't have access to the **VkFormat** from the **VkSurfaceFormatKHR** str
 [[Creating the swapchain]]
 [[Querying surface capabilities]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

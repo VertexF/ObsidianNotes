@@ -3,7 +3,7 @@ Status: #adult
 Tags: [[vulkan]] [[vulkan instance]] [[vulkan validation]]
 # How to debug instance creation
 
-You may not know that creation of the debug callback function from the debug util extension requires a successfully create vulkan instance to set up. So how do you debug instance creation?
+You may not know that creation of the debug callback function from the debug util extension requires a successfully created vulkan instance to set up. So how do you debug instance creation?
 
 Well you simply create the **VkDebugUtilsMessengerCreateInfoEXT** before the **VkInstanceCreateInfo** and extend **VkInstanceCreateInfo** with **VkDebugUtilsMessengerCreateInfoEXT** with the .pNext feature
 ```c++
@@ -31,4 +31,4 @@ So now with creation and deletion of the vulkan instance you have validation lay
 [[Connecting custom debug function to Vulkan]]
 [[Instance and device level validation]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

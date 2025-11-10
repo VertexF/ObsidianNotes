@@ -58,5 +58,5 @@ Then when create the render pass we set up the subpass dependencies for our 1 su
 [[What is a subpass]]
 [[What are subpass dependencies]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]
 [[Render Passes in Vulkan]]

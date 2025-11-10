@@ -31,4 +31,4 @@ for (uint32_t i = 0; i < availableExtensions.size(); ++i)
 ##### Main Notes
 [[What is a swapchain]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

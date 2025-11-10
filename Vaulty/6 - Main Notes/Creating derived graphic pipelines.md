@@ -79,4 +79,4 @@ The value of the child **.basePipelineIndex** has to be -1.
 ##### Main Notes
 [[Creating the graphics pipeline]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

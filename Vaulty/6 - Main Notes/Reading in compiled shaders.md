@@ -73,4 +73,4 @@ const uint32_t* binFragCode = reinterpret_cast<const uint32_t*>(fileReadBinary("
 ##### Main Notes
 [[Compiling shaders with vulkan]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

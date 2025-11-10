@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Indexes/vulkan.md",
+                "file": "2 - Source Material/Article/Vertex buffers.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,7 +29,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "vulkan"
+              "title": "Vertex buffers"
             }
           },
           {
@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Article/Vulkan-Tutorial.md",
+                "file": "2 - Source Material/Article/Drawing a triangle.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -53,11 +53,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Vulkan-Tutorial"
+              "title": "Drawing a triangle"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "acaf321eb0789184",
@@ -70,7 +69,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Setting the synchronisation with the subpass dependencies.md",
+                "file": "6 - Main Notes/Recreating the swapchain.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -85,7 +84,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Setting the synchronisation with the subpass dependencies"
+              "title": "Recreating the swapchain"
             }
           },
           {
@@ -94,7 +93,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/What are semaphores.md",
+                "file": "6 - Main Notes/Dealing with VK_ERROR_OUT_OF_DATE not being supported.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -109,10 +108,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "What are semaphores"
+              "title": "Dealing with VK_ERROR_OUT_OF_DATE not being supported"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -272,34 +272,36 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e6f344743abd577a",
+  "active": "c4d2b20627c56919",
   "lastOpenFiles": [
-    "6 - Main Notes/Submitting the command buffer for rendering.md",
+    "6 - Main Notes/Recreating the swapchain.md",
     "4 - Indexes/vulkan.md",
-    "6 - Main Notes/What are command buffers.md",
-    "6 - Main Notes/What you need to synchronise a frame.md",
-    "6 - Main Notes/Setting the synchronisation with the subpass dependencies.md",
-    "2 - Source Material/Article/Vulkan-Tutorial.md",
-    "6 - Main Notes/Setting up subpass dependencies with one subpass.md",
-    "2 - Source Material/Video/Render Passes in Vulkan.md",
-    "6 - Main Notes/What is a subpass.md",
-    "6 - Main Notes/What are subpass dependencies.md",
+    "6 - Main Notes/Customising validation layers externally.md",
+    "6 - Main Notes/How to debug instance creation.md",
+    "6 - Main Notes/Connecting custom debug function to Vulkan.md",
+    "6 - Main Notes/Creating the custom callback function for validation.md",
+    "6 - Main Notes/Why set up debug callbacks for vulkan validation.md",
+    "6 - Main Notes/Enabling Validation layers.md",
+    "6 - Main Notes/Instance and device level validation.md",
+    "6 - Main Notes/Vulkan Layers aren't extensions.md",
+    "6 - Main Notes/What are validation layers.md",
+    "2 - Source Material/Article/Vertex buffers.md",
+    "2 - Source Material/Article/Drawing a triangle.md",
+    "3 - Tags/vulkan swapchain.md",
+    "3 - Tags/vulkan sychronisation.md",
+    "6 - Main Notes/Code for the simplest vulkan app.md",
+    "6 - Main Notes/Dealing with VK_ERROR_OUT_OF_DATE not being supported.md",
+    "6 - Main Notes/Fixing a possible deadlock.md",
+    "6 - Main Notes/When to recreate the swapchain image.md",
     "6 - Main Notes/What are semaphores.md",
-    "3 - Tags/vulkan subpass.md",
+    "6 - Main Notes/Handling frames in flight.md",
     "6 - Main Notes/Setting up the colour attachment descriptions.md",
     "6 - Main Notes/Setting up the synchronisation objects.md",
-    "6 - Main Notes/Acquirng an image from the swapchain.md",
-    "6 - Main Notes/Using a fence to synchronise the previous frame.md",
-    "6 - Main Notes/What is synchronisation in vulkan.md",
-    "6 - Main Notes/What are fences.md",
-    "6 - Main Notes/Setting up the command buffers.md",
-    "6 - Main Notes/Setting up and running the vkCmdDraw command.md",
-    "6 - Main Notes/Using a render pass.md",
-    "3 - Tags/vulkan sychronisation.md",
-    "6 - Main Notes/Recording commands.md",
-    "3 - Tags/vulkan validation.md",
-    "6 - Main Notes/Setting up the rasteriser.md",
-    "6 - Main Notes/Querying surface capabilities.md",
+    "New folder",
+    "7 - Code",
+    "6 - Main Notes/Selecting a presentation mode.md",
+    "6 - Main Notes/Checking surface and swapchain compability.md",
+    "6 - Main Notes/Checking surface format.md",
     "vulkan_simplified_pipeline.svg",
     "viewports_scissors-2294964527.png",
     "4 - Indexes",
@@ -311,8 +313,6 @@
     "5 - Template",
     "4 - Indexes",
     "3 - Tags",
-    "2 - Source Material",
-    "1 - Rough Notes",
-    "desktop.ini"
+    "2 - Source Material"
   ]
 }

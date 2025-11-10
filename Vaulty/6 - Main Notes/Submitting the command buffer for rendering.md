@@ -9,7 +9,7 @@ Queue submission and synchronisation is configured with **VkSubmitInfo**.
 VkSubmitInfo submitInfo{};
 submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
 
-VkSemaphore waitSemaphores[] = { imageAvailableSemaphore };
+VkSemaphore waitSemaphores[] = { imageAvailableSemaphore[currentFrame]};
 VkPipelineStageFlags waitStages[] = { VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT };
 submitInfo.waitSemaphoreCount = 1;
 submitInfo.pWaitSemaphores = waitSemaphores;
@@ -24,13 +24,13 @@ This means that we can run the vertex shader and other stages of the pipeline be
 
 ```c++
 submitInfo.commandBufferCount = 1;
-submitInfo.pCommandBuffers = &commandBuffer;
+submitInfo.pCommandBuffers = &commandBuffers[currentFrame];
 ```
 
 Here we submit the command buffer for execution.
 
 ```c++
-VkSemaphore signalSemaphores[] = { renderFinishSemaphore };
+VkSemaphore signalSemaphores[] = { renderFinishSemaphore[currentFrame]};
 submitInfo.signalSemaphoreCount = 1;
 submitInfo.pSignalSemaphores = signalSemaphores;
 ```
@@ -38,7 +38,7 @@ submitInfo.pSignalSemaphores = signalSemaphores;
 This is simply the set up to signal the semaphore when the command buffer has finished executing.
 
 ```c++
-if (vkQueueSubmit(mainQueue, 1, &submitInfo, framesInFlight) != VK_SUCCESS) 
+if (vkQueueSubmit(mainQueue, 1, &submitInfo, framesInFlight[currentFrame]) != VK_SUCCESS) 
 {
 	printf("Failed to submit the command buffer to draw with the current queue.");
 }
@@ -56,4 +56,4 @@ For this function we have
 [[What are fences]]
 [[Acquirng an image from the swapchain]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

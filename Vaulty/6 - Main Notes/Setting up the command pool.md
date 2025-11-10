@@ -43,4 +43,4 @@ vkDestroyCommandPool(device, commandPool, nullptr);
 [[Setting up vulkan queues]]
 [[Creating vulkan queues]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

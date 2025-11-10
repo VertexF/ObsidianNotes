@@ -15,4 +15,4 @@ However if you've split up the presentation or any other type of queue family yo
 [[Checking to see if presentation is supported]]
 [[Create the logical device]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

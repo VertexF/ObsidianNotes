@@ -24,4 +24,4 @@ You only need to worry about the **VK_API_VERSION** here as this changes what is
 [[Checking for supported extensions]]
 [[Running Vulkan on Mac]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

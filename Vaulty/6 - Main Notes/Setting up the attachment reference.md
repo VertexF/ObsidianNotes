@@ -23,4 +23,4 @@ The **.layout** is the format of the output of the shader so this is an attachme
 [[Setting up the subpass]]
 [[What is a render pass]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

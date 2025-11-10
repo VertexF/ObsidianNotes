@@ -36,4 +36,4 @@ If you want to use the **VK_KHR_WIN32_SURFACE_EXTENSION_NAME** you'll need the t
 [[What is a vulkan surface]]
 [[Checking for supported extensions]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

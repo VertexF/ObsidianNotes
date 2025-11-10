@@ -26,4 +26,4 @@ This is great but the order of this function finishing on the GPU is undefined, 
 [[What are fences]]
 [[What you need to synchronise a frame]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

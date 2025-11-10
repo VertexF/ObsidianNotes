@@ -13,4 +13,4 @@ So if you plan on rendering something you need to check for the swapchain extens
 [[Instance and device level validation]]
 [[Making GPU features usable]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

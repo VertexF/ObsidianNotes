@@ -12,4 +12,4 @@ Commands run by submitting commands buffers every frame to a device queue such a
 [[Setting up the command buffers]]
 [[What is a render pass]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

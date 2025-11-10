@@ -10,7 +10,7 @@ To do any of this you should be currently  [[Recording commands]] and within tha
 After that you'll need to bind the graphics pipeline. 
 
 ```c++
-vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, mainPipeline);
+vkCmdBindPipeline(commandBuffers[currentFrame], VK_PIPELINE_BIND_POINT_GRAPHICS, mainPipeline);
 ```
 
 The second argument tells vulkan what type of pipeline you're binding. This is because vulkan needs to know about the attachments in the fragmant shader in the **VkAttachmentReference**
@@ -26,19 +26,19 @@ viewport.width = float(swapchainExtent.width);
 viewport.height = float(swapchainExtent.height);
 viewport.minDepth = 0.f;
 viewport.maxDepth = 1.f;
-vkCmdSetViewport(commandBuffer, 0, 1, &viewport);
+vkCmdSetViewport(commandBuffers[currentFrame], 0, 1, &viewport)
 
 VkRect2D scissor{};
 scissor.offset = { 0, 0 };
 scissor.extent = swapchainExtent;
-vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
+vkCmdSetScissor(commandBuffers[currentFrame], 0, 1, &scissor);
 ```
 
 This is basically how you set up scissor and viewport statically.
 
 After all that you can simply run the draw command, this is for drawing a triangle. Note it's not index because we have no index buffer.
 ```c++
-vkCmdDraw(commandBuffer, 3, 1, 0, 0);
+vkCmdDraw(commandBuffers[currentFrame], 3, 1, 0, 0);
 ```
 
 The arguments are after the command buffer:
@@ -49,8 +49,8 @@ The arguments are after the command buffer:
 
 Finally you'll want to end the render pass with
 ```c++
-vkCmdEndRenderPass(commandBuffer);
-if (vkEndCommandBuffer(commandBuffer) != VK_SUCCESS) 
+vkCmdEndRenderPass(commandBuffers[currentFrame]);
+if (vkEndCommandBuffer(commandBuffers[currentFrame]) != VK_SUCCESS)
 {
 	printf("Failed to record a command buffer");
 }
@@ -61,5 +61,6 @@ if (vkEndCommandBuffer(commandBuffer) != VK_SUCCESS)
 [[What is the graphics pipeline]]
 [[Using a render pass]]
 [[Recording commands]]
+[[Handling frames in flight]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

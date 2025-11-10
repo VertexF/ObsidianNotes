@@ -11,4 +11,4 @@ You need to have a least set up the logical device to begin writing the swapchai
 [[Setting up the swapchain extension]]
 [[What is vulkan logical device]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

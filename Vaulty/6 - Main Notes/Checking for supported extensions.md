@@ -32,4 +32,4 @@ Then you can check the list in the for loop to see if the optional extension you
 [[Setting up extensions]]
 [[Device level extensions]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

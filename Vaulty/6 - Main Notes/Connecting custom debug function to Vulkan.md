@@ -27,7 +27,7 @@ So lets look at the function arguments
 vkCreateDebugUtilsMessengerEXT(vulkanInstance, &debugMessenegerCreateInfo, vulkanAllocationCallbacks, &vulkanDebugUtilsMessenger);
 ```
 
-Firstly is the vulkan instance, second is the struct we made earlier, third is the allocator and forth is the **VkDebugUtilsMessengerEXT** which tracks the life span of the connected custom debug function.
+First is the vulkan instance, second is the struct we made earlier, third is the allocator and forth is the **VkDebugUtilsMessengerEXT** which tracks the life span of the connected custom debug function.
 
 If you've done that right you should have a connected debug function up and running. It's important to note again this should be **ONLY** set up in debug builds.
 # References
@@ -36,4 +36,4 @@ If you've done that right you should have a connected debug function up and runn
 [[Creating the custom callback function for validation]]
 [[Loading extended functions dynamically]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

@@ -35,4 +35,4 @@ SDLWindow = window;
 ##### Main Notes
 [[Destroying a vulkan surface]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

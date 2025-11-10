@@ -51,4 +51,4 @@ The arguments are
 [[Making GPU features usable]]
 [[Device level extensions]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

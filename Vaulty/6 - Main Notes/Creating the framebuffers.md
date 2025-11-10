@@ -63,4 +63,4 @@ for (uint32_t i = 0; i < swapchainFramebuffers.size(); ++i)
 [[Getting swapchain images]]
 [[Creating the swapchain]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

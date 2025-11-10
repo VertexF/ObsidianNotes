@@ -31,4 +31,4 @@ You will want to have a "#define" or use NDEBUG and DEBUG to enable and disable 
 [[Vulkan Layers aren't extensions]]
 [[Instance and device level validation]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

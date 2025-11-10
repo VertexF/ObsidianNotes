@@ -19,4 +19,4 @@ The option -o means output file name if successful compiled. glslc.exe will work
 ##### Main Notes
 [[Reading in compiled shaders]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

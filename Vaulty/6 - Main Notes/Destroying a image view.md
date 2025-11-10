@@ -14,4 +14,4 @@ You need to do this before the logical device is destroy.
 ##### Main Notes
 [[Creating an image view]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

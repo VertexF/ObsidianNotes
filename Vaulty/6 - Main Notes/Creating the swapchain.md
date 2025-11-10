@@ -89,4 +89,4 @@ vkDestroySwapchainKHR(device, swapchain, nullptr);
 [[Checking surface format]]
 [[Selecting a presentation mode]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

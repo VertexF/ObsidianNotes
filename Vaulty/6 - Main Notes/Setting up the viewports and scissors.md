@@ -47,4 +47,4 @@ viewportCreateInfo.scissorCount = 1;
 [[Setting up the dynamic states]]
 [[What is a framebuffer]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

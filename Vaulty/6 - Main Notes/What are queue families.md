@@ -13,4 +13,4 @@ Remember a single queue family can have more than one queue type. It's common fo
 [[Listing the queue families]]
 [[What is a vulkan physical device]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

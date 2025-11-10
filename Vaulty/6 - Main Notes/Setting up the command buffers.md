@@ -8,14 +8,15 @@ When you create a command buffer you need to have finshed [[Setting up the comma
 To create the command buffers you need to allocate them from the command pool you should have set up. 
 
 ```c++
+const int maxFramesInFlight = imageCount;
+std::vector<VkCommandBuffer> commandBuffers(maxFramesInFlight);
 VkCommandBufferAllocateInfo allocateInfo{};
 allocateInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
 allocateInfo.commandPool = commandPool;
 allocateInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
-allocateInfo.commandBufferCount = 1;
+allocateInfo.commandBufferCount = uint32_t(commandBuffers.size());
 
-VkCommandBuffer commandBuffer;
-if (vkAllocateCommandBuffers(device, &allocateInfo, &commandBuffer)) 
+if (vkAllocateCommandBuffers(device, &allocateInfo, commandBuffers.data())) 
 {
 	printf("Failed to create a command buffer.");
 }
@@ -30,5 +31,6 @@ Secondary command buffer usage helps with command reuse which can help with perf
 ##### Main Notes
 [[Recording commands]]
 [[Setting up the command pool]]
+[[Handling frames in flight]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

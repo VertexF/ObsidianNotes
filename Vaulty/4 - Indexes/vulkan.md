@@ -1,6 +1,6 @@
 ### Overview
 [[What is Vulkan]]
-[[Overview on how to create the simplest vulkan app]]
+[[Code for the simplest vulkan app]]
 ### Instance
 [[First Step for setting up Vulkan]]
 [[Creating a vulkan instance]]
@@ -54,6 +54,12 @@
 [[Selecting a presentation mode]]
 [[Creating the swapchain]]
 [[Getting swapchain images]]
+>**Swapchain Recreate**
+>[[Recreating the swapchain]]
+>[[When to recreate the swapchain image]]
+>[[Fixing a possible deadlock]]
+>[[Dealing with VK_ERROR_OUT_OF_DATE not being supported]]
+
 ### Image View
 [[What are image views]]
 [[Creating an image view]]
@@ -92,6 +98,8 @@
 ### Framebuffers
 [[What is a framebuffer]]
 [[Creating the framebuffers]]
+
+[[Handling frames in flight]]
 ### Command Buffers
 [[What are command buffers]]
 [[Setting up the command pool]]
@@ -109,3 +117,4 @@
 [[Acquirng an image from the swapchain]]
 [[Submitting the command buffer for rendering]]
 [[Setting the synchronisation with the subpass dependencies]]
+[[Presenting to the screne]]

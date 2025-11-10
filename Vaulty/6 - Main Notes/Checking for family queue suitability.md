@@ -43,4 +43,4 @@ for (uint32_t familyIndex = 0; familyIndex < queueFamilyCount; ++familyIndex)
 [[Listing the queue families]]
 [[Checking for hardware suitability]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

@@ -8,7 +8,7 @@ To do this you'll have to have finished [[Setting up the command buffers]]. Once
 Before you begine it's important to note that you'll need to reset the command before with **vkResetCommandBuffer**.
 
 ```c++
-vkResetCommandBuffer(commandBuffer, 0);
+vkResetCommandBuffer(commandBuffers[currentFrame], 0);
 ```
 
 Second argument takes a reset flag which either is set **VK_COMMAND_BUFFER_RESET_RELEASE_RESOURCES_BIT** or 0. If you set this the **REST_RELEASER_RESOURCES_BIT*** then all the memory that was used in the recording process will be released back into the command pool. 
@@ -18,12 +18,14 @@ When you want to begin recording you need the **VkCommandBufferBeginInfo** struc
 
 This is how things are began, **vkBeginCommandBuffer** clears the previously recorded commands, you can previously append more commands. 
 ```c++
+vkResetCommandBuffer(commandBuffers[currentFrame], 0);
+
 VkCommandBufferBeginInfo beginInfo{};
 beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
 beginInfo.flags = 0;
 beginInfo.pInheritanceInfo = 0;
 
-if (vkBeginCommandBuffer(commandBuffer, &beginInfo) != VK_SUCCESS) 
+if (vkBeginCommandBuffer(commandBuffers[currentFrame], &beginInfo) != VK_SUCCESS)
 {
 	printf("Failed to begin recording command buffer.");
 }
@@ -40,7 +42,7 @@ Between ending and beginning the command buffer you can write any command which 
 
 To end a command buffer you run this.
 ```c++
-if (vkEndCommandBuffer(commandBuffer) != VK_SUCCESS) 
+if (vkEndCommandBuffer(commandBuffers[currentFrame]) != VK_SUCCESS)
 {
 	printf("Failed to record a command buffer");
 }
@@ -53,5 +55,6 @@ This takes the command buffer out of a recording state and now can be submitted.
 [[What are command buffers]]
 [[Setting up the command pool]]
 [[Setting up the command buffers]]
+[[Handling frames in flight]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

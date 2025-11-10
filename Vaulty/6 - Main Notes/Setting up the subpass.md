@@ -33,4 +33,4 @@ There are 4 other attachments for different shaders:
 [[Setting up the attachment reference]]
 [[What is a render pass]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

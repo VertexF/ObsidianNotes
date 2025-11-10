@@ -22,4 +22,4 @@ multisamplingState.alphaToOneEnable = VK_FALSE; //optional
 ##### Main Notes
 [[What is the graphics pipeline]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

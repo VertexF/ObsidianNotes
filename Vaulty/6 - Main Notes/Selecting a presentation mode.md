@@ -40,4 +40,4 @@ for (uint32_t i = 0; i < presentationModes.size(); ++i)
 ##### Main Notes
 [[Checking surface and swapchain compability]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

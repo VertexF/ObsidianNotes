@@ -7,7 +7,7 @@ Here we need to get the image from the swapchain.
 
 ```c++
 uint32_t imageIndex;
-vkAcquireNextImageKHR(device, swapchain, UINT64_MAX, imageAvailableSemaphore, VK_NULL_HANDLE, &imageIndex);
+vkAcquireNextImageKHR(device, swapchain, UINT64_MAX, imageAvailableSemaphore[currentFrame], VK_NULL_HANDLE, &imageIndex);
 ```
 
 The first two parameters are telling vulkan were we get the image from. The third argument is the timeout for this command which we disable again with the UINT64_MAX.
@@ -18,5 +18,6 @@ The last argument tells us which VkImage is usable in the swapchain array. We us
 # References
 ##### Main Notes
 [[Using a fence to synchronise the previous frame]]
+[[Handling frames in flight]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

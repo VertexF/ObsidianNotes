@@ -12,4 +12,4 @@ When creating the logical device you should have the **VkPhysicalDevice** and th
 [[What are queue families]]
 [[Setting up vulkan queues]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

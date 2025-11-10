@@ -16,4 +16,4 @@ It's important to note in vulkan the graphics pipeline is set up in one go in th
 [[Setting up the vertex inputs]]
 [[Setting up the input assembly]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

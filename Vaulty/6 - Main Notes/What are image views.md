@@ -9,4 +9,4 @@ If you want to do something with an VkImage such has deal with the swapchain or 
 [[Creating an image view]]
 [[Getting swapchain images]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

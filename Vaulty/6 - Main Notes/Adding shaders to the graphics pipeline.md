@@ -30,4 +30,4 @@ VkPipelineShaderStageCreateInfo  shaderStages[] = { vertShaderModuleInfo, fragSh
 [[Creation of the shader module]]
 [[What is the graphics pipeline]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

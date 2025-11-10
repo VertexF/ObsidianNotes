@@ -25,4 +25,4 @@ If you're not going to upload anything to a vertex shader this is actually compl
 ##### Main Notes 
 [[What is the graphics pipeline]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

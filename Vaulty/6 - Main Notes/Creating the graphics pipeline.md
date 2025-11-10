@@ -94,4 +94,4 @@ The second argument which takes in a **VkPipelineCache** value can be really use
 >[[Setting up the render pass]]
 
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

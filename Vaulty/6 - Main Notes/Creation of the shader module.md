@@ -42,4 +42,4 @@ It's important to note that you can add more than one shader to a shader module.
 [[Reading in compiled shaders]]
 [[What is the graphics pipeline]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

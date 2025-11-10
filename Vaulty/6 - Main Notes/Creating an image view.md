@@ -61,4 +61,4 @@ This can fail so you need to check.
 [[What is a swapchain]]
 [[Destroying a image view]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

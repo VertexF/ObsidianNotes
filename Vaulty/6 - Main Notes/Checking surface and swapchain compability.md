@@ -20,4 +20,4 @@ Once you have all the right information you can correctly fill up the swapchain 
 [[Selecting a presentation mode]]
 [[What is a swapchain]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

@@ -13,4 +13,4 @@ If you can avoid fences because the CPU will just wait until it gets a signal fr
 [[Setting up the synchronisation objects]]
 [[What is synchronisation in vulkan]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

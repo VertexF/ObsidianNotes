@@ -32,4 +32,4 @@ vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
 ##### Main Notes
 [[What is the graphics pipeline]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

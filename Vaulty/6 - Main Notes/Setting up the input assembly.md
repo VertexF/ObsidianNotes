@@ -26,4 +26,4 @@ If **.primitiveRestartEnable** is set to VK_TRUE, when using any of the `_STRIP`
 [[Setting up the vertex inputs]]
 [[What is the graphics pipeline]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

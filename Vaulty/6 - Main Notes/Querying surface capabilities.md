@@ -40,4 +40,4 @@ If the value if the maxImageCount is **GREATER** than 0 that means there is a ma
 ##### Main Notes
 [[Checking surface and swapchain compability]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]

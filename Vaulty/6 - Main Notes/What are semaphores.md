@@ -22,4 +22,4 @@ With the semaphores the synchronisation is **ONLY** for commands running that ru
 [[Setting up the synchronisation objects]]
 [[What is synchronisation in vulkan]]
 #### Source Notes
-[[Vulkan-Tutorial]]
+[[Drawing a triangle]]
