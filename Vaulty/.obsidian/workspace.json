@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Article/Vertex buffers.md",
+                "file": "2 - Source Material/Article/Iteration is hard.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,7 +29,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Vertex buffers"
+              "title": "Iteration is hard"
+            }
+          },
+          {
+            "id": "28bbee6b18148090",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 - Indexes/C++.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "C++"
             }
           },
           {
@@ -274,6 +298,15 @@
   },
   "active": "c4d2b20627c56919",
   "lastOpenFiles": [
+    "4 - Indexes/C++.md",
+    "2 - Source Material/Article/Vertex buffers.md",
+    "2 - Source Material/Article/Iteration is hard.md",
+    "6 - Main Notes/Deleting elements out of a vector within a loop.md",
+    "2 - Source Material/Article/Drawing a triangle.md",
+    "6 - Main Notes/Dealing with VK_ERROR_OUT_OF_DATE not being supported.md",
+    "6 - Main Notes/Vulkan surface extensions.md",
+    "1 - Rough Notes/TODO.md",
+    "6 - Main Notes/Setting up the viewports and scissors.md",
     "6 - Main Notes/Recreating the swapchain.md",
     "4 - Indexes/vulkan.md",
     "6 - Main Notes/Customising validation layers externally.md",
@@ -285,23 +318,14 @@
     "6 - Main Notes/Instance and device level validation.md",
     "6 - Main Notes/Vulkan Layers aren't extensions.md",
     "6 - Main Notes/What are validation layers.md",
-    "2 - Source Material/Article/Vertex buffers.md",
-    "2 - Source Material/Article/Drawing a triangle.md",
     "3 - Tags/vulkan swapchain.md",
     "3 - Tags/vulkan sychronisation.md",
     "6 - Main Notes/Code for the simplest vulkan app.md",
-    "6 - Main Notes/Dealing with VK_ERROR_OUT_OF_DATE not being supported.md",
     "6 - Main Notes/Fixing a possible deadlock.md",
     "6 - Main Notes/When to recreate the swapchain image.md",
     "6 - Main Notes/What are semaphores.md",
-    "6 - Main Notes/Handling frames in flight.md",
-    "6 - Main Notes/Setting up the colour attachment descriptions.md",
-    "6 - Main Notes/Setting up the synchronisation objects.md",
     "New folder",
     "7 - Code",
-    "6 - Main Notes/Selecting a presentation mode.md",
-    "6 - Main Notes/Checking surface and swapchain compability.md",
-    "6 - Main Notes/Checking surface format.md",
     "vulkan_simplified_pipeline.svg",
     "viewports_scissors-2294964527.png",
     "4 - Indexes",

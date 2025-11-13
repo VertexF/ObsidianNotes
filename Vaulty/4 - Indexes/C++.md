@@ -1,0 +1,1 @@
+[[Deleting elements out of a vector within a loop]]

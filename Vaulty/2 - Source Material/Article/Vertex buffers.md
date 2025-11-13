@@ -20,3 +20,6 @@ This takes in both position and colour as inputs and uses them in the shader. Re
 
 Not all types take up simply 1 slot in the shader. The x64 version of vec3 called dvec3 actually take up 2 slots. If you need something like this look at the OpenGL layout qualifers https://wikis.khronos.org/opengl/Layout_Qualifier_(GLSL).
 ##### Vertex data
+There isn't much to be said here about vertex data. This could be just position or other stuff. For this tutorial we are creating colour and position with a Vertex struct that contains these data types.
+
+This will eventually come from models so this isn't important really.
