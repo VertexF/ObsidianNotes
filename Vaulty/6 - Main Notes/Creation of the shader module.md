@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan shaders]]
 # Creation of the shader module
 
-This is going to part of the graphics pipeline as a **VkShaderModule**. You need to create with the good old creation struct pattern. 
+To create the shader model we are required to create the **VkShaderModule** type. Which is done with the good old creation struct pattern. 
 
 Assuming you've aligned the char* pointer to a uint32_t* width by [[Reading in compiled shaders]] correctly you should okay. I'm only going to show the vertex shader but any shader has the same idea.
 

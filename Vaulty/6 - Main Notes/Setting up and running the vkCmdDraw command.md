@@ -55,6 +55,8 @@ if (vkEndCommandBuffer(commandBuffers[currentFrame]) != VK_SUCCESS)
 	printf("Failed to record a command buffer");
 }
 ```
+
+Note if you want more complex scenes you'll need to [[Binding the vertex buffer and drawing]] and/or us an index buffer as you can see here [[Drawing with an index buffer]]
 # References
 ##### Main Notes
 [[Setting up the dynamic states]]

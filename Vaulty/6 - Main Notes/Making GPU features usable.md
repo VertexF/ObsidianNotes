@@ -3,7 +3,7 @@ Status: [[vulkan]] [[logical device]]
 Tags: #baby 
 # Making GPU features usable
 
-When you want to use some feature such as dynamic rendering or using uint8_t in shaders you need to request them before you create the logical device. **Make sure you have already checked if they are available on the hardware**. [[Checking for hardware suitability]] Don't request ray tracing on hardware that doesn't support it for example.
+When you want to use some feature such as dynamic rendering or using uint8 types in shaders you need to request them before you create the logical device. **Make sure you have already checked if they are available on the hardware**. [[Checking for hardware suitability]] Don't request ray tracing on hardware that doesn't support it for example.
 
 You likely want to request more than one unique feature, you do this by chaining structures together with the .pNext for each feature. So if you want feature like dynamic rendering you will need to add that + anything else into the .pNext chain. For example
 

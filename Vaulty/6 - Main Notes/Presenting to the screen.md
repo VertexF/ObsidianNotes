@@ -1,7 +1,7 @@
 2025-11-08 09:53
 Status: #baby 
 Tags: [[vulkan]]
-# Presenting to the screne
+# Presenting to the screen
 
 If you've done everything needed to take the image to the submit your command buffer, the final to is tell the swapchain to submit your image to the screen. This is done with the **VkPresentInfoKHR** struct.
 

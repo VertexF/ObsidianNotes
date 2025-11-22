@@ -11,7 +11,7 @@ vkWaitForFences(device, 1, &framesInFlight[currentFrame], VK_TRUE, UINT64_MAX);
 
 The **vkWaitForFence** can wait more muiltple fences. The secound argument is the amount of fences in the array, the next is the VkFence array and the **VK_TRUE** here is a bool that says should the host wait for all the fences. Since we are using 1 fence this doesn't matter to use a lot. The last argument is the timeout, using UINT64_MAX pretty much disables this wait timing out. 
 
-Remember you have to reset the fence manually so after the wait is over from **vkWaitForFences** we need to reset the fence back it's unsignlled state with.
+Remember you have to reset the fence manually so after the wait is over from **vkWaitForFences** we need to reset the fence back it's unsignalled state with.
 
 ```c++
 vkResetFences(device, 1, &framesInFlight[currentFrame]);

@@ -47,7 +47,7 @@ vkCmdEndRenderPass(commandBuffers[currentFrame]);
 ```
 
 As you can see in the comments that's where all the draw commands. The last parameter in the **vkCmdBeginRenderPass** can be two different values:
-- **VK_SUBPASS_CONTENTS_INLINE** The commands will be in the primary command buffer, there will be no secondary command buffer. 
+- **VK_SUBPASS_CONTENTS_INLINE** The commands will be embedded in the primary command buffer, there will be no secondary command buffer. 
 - **VK_SUBPASS_CONTENTS_SECONDARY_COMMAND_BUFFERS** The render pass be will executed from a secondary command buffer.
   
 Note that these values can change for each render pass you are using. If you're for example calling out to subpass in one render pass then  doing everything inline. 

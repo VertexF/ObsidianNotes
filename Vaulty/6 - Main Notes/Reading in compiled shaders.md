@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan shaders]]
 # Reading in compiled shaders
 
-First thing you need to know is that you need both the file size and the file in binary because this is in byte code. 
+First thing you need to know is that you need both the file size and the  shader file in binary because this is in byte code. 
 
 ```c++
 static long getFileSize(FILE* file)

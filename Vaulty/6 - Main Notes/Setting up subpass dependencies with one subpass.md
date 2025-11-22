@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan subpass]]
 # Setting up subpass dependencies with one subpass
 
-To setup the subpass self dependency for 1 subpass we **VkSubpassDependency** struct which needs to be set up as part of the render pass creation. When and where you want to pause needs to be thought about at draw time when the subpass is used. We are trying to synchronising rendering with the swapchain with this self dependency
+To setup the subpass self dependency for 1 subpass we use the **VkSubpassDependency** struct which needs to be set up as part of the render pass creation. When and where you want to pause needs to be thought about at draw time when the subpass is used. We are trying to synchronising rendering with the swapchain with this self dependency
 
 ```c++
 VkSubpassDependency dependency{};
@@ -27,7 +27,7 @@ dependencyTwo.srcSubpass = 0;
 dependencyTwo.dstSubpass = 1;
 ```
 
-Next we set up what pipeline stages and image attachments we are waiting. When we are using the **.src** paramters we are telling vulkan that **THIS** subpass need to wait on before any operations can begin within that subpass. The **.dst** is all about what needs to be completed before we can pass over this over to the NEXT subpass.
+Next we set up what pipeline stages and image attachments we are waiting. When we are using the **.src** paramters we are telling vulkan that **THIS** subpass needs to wait on before any operations can begin within that subpass. The **.dst** is all about what needs to be completed before we can pass over this over to the NEXT subpass.
 
 Here we only using 1 subpass within a render pass so these are self dependences. 
 

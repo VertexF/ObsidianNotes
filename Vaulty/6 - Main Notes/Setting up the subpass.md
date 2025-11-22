@@ -27,7 +27,7 @@ There are 4 other attachments for different shaders:
 - **.pInputAttachment** This is for reading things out of a shader
 - **.pResolveAttachment** This is for muiltisampling colour attachments
 - **.pDepthStencilAttachment** This for depth and stencil data.
-- **.pPreserveAttachments** This is for thing that are used by the subpass but we need to keep that data around.
+- **.pPreserveAttachments** This is for things that are used by the subpass but we need to keep that data around.
 # References
 ##### Main Notes
 [[Setting up the attachment reference]]

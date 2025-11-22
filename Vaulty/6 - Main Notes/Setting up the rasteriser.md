@@ -36,6 +36,8 @@ rasteriser.lineWidth = 1.f;
 ```
 
 This will set the line width the rasteriser will output. Anything more than 1.f requires the GPU feature **wideLines** to be enabled.
+#### NOTE
+If you haven't set up a view projection matrix you want to set things up like this
 
 ```c++
 rasteriser.cullMode = VK_CULL_MODE_BACK_BIT;
@@ -43,6 +45,15 @@ rasteriser.frontFace = VK_FRONT_FACE_CLOCKWISE;
 ```
 
 These set up the culling modes. **.cullMode** tells vulkan what cull if anything at all. **.frontFrace** tells vulkan what direction the polygons are facing.
+#### NOTE
+If you have set up the view projection matrix your cull mode needs to be **VK_FRONT_FACE_COUNTER_CLOCKWISE** because you'll have to flip the Y direction.
+
+```c++
+rasteriser.cullMode = VK_CULL_MODE_BACK_BIT;
+```
+
+If you don't do this the back face culling will kick and remove the polygon from view.
+
 # References
 ##### Main Notes
 #### Source Notes

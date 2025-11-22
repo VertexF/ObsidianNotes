@@ -36,7 +36,7 @@ std::vector<VkSemaphore> renderFinishSemaphore(maxFramesInFlight);
 std::vector<VkFence> framesInFlight(maxFramesInFlight);
 ```
 
-Since you know how to use flat arrays I'm sure you figure out the reset.
+Since you know how to use flat arrays I'm sure you figure out the rest of allocate and creating semaphores and fences in a loop.
 
 To do the rest we need to keep track of the current frame at run time. 
 

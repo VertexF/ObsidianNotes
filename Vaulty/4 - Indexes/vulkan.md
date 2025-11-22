@@ -54,16 +54,24 @@
 [[Selecting a presentation mode]]
 [[Creating the swapchain]]
 [[Getting swapchain images]]
->**Swapchain Recreate**
+>**Swapchain Recreation**
 >[[Recreating the swapchain]]
 >[[When to recreate the swapchain image]]
 >[[Fixing a possible deadlock]]
 >[[Dealing with VK_ERROR_OUT_OF_DATE not being supported]]
-
 ### Image View
 [[What are image views]]
 [[Creating an image view]]
 [[Destroying a image view]]
+### Descriptors
+[[What are descriptors]]
+[[What is a descriptor set layout]]
+[[What are descriptor sets]]
+[[Creating a descriptor set layout]]
+[[How to use a descriptor set]]
+[[Creating a descriptor pool]]
+[[Creating descriptor sets]]
+[[Binding a descriptor set to use at draw time]]
 ### Graphics Pipeline
 [[What is the graphics pipeline]]
 >**Shaders**
@@ -80,7 +88,8 @@
 >[[Setting up the depth and stencil testing]]
 >[[Setting up the colour blending]]
 >**Pipeline Layout**
->[[Setting up the pipeline layout]]
+>[[Setting up an empty pipeline layout]]
+>[[Setting up the pipeline layout with a descriptor]]
 >**Render pass**
 >[[What is a render pass]]
 >[[Setting up the colour attachment descriptions]]
@@ -91,6 +100,38 @@
 >[[Creating the graphics pipeline]]
 >[[Creating derived graphic pipelines]]
 
+[[Handling frames in flight]]
+## Buffers
+[[Setting up the a buffer]]
+[[Setting up the allocating buffer memory]]
+[[Making a basic createBuffer function]]
+[[Buffer alignment requirement]]
+[[Multiple descriptor sets]]
+### Vertex Buffers
+[[What is a vertex buffer]]
+[[Setting up vertex buffer data]]
+>**Vertex buffer attributes**
+>[[Shader vertex input descriptions]]
+>[[Setting up binding descriptions]]
+>[[Setting up the vertex attributes descriptions]]
+>**Vertex buffer creation**
+>[[Filling up a vertex buffer with CPU visibility]]
+>[[Creating the vertex buffer with staging buffers]]
+>[[Binding the vertex buffer and drawing]]
+### Staging Buffers
+[[What are staging buffers]]
+[[Creating a transfer queue for buffer copying]]
+[[Setting up a staging buffer]]
+[[Copying buffer data over]]
+### Index Buffers
+[[What is a index buffer]]
+[[Setting up the index buffer data]]
+[[Creating the index buffer with staging buffers]]
+[[Drawing with an index buffer]]
+[[Making vertex and index buffer faster with aliasing]]
+### Uniform Buffers
+[[Creating uniform buffers]]
+[[Updating uniform buffers]]
 ### Subpass
 [[What is a subpass]]
 [[What are subpass dependencies]]
@@ -98,8 +139,6 @@
 ### Framebuffers
 [[What is a framebuffer]]
 [[Creating the framebuffers]]
-
-[[Handling frames in flight]]
 ### Command Buffers
 [[What are command buffers]]
 [[Setting up the command pool]]
@@ -117,4 +156,4 @@
 [[Acquirng an image from the swapchain]]
 [[Submitting the command buffer for rendering]]
 [[Setting the synchronisation with the subpass dependencies]]
-[[Presenting to the screne]]
+[[Presenting to the screen]]

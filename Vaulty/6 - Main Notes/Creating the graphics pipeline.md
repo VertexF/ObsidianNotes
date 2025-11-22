@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]][[vulkan graphic pipeline]]
 # Creating the graphics pipeline
 
-Before you begin creating the graphics pipeline you will have to had set everything listed in the in the **Setup** in the **Main Notes** in references. To complete this you need to set up the **VkGraphicsPipelineCreateInfo** with all it's paramters linking back to the different creation structs you have made containing
+Before you begin creating the graphics pipeline you will have to had set everything listed in the in the **Setup** in the [[vulkan]] reference. To complete this you need to set up the **VkGraphicsPipelineCreateInfo** with all it's parameters linking back to the different creation structs you have made containing
 - **Shader stages** These define the functionality of the programmable stages of the graphics pipeline.
 - **Fixed function states** These define the fixed function graphics pipeline stuff.
 - **Pipeline Layout** These define uniforms and the push constants you'll be using for your shaders.
@@ -33,7 +33,7 @@ pipelineInfo.pColorBlendState = &colourBlending;
 pipelineInfo.pDynamicState = &dynamicState;
 ```
 
-Note **.pDepthStencilState** is the only graphics pipeline type that can be null because it's optional.
+Note **.pDepthStencilState** is the only graphics pipeline that's optional.
 
 Then you want the pipeline layout.
 ```c++
@@ -85,7 +85,7 @@ The second argument which takes in a **VkPipelineCache** value can be really use
 >[[Setting up the depth and stencil testing]]
 >[[Setting up the colour blending]]
 >**Pipeline Layout**
->[[Setting up the pipeline layout]]
+>[[Setting up an empty pipeline layout]]
 >**Render pass**
 >[[What is a render pass]]
 >[[Setting up the colour attachment descriptions]]

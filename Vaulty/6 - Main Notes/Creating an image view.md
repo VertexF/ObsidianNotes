@@ -3,9 +3,9 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan image views]] [[vulkan swapchain]]
 # Creating an image view
 
-This is going to explain how to create a image view for a swapchain image. This is the simplest VkImageView you can make. This is for if you're simply writing the graphics straight to a VkImage.
+This is going to explain how to create a image view from a swapchain image. This is the simplest VkImageView you can make. This is for if you're simply writing the graphics straight to a VkImage.
 
-So if you're doing to create a VkImageView you'll need to use the **VkImageViewCreateInfo** struct. The VkImage we are going to use is a swapchain image. 
+So if you're going to create a VkImageView you'll need to use the **VkImageViewCreateInfo** struct. The VkImage we are going to use is a swapchain image. 
 
 ```c++
 VkImageView swapchainImageView;

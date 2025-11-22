@@ -6,32 +6,7 @@
       {
         "id": "fa917daf52f3b369",
         "type": "tabs",
-        "dimension": 49.87309644670051,
         "children": [
-          {
-            "id": "c4d2b20627c56919",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/Article/Iteration is hard.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Iteration is hard"
-            }
-          },
           {
             "id": "28bbee6b18148090",
             "type": "leaf",
@@ -57,12 +32,12 @@
             }
           },
           {
-            "id": "e6f344743abd577a",
+            "id": "c46e9faccbb990e5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Article/Drawing a triangle.md",
+                "file": "6 - Main Notes/Using a fence to synchronise the previous frame.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -77,23 +52,23 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Drawing a triangle"
+              "title": "Using a fence to synchronise the previous frame"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
-        "id": "acaf321eb0789184",
+        "id": "24d40fb114c8f364",
         "type": "tabs",
-        "dimension": 50.1269035532995,
         "children": [
           {
-            "id": "7a17ec18f3ab537b",
+            "id": "6ce8e596408c10ff",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Recreating the swapchain.md",
+                "file": "6 - Main Notes/How to use a descriptor set.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -108,16 +83,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Recreating the swapchain"
+              "title": "How to use a descriptor set"
             }
           },
           {
-            "id": "7fe83f1e06744e16",
+            "id": "1f54d8f805079fe3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Dealing with VK_ERROR_OUT_OF_DATE not being supported.md",
+                "file": "6 - Main Notes/Multiple descriptor sets.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -132,7 +107,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Dealing with VK_ERROR_OUT_OF_DATE not being supported"
+              "title": "Multiple descriptor sets"
             }
           }
         ],
@@ -296,34 +271,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c4d2b20627c56919",
+  "active": "c46e9faccbb990e5",
   "lastOpenFiles": [
-    "4 - Indexes/C++.md",
-    "2 - Source Material/Article/Vertex buffers.md",
-    "2 - Source Material/Article/Iteration is hard.md",
-    "6 - Main Notes/Deleting elements out of a vector within a loop.md",
-    "2 - Source Material/Article/Drawing a triangle.md",
-    "6 - Main Notes/Dealing with VK_ERROR_OUT_OF_DATE not being supported.md",
-    "6 - Main Notes/Vulkan surface extensions.md",
-    "1 - Rough Notes/TODO.md",
-    "6 - Main Notes/Setting up the viewports and scissors.md",
-    "6 - Main Notes/Recreating the swapchain.md",
     "4 - Indexes/vulkan.md",
-    "6 - Main Notes/Customising validation layers externally.md",
-    "6 - Main Notes/How to debug instance creation.md",
-    "6 - Main Notes/Connecting custom debug function to Vulkan.md",
-    "6 - Main Notes/Creating the custom callback function for validation.md",
-    "6 - Main Notes/Why set up debug callbacks for vulkan validation.md",
-    "6 - Main Notes/Enabling Validation layers.md",
-    "6 - Main Notes/Instance and device level validation.md",
-    "6 - Main Notes/Vulkan Layers aren't extensions.md",
-    "6 - Main Notes/What are validation layers.md",
-    "3 - Tags/vulkan swapchain.md",
-    "3 - Tags/vulkan sychronisation.md",
-    "6 - Main Notes/Code for the simplest vulkan app.md",
-    "6 - Main Notes/Fixing a possible deadlock.md",
-    "6 - Main Notes/When to recreate the swapchain image.md",
-    "6 - Main Notes/What are semaphores.md",
+    "6 - Main Notes/What are fences.md",
+    "6 - Main Notes/What is synchronisation in vulkan.md",
+    "6 - Main Notes/Handling frames in flight.md",
+    "6 - Main Notes/Creating a descriptor pool.md",
+    "6 - Main Notes/Creating a descriptor set layout.md",
+    "6 - Main Notes/What is a descriptor set layout.md",
+    "2 - Source Material/Article/Texture mapping.md",
+    "2 - Source Material/Article/Uniform buffers.md",
+    "6 - Main Notes/What.md",
+    "6 - Main Notes/Multiple descriptor sets.md",
+    "6 - Main Notes/Buffer alignment requirement.md",
+    "6 - Main Notes/Binding a descriptor set to use at draw time.md",
+    "6 - Main Notes/How to use a descriptor set.md",
+    "6 - Main Notes/Creating descriptor sets.md",
+    "4 - Indexes/C++.md",
+    "6 - Main Notes/Updating uniform buffers.md",
+    "6 - Main Notes/Creating uniform buffers.md",
+    "6 - Main Notes/Setting up the rasteriser.md",
+    "6 - Main Notes/Making a basic createBuffer function.md",
+    "2 - Source Material/Article/Vertex buffer.md",
+    "6 - Main Notes/What are descriptor sets.md",
+    "6 - Main Notes/Creating the vertex buffer with staging buffers.md",
+    "6 - Main Notes/Creating the index buffer with staging buffers.md",
+    "6 - Main Notes/Copying buffer data over.md",
+    "6 - Main Notes/Making vertex and index buffer faster with aliasing.md",
     "New folder",
     "7 - Code",
     "vulkan_simplified_pipeline.svg",

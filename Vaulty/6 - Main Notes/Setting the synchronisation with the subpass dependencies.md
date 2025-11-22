@@ -10,7 +10,7 @@ To actually get the dependency within the subpass to work correctly this how you
 VkSubmitInfo submitInfo{};
 submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
 
-VkSemaphore waitSemaphores[] = { imageAvailableSemaphore[currentFrame]};
+VkSemaphore waitSemaphores[] = { imageAvailableSemaphore[currentFrame] };
 VkPipelineStageFlags waitStages[] = { VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT };
 submitInfo.waitSemaphoreCount = 1;
 submitInfo.pWaitSemaphores = waitSemaphores;

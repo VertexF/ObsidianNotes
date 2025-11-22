@@ -1,7 +1,7 @@
 2025-10-26 16:37
 Status: #baby 
 Tags: [[vulkan]] [[vulkan graphic pipeline]]
-# Setting up the pipeline layout
+# Setting up an empty pipeline layout
 
 This is to do with the the **uniform** and **push constant**. These are like global variable for shaders they are often used for transformation matrices and textures samples. 
 
