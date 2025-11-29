@@ -18,7 +18,6 @@ pipelineLayoutCreateInfo.pPushConstantRanges = nullptr;
 
 if (vkCreatePipelineLayout(device, &pipelineLayoutCreateInfo, nullptr, &pipelineLayout) != VK_SUCCESS) 
 {
-	assert(false);
 	printf("Failed to create the layout pipeline.\n");
 }
 ```

@@ -23,7 +23,7 @@ You now need to fill up the struct, this is how you start if off.
 **.imageArrayLayers** is set to one unless you want to do stereoscopic 3D. If you're writing directly to the images you use **VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT**. If you are writing to an image first then transfering it to **VK_IMAGE_USAGE_TRANSFER_DST_BIT**. In my engine I've OR-ed them together.
 
 ```c++
-	//We are going to skip the code that actually gets the queue indices to keepe the code simple.
+	//We are going to skip the code that actually gets the queue indices to keep the code simple.
 	uint32_t presentationQueueFamily = 0;
 	uint32_t graphicsQueueFamilyExclusive = UINT32_MAX;
 	

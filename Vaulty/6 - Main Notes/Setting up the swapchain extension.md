@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan swapchain]] [[vulkan physical device]]
 # Setting up the swapchain extension
 
-To start with you need to set up the swapchain extention at the physical device level. If this extension is not available on the physic devices you've select it's totally normal to close the application right there and then.
+To start with you need to set up the swapchain extention at the physical device level. If this extension is not available on the physical devices you've select it's totally normal to close the application right there and then.
 
 To check you would use the standard checking method. First we get the list of extensions for that physical device
 

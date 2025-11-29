@@ -17,7 +17,7 @@ static VkVertexInputBindingDescription getBindingDescriptions()
 
 The **.binding** is the index of the vertex buffer, say you have 5 vertex buffers each need there own binding so you can bind them at draw time. 
 
-You'll find that the second argument of the **vkCmdBindVertexBuffers** which is ran at draw time request that it takes the first vertex input binding whose state is updated by the command needs to be set. Meaning that if we have a list of vertex buffer and we want to bind them all, we need to have the number equal to the lowest **.binding** from the **VkVertexInputBindingDescription** struct.
+You'll find that the third argument of the **vkCmdBindVertexBuffers** which is ran at draw time request that it takes the first vertex input binding whose state is updated by the command needs to be set. Meaning that if we have a list of vertex buffer and we want to bind them all, we need to have the number equal to the lowest **.binding** from the **VkVertexInputBindingDescription** struct.
 
 Next we need to set the stride which is the **.stride** and finally we need to set the rate on which we will send in the data this is **.inputRate**.
 

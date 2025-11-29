@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]][[vulkan graphic pipeline]]
 # Creating the graphics pipeline
 
-Before you begin creating the graphics pipeline you will have to had set everything listed in the in the **Setup** in the [[vulkan]] reference. To complete this you need to set up the **VkGraphicsPipelineCreateInfo** with all it's parameters linking back to the different creation structs you have made containing
+To complete this you need to set up the **VkGraphicsPipelineCreateInfo** with all it's parameters linking back to the different creation structs you have made containing
 - **Shader stages** These define the functionality of the programmable stages of the graphics pipeline.
 - **Fixed function states** These define the fixed function graphics pipeline stuff.
 - **Pipeline Layout** These define uniforms and the push constants you'll be using for your shaders.

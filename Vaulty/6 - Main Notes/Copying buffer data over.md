@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan buffer]]
 # Copying buffer data over
 
-You may want to turn this into a helper function. I have a followed the steps [[Creating a transfer queue for buffer copying]] which is different frm the tutorial code.
+You may want to turn this into a helper function. I have a followed the steps [[Creating a transfer queue for buffer copying]] which is different from the tutorial code.
 
 The first thing you need to do is create a command buffer
 
@@ -38,8 +38,6 @@ We want to begin the recording with **VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BI
 
 Next you want to record the **vkCmdCopyBuffer**. This needs to take a **srcBuffer** that has the TRANSFER_SRC_BIT as it's usage and the TRANSFER_DST_BIT for the usage for the other bit. For the destination you also need to OR the other usage flags together so we can actually use the buffer for something.
 
-For the case of copying data into a vertex buffer you'll want to the usage like this:
-
 The **VkBufferCopy** just sets up how much of the source buffer you're copying over to the destination.
 
 Then you submit it
@@ -53,7 +51,7 @@ vkQueueSubmit(transferQueue, 1, &submitInfo, VK_NULL_HANDLE);
 vkQueueWaitIdle(transferQueue);
 ```
 
-The faster way of waiting things to execute on the GPU is to wait for fence with **vkWaitForFences** this. Waiting for vkWaitForFences would allow you to stack multiple command buffer up to use the queue in parallel. This however requires more work and for 1 buffer transfer not even at run time **vkQueueWaitIdle** which waits until the queue is idling is good enough.
+The faster way of waiting things to execute on the GPU is to wait for fence with **vkWaitForFences** this. Waiting for vkWaitForFences would allow you to stack multiple command buffer up to use the queue in parallel. This however requires more work and for 1 buffer transfer not even at run time **vkQueueWaitIdle** which waits until the queue is idling which is good enough.
 
 ```c++
 vkFreeCommandBuffers(device, transferCommandPool, 1, &commandBuffer);

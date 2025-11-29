@@ -38,9 +38,10 @@ When closing you need to remember that GPU is asynchronous from the CPU meaning 
 vkDeviceWaitIdle(device);
 ```
 
-all to pause operations. This is a very crewd way of performaning synchronisations between the GPU and CPU but while closing this is enough.
+to pause all operations. This is a very crewd way of performaning synchronisations between the GPU and CPU but while closing this is enough.
 # References
 ##### Main Notes
-
+[[What are semaphores]]
+[[What is a swapchain]]
 #### Source Notes
 [[Drawing a triangle]]

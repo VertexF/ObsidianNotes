@@ -62,6 +62,7 @@
 ### Image View
 [[What are image views]]
 [[Creating an image view]]
+[[Creating a texture image view]]
 [[Destroying a image view]]
 ### Descriptors
 [[What are descriptors]]
@@ -132,6 +133,15 @@
 ### Uniform Buffers
 [[Creating uniform buffers]]
 [[Updating uniform buffers]]
+### Texture Mapping
+[[Introduction to texture mapping]]
+[[Loading an image file]]
+[[Creating a VkImage for texture mapping]]
+[[Transitioning image memory for texture mapping]]
+[[Preparing the texture image]]
+[[Creating a texture image view]]
+[[What are samplers]]
+[[Creating a sampler]]
 ### Subpass
 [[What is a subpass]]
 [[What are subpass dependencies]]
@@ -153,7 +163,7 @@
 [[What you need to synchronise a frame]]
 [[Setting up the synchronisation objects]]
 [[Using a fence to synchronise the previous frame]]
-[[Acquirng an image from the swapchain]]
+[[Acquiring an image from the swapchain]]
 [[Submitting the command buffer for rendering]]
 [[Setting the synchronisation with the subpass dependencies]]
 [[Presenting to the screen]]

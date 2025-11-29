@@ -41,7 +41,7 @@ The framebuffer needs the render pass you're going to use a draw time in the **.
 
 The **.pAttachments** are the swapchain images. Note we only have 1 attachment descriptions in the static array which described the swapchain colour image. Note this isn't the same attachment description that we used when [[Setting up the render pass]] this is the swapchain's VkImageView. 
 
-We are making a new array here so if we have more attachment descriptions we can add them to the `attachments[]` array. The **.attachmentCount** is the totally number of attachments we have in our render pass and framebuffer.
+We are making a new array here with **.pAttachments** so if we have more attachment descriptions we can add them to the `attachments[]` array. The **.attachmentCount** is the totally number of attachments we have in our render pass and framebuffer.
 
 The **.layers** refers to number layers in image arrays. Our swapchain images are simply only having a single image, so no array's here. Meaning we set the **.layer** to 1.
 

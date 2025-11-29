@@ -9,7 +9,7 @@ If you don't set up the subpass dependencies on a subpass it will be executed in
 
 You have to be very careful, when you're using a render pass and setting up the sychronisation between the images with semaphore. The operations in the subpass need to happen at the correct time to match up with the semaphores signalling if you don't set up the dependencies you can end up undefined behaviour.
 
-What if you only have 1 subpass within a render pass? Well it's important note that subpasses have self dependencies. Which might need to be set up if you say allowing the vertex shader to run before the swapchain has finished reading the image from the last frame and pausing operation until the swapchain has finish reading the image so you can write out the final colour. I do this in the {{Setting the sychronisation with the subpass dependencies}}
+What if you only have 1 subpass within a render pass? Well it's important note that subpasses have self dependencies. Which might need to be set up if you say allowing the vertex shader to run before the swapchain has finished reading the image from the last frame and pausing operation until the swapchain has finish reading the image so you can write out the final colour. I do this in the [[Setting the synchronisation with the subpass dependencies]]
 # References
 ##### Main Notes
 [[What is a subpass]]

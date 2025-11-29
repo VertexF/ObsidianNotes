@@ -6,6 +6,7 @@
       {
         "id": "fa917daf52f3b369",
         "type": "tabs",
+        "dimension": 49.555837563451774,
         "children": [
           {
             "id": "28bbee6b18148090",
@@ -13,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Indexes/C++.md",
+                "file": "2 - Source Material/Article/Texture mapping.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +29,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "C++"
+              "title": "Texture mapping"
             }
           },
           {
-            "id": "c46e9faccbb990e5",
+            "id": "94c5fdff9086952e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Using a fence to synchronise the previous frame.md",
+                "file": "4 - Indexes/vulkan.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,15 +53,64 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Using a fence to synchronise the previous frame"
+              "title": "vulkan"
+            }
+          },
+          {
+            "id": "2bfc77eb55f08cc6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Creating a descriptor set layout.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Creating a descriptor set layout"
+            }
+          },
+          {
+            "id": "6691c1e1279e3fb0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Article/Texture mapping.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Texture mapping"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       },
       {
         "id": "24d40fb114c8f364",
         "type": "tabs",
+        "dimension": 50.444162436548226,
         "children": [
           {
             "id": "6ce8e596408c10ff",
@@ -87,12 +137,12 @@
             }
           },
           {
-            "id": "1f54d8f805079fe3",
+            "id": "c0d600c9bbeb05c8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Multiple descriptor sets.md",
+                "file": "6 - Main Notes/Creating a sampler.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -107,7 +157,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Multiple descriptor sets"
+              "title": "Creating a sampler"
             }
           }
         ],
@@ -271,34 +321,37 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c46e9faccbb990e5",
+  "active": "6691c1e1279e3fb0",
   "lastOpenFiles": [
-    "4 - Indexes/vulkan.md",
-    "6 - Main Notes/What are fences.md",
-    "6 - Main Notes/What is synchronisation in vulkan.md",
-    "6 - Main Notes/Handling frames in flight.md",
-    "6 - Main Notes/Creating a descriptor pool.md",
     "6 - Main Notes/Creating a descriptor set layout.md",
-    "6 - Main Notes/What is a descriptor set layout.md",
+    "4 - Indexes/vulkan.md",
     "2 - Source Material/Article/Texture mapping.md",
+    "6 - Main Notes/What is a descriptor set layout.md",
+    "6 - Main Notes/Setting up subpass dependencies with one subpass.md",
+    "6 - Main Notes/Creating a sampler.md",
     "2 - Source Material/Article/Uniform buffers.md",
-    "6 - Main Notes/What.md",
-    "6 - Main Notes/Multiple descriptor sets.md",
-    "6 - Main Notes/Buffer alignment requirement.md",
-    "6 - Main Notes/Binding a descriptor set to use at draw time.md",
-    "6 - Main Notes/How to use a descriptor set.md",
-    "6 - Main Notes/Creating descriptor sets.md",
-    "4 - Indexes/C++.md",
-    "6 - Main Notes/Updating uniform buffers.md",
-    "6 - Main Notes/Creating uniform buffers.md",
-    "6 - Main Notes/Setting up the rasteriser.md",
-    "6 - Main Notes/Making a basic createBuffer function.md",
-    "2 - Source Material/Article/Vertex buffer.md",
-    "6 - Main Notes/What are descriptor sets.md",
-    "6 - Main Notes/Creating the vertex buffer with staging buffers.md",
+    "6 - Main Notes/What are samplers.md",
+    "6 - Main Notes/Transitioning image memory for texture mapping.md",
+    "6 - Main Notes/What are subpass dependencies.md",
+    "6 - Main Notes/Setting the synchronisation with the subpass dependencies.md",
+    "6 - Main Notes/Introduction to texture mapping.md",
+    "6 - Main Notes/Creating an image view.md",
+    "6 - Main Notes/Creating a texture image view.md",
+    "texture_addressing.png",
+    "anisotropic_filtering.png",
+    "texture_filtering.png",
+    "6 - Main Notes/Preparing the texture image.md",
+    "6 - Main Notes/What are image views.md",
+    "6 - Main Notes/Loading extended functions dynamically.md",
+    "6 - Main Notes/Loading an image file.md",
+    "6 - Main Notes/Creating a VkImage for texture mapping.md",
     "6 - Main Notes/Creating the index buffer with staging buffers.md",
-    "6 - Main Notes/Copying buffer data over.md",
-    "6 - Main Notes/Making vertex and index buffer faster with aliasing.md",
+    "6 - Main Notes/Setting up the vertex attributes descriptions.md",
+    "6 - Main Notes/What is synchronisation in vulkan.md",
+    "6 - Main Notes/Setting up and running the vkCmdDraw command.md",
+    "3 - Tags/vulkan textures.md",
+    "6 - Main Notes/Multiple descriptor sets.md",
+    "6 - Main Notes/Setting up the allocating buffer memory.md",
     "New folder",
     "7 - Code",
     "vulkan_simplified_pipeline.svg",

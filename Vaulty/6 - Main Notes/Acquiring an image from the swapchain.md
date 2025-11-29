@@ -1,7 +1,7 @@
 2025-11-07 14:05
 Status: #baby 
 Tags: [[vulkan]] [[vulkan sychronisation]]
-# Acquirng an image from the swapchain
+# Acquiring an image from the swapchain
 
 Here we need to get the image from the swapchain. 
 

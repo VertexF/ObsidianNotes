@@ -9,7 +9,7 @@ You'll also need two semaphores to order the operations that are happening with 
 
 These are the steps you need to take for sychronisation and presentention of a frame:
 1) [[Using a fence to synchronise the previous frame]]
-2) [[Acquirng an image from the swapchain]]
+2) [[Acquiring an image from the swapchain]]
 3) [[Submitting the command buffer for rendering]] 
 4) [[Presenting to the screen]]
 5) [[Handling frames in flight]]

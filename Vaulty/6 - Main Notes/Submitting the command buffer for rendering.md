@@ -9,7 +9,7 @@ Queue submission and synchronisation is configured with **VkSubmitInfo**.
 VkSubmitInfo submitInfo{};
 submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
 
-VkSemaphore waitSemaphores[] = { imageAvailableSemaphore[currentFrame]};
+VkSemaphore waitSemaphores[] = { imageAvailableSemaphore[currentFrame] };
 VkPipelineStageFlags waitStages[] = { VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT };
 submitInfo.waitSemaphoreCount = 1;
 submitInfo.pWaitSemaphores = waitSemaphores;
@@ -30,7 +30,7 @@ submitInfo.pCommandBuffers = &commandBuffers[currentFrame];
 Here we submit the command buffer for execution.
 
 ```c++
-VkSemaphore signalSemaphores[] = { renderFinishSemaphore[currentFrame]};
+VkSemaphore signalSemaphores[] = { renderFinishSemaphore[currentFrame] };
 submitInfo.signalSemaphoreCount = 1;
 submitInfo.pSignalSemaphores = signalSemaphores;
 ```
@@ -48,12 +48,12 @@ For this function we have
 - **mainQueue** which is queue we are submitting the command buffer on.
 - **1** which is the total count of **VkSubmitInfo** in an array.
 - **&submitInfo** is the struct itself or an array of them. Having an array can help with efficiency if the work load is large enough.
-- **frameInFlight** is our fence (which is optional) this will signal the fence to wait for the command buffer to finish executing. This is so our frames don't over draw each other causing all sort of issues.
+- **frameInFlight** is our fence this will signal the fence to wait for the command buffer to finish executing. This is so our frames don't over draw each other causing all sort of issues.
 # References
 ##### Main Notes
 [[What are command buffers]]
 [[What are semaphores]]
 [[What are fences]]
-[[Acquirng an image from the swapchain]]
+[[Acquiring an image from the swapchain]]
 #### Source Notes
 [[Drawing a triangle]]
