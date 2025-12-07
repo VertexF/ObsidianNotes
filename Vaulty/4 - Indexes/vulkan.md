@@ -72,6 +72,7 @@
 [[How to use a descriptor set]]
 [[Creating a descriptor pool]]
 [[Creating descriptor sets]]
+[[Creating an combined image sampler descriptor]]
 [[Binding a descriptor set to use at draw time]]
 ### Graphics Pipeline
 [[What is the graphics pipeline]]
@@ -142,6 +143,19 @@
 [[Creating a texture image view]]
 [[What are samplers]]
 [[Creating a sampler]]
+[[Creating an combined image sampler descriptor]]
+[[Creating basic texture coordinate]]
+[[Using textures within a shader]]
+### Depth Testing
+[[3D geometry without the depth buffer]]
+[[Creating the depth image and view]]
+[[Explicitly transitioning the depth image]]
+[[Setting depth buffer attachments]]
+[[Framebuffer with depth]]
+[[Setting up the depth and stencil testing]]
+[[Resizing the window with a depth buffer]]
+[[Cleaning up depth resources]]
+[[Setting up reverse perspective for your depth buffer]]
 ### Subpass
 [[What is a subpass]]
 [[What are subpass dependencies]]

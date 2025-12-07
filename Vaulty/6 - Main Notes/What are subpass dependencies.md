@@ -5,7 +5,7 @@ Tags: [[vulkan]] [[vulkan subpass]]
 
 Subpasses dependencies are to do with memory transitions that happen within a render pass automatically depending on the operation and graphics pipeline stage. The subpass will transition as soon as they can.
 
-If you don't set up the subpass dependencies on a subpass it will be executed in any order within the render pass, which isn't always an error. It's possible have a subpass that just needs to be executed at some undefined point within a render pass.
+If you don't set up the subpass dependencies on a subpass execution will happen in any order within the render pass, which isn't always an error. It's possible have a subpass that just needs to be executed at some undefined point within a render pass.
 
 You have to be very careful, when you're using a render pass and setting up the sychronisation between the images with semaphore. The operations in the subpass need to happen at the correct time to match up with the semaphores signalling if you don't set up the dependencies you can end up undefined behaviour.
 

@@ -5,7 +5,7 @@ Tags: [[vulkan]] [[vulkan descriptors]]
 
 The descriptor set specifies the actual buffer or image that will be bound to descriptors. The descriptor set is similar to a framebuffer in some ways, as the framebuffer specifies the the VkImageView that will be bound to the render pass. Like a render pass instance needs a framebuffers VkImageView, we need the descriptor set to carry the actually buffer to the shader.
 
-There are different types of descriptor sets such SSBO (Shader Storage Buffer Object) and UBO (Uniform Buffer Object).
+There are different types of descriptor sets such SSBO (Shader Storage Buffer Object), UBO (Uniform Buffer Object) and combined image samplers being the most common.
 # References
 ##### Main Notes
 [[What are descriptors]]

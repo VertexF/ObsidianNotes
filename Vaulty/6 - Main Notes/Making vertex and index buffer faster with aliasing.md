@@ -5,7 +5,7 @@ Tags: [[vulkan]] [[vulkan buffer]]
 
 In the example of [[Creating the vertex buffer with staging buffers]] and [[Creating the index buffer with staging buffers]] we have used a vertex buffer, allocated memory to it, bound it and the same for the index buffer. The problem is we are repeating the allocation for each buffer. 
 
-Vulkan allows you to offset into buffers for different usages. Why not do that for the vertex and index buffer, this reduces expensive CPU allocations and increases GPU cache locality. With this method there is more for the programmer to keep track off, you'll have to keep track of the offsets and make things at set up and draw time both match.
+Vulkan allows you to offset into buffers for different usages. Why not do that for the vertex and index buffer? This reduces expensive CPU allocations and increases GPU cache locality. With this method there is more for the programmer to keep track off, you'll have to keep track of the offsets and make things at set up and draw time both match.
 
 Set up similar as before
 

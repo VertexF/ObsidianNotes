@@ -9,30 +9,6 @@
         "dimension": 49.555837563451774,
         "children": [
           {
-            "id": "28bbee6b18148090",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/Article/Texture mapping.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Texture mapping"
-            }
-          },
-          {
             "id": "94c5fdff9086952e",
             "type": "leaf",
             "state": {
@@ -57,12 +33,12 @@
             }
           },
           {
-            "id": "2bfc77eb55f08cc6",
+            "id": "d14f06a1c3b70007",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Creating a descriptor set layout.md",
+                "file": "6 - Main Notes/Transitioning image memory for texture mapping.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -77,16 +53,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Creating a descriptor set layout"
+              "title": "Transitioning image memory for texture mapping"
             }
           },
           {
-            "id": "6691c1e1279e3fb0",
+            "id": "d9eb81a8c9f8227f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Article/Texture mapping.md",
+                "file": "6 - Main Notes/Setting up the subpass.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -101,11 +77,155 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Texture mapping"
+              "title": "Setting up the subpass"
+            }
+          },
+          {
+            "id": "3f44d2364c4e39cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Setting up the attachment reference.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Setting up the attachment reference"
+            }
+          },
+          {
+            "id": "bd1aa5fb4d0bd19d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Setting up the vertex attributes descriptions.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Setting up the vertex attributes descriptions"
+            }
+          },
+          {
+            "id": "02a4e5c01ab1df9c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Article/Depth buffering.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Depth buffering"
+            }
+          },
+          {
+            "id": "5ebe70e1fe668ec2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Setting up the depth and stencil testing.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Setting up the depth and stencil testing"
+            }
+          },
+          {
+            "id": "7c673667929c9295",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Creating the framebuffers.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Creating the framebuffers"
+            }
+          },
+          {
+            "id": "8fb25a64cbe396c9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Setting up the render pass.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Setting up the render pass"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       },
       {
         "id": "24d40fb114c8f364",
@@ -137,12 +257,12 @@
             }
           },
           {
-            "id": "c0d600c9bbeb05c8",
+            "id": "44d29ff2efec07a7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Creating a sampler.md",
+                "file": "6 - Main Notes/3D geometry without the depth buffer.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -157,11 +277,83 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Creating a sampler"
+              "title": "3D geometry without the depth buffer"
+            }
+          },
+          {
+            "id": "d90d41c50e8281b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Setting up the depth and stencil testing.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Setting up the depth and stencil testing"
+            }
+          },
+          {
+            "id": "6eb4b7cab511948e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 - Indexes/C++.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "C++"
+            }
+          },
+          {
+            "id": "20bfc818d7e4a198",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Dangling pointer with locally created arrays.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Dangling pointer with locally created arrays"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -321,50 +513,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6691c1e1279e3fb0",
+  "active": "20bfc818d7e4a198",
   "lastOpenFiles": [
-    "6 - Main Notes/Creating a descriptor set layout.md",
-    "4 - Indexes/vulkan.md",
-    "2 - Source Material/Article/Texture mapping.md",
-    "6 - Main Notes/What is a descriptor set layout.md",
-    "6 - Main Notes/Setting up subpass dependencies with one subpass.md",
-    "6 - Main Notes/Creating a sampler.md",
-    "2 - Source Material/Article/Uniform buffers.md",
-    "6 - Main Notes/What are samplers.md",
+    "4 - Indexes/C++.md",
+    "6 - Main Notes/Douple deletes with raw buffer data.md",
+    "6 - Main Notes/What is reverse-Z perspective.md",
     "6 - Main Notes/Transitioning image memory for texture mapping.md",
-    "6 - Main Notes/What are subpass dependencies.md",
-    "6 - Main Notes/Setting the synchronisation with the subpass dependencies.md",
-    "6 - Main Notes/Introduction to texture mapping.md",
-    "6 - Main Notes/Creating an image view.md",
-    "6 - Main Notes/Creating a texture image view.md",
+    "6 - Main Notes/What is vulkan logical device.md",
+    "6 - Main Notes/Setting up the input assembly.md",
+    "6 - Main Notes/Multiple descriptor sets.md",
+    "6 - Main Notes/Using a render pass.md",
+    "6 - Main Notes/Checking surface and swapchain compability.md",
+    "6 - Main Notes/Copying buffer data over.md",
+    "6 - Main Notes/What is the graphics pipeline.md",
+    "6 - Main Notes/3D geometry without the depth buffer.md",
+    "6 - Main Notes/Setting up reverse perspective for your depth buffer.md",
+    "3 - Tags/graphics theory.md",
+    "6 - Main Notes/Setting up the depth and stencil testing.md",
+    "6 - Main Notes/Enabling Validation layers.md",
+    "4 - Indexes/vulkan.md",
+    "6 - Main Notes/Destroying a image view.md",
+    "2 - Source Material/Article/Depth buffering.md",
+    "6 - Main Notes/Setting up the pipeline layout with a descriptor.md",
+    "6 - Main Notes/Cleaning up depth resources.md",
+    "6 - Main Notes/Resizing the window with a depth buffer.md",
+    "6 - Main Notes/Clear depth values.md",
+    "6 - Main Notes/Framebuffer with depth.md",
+    "6 - Main Notes/Setting depth buffer attachments.md",
+    "6 - Main Notes/Setting up the subpass.md",
+    "reverse_Z_depth.png",
+    "image-1.png",
+    "regular_depth_z.png",
+    "2 - Source Material/Books",
+    "2 - Source Material/Article/Untitled",
+    "overlapping_geometry.png",
+    "texture_frogx4.png",
+    "texture_coordinate_wrong.png",
+    "texture_coordinates.png",
     "texture_addressing.png",
     "anisotropic_filtering.png",
     "texture_filtering.png",
-    "6 - Main Notes/Preparing the texture image.md",
-    "6 - Main Notes/What are image views.md",
-    "6 - Main Notes/Loading extended functions dynamically.md",
-    "6 - Main Notes/Loading an image file.md",
-    "6 - Main Notes/Creating a VkImage for texture mapping.md",
-    "6 - Main Notes/Creating the index buffer with staging buffers.md",
-    "6 - Main Notes/Setting up the vertex attributes descriptions.md",
-    "6 - Main Notes/What is synchronisation in vulkan.md",
-    "6 - Main Notes/Setting up and running the vkCmdDraw command.md",
-    "3 - Tags/vulkan textures.md",
-    "6 - Main Notes/Multiple descriptor sets.md",
-    "6 - Main Notes/Setting up the allocating buffer memory.md",
     "New folder",
     "7 - Code",
-    "vulkan_simplified_pipeline.svg",
-    "viewports_scissors-2294964527.png",
     "4 - Indexes",
-    "1 - Rough Notes/Pasted image 20250920080120.png",
     "2 - Source Material/Article",
     "Untitled.canvas",
     "2 - Source Material/Video",
     "6 - Main Notes",
     "5 - Template",
-    "4 - Indexes",
-    "3 - Tags",
-    "2 - Source Material"
+    "4 - Indexes"
   ]
 }

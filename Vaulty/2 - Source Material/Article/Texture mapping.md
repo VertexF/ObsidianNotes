@@ -512,7 +512,198 @@ Don't forget to destroy the sampler.
 ```c++
 vkDestroySampler(device, textureSampler, nullptr);
 ```
-##### Combed image sampler
+##### Combined image sampler
 To allow us to access an image view that contains a texture in a shader we need to be able to use a descriptor set type called a **combined image sampler**. 
 
-The first thing you have to do is create a sampler descriptor with **VkDescriptorSetLayoutBinding** and add it to the descriptor then add that to the **DEscriptorSetLayoutCreateInfo** This is the same as [[Creating a descriptor set layout]] but we make it a combined image sampler.
+The first thing you have to do is create a sampler descriptor with **VkDescriptorSetLayoutBinding** and add it to the descriptor then add that to the **DescriptorSetLayoutCreateInfo** This is the same as [[Creating a descriptor set layout]] but we make it a combined image sampler.
+
+```c++
+VkDescriptorSetLayoutBinding sampleLayoutBinding{};
+sampleLayoutBinding.binding = 1;
+sampleLayoutBinding.descriptorCount = 1;
+sampleLayoutBinding.descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+sampleLayoutBinding.pImmutableSamplers = nullptr;
+sampleLayoutBinding.stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT;
+    
+//Pipeline layout creation
+std::array<VkDescriptorSetLayoutBinding, 2> binding = { uboLayoutBinding, sampleLayoutBinding };
+VkDescriptorSetLayoutCreateInfo layoutInfo{};
+layoutInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
+layoutInfo.bindingCount = uint32_t(binding.size());
+layoutInfo.pBindings = binding.data();
+```
+
+Here we are creating the descriptor but this time it's a **VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER** type. You can put image sampler in the vertex shader if you need to generate a height map, by deforming a vertex grid.
+
+We also need to increase the size of the descriptor pool to include the sampler
+```c++
+//Descriptor pool creation
+std::array<VkDescriptorPoolSize, 2> poolSize{};
+poolSize[0].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+poolSize[0].descriptorCount = imageCount;
+poolSize[1].type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+poolSize[1].descriptorCount = imageCount;
+
+VkDescriptorPoolCreateInfo poolDescriptorCreateInfo{};
+poolDescriptorCreateInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
+poolDescriptorCreateInfo.poolSizeCount = uint32_t(poolSize.size());
+poolDescriptorCreateInfo.pPoolSizes = poolSize.data();
+poolDescriptorCreateInfo.maxSets = imageCount;
+```
+
+Since the allocation of the descriptors and left to the graphics driver you don't need to set things up in away that types are exact, but it's best practice to do so.
+
+Next we'll need to write the the image sampler descriptor set to be able to bind this at draw time.
+```c++
+VkDescriptorBufferInfo desBufferInfo{};
+desBufferInfo.buffer = uniformBuffers[i];
+desBufferInfo.offset = 0;
+desBufferInfo.range = sizeof(ModelData);
+
+VkDescriptorImageInfo desImageInfo{};
+desImageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+desImageInfo.imageView = textureImageView;
+desImageInfo.sampler = textureSampler;
+
+std::array<VkWriteDescriptorSet, 2> descriptorWrites{};
+
+descriptorWrites[0].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+descriptorWrites[0].dstSet = descriptorSets[i];
+descriptorWrites[0].dstBinding = 0;
+descriptorWrites[0].dstArrayElement = 0;
+descriptorWrites[0].descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+descriptorWrites[0].descriptorCount = 1;
+descriptorWrites[0].pBufferInfo = &desBufferInfo;
+descriptorWrites[0].pImageInfo = nullptr;
+descriptorWrites[0].pTexelBufferView = nullptr;
+
+descriptorWrites[1].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+descriptorWrites[1].dstSet = descriptorSets[i];
+descriptorWrites[1].dstBinding = 1;
+descriptorWrites[1].dstArrayElement = 0;
+descriptorWrites[1].descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+descriptorWrites[1].descriptorCount = 1;
+descriptorWrites[1].pBufferInfo = nullptr;
+descriptorWrites[1].pImageInfo = &desImageInfo;
+descriptorWrites[1].pTexelBufferView = nullptr;
+
+vkUpdateDescriptorSets(device, uint32_t(descriptorWrites.size()), descriptorWrites.data(), 0, nullptr);
+```
+
+Note we are updating the **.pImageInfo** with out image data with unlike the **VkDescriptorBufferInfo** struct.
+##### Texture coordinates
+You need to have vertex attribute descriptions for the vertex buffer which is were the texcoords are gonna live. 
+```c++
+struct Vertex 
+{
+    vec2s position;
+    vec3s colour;
+    vec2s texCoord;
+
+    static std::array<VkVertexInputAttributeDescription, 3> getAttributeDescriptions() 
+    {
+        std::array<VkVertexInputAttributeDescription, 3> attributeDescriptions{};
+
+        attributeDescriptions[0].binding = 0;
+        attributeDescriptions[0].location = 0;
+        attributeDescriptions[0].format = VK_FORMAT_R32G32_SFLOAT;
+        attributeDescriptions[0].offset = offsetof(Vertex, position);
+
+        attributeDescriptions[1].binding = 0;
+        attributeDescriptions[1].location = 1;
+        attributeDescriptions[1].format = VK_FORMAT_R32G32B32_SFLOAT;
+        attributeDescriptions[1].offset = offsetof(Vertex, colour);
+
+        attributeDescriptions[2].binding = 0;
+        attributeDescriptions[2].location = 2;
+        attributeDescriptions[2].format = VK_FORMAT_R32G32_SFLOAT;
+        attributeDescriptions[2].offset = offsetof(Vertex, texCoord);
+
+        return attributeDescriptions;
+    }    
+```
+
+Note the format being **VK_FORMAT_R32G32_SFLOAT** matching the `vec2s`. 
+
+You also have to have the data within your vertex buffer
+```c++
+const std::vector<Vertex> vertices = 
+{
+    {{ -0.5f, -0.5f }, { 1.f, 1.f, 1.f }, { 1.f, 0.f }},
+    {{  0.5f, -0.5f }, { 1.f, 1.f, 1.f }, { 0.f, 0.f }},
+    {{  0.5f,  0.5f }, { 1.f, 1.f, 1.f }, { 0.f, 1.f }},
+    {{ -0.5f,  0.5f }, { 1.f, 1.f, 1.f }, { 1.f, 1.f }}
+};
+```
+
+This just texture maps a sqaure. It's not that important what the data because it's just dummy data it's more that it matches with the **VK_FORMAT_R32G32_SFLOAT**. 
+##### Using textures with shaders
+The first thing you need to do is be aware the vertex attribute that comes through the vertex buffer needs to handle. So you need to pass the texture coordinates from the vertex shader to the fragment shader.
+
+```c
+#version 450
+layout (location = 0) in vec2 inPosition;
+layout (location = 1) in vec3 inColour;
+layout (location = 2) in vec2 inTexCoord; 
+
+layout (location = 0) out vec3 fragColour;
+layout (location = 1) out vec2 fragTexCoord;
+
+void main()
+{
+	gl_Position = modelData.proj * modelData.view * modelData.model * vec4(inPosition, 0.0, 1.0);
+	fragColour = inColour;
+	fragTexCoord = inTexCoord;
+}
+```
+
+Here we are just going to print the texture coordinate with the texture coordinates we passed over from the vertex shader.
+```c
+layout(location = 0) in vec3 fragColour;
+layout(location = 1) in vec2 fragTexCoord;
+
+layout(location = 0) out vec4 outColour;
+
+void main()
+{
+	outColour = vec4(fragTexCoord, 0.0, 1.0);
+}
+```
+
+If you're having a problem with textures on models you can actually just display the texture coordinates directly. This can be thought of as shader "printf" debugging as it shows you if the texture coordinates make sense.
+
+![[texture_coordinates.png]]
+This is what a correct texture coordinates should look like. The green represents the hoziontal coordinates and the red channel represents the coordinates. The yellow and the black corners show that we are interperlating correctly from 0, 0 to 1, 1 across the square.
+
+You can see that if I make a mistake with the texture coordinates I don't get this picture.
+
+![[texture_coordinate_wrong.png]] 
+
+Since we are missing the black corner you can get an idea on what's wrong here.
+
+To actually use the combined image sampler you'll want to create a uniform **sampler** object in the shader you want to use a texture.
+
+```c
+layout(binding = 1) uniform sampler2D texSampler;
+```
+
+You have 1D and 3D version of this so be aware on what type of texture you're interested in. The binding has to match the `descriptorWrites[1].dstBinding = 1;` when we created the `std::array<VkWriteDescriptorSet, 2>` when binding the image buffer.
+
+```c
+vec4 tex = texture(texSampler, fragTexCoord);
+outColour = vec4(fragColour * tex.rgb, tex.a);
+```
+
+Next you'll want to use the **texture** function in your shader that deals with the sampling transformation and filtering in the background. 
+
+I only added a little extra code here so I could add the **fragColour** to the RBG parts of the texture while leaving the alpha pixels alone.
+
+```c
+vec4 tex = texture(texSampler, fragTexCoord * 4.0);
+outColour = vec4(fragColour * tex.rgb, tex.a);
+```
+
+You can if you want mess around the with texture coordinate values and you'll see the address mode at work for a given sampler. 
+
+This is the output of that result
+![[texture_frogx4.png]]

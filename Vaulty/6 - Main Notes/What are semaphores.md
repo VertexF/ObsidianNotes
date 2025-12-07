@@ -5,7 +5,7 @@ Tags: [[vulkan]] [[vulkan sychronisation]]
 
 Semaphores are used to order commands within a queue and synchronise different queues together. There is also functions outside of command synchronisation that need semaphores.
 
-There are two types of semaphores **binary** and **timeline**. To use timeline you need an extension to get this working. Binary semaphores are the simpliest and require less set up but can do less. Here I will only talk about binary semaphores as they are simplest.
+There are two types of semaphores **binary** and **timeline**. To use timeline you need an extension to get this working. Binary semaphores are the simplest and require less set up but can do less. Here I will only talk about binary semaphores as they are simplest.
 
 A binary semaphore is either unsignalled or signalled. It begins as unsignaled. This works by one command in a queue signalling the semaphore when the command is complete, another command will wait on that semaphore until it is singled to then go on and do it's work. Once the second command has started the semaphore goes back to unsignaled automatically.
 

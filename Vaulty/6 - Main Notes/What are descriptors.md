@@ -8,7 +8,8 @@ These guys are used to update shaders every frame with global variables. These c
 To use these you need to set up these three things:
 1) You need to specify a [[What is a descriptor set layout|descriptor set layout]] during pipeline creation in the stage of the pipeline layout.
 2) You need to allocate descriptors like command buffer from a memory pool, called a descriptor pool.
-3) Bind the descriptor you want to use during rendering.
+3) You need to write the memory to the descriptor set so it can be used in a shader.
+4) Bind the descriptor you want to use during rendering.
 # References
 ##### Main Notes
 [[Setting up the pipeline layout with a descriptor]]

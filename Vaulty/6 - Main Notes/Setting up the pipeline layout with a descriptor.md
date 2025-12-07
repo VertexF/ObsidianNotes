@@ -3,8 +3,6 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan graphic pipeline]] [[vulkan descriptors]]
 # Setting up the pipeline layout with a descriptor
 
-# WARNING: - We have not talked about descriptor pools
-
 To create a pipeline layout that uses descriptors you first need to have finished [[Creating a descriptor set layout]]  
 
 ```c++

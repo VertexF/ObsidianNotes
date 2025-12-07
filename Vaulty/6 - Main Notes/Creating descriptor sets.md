@@ -68,7 +68,7 @@ for (uint32_t i = 0; i < imageCount; ++i)
 
 The parameters **.dstSet** and **.dstBinding** specify the descriptor set you want to update and the binding. Descriptor sets can be arrays we so **.dstArrayElement** tells vulkan what is the first index of that array, if you're not using arrays set the to 0. 
 
-**.descriptorType** specify the descriptor type again. Descriptor sets to update arrays of descriptor sets at the same time from **.dstArrayElement** to **.descriptorCount** If you don't have an array just set **.descriptorCount** to 1. Which means 1 things gets up dated because 0 to 1 things are in the "array".
+**.descriptorType** specify the descriptor type again. Descriptor sets to update arrays of descriptor sets at the same time from **.dstArrayElement** to **.descriptorCount** If you don't have an array just set **.descriptorCount** to 1. 
 
 ```c++
 descriptorWrite.pBufferInfo = &desBufferInfo;

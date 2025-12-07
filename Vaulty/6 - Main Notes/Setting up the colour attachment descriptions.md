@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[render pass]]
 # Setting up the colour attachment descriptions
 
-The attachment description describes what needs to be changed within a buffer and samples within a render pass. So a colour attachment description is going to be different to a depth attachment description for example.
+The attachment description describes what needs to be changed within a buffer and samples within a render pass. So a colour attachment description is going to be different to a depth attachment description for example. Please note that the samples are different from a sampler.
 
 You do this by setting creating the **VkAttachmentDescription**. I will show how to set up a simple colour attachment description but other types require different set up.
 

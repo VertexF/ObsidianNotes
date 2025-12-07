@@ -17,7 +17,7 @@ createImageViewInfo.image = swapchainImages;
 
 Next you'll want to specify how the data should be interpreted with **.viewType** and **.format**. The types **VK_IMAGE_VIEW_TYPE_1D|2D|3D|CUBE** are used in different contexts for types of data. 2D is standard for regular textures and for a swapchain image.
 
-The format depends on what you're dealing with, if you're dealing with swapchain image you can just take the swapchain format from the **VkSurfaceFormatKHR** with **.format**
+The format depends on what you're dealing with, if you're dealing with swapchain image you can just take the swapchain format from the **VkSurfaceFormatKHR** with **.format** The format sets the values like RBGAs of the image. 
 
 ```c++
 	createImageViewInfo.viewType = VK_IMAGE_VIEW_TYPE_2D;
