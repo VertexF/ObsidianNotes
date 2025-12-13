@@ -49,7 +49,7 @@ These set up the culling modes. **.cullMode** tells vulkan what cull if anything
 If you have set up the view projection matrix your cull mode needs to be **VK_FRONT_FACE_COUNTER_CLOCKWISE** because you'll have to flip the Y direction.
 
 ```c++
-rasteriser.cullMode = VK_CULL_MODE_BACK_BIT;
+rasteriser.frontFace = VK_FRONT_FACE_COUNTER_CLOCKWISE;
 ```
 
 If you don't do this the back face culling will kick and remove the polygon from view.

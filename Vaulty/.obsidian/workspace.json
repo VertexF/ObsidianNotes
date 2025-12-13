@@ -36,24 +36,10 @@
             "id": "d14f06a1c3b70007",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Transitioning image memory for texture mapping.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Transitioning image memory for texture mapping"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
@@ -225,7 +211,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "24d40fb114c8f364",
@@ -310,7 +296,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Indexes/C++.md",
+                "file": "6 - Main Notes/Douple deletes with raw buffer data.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -325,35 +311,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "C++"
-            }
-          },
-          {
-            "id": "20bfc818d7e4a198",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Dangling pointer with locally created arrays.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Dangling pointer with locally created arrays"
+              "title": "Douple deletes with raw buffer data"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -513,12 +475,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "20bfc818d7e4a198",
+  "active": "d9eb81a8c9f8227f",
   "lastOpenFiles": [
-    "4 - Indexes/C++.md",
-    "6 - Main Notes/Douple deletes with raw buffer data.md",
-    "6 - Main Notes/What is reverse-Z perspective.md",
+    "6 - Main Notes/Encoding basics.md",
+    "6 - Main Notes/Recreating the swapchain.md",
+    "6 - Main Notes/What is Vulkan.md",
+    "6 - Main Notes/Handling frames in flight.md",
+    "6 - Main Notes/Setting up the rasteriser.md",
     "6 - Main Notes/Transitioning image memory for texture mapping.md",
+    "6 - Main Notes/Douple deletes with raw buffer data.md",
+    "4 - Indexes/C++.md",
+    "2 - Source Material/Books/The Abstraction- The Process.md",
+    "6 - Main Notes/Dangling pointer with locally created arrays.md",
+    "6 - Main Notes/What is reverse-Z perspective.md",
     "6 - Main Notes/What is vulkan logical device.md",
     "6 - Main Notes/Setting up the input assembly.md",
     "6 - Main Notes/Multiple descriptor sets.md",
@@ -534,13 +503,6 @@
     "4 - Indexes/vulkan.md",
     "6 - Main Notes/Destroying a image view.md",
     "2 - Source Material/Article/Depth buffering.md",
-    "6 - Main Notes/Setting up the pipeline layout with a descriptor.md",
-    "6 - Main Notes/Cleaning up depth resources.md",
-    "6 - Main Notes/Resizing the window with a depth buffer.md",
-    "6 - Main Notes/Clear depth values.md",
-    "6 - Main Notes/Framebuffer with depth.md",
-    "6 - Main Notes/Setting depth buffer attachments.md",
-    "6 - Main Notes/Setting up the subpass.md",
     "reverse_Z_depth.png",
     "image-1.png",
     "regular_depth_z.png",
