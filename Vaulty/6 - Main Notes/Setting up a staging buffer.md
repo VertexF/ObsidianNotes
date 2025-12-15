@@ -23,7 +23,7 @@ vkUnmapMemory(device, stagingBufferMemory);
 Okay so the **createBuffer** is a help function that creates a buffer, selects the memory type and binds it. You can find more about that in the [[Setting up the a buffer]] and [[Setting up the allocating buffer memory]] The arguments for this function are:
 1) **VkDeviceSize** which takes in the size of the buffer. 
 2) **VkBufferUsageFlags** This tells the function what the buffer is going to be used for. 
-3) **VkMemoryPropertyFlags** This tell the function the memory type we are intested in. 
+3) **VkMemoryPropertyFlags** This tell the function the memory type we are interested in. 
 4) **VkBuffer&** is the output variable for the buffer we are going to use. 
 5) **VkDeviceMemory&** is the output variable for the buffer **memory** we are going to use. 
 

@@ -28,7 +28,7 @@ The arguments go
 2) The number of indices
 3) The number of instances (if you're not instance rendering set this to 1)
 4) The offset into the index buffer (if you start at 1 for example the first index will be skipped)
-5) Is the value added to the vertex index before indexing into the vertex buffer. I believe this means that it's offset into the vertex buffer before we start using it. Mean if we have 1 we skip the first index.
+5) Is the value added to the vertex index before indexing into the vertex buffer. I believe this means that it's offset into the vertex buffer before we start using it. Mean if we have 1 we skip the first vertex.
 6) The offset for instancing
 # References
 ##### Main Notes

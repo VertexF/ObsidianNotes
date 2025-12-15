@@ -3,9 +3,9 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan buffer]]
 # Setting up vertex buffer data
 
-There isn't much to be said here about vertex data. This could be just position or other stuff. For this tutorial we are creating colour and position with a Vertex struct that contains these data types.
+There isn't much to be said here about vertex data. This is were the vertex attributes actually are, this can contain anything that needs to be ran per-vertex. For this tutorial we are creating colour and position with a Vertex struct that contains these data types.
 
-This will eventually come from models so this isn't important really. If you most setting up the data by look like this.
+If you most setting up the data by look like this, normally this comes from a model.
 
 ```c++
 struct Vertex 
@@ -22,8 +22,11 @@ const std::vector<Vertex> vertices =
 };
 ```
 
-I will be using throughout some examples so this is purely here to link back to. However the `Vertex`class can be anything with vertices in it.
+It's important you know what's in the vertex data itself because this tells us what we need in the [[Shader vertex input descriptions]] the stride when [[Setting up binding descriptions]] and the individual type and stride between different vertex attributes when [[Setting up the vertex attributes descriptions]]
 # References
 ##### Main Notes
+[[Shader vertex input descriptions]]
+[[Setting up binding descriptions]]
+[[Setting up the vertex attributes descriptions]]
 #### Source Notes
 [[Vertex buffer]]

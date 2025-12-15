@@ -20,7 +20,7 @@ void main()
 
 This takes in both position and colour as inputs and uses them in the shader, with the **in** part of the shader. The `location = n` is decided when you creating the vertex buffer with the [[Setting up the vertex attributes descriptions|VkVertexInputAttributeDescription]], so keep in mind when creating the vertex shader. Remember this shader runs per vertex.
 
-Not all types take up simply 1 slot in the shader. The double version of vec3 called dvec3 actually take up 2 slots. If you need something like this look at the OpenGL layout qualifers https://wikis.khronos.org/opengl/Layout_Qualifier_(GLSL).
+Not all types take up simply 1 slot in the shader. The double version of vec3 called dvec3 actually take up 2 slots. If you need something like this look at the OpenGL layout qualifiers https://wikis.khronos.org/opengl/Layout_Qualifier_(GLSL).
 # References
 ##### Main Notes
 [[Setting up the vertex attributes descriptions]]

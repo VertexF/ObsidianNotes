@@ -13,7 +13,7 @@ vkGetBufferMemoryRequirements(device, vertexBuffer, &memoryRequirements);
 Memory requirements for buffer are returned in this struct:
 - **.size** which is the size of memory in bytes.
 - **.memoryTypeBits** which is a bit mask that allows us to see if various bit types are supported. 
-- **.aligment** which tells if and were the offset of buffer begins in the allocated region. This changes depending on the **VkBufferCreateInfo** **.usage** and **.flags**.
+- **.alignment** which tells if and were the offset of buffer begins in the allocated region. This changes depending on the **VkBufferCreateInfo** **.usage** and **.flags**.
 
 The graphics card can do a lot of different allocation, so we need to figure out which we need to use for our case.
 ```c++

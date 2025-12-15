@@ -15,7 +15,7 @@ Lets map a float 32-bit value to a given depth value
 
 ![[regular_depth_z.png]]
 
-You can see for each depth value we lose tonne of values near the vertical asymptote. The reason here is that the 0 part of the y-axis has a lot more values when the graph line exploding to infinity but what if we reverse the y-axis? Well you get this
+You can see for each depth value we lose tonne of values near the vertical asymptotic. The reason here is that the 0 part of the y-axis has a lot more values when the graph line exploding to infinity but what if we reverse the y-axis? Well you get this
 
 ![[reverse_Z_depth.png]]
 

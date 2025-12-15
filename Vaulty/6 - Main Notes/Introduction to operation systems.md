@@ -14,7 +14,7 @@ What if we want to run 2 programs at the exact same time? Well the OS **policy**
 Memory of the data and instruction are held in memory. Each instruction fetch also gets the data. It's possible or a programs to allocate memory at exactly same memory as other programs. This because of memory virtualisation. Each program has it's own private virtual address space. The OS maps the virtual to the physical address and the physical address is a shared resource.
 ###### Persistence
 When writing to disk the OS will do something called **journaling** or **copy-on-write** to be able to recover to a reasonable state after crashing. The OS has to keep track of simple and complex data structures to write to disk. It's also wait until possible to write things in bulk.
-###### HistoryA
+###### History
 An OS used to be a bunch of libraries you could use until it progressed to having system calls. The part of the hardware that picks them up is called a **trap handler**, through an instruction called a **trap**. The trap handler raises the privilege level to kernel mode from user mode allowing things like file creation or whatever. You also have a special **return-from-trap** instruction which reverts things back to user mode while simultaneously passing control back to the application were things left off.
 # References
 ##### Main Notes

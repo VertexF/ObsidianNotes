@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan buffer]] [[vulkan shaders]]
 # Buffer alignment requirement
 
-Buffers in shaders need to be aligned with the C++ counter parts or the data gets corrupted on the shader. The basic idea is that the SPIRV add padding to the buffers to make things run faster on the GPU and this padding can mis-align things when the descriptor set tries to update the shader.
+Buffers in shaders need to be aligned with the C++ counter parts or the data gets corrupted on the shader. The basic idea is that the SPIRV add padding to the buffers to make things run faster on the GPU and this padding can misaligned things when the descriptor set tries to update the shader.
 
 There are different rules to this depending on what alignment you're using. I've used **std140** in the past, which makes it so it follows a consistent rule.
 
@@ -14,7 +14,7 @@ The only things you need to remember are
 2) vec2 appear in the beginning or the end of 2 chunk types.
 3) vec3 takes up 3 chunks but can only appear at the beginning.
 4) Anything takes up the maximum amount of space, starting from a from the beginning of a chunk. This may include adding a load of padding so the alignment works.
-5) Matrices treated like array and pad the parts they don't use. So a mat2 takes up 2 chunks and pads the rest of the space to make it fill up a total of 8 chunks. 
+5) Matrices treated like array and pad the parts they don't use. So a mat2 takes up 4 chunks and pads the rest of the space to make it fill up a total of 8 chunks. 
 
 More information can be found on this excellent tutorial on WebGL https://youtu.be/JPvbRko9lBg?si=F8m8Mj1fme3ewlBR&t=196 to 8:58
 

@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan buffer]]
 # Setting up binding descriptions
 
-The first to do once you've set up the [[Setting up vertex buffer data]] you create vertex binding descriptions. 
+The first to do once you've set up the [[Setting up vertex buffer data]] you create vertex binding descriptions within a shader and have the data for the vertex shader [[Setting up vertex buffer data]]
 ```c++
 static VkVertexInputBindingDescription getBindingDescriptions() 
 {
@@ -25,7 +25,7 @@ The **.inputRate** can be either these two values
 - **VK_VERTEX_INPUT_RATE_VERTEX** Move to the next entry after each vertex.
 - **VK_VERTEX_INPUT_RATE_INSTANCE** Move to the next data entry after each instance. 
 
-This will change depending on what your vertex data is layed out like and how you're rendering.
+This will change depending on what your vertex data is laid out like and how you're rendering.
 # References
 ##### Main Notes
 [[Setting up vertex buffer data]]
