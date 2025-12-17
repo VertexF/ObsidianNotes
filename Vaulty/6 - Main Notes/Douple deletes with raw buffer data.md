@@ -43,7 +43,7 @@ struct Entity
 } entities;
 
 
-static Image loadSprint(const char* filePath) 
+static Image loadSprite(const char* filePath) 
 {
 	//Load the file from file path
 	uint32_t bufferSize = 8;
@@ -55,7 +55,7 @@ static Image loadSprint(const char* filePath)
 int main()
 {
 	int playerID = 0;
-	entities.sprite[playerID] = loadSprint("../Sprint/frog.png");
+	entities.sprite[playerID] = loadSprite("../Sprite/frog.png");
 
 	for (uint32_t i = 0; i < entities.sprite[playerID].bufferSize; ++i)
 	{
@@ -69,10 +69,10 @@ int main()
 What ends up happening is that the move operator that is generated from the compiler at this line. No RVO can save you here.
 
 ```c++
-entities.sprite[playerID] = loadSprint("../Sprint/frog.png");
+entities.sprite[playerID] = loadSprite("../Sprite/frog.png");
 ```
 
-This move operator just the pointer of **pixelData** over to the `entities.sprite[playerID]` and then because **loadSprint** is an rvalue the the destructor gets called, meaning that the line `delete[] pixelData;` within the Image destructor runs and deletes pixelData from memory. Now `entities.sprite[playerID]` has junk data and when it runs it's own destructor the tries to delete already deleted memory at the end of main causing a double delete.
+This move operator just moves the pointer of **pixelData** over to the `entities.sprite[playerID]` and then because **loadSprite** is an rvalue the the destructor gets called, meaning that the line `delete[] pixelData;` within the Image destructor runs and deletes pixelData from memory. Now `entities.sprite[playerID]` has junk data and when it runs it's own destructor the tries to delete already deleted memory at the end of main causing a double delete.
 
 What you have to do is follow the rule of 5 and build out the constructs and operators to handle doing a deep copy so every case is taken care of.
 ```c++
@@ -154,7 +154,7 @@ struct Image
 
 The operators need to delete the old **pixelData** because the old data would still be lying around in memory. We would have a memory with no way to access it.
 
-The move constructors and operators don't need to have a memory copy because the we have a r-reference object to deal with so the data can be safely moved without a **memcpy**. We do want to 0 out the memory after the move because **.rhs.pixelData** after the move will have junk in.
+The move constructors and operators don't need to have a memory copy because the we have a r-reference so the data can be safely moved without a **memcpy**. We do want to 0 out the memory after the move because **.rhs.pixelData** after the move will have junk in.
 
 You get a warning if you need add **noexecpt** in the move operator and constructor. Remember this just means that if an expection is thrown in a function marked as **noexpect** the application just terminates 
 # References

@@ -33,6 +33,7 @@
             }
           },
           {
+<<<<<<< Updated upstream
             "id": "6c26cfe8084af112",
             "type": "leaf",
             "state": {
@@ -126,6 +127,15 @@
               },
               "icon": "lucide-file",
               "title": "Shader vertex input descriptions"
+=======
+            "id": "d14f06a1c3b70007",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+>>>>>>> Stashed changes
             }
           },
           {
@@ -134,7 +144,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Setting up the attachment reference.md",
+                "file": "4 - Indexes/vulkan.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -149,7 +159,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Setting up the attachment reference"
+              "title": "vulkan"
             }
           },
           {
@@ -536,6 +546,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
+<<<<<<< Updated upstream
   "active": "94c5fdff9086952e",
   "lastOpenFiles": [
     "4 - Indexes/vulkan.md",
@@ -564,6 +575,36 @@
     "6 - Main Notes/Setting up the attachment reference.md",
     "6 - Main Notes/Multiple descriptor sets.md",
     "6 - Main Notes/Buffer alignment requirement.md",
+=======
+  "active": "3f44d2364c4e39cd",
+  "lastOpenFiles": [
+    "6 - Main Notes/Copying buffer data over.md",
+    "4 - Indexes/vulkan.md",
+    "6 - Main Notes/Setting up a staging buffer.md",
+    "6 - Main Notes/Creating a transfer queue for buffer copying.md",
+    "6 - Main Notes/Creating a VkImage for texture mapping.md",
+    "6 - Main Notes/Transitioning image memory for texture mapping.md",
+    "6 - Main Notes/Preparing the texture image.md",
+    "6 - Main Notes/Setting up the attachment reference.md",
+    "6 - Main Notes/Douple deletes with raw buffer data.md",
+    "4 - Indexes/C++.md",
+    "3 - Tags/OS.md",
+    "6 - Main Notes/Introduction to operation systems.md",
+    "2 - Source Material/Books/The Abstraction- The Process.md",
+    "6 - Main Notes/Setting up the allocating buffer memory.md",
+    "6 - Main Notes/Creation of the shader module.md",
+    "6 - Main Notes/Binding the vertex buffer and drawing.md",
+    "6 - Main Notes/Creating an combined image sampler descriptor.md",
+    "6 - Main Notes/Creating descriptor sets.md",
+    "6 - Main Notes/Cleaning up depth resources.md",
+    "6 - Main Notes/Fixing a possible deadlock.md",
+    "6 - Main Notes/Destroying a image view.md",
+    "6 - Main Notes/Setting up binding descriptions.md",
+    "6 - Main Notes/What are descriptors.md",
+    "6 - Main Notes/Creating a sampler.md",
+    "6 - Main Notes/What are samplers.md",
+    "6 - Main Notes/Creating a texture image view.md",
+>>>>>>> Stashed changes
     "reverse_Z_depth.png",
     "Reverse_depth_z.png",
     "texture_addressing.png",
