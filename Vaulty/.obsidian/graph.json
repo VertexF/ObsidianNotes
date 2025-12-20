@@ -25,7 +25,7 @@
       "query": "path:\"4 - Indexes\"  ",
       "color": {
         "a": 1,
-        "rgb": 5840889
+        "rgb": 6433534
       }
     }
   ],
@@ -39,10 +39,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-<<<<<<< Updated upstream
-  "scale": 0.26237006053778816,
-=======
-  "scale": 0.3213363860503566,
->>>>>>> Stashed changes
-  "close": true
+  "scale": 0.36288736930121057,
+  "close": false
 }

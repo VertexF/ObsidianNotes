@@ -100,12 +100,12 @@ if (vkAllocateMemory(device, &allocateInfo, nullptr, &textureImageMemory) != VK_
 vkBindImageMemory(device, textureImage, textureImageMemory, 0);
 ```
 
-You then set the memory exactly the same way as when you create the buffers [[Setting up the allocating buffer memory]] The only difference is I've abstracted the **.memoryTypeIndex** into it's own function.
+You then set the memory exactly the same way as when you create the buffers [[Allocating data to a buffer]] The only difference is I've abstracted the **.memoryTypeIndex** into it's own function.
 
 This was all encapsulated in a helper function called **copyBufferToImage** as it's going to be used in different places.
 # References
 ##### Main Notes
-[[Setting up the allocating buffer memory]]
+[[Allocating data to a buffer]]
 [[Introduction to texture mapping]]
 [[Loading an image file]]
 #### Source Notes

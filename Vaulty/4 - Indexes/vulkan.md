@@ -105,7 +105,7 @@
 [[Handling frames in flight]]
 ## Buffers
 [[Setting up the a buffer]]
-[[Setting up the allocating buffer memory]]
+[[Allocating data to a buffer]]
 [[Making a basic createBuffer function]]
 [[Buffer alignment requirement]]
 [[Multiple descriptor sets]]

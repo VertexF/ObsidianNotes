@@ -5,7 +5,7 @@ Tags: [[vulkan]] [[vulkan command buffers]]
 
 To do this you'll have to have finished [[Setting up the command buffers]]. Once you have a command buffer you can record any command into the command **IF** the command and the VkQueue type match. 
 
-Before you begine it's important to note that you'll need to reset the command before with **vkResetCommandBuffer**.
+Before you begin it's important to note that you'll need to reset the command before with **vkResetCommandBuffer**.
 
 ```c++
 vkResetCommandBuffer(commandBuffers[currentFrame], 0);

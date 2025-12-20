@@ -74,7 +74,7 @@ entities.sprite[playerID] = loadSprite("../Sprite/frog.png");
 
 This move operator just moves the pointer of **pixelData** over to the `entities.sprite[playerID]` and then because **loadSprite** is an rvalue the the destructor gets called, meaning that the line `delete[] pixelData;` within the Image destructor runs and deletes pixelData from memory. Now `entities.sprite[playerID]` has junk data and when it runs it's own destructor the tries to delete already deleted memory at the end of main causing a double delete.
 
-What you have to do is follow the rule of 5 and build out the constructs and operators to handle doing a deep copy so every case is taken care of.
+What you have to do is follow the rule of 4 and build out the constructs and operators to handle doing a deep copy so every case is taken care of.
 ```c++
 #include <stdint.h>
 #include <iostream>

@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan buffer]]
 # Making a basic createBuffer function
 
-I'm making this note to show what's in this createBuffer function which is used everywhere. This function just creates a buffer. That's all it does. It combined both [[Setting up the a buffer]] and [[Setting up the allocating buffer memory]] into a function.
+I'm making this note to show what's in this createBuffer function which is used everywhere. This function just creates a buffer. That's all it does. It combined both [[Setting up the a buffer]] and [[Allocating data to a buffer]] into a function.
 
 There are draw back to this function 
 1) I'm not using VMA at all here so we are limited to 4096 buffers we can create.

@@ -18,6 +18,6 @@ You need to worry about this because the GPU doesn't guarantee when it will be u
 # References
 ##### Main Notes
 [[Setting up the a buffer]]
-[[Setting up the allocating buffer memory]]
+[[Allocating data to a buffer]]
 #### Source Notes
 [[Vertex buffer]]

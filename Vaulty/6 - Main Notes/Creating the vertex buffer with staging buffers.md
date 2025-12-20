@@ -45,7 +45,7 @@ The pattern is pretty solid so this pattern could be used for other types of buf
 [[Making a basic createBuffer function]]
 [[Creating a transfer queue for buffer copying]]
 [[Copying buffer data over]]
-[[Setting up the allocating buffer memory]]
+[[Allocating data to a buffer]]
 [[Filling up a vertex buffer with CPU visibility]]
 [[Setting up the a buffer]]
 #### Source Notes

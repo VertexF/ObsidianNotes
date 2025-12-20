@@ -1,7 +1,7 @@
 2025-11-16 14:43
 Status: #baby 
 Tags: [[vulkan]] [[vulkan buffer]]
-# Setting up the allocating buffer memory
+# Allocating data to a buffer
 
 Now we need to allocate the memory into the buffer. To begin with we need to buffer type already created to get memory requirements needed to allocate data into the buffer.
 

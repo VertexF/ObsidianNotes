@@ -1,20 +1,19 @@
 {
   "main": {
-    "id": "23713e56d0793011",
+    "id": "c1bda6860389e887",
     "type": "split",
     "children": [
       {
-        "id": "fa917daf52f3b369",
+        "id": "7b5395955640a2d9",
         "type": "tabs",
-        "dimension": 49.555837563451774,
         "children": [
           {
-            "id": "94c5fdff9086952e",
+            "id": "e9a675995930a543",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Setting up the a buffer.md",
+                "file": "3 - Tags/OS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,378 +28,24 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Setting up the a buffer"
-            }
-          },
-          {
-<<<<<<< Updated upstream
-            "id": "6c26cfe8084af112",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Setting up the vertex attributes descriptions.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Setting up the vertex attributes descriptions"
-            }
-          },
-          {
-            "id": "5ca447d3d8f7db83",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Setting up binding descriptions.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Setting up binding descriptions"
-            }
-          },
-          {
-            "id": "866bb333f3e4d408",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Setting up vertex buffer data.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Setting up vertex buffer data"
-            }
-          },
-          {
-            "id": "a424cec10f37711c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Shader vertex input descriptions.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Shader vertex input descriptions"
-=======
-            "id": "d14f06a1c3b70007",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
->>>>>>> Stashed changes
-            }
-          },
-          {
-            "id": "3f44d2364c4e39cd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 - Indexes/vulkan.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "vulkan"
-            }
-          },
-          {
-            "id": "bd1aa5fb4d0bd19d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Setting up the vertex attributes descriptions.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Setting up the vertex attributes descriptions"
-            }
-          },
-          {
-            "id": "02a4e5c01ab1df9c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/Article/Depth buffering.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Depth buffering"
-            }
-          },
-          {
-            "id": "5ebe70e1fe668ec2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Setting up the depth and stencil testing.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Setting up the depth and stencil testing"
-            }
-          },
-          {
-            "id": "7c673667929c9295",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Creating the framebuffers.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Creating the framebuffers"
-            }
-          },
-          {
-            "id": "8fb25a64cbe396c9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Setting up the render pass.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Setting up the render pass"
+              "title": "OS"
             }
           }
         ]
-      },
-      {
-        "id": "24d40fb114c8f364",
-        "type": "tabs",
-        "dimension": 50.444162436548226,
-        "children": [
-          {
-            "id": "6ce8e596408c10ff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/How to use a descriptor set.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "How to use a descriptor set"
-            }
-          },
-          {
-            "id": "44d29ff2efec07a7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/3D geometry without the depth buffer.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "3D geometry without the depth buffer"
-            }
-          },
-          {
-            "id": "d90d41c50e8281b0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Setting up the depth and stencil testing.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Setting up the depth and stencil testing"
-            }
-          },
-          {
-            "id": "6eb4b7cab511948e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Douple deletes with raw buffer data.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Douple deletes with raw buffer data"
-            }
-          }
-        ],
-        "currentTab": 3
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "33d7fd28ca023f95",
+    "id": "e1ef3cd546307f78",
     "type": "split",
     "children": [
       {
-        "id": "701fb1caddf25d32",
+        "id": "49e8ffe6f3e65d72",
         "type": "tabs",
         "children": [
           {
-            "id": "9c702ce9bcf102ba",
+            "id": "7fb22585c6ec9e22",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -413,7 +58,7 @@
             }
           },
           {
-            "id": "a3d14720c35abf78",
+            "id": "86c8a13cc85cf2b9",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -430,7 +75,7 @@
             }
           },
           {
-            "id": "dae6856652142210",
+            "id": "8a9d660c300db3c6",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -446,20 +91,19 @@
     "width": 300
   },
   "right": {
-    "id": "382a5e9c395ed957",
+    "id": "15b828cf075318f5",
     "type": "split",
     "children": [
       {
-        "id": "e3caadf6e726ae7a",
+        "id": "edc30a5f1f618b12",
         "type": "tabs",
         "children": [
           {
-            "id": "24027f465dcfd355",
+            "id": "24105a37bd4fc2f5",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6 - Main Notes/Why study at all.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -469,35 +113,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Why study at all"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "6485ccf9024810dd",
+            "id": "fe63e6750dca2d4c",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6 - Main Notes/Why study at all.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Why study at all"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "459976abcc2661de",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
-            }
-          },
-          {
-            "id": "7443f3a4d91d725b",
+            "id": "b82ae14a30856644",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -512,119 +145,64 @@
             }
           },
           {
-            "id": "469b789172766b66",
+            "id": "78edabf8a028488f",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - Source Material/Article/Vulkan-Tutorial.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Vulkan-Tutorial"
+              "title": "Outline"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 317.5,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
+      "bases:Create new base": false,
       "obsidian-git:Open Git source control": false
     }
   },
-<<<<<<< Updated upstream
-  "active": "94c5fdff9086952e",
+  "active": "e9a675995930a543",
   "lastOpenFiles": [
-    "4 - Indexes/vulkan.md",
-    "6 - Main Notes/Setting up extensions.md",
-    "2 - Source Material/Books/The Abstraction- The Process.md",
-    "6 - Main Notes/Introduction to operation systems.md",
-    "3 - Tags/OS.md",
-    "6 - Main Notes/Making vertex and index buffer faster with aliasing.md",
-    "6 - Main Notes/Drawing with an index buffer.md",
-    "6 - Main Notes/Creating the index buffer with staging buffers.md",
-    "6 - Main Notes/Setting up the index buffer data.md",
-    "6 - Main Notes/What is a index buffer.md",
-    "6 - Main Notes/Copying buffer data over.md",
-    "6 - Main Notes/Setting up a staging buffer.md",
-    "6 - Main Notes/Creating a transfer queue for buffer copying.md",
-    "6 - Main Notes/What are staging buffers.md",
-    "6 - Main Notes/Binding the vertex buffer and drawing.md",
-    "6 - Main Notes/Creating the vertex buffer with staging buffers.md",
-    "6 - Main Notes/Filling up a vertex buffer with CPU visibility.md",
-    "6 - Main Notes/Setting up the vertex attributes descriptions.md",
-    "6 - Main Notes/Setting up binding descriptions.md",
-    "6 - Main Notes/Shader vertex input descriptions.md",
-    "6 - Main Notes/Setting up vertex buffer data.md",
-    "6 - Main Notes/Douple deletes with raw buffer data.md",
-    "6 - Main Notes/What is a vertex buffer.md",
-    "6 - Main Notes/Setting up the attachment reference.md",
+    "6 - Main Notes/Making a basic createBuffer function.md",
     "6 - Main Notes/Multiple descriptor sets.md",
-    "6 - Main Notes/Buffer alignment requirement.md",
-=======
-  "active": "3f44d2364c4e39cd",
-  "lastOpenFiles": [
-    "6 - Main Notes/Copying buffer data over.md",
-    "4 - Indexes/vulkan.md",
-    "6 - Main Notes/Setting up a staging buffer.md",
-    "6 - Main Notes/Creating a transfer queue for buffer copying.md",
-    "6 - Main Notes/Creating a VkImage for texture mapping.md",
-    "6 - Main Notes/Transitioning image memory for texture mapping.md",
-    "6 - Main Notes/Preparing the texture image.md",
-    "6 - Main Notes/Setting up the attachment reference.md",
-    "6 - Main Notes/Douple deletes with raw buffer data.md",
-    "4 - Indexes/C++.md",
-    "3 - Tags/OS.md",
-    "6 - Main Notes/Introduction to operation systems.md",
-    "2 - Source Material/Books/The Abstraction- The Process.md",
-    "6 - Main Notes/Setting up the allocating buffer memory.md",
-    "6 - Main Notes/Creation of the shader module.md",
-    "6 - Main Notes/Binding the vertex buffer and drawing.md",
-    "6 - Main Notes/Creating an combined image sampler descriptor.md",
-    "6 - Main Notes/Creating descriptor sets.md",
-    "6 - Main Notes/Cleaning up depth resources.md",
-    "6 - Main Notes/Fixing a possible deadlock.md",
-    "6 - Main Notes/Destroying a image view.md",
+    "6 - Main Notes/What is a render pass.md",
+    "6 - Main Notes/What is a index buffer.md",
     "6 - Main Notes/Setting up binding descriptions.md",
-    "6 - Main Notes/What are descriptors.md",
-    "6 - Main Notes/Creating a sampler.md",
-    "6 - Main Notes/What are samplers.md",
-    "6 - Main Notes/Creating a texture image view.md",
->>>>>>> Stashed changes
-    "reverse_Z_depth.png",
-    "Reverse_depth_z.png",
-    "texture_addressing.png",
-    "texture_coordinate_wrong.png",
-    "regular_depth_z.png",
-    "2 - Source Material/Books",
-    "2 - Source Material/Article/Untitled",
-    "overlapping_geometry.png",
-    "texture_frogx4.png",
-    "texture_coordinates.png",
-    "anisotropic_filtering.png",
-    "texture_filtering.png",
-    "New folder",
-    "7 - Code",
-    "4 - Indexes",
-    "2 - Source Material/Article",
-    "Untitled.canvas",
-    "2 - Source Material/Video",
-    "6 - Main Notes",
-    "5 - Template",
-    "4 - Indexes"
+    "6 - Main Notes/Recording commands.md",
+    "6 - Main Notes/Creating the vertex buffer with staging buffers.md",
+    "6 - Main Notes/Listing the GPUs in Vulkan.md",
+    "6 - Main Notes/Customising validation layers externally.md",
+    "6 - Main Notes/Creating the custom callback function for validation.md",
+    "6 - Main Notes/Setting up the subpass.md",
+    "6 - Main Notes/Acquiring an image from the swapchain.md",
+    "6 - Main Notes/Setting the synchronisation with the subpass dependencies.md",
+    "6 - Main Notes/What are subpass dependencies.md",
+    "6 - Main Notes/Allocating data to a buffer.md",
+    "6 - Main Notes/Instance and device level validation.md",
+    "6 - Main Notes/Creating vulkan queues.md",
+    "4 - Indexes/vulkan.md",
+    "6 - Main Notes/Douple deletes with raw buffer data.md",
+    "6 - Main Notes/Setting up the synchronisation objects.md",
+    "6 - Main Notes/Setting up an empty pipeline layout.md",
+    "6 - Main Notes/What is a vulkan physical device.md",
+    "6 - Main Notes/Introduction to texture mapping.md",
+    "6 - Main Notes/Setting up the viewports and scissors.md",
+    "2 - Source Material/Article/Introduction to VulkanDev.md"
   ]
 }

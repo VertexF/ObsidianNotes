@@ -162,7 +162,7 @@ if (vkAllocateMemory(device, &allocateInfo, nullptr, &textureImageMemory) != VK_
 vkBindImageMemory(device, textureImage, textureImageMemory, 0);
 ```
 
-You then set the memory exactly the same way as when you create the buffers [[Setting up the allocating buffer memory]] The only difference is I've abstracted the **.memoryTypeIndex** into it's own function.
+You then set the memory exactly the same way as when you create the buffers [[Allocating data to a buffer]] The only difference is I've abstracted the **.memoryTypeIndex** into it's own function.
 ##### Transitioning memory for images
 We are actually going to use something similar to sychronisation with semaphores. The idea behind a **image memory barrier** is used to synchronised to ensure things like a write to a buffer is completed before reading from it. It also used to move image to a different queue which owns it, assuming that queue has **VK_SHARIN_MODE_EXCLUSIVE**.
 
