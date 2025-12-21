@@ -14,7 +14,7 @@ descriptorAllocateInfo.descriptorSetCount = imageCount;
 descriptorAllocateInfo.pSetLayouts = layouts.data();
 ```
 
-You need a list of descriptor set layouts for the amount of descriptor sets you want. That's what **.descriptorSetCount** and **.pSetLayout**. We've just used a little C++ magic to allocate the same object **descriptorSetLayout** for the amount of **imageCount**, with a copy. 
+You need a list of descriptor set layouts for the amount of descriptor sets you want. That's what **.descriptorSetCount** and **.pSetLayout**. We've just used a little C++ magic to allocate the same object **descriptorSetLayout** for the amount of **imageCount**, with a copy, in the std::vector like of the code.
 
 Finally we just give the descriptor pool **.descriptorPool**.
 
@@ -26,7 +26,7 @@ if (vkAllocateDescriptorSets(device, &descriptorAllocateInfo, descriptorSets.dat
 }
 ```
 
-Then we can allocate a set of descriptor sets. The function **vkAllocateDescriptorSets** expect there to be a identical set of descriptor set layouts in the **VkDescriptorSetAllocateInfo** struct which is why we had to copy/move them in our std::vector allocation.
+Then we can allocate a set of descriptor sets. The function **vkAllocateDescriptorSets** expects there to be a identical set of descriptor set layouts in the **VkDescriptorSetAllocateInfo** struct which is why we had to copy/move them in our std::vector allocation for each image count.
 
 We don't have to destroy these descriptor sets they will be cleaned up with the descriptor pool.
 

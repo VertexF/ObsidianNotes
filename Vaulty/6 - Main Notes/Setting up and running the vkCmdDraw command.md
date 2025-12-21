@@ -13,7 +13,7 @@ After that you'll need to bind the graphics pipeline.
 vkCmdBindPipeline(commandBuffers[currentFrame], VK_PIPELINE_BIND_POINT_GRAPHICS, mainPipeline);
 ```
 
-The second argument tells vulkan what type of pipeline you're binding. This is because vulkan needs to know about the attachments in the fragmant shader in the **VkAttachmentReference**
+The second argument tells vulkan what type of pipeline you're binding. This is because vulkan needs to know about the attachments in the fragment shader in the **VkAttachmentReference**
 
 If you've set things up so the viewport and scissor are dynamic when [[Setting up the dynamic states]]
 within the graphics pipeline here is were you have to dynamically set up them up.
@@ -45,7 +45,7 @@ The arguments are after the command buffer:
 - **vertexCount** This is for the amount of vertices you want to render. 
 - **instanceCount** This is for used for instanced rendering. We have 1 instance so it's 1.
 - **firstVertex** This is the offset into a vertex buffer. This defined the lowest value of **gl_VertexIndex**
-- **firstInstance** This is used for instanced redering and defines the lowest value of **gl_Instance**
+- **firstInstance** This is used for instanced rendering and defines the lowest value of **gl_Instance**
 
 Finally you'll want to end the render pass with
 ```c++
