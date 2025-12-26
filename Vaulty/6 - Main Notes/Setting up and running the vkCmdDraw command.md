@@ -16,7 +16,7 @@ vkCmdBindPipeline(commandBuffers[currentFrame], VK_PIPELINE_BIND_POINT_GRAPHICS,
 The second argument tells vulkan what type of pipeline you're binding. This is because vulkan needs to know about the attachments in the fragment shader in the **VkAttachmentReference**
 
 If you've set things up so the viewport and scissor are dynamic when [[Setting up the dynamic states]]
-within the graphics pipeline here is were you have to dynamically set up them up.
+within the graphics pipeline here is where you have to dynamically set up them up.
 
 ```c++
 VkViewport viewport{};

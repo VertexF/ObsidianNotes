@@ -4,17 +4,61 @@
     "type": "split",
     "children": [
       {
+        "id": "fc0e0e29437a9875",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "750de7dcaaa5fe89",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Article/Memory Layout of a C Program.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Memory Layout of a C Program"
+            }
+          }
+        ]
+      },
+      {
         "id": "7b5395955640a2d9",
         "type": "tabs",
         "children": [
           {
-            "id": "e9a675995930a543",
+            "id": "cba49b368b822d2c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Books/The Abstraction- The Process.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "The Abstraction- The Process"
             }
           }
         ]
@@ -163,33 +207,37 @@
       "bases:Create new base": false
     }
   },
-  "active": "e9a675995930a543",
+  "active": "cba49b368b822d2c",
   "lastOpenFiles": [
-    "6 - Main Notes/Creating descriptor sets.md",
-    "6 - Main Notes/Handling frames in flight.md",
-    "6 - Main Notes/Setting up and running the vkCmdDraw command.md",
-    "6 - Main Notes/Setting up the attachment reference.md",
-    "6 - Main Notes/Code for the simplest vulkan app.md",
-    "6 - Main Notes/What is synchronisation in vulkan.md",
-    "6 - Main Notes/Setting up vertex buffer data.md",
-    "6 - Main Notes/Creating the index buffer with staging buffers.md",
-    "2 - Source Material/Books/The Abstraction- The Process.md",
-    "6 - Main Notes/Untitled.md",
-    "3 - Tags/OS.md",
-    "6 - Main Notes/Making a basic createBuffer function.md",
-    "6 - Main Notes/Multiple descriptor sets.md",
-    "6 - Main Notes/What is a render pass.md",
-    "6 - Main Notes/What is a index buffer.md",
-    "6 - Main Notes/Setting up binding descriptions.md",
+    "2 - Source Material/Article/Structure Member Alignment Padding and Data Packing.md",
+    "memorybanks.png",
+    "memorybanksgroups.png",
+    "6 - Main Notes/Major features that got introduces in C++17.md",
+    "6 - Main Notes/Memory layout - Initialised data.md",
+    "6 - Main Notes/Memory layout - The heap.md",
+    "6 - Main Notes/Memory layout - The stack.md",
+    "6 - Main Notes/Memory layout - BSS uninitialised data.md",
+    "4 - Indexes/OS.md",
+    "6 - Main Notes/Three problems with physical memory.md",
+    "6 - Main Notes/Memory layout - Text section.md",
+    "2 - Source Material/Article/Memory Layout of a C Program.md",
+    "4 - Indexes/vulkan.md",
+    "memorylayout.png",
+    "2 - Source Material/Article/VulkanDev.md",
+    "6 - Main Notes/Allocating data to a buffer.md",
+    "6 - Main Notes/Setting up the command pool.md",
     "6 - Main Notes/Recording commands.md",
-    "6 - Main Notes/Creating the vertex buffer with staging buffers.md",
-    "6 - Main Notes/Listing the GPUs in Vulkan.md",
-    "6 - Main Notes/Customising validation layers externally.md",
-    "6 - Main Notes/Creating the custom callback function for validation.md",
-    "6 - Main Notes/Setting up the subpass.md",
-    "6 - Main Notes/Acquiring an image from the swapchain.md",
-    "6 - Main Notes/Setting the synchronisation with the subpass dependencies.md",
-    "6 - Main Notes/What are subpass dependencies.md",
-    "6 - Main Notes/Allocating data to a buffer.md"
+    "6 - Main Notes/What are validation layers.md",
+    "6 - Main Notes/Cleaning up depth resources.md",
+    "6 - Main Notes/Checking for hardware suitability.md",
+    "6 - Main Notes/Resizing the window with a depth buffer.md",
+    "6 - Main Notes/Enabling Validation layers.md",
+    "6 - Main Notes/Creating the graphics pipeline.md",
+    "6 - Main Notes/Dangling pointer with locally created arrays.md",
+    "6 - Main Notes/Binding a descriptor set to use at draw time.md",
+    "6 - Main Notes/Creating the depth image and view.md",
+    "process.png",
+    "pagetablechunks.png",
+    "process-states.png"
   ]
 }

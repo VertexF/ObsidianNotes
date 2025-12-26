@@ -25,7 +25,7 @@ To enable layers you need to simply wire them up with a const char* array and th
 #endif //VULKAN_DEBUG_REPORT
 ```
 
-You will want to have a "#define" or use NDEBUG and DEBUG to enable and disable these layers when compiling different versions of your application. That's what I've done above here.
+The reason you don't want to `#define` NDEBUG and DEBUG for release and debug is because you might want validation turned on in release to make sure you're doing anything wrong.
 # References
 ##### Main Notes
 [[Vulkan Layers aren't extensions]]

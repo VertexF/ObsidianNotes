@@ -34,3 +34,16 @@ The OS will initialise 3 **I/O** file descriptors
 - error output.
 
 After loading the code, static data, the stack frame, I/O set up the OS has the set the stage for a program to become a process. The OS finally jumps the **main()** and hands over the CPU to the program to begin execution.
+##### Process state
+There are 3 overview states a process:
+- **Running** This means the process is running instructions
+- **Ready** This means the process is ready to go but the OS has stopped the process for a moment.
+- **Blocked** This means that the process has requested something that requires an event to be taken place. This can be something like request some I/O interaction with something like a file.
+
+![[process-states.png|439x349]]
+
+As you can see in this picture this how a process can transition from one state to another.
+
+Typically when a process is stopped because the schedular part of the operating system will run another process. 
+###### Data structures
+The operating system has to have data structures that store the processor list, the processors 

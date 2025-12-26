@@ -18,7 +18,7 @@ VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT;
          createInfo.pUserData = nullptr;
 ```
 
-You can sent more than this if you want the details of these severity message and message types can be found in the [[Creating the custom callback function for validation]] . **pfnUserCallback** takes a custom debug function pointer which should follow the specification. **pUserData** is were you set up the pointer to be returned in a custom callback function, this can be left null.
+You can send more than this if you want the details of these severity message and message types can be found in the [[Creating the custom callback function for validation]] . **pfnUserCallback** takes a custom debug function pointer which should follow the specification. **pUserData** is were you set up the pointer to be returned in a custom callback function, this can be left null.
 
 You'll need to load the functions dynamically more for info on that go to [[Loading extended functions dynamically]] 
 

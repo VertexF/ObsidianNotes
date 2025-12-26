@@ -61,6 +61,7 @@ Here we are very likely to skip over the stencil part of the depth buffer, I'm s
 VkFormat depthFormat = findDepthFormat();
 
 createImage(swapchainExtent.width, swapchainExtent.height, depthFormat, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, depthImage, depthImageMemory);
+
 createImageView(depthImage, depthFormat, VK_IMAGE_ASPECT_DEPTH_BIT);
 ```
 

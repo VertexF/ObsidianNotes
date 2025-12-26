@@ -1,3 +1,6 @@
+[[Major features that got introduces in C++11]]
+[[Major features that got introduces in C++14]]
+[[Major features that got introduces in C++17]]
 [[Deleting elements out of a vector within a loop]]
 [[Dangling pointer with locally created arrays]]
 [[Douple deletes with raw buffer data]]

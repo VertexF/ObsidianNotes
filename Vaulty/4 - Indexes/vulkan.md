@@ -167,6 +167,7 @@
 [[What are command buffers]]
 [[Setting up the command pool]]
 [[Setting up the command buffers]]
+[[Threading command buffers in theory]]
 [[Recording commands]]
 [[Using a render pass]]
 [[Setting up and running the vkCmdDraw command]]
