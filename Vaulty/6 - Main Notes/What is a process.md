@@ -1,13 +1,8 @@
-# Reference Operating Systems - Three Easy Pieces
+2025-12-29 11:09
+Status: #baby 
+Tags: [[OS]] [[CPU]]
+# What is a process
 
-##### Intro
-The basic technique of sharing the CPU is called **time sharing** which allows other process to use the CPU concurrently, while slowing the CPU down for any particular task. This is called **context switch** which is a the low level **mechanisms**. These are protocols that allow the user to handle multiple processes. 
-
-You also have high level systems that support CPU virtualisation. Like the **scheduling policy** which is part of the **policy** set of algorithms that help the OS make decisions using: 
-- **historical information** e.g which program has run more over the last minute?
-- **workload knowledge** e.g. what types of programs are run.
-- **performance metrics** e.g. is the system optimising for interactive performance, or throughput?
-##### The abstraction - a process
 A process is just what you call a running program. Think to VS and how you attach a process to debug. You'll want to think of a process the things it's trying to access and is operating on. So we need to worry about the **machine state**
 - what can the process read/write to
 - what part of the machine are important to the process at a give point in time.
@@ -34,16 +29,8 @@ The OS will initialise 3 **I/O** file descriptors
 - error output.
 
 After loading the code, static data, the stack frame, I/O set up the OS has the set the stage for a program to become a process. The OS finally jumps the **main()** and hands over the CPU to the program to begin execution.
-##### Process state
-There are 3 overview states a process:
-- **Running** This means the process is running instructions
-- **Ready** This means the process is ready to go but the OS has stopped the process for a moment.
-- **Blocked** This means that the process has requested something that requires an event to be taken place. This can be something like request some I/O interaction with something like a file.
-
-![[process-states.png|439x349]]
-
-As you can see in this picture this how a process can transition from one state to another.
-
-Typically when a process is stopped because the schedular part of the operating system will run another process. 
-###### Data structures
-The operating system has to have data structures that store the processor list, the processors 
+# References
+##### Main Notes
+[[Process state]]
+#### Source Notes
+[[The Abstraction - The Process]]

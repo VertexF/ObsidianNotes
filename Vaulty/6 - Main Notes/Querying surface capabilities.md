@@ -22,7 +22,8 @@ if (swapchainExtent.width == UINT32_MAX)
 
 Here you might notice that we clamping the values between the minimum and the maximum values from the **VkSurfaceCapabilitiesKHR** this is to make sure the pixel width and height doesn't fall outside the range **IF** the width is reading the value to be the max UINT32_MAX value.
 
-In SDL3 there is no function call to handle high DPI display's at the moment meaning that if vulkan hasn't updated to detect this the pixels width and height will be more than the actual resolution of the application window then this doesn't work for high DPI. This needs testing.
+I believe to make SDL3 DPI aware you need to set the **SDL_WINDOW_HIGH_PIXEL_DENSITY** which will try to create a window that has the correct DPI. This is from the documentation 
+"`If the window is created with the `SDL_WINDOW_HIGH_PIXEL_DENSITY` flag, SDL will try to match the native pixel density for the display, otherwise it will try to have the pixel size match the window size.`" - https://wiki.libsdl.org/SDL3/README-highdpi
 
 Finally we need to get the minimum number of images that the hardware supports for the swapchain. You can't just assume it's 3 or 2 you have to check. 
 

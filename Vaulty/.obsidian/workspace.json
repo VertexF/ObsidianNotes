@@ -4,16 +4,26 @@
     "type": "split",
     "children": [
       {
-        "id": "fc0e0e29437a9875",
+        "id": "e3625aa70d9fddb8",
         "type": "tabs",
         "children": [
           {
-            "id": "750de7dcaaa5fe89",
+            "id": "58748ce6a987cec2",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "cba49b368b822d2c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Article/Memory Layout of a C Program.md",
+                "file": "2 - Source Material/Books/The Abstraction - The Process.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +38,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Memory Layout of a C Program"
+              "title": "The Abstraction - The Process"
             }
           }
         ]
@@ -38,12 +48,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cba49b368b822d2c",
+            "id": "5ef18b7879088b22",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Books/The Abstraction- The Process.md",
+                "file": "6 - Main Notes/High level overview on CPU virtualisation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -58,10 +68,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "The Abstraction- The Process"
+              "title": "High level overview on CPU virtualisation"
+            }
+          },
+          {
+            "id": "2e5e1712fe541497",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/What is a process.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "What is a process"
+            }
+          },
+          {
+            "id": "7cd80280f4df57ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/The operating systems process list.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "The operating systems process list"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -207,35 +266,37 @@
       "bases:Create new base": false
     }
   },
-  "active": "cba49b368b822d2c",
+  "active": "58748ce6a987cec2",
   "lastOpenFiles": [
-    "2 - Source Material/Article/Structure Member Alignment Padding and Data Packing.md",
+    "4 - Indexes/OS.md",
+    "6 - Main Notes/The operating systems process list.md",
+    "2 - Source Material/Books/The Abstraction - The Process.md",
+    "6 - Main Notes/Process state.md",
+    "6 - Main Notes/What is a process.md",
+    "6 - Main Notes/High level overview on CPU virtualisation.md",
+    "3 - Tags/CPU.md",
+    "6 - Main Notes/Allocating data to a buffer.md",
+    "4 - Indexes/vulkan.md",
+    "6 - Main Notes/Recreating the swapchain.md",
+    "6 - Main Notes/Querying surface capabilities.md",
+    "6 - Main Notes/Setting up the swapchain extension.md",
+    "6 - Main Notes/Memory layout - The heap.md",
+    "6 - Main Notes/What are descriptor sets.md",
+    "6 - Main Notes/What is a descriptor set layout.md",
+    "6 - Main Notes/What are descriptors.md",
+    "6 - Main Notes/Checking surface and swapchain compability.md",
+    "6 - Main Notes/What is vulkan logical device.md",
+    "6 - Main Notes/Cleaning up a physical device and queue families.md",
+    "6 - Main Notes/Checking for family queue suitability.md",
+    "6 - Main Notes/Listing the queue families.md",
+    "6 - Main Notes/What are queue families.md",
+    "6 - Main Notes/What is a vulkan physical device.md",
+    "6 - Main Notes/Major features that got introduces in C++14.md",
+    "6 - Main Notes/Setting up the a buffer.md",
+    "6 - Main Notes/Creating a separate queue.md",
     "memorybanks.png",
     "memorybanksgroups.png",
-    "6 - Main Notes/Major features that got introduces in C++17.md",
-    "6 - Main Notes/Memory layout - Initialised data.md",
-    "6 - Main Notes/Memory layout - The heap.md",
-    "6 - Main Notes/Memory layout - The stack.md",
-    "6 - Main Notes/Memory layout - BSS uninitialised data.md",
-    "4 - Indexes/OS.md",
-    "6 - Main Notes/Three problems with physical memory.md",
-    "6 - Main Notes/Memory layout - Text section.md",
-    "2 - Source Material/Article/Memory Layout of a C Program.md",
-    "4 - Indexes/vulkan.md",
     "memorylayout.png",
-    "2 - Source Material/Article/VulkanDev.md",
-    "6 - Main Notes/Allocating data to a buffer.md",
-    "6 - Main Notes/Setting up the command pool.md",
-    "6 - Main Notes/Recording commands.md",
-    "6 - Main Notes/What are validation layers.md",
-    "6 - Main Notes/Cleaning up depth resources.md",
-    "6 - Main Notes/Checking for hardware suitability.md",
-    "6 - Main Notes/Resizing the window with a depth buffer.md",
-    "6 - Main Notes/Enabling Validation layers.md",
-    "6 - Main Notes/Creating the graphics pipeline.md",
-    "6 - Main Notes/Dangling pointer with locally created arrays.md",
-    "6 - Main Notes/Binding a descriptor set to use at draw time.md",
-    "6 - Main Notes/Creating the depth image and view.md",
     "process.png",
     "pagetablechunks.png",
     "process-states.png"
