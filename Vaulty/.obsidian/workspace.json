@@ -11,10 +11,24 @@
             "id": "58748ce6a987cec2",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Creating a descriptor pool.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Creating a descriptor pool"
             }
           },
           {
@@ -42,85 +56,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "7b5395955640a2d9",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "5ef18b7879088b22",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/High level overview on CPU virtualisation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "High level overview on CPU virtualisation"
-            }
-          },
-          {
-            "id": "2e5e1712fe541497",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/What is a process.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "What is a process"
-            }
-          },
-          {
-            "id": "7cd80280f4df57ac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/The operating systems process list.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "The operating systems process list"
-            }
-          }
-        ],
-        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -268,15 +203,24 @@
   },
   "active": "58748ce6a987cec2",
   "lastOpenFiles": [
-    "4 - Indexes/OS.md",
+    "4 - Indexes/vulkan.md",
+    "6 - Main Notes/Creating descriptor sets.md",
+    "6 - Main Notes/Creating an combined image sampler descriptor.md",
+    "6 - Main Notes/Binding a descriptor set to use at draw time.md",
+    "6 - Main Notes/Loading extended functions dynamically.md",
+    "6 - Main Notes/Setting up the render pass.md",
+    "6 - Main Notes/Setting up the subpass.md",
+    "6 - Main Notes/Setting up the attachment reference.md",
+    "6 - Main Notes/Setting up the colour attachment descriptions.md",
+    "6 - Main Notes/Setting up reverse perspective for your depth buffer.md",
     "6 - Main Notes/The operating systems process list.md",
+    "4 - Indexes/OS.md",
     "2 - Source Material/Books/The Abstraction - The Process.md",
     "6 - Main Notes/Process state.md",
     "6 - Main Notes/What is a process.md",
     "6 - Main Notes/High level overview on CPU virtualisation.md",
     "3 - Tags/CPU.md",
     "6 - Main Notes/Allocating data to a buffer.md",
-    "4 - Indexes/vulkan.md",
     "6 - Main Notes/Recreating the swapchain.md",
     "6 - Main Notes/Querying surface capabilities.md",
     "6 - Main Notes/Setting up the swapchain extension.md",
@@ -285,15 +229,6 @@
     "6 - Main Notes/What is a descriptor set layout.md",
     "6 - Main Notes/What are descriptors.md",
     "6 - Main Notes/Checking surface and swapchain compability.md",
-    "6 - Main Notes/What is vulkan logical device.md",
-    "6 - Main Notes/Cleaning up a physical device and queue families.md",
-    "6 - Main Notes/Checking for family queue suitability.md",
-    "6 - Main Notes/Listing the queue families.md",
-    "6 - Main Notes/What are queue families.md",
-    "6 - Main Notes/What is a vulkan physical device.md",
-    "6 - Main Notes/Major features that got introduces in C++14.md",
-    "6 - Main Notes/Setting up the a buffer.md",
-    "6 - Main Notes/Creating a separate queue.md",
     "memorybanks.png",
     "memorybanksgroups.png",
     "memorylayout.png",
