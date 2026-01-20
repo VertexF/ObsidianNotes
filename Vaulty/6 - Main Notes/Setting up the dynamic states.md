@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan graphic pipeline]]
 # Setting up the dynamic states
 
-When you're creating a graphics pipeline you don't want everything to do static. There are three things that don't have to static.
+When you're creating a graphics pipeline you don't want everything to be static. There are three things that you might want to be non-static.
 1) Viewport size and scissor size
 2) Line width
 3) Blend constants

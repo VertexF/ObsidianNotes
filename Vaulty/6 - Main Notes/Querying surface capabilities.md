@@ -36,7 +36,7 @@ if (surfaceCapabilities.maxImageCount > 0 && imageCount > surfaceCapabilities.ma
 }
 ```
 
-If the value if the maxImageCount is **GREATER** than 0 that means there is a maximum value. Meaning we need to make sure our value of **.minImageCount + 1** isn't too large with extra check.
+If the value if the maxImageCount is **GREATER** than 0 that means there **is** a maximum value. Meaning we need to make sure our value of **.minImageCount + 1** isn't too large with extra check.
 # References
 ##### Main Notes
 [[Checking surface and swapchain compability]]

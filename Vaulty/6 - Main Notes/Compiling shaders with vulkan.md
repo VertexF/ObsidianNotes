@@ -7,7 +7,7 @@ Khronos SDK has a **vender-independent** compiler. The compiler checks your code
 
 If you use the glslc.exe compiler it fits closer with the paramter formats with GCC and Clang, not only that you get `#includes` for free. These are both with the vulkan SDK.
 
-A simply way to compile the shader be like this. 
+A simple way to compile the shader be like this. 
 ```batch
 C:/VulkanSDK/1.4.321.1/Bin/glslc.exe mainShader.vert -o mainShader.vert.spv
 C:/VulkanSDK/1.4.321.1/Bin/glslc.exe mainShader.frag -o mainShader.frag.spv

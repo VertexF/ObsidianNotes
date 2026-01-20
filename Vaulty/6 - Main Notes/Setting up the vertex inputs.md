@@ -21,6 +21,19 @@ vertexInputState.pVertexAttributeDescriptions = nullptr;
 ```
 
 If you're not going to upload anything to a vertex shader this is actually complete. However, if you do want to upload data you need to set up the **.pVertexBindingDescriptions** and **.pVertexAttributeDescriptions** with arrays of structs and the count of these arrays go to the count variable in this struct.
+
+You would do that like this
+```c++
+VkVertexInputBindingDescription bindingDescription = Vertex::getBindingDescriptions();
+Array<VkVertexInputAttributeDescription> attributeDescriptions = Vertex::getAttributeDescriptions(renderer->stackAllocator);
+
+VkPipelineVertexInputStateCreateInfo vertexInputState{};
+vertexInputState.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
+vertexInputState.vertexBindingDescriptionCount = 1;
+vertexInputState.pVertexBindingDescriptions = &bindingDescription;
+vertexInputState.vertexAttributeDescriptionCount = attributeDescriptions.size;
+vertexInputState.pVertexAttributeDescriptions = attributeDescriptions.data;
+```
 # References
 ##### Main Notes 
 [[What is the graphics pipeline]]

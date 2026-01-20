@@ -10,7 +10,7 @@ When you actually want to render a frame you need to do these things:
 4) Submit the recorded command buffer
 5) Present the swapchain image.
 
-This is the overview you need to keep in mind while other things are mention
+This is the overview you need to keep in mind while other things are mentioned.
 
 With synchronisation everything explicit meaning that order of operation is up to us. We need to tell the driver what to do with all the synchronisation primitive. It's important to note that the GPU and CPU are asynchronous, meaning that a lot of vulkan functions will return before the work on the GPU is done.
 

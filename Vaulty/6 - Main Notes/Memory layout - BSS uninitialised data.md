@@ -7,7 +7,7 @@ Tags: [[OS]] [[OS memory]]
 
 This piece of memory is static at run time. Variables are stored in here when you have is static variables and you have **NOT** initialised them to something. The **block starting symbol** BSS space initalises the static variables at run time with an ASM instruction. 
 
-These are BBS segment variables.
+These are BSS segment variables.
 ```c++
 #include <stdio.h>
 
