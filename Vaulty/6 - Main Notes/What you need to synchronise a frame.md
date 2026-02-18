@@ -13,6 +13,14 @@ These are the steps you need to take for sychronisation and presentention of a f
 3) [[Submitting the command buffer for rendering]] 
 4) [[Presenting to the screen]]
 5) [[Handling frames in flight]]
+
+Frame in flight index is incremented and reset to zero. Swapchain image index is returned by vkAcquireNextImageKHR.
+
+Frame in flight and swapchain images are different things. They could be anything, it's possible for example to have 2 frames in flight and 4 swapchain images. Meaning that you should **NEVER** mix up your current frame with swapchain image index.
+
+It's also important to point out that the swapchain will increment the swapchain images index itself. Don't touch it.
+
+You'll eventually want to stop using this method of sychronisation and use dynamic rendering instead of this for desktop. This simplifies things by removing **VkFrameBuffer** and **VkRenderPass** from the process. Synchronisation1 and Synchronisation2 are actually pretty similar and don't change much.
 # References
 ##### Main Notes
 [[What is synchronisation in vulkan]]

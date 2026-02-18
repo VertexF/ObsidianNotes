@@ -11,3 +11,5 @@
 [[Memory layout - The heap]]
 [[Memory layout - The stack]]
 [[Three problems with physical memory]]
+### Hardware
+[[What is a memory block]]

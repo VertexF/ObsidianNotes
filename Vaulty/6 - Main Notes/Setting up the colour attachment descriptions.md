@@ -5,7 +5,7 @@ Tags: [[vulkan]] [[render pass]]
 
 The attachment description describes what needs to be changed within a buffer and samples within a render pass. So a colour attachment description is going to be different to a depth attachment description for example. Please note that the samples are different from a sampler.
 
-You do this by setting creating the **VkAttachmentDescription**. I will show how to set up a simple colour attachment description but other types require different set up.
+You do this by setting creating the **VkAttachmentDescription**. I will show how to set up a simple colour attachment description but other types require different set up depending on your needs.
 
 ```c++
 VkAttachmentDescription colourAttachment{};
@@ -13,7 +13,7 @@ colourAttachment.format = swapchainFormat;
 colourAttachment.samples = VK_SAMPLE_COUNT_1_BIT;
 ```
 
-I'm using the swapchain format to set the colour attachment format. The samples at set to **1_BIT** because we aren't doing any type of multisampling.
+I'm using the swapchain format to set the colour attachment format, however this is simply a **VkFomat** set to **VK_FORMAT_B8G8R8A8_SRGB** pick a format that makes sense to you. The samples at set to **1_BIT** because we aren't doing any type of multisampling.
 
 When creating attachment descriptions you need to describe how your doing to store and load the data. We do this with **.loadOp** and **.storeOp** for colour and depth data and **.stencilLoadOp** and **.stencilStoreOp** for stencil values only.
 

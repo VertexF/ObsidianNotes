@@ -13,7 +13,7 @@ uint32_t imageCount = surfaceCapabilities.minImageCount + 1;
 
 This is the totally number of frame in flight you should have. 
 
-Since we want to process these frames at the same time we also need to duplicated the command buffer and the synchronisation object.
+Since we want to process these frames at the same time we also need to duplicated the command buffer and the synchronisation object. It's important to note too, if you have muiltple threads for your command buffers and they are going submitting commands at draw time, you needs to duplicate the command buffers by the thread count * swapchain image count.
 
 This is what creation would look like the command buffer.
 ```c++

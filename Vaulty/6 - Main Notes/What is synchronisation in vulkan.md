@@ -15,7 +15,7 @@ This is the overview you need to keep in mind while other things are mentioned.
 With synchronisation everything explicit meaning that order of operation is up to us. We need to tell the driver what to do with all the synchronisation primitive. It's important to note that the GPU and CPU are asynchronous, meaning that a lot of vulkan functions will return before the work on the GPU is done.
 
 There are 3 major things with need to synchronise
-- Acquiring an image from the swap chain.
+- Acquiring an image from the swapchain.
 - Executing commands that draw onto the acquired image.
 - Presenting images to the screen for presentation, then returning it to the swapchain.
 

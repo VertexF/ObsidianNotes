@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan graphic pipeline]]
 # Setting up the input assembly
 
-The input assembly is how the vulkan should handle the vertices. You have the these enum types to interpret vertices
+The input assembly is how the vulkan should handle the vertices with a vertex buffer. You have the these enum types to interpret vertices
 - **VK_PRIMITIVE_TOPOLOGY_POINT_LIST** - points from the vertices
 - **VK_PRIMITIVE_TOPOLOGY_LINE_LIST** - line from every 2 vertices without reuse
 - **VK_PRIMITIVE_TOPOLOGY_LINE_STRIP** - Basically a big continous line has reuse

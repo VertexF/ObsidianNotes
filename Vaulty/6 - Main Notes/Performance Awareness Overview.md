@@ -1,6 +1,6 @@
 2025-10-24 14:44
 Status: #baby 
-Tags: 
+Tags: [[performance]]
 # Performance Awareness Overview
 
 The general idea of being performance aware is to be able to write code that isn't slow rather than learn to write a lot of very specialised code to make something fast.

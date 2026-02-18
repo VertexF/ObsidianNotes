@@ -35,6 +35,7 @@
 [[Setting up vulkan queues]]
 [[Device level extensions]]
 [[Making GPU features usable]]
+[[Modern vulkan device level features]]
 [[Create the logical device]]
 [[Cleaning up a vulkan logical device and queues]]
 [[Creating vulkan queues]]
@@ -134,6 +135,10 @@
 ### Uniform Buffers
 [[Creating uniform buffers]]
 [[Updating uniform buffers]]
+### Push Constants
+[[Using a push constants]]
+[[Push constant with offset data]]
+[[Push constant life time]]
 ### Texture Mapping
 [[Introduction to texture mapping]]
 [[Loading an image file]]
@@ -167,10 +172,16 @@
 [[What are command buffers]]
 [[Setting up the command pool]]
 [[Setting up the command buffers]]
+[[Command buffer states]]
 [[Threading command buffers in theory]]
 [[Recording commands]]
 [[Using a render pass]]
 [[Setting up and running the vkCmdDraw command]]
+### Indirect draw calls
+[[What are indirect draw calls]]
+[[Advantages of indirect draw calls]]
+[[Setting up an indexed indirect draw call]]
+[[How to use an indexed indirect draw call]]
 ### Synchronisation
 [[What is synchronisation in vulkan]]
 [[What are semaphores]]

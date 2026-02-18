@@ -88,7 +88,6 @@ vkUpdateDescriptorSets(device, 1, &descriptorWrite, 0, nullptr);
 ```
 
 Then run the update function to update your descriptors, remember this can handle arrays so we pass in the reference with a size of 1. We are passing in the **VkWriteDescriptorSet** which writes data, you can also pass in **VkCopyDescriptorSet** this copies descriptor sets to another set.
-# References
 ##### Main Notes
 [[Creating a descriptor pool]]
 #### Source Notes

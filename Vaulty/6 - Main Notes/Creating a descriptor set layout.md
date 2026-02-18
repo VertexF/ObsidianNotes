@@ -7,7 +7,7 @@ This will be a super basic example of how to use a uniform buffer object with a 
 ```c++
 #version 450
 
-layout (binding = 0) uniform ModelData
+layout (set = 0, binding = 0) uniform ModelData
 {
 	mat4 model;
 	mat4 view;
@@ -27,6 +27,8 @@ void main()
 ```
 
 The `binding = 0` is similar to the `location = 0` directive. We will reference the binding directly in the pipeline set up with the descriptor set layout. We need to do this for every single location.
+
+The `set = 0` is the directive that tells vulkan which descriptor set layout you are using. For example, if you have 2 descriptor set layout and they have a uniform buffer at binding 0, it's important to seperate out with the set.
 
 So lets create it
 ```c++

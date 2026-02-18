@@ -21,7 +21,7 @@ for (uint32_t i = 0; i < maxFramesInFlight; ++i)
 {
 	if (vkCreateSemaphore(device, &semaphoreInfo, nullptr, &imageAvailableSemaphore[i]) != VK_SUCCESS)
 	{
-			printf("Failed to create image available semaphore");
+		printf("Failed to create image available semaphore");
 	}
 
 	if (vkCreateSemaphore(device, &semaphoreInfo, nullptr, &renderFinishSemaphore[i]) != VK_SUCCESS)
@@ -31,12 +31,12 @@ for (uint32_t i = 0; i < maxFramesInFlight; ++i)
 
 	if (vkCreateFence(device, &fenceInfo, nullptr, &framesInFlight[i]) != VK_SUCCESS)
 	{
-			printf("Failed to create the fence");
+		printf("Failed to create the fence");
 	}
 }
 ```
 
-The only important part is the **VkCreateFenceInfo** **.flags** this is set to **VK_FENCE_CREATE_SIGNALED_BIT** meaning we set up the fence to be signalled from the start. You want to do this because we be waiting for the fence to be signled before we begin our next frame. Well what about the first frame? There wasn't a previous frame to wait for. If we don't set up the fence at the beginning we will dead locked immediately. 
+The only important part is the **VkCreateFenceInfo** **.flags** this is set to **VK_FENCE_CREATE_SIGNALED_BIT** meaning we set up the fence to be signalled from the start. You want to do this because we be waiting for the fence to be signalled before we begin our next frame. Well what about the first frame? There wasn't a previous frame to wait for. If we don't set up the fence at the beginning we will dead locked immediately. 
 
 Destroying them is pretty simple too.
 

@@ -34,7 +34,7 @@ subpass.pColorAttachments = &colourAttachmentRef;
 subpass.pDepthStencilAttachment = &depthAttachmentRef;
 ```
 
-Unlike the colour attachment, a subpass can only use 1 depth stencil attachment. As it doesn't really make sense to do depth test on multiple buffers.
+Unlike the colour attachment, a subpass can only use 1 depth stencil attachment. Since the depth buffer only lives on the GPU so there are not frames in flight to worry about.
 
 ```c++
 VkSubpassDependency dependency{};

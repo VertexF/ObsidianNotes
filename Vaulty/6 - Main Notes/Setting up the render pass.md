@@ -34,7 +34,7 @@ By the end of this you'll have a **VkRenderPass** object which will be used for 
 
 Destruction is simple, you just destroy **VkRenderPass** at some point before the VkDevice
 
- ```c++
+```c++
 vkDestroyRenderPass(device, renderPass, nullptr);
 ```
 # References

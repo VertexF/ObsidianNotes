@@ -23,6 +23,15 @@ Vulkan doesn't know what platform it's running on, so you plan on displaying gra
 ```
 
 The **REQUESTED_EXTENSIONS** contains a list of const char* to different extensions you need. So **enabledExtensionsCount** just takes the size of the array and **ppEnabledExtensionsNames** takes the array.
+
+If you're using SDL3 you can actually get SDL to grab the extensions you for a given platform with the code
+```c++
+uint32_t instanceExtensionsCount = 0;
+char const* const* instanceExtensions
+{ 
+	SDL_Vulkan_GetInstanceExtensions(&instanceExtensionsCount) 
+};
+```
 # References
 ##### Main Notes
 [[First Step for setting up Vulkan]]

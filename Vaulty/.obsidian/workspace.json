@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "58748ce6a987cec2",
+            "id": "d47d0ac0377a78e6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/What is synchronisation in vulkan.md",
+                "file": "6 - Main Notes/Modern vulkan device level features.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,223 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "What is synchronisation in vulkan"
+              "title": "Modern vulkan device level features"
+            }
+          },
+          {
+            "id": "ca700a2b4de0ac09",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Push constant with offset data.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Push constant with offset data"
+            }
+          },
+          {
+            "id": "7488949964a2614e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Push constant life time.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Push constant life time"
+            }
+          },
+          {
+            "id": "6c464a537f40c170",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Setting up an indexed indirect draw call.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Setting up an indexed indirect draw call"
+            }
+          },
+          {
+            "id": "7f9bcbe5141e9f5f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Advantages of indirect draw calls.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Advantages of indirect draw calls"
+            }
+          },
+          {
+            "id": "535cfd16bb29985d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Setting up an indexed indirect draw call.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Setting up an indexed indirect draw call"
+            }
+          },
+          {
+            "id": "b70485988c99ed5a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/How to use an indexed indirect draw call.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "How to use an indexed indirect draw call"
+            }
+          },
+          {
+            "id": "59f9583da464e3a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Aligning your structs for better performances.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Aligning your structs for better performances"
+            }
+          },
+          {
+            "id": "02d84a8c216e09e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/What are indirect draw calls.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "What are indirect draw calls"
+            }
+          },
+          {
+            "id": "2c2b91f44b3656a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Article/GPU Rendering and Multi-Draw Indirect.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "GPU Rendering and Multi-Draw Indirect"
             }
           }
         ]
@@ -177,34 +393,35 @@
       "bases:Create new base": false
     }
   },
-  "active": "58748ce6a987cec2",
+  "active": "d47d0ac0377a78e6",
   "lastOpenFiles": [
-    "4 - Indexes/vulkan.md",
-    "6 - Main Notes/Creating an image view.md",
-    "2 - Source Material/Books/The Abstraction - The Process.md",
-    "6 - Main Notes/Submitting the command buffer for rendering.md",
-    "6 - Main Notes/What are image views.md",
-    "6 - Main Notes/Acquiring an image from the swapchain.md",
-    "6 - Main Notes/Presenting to the screen.md",
-    "6 - Main Notes/What you need to synchronise a frame.md",
-    "6 - Main Notes/Using a fence to synchronise the previous frame.md",
-    "6 - Main Notes/Setting up binding descriptions.md",
-    "6 - Main Notes/Shader vertex input descriptions.md",
-    "6 - Main Notes/Setting up the input assembly.md",
-    "6 - Main Notes/Setting up the vertex inputs.md",
-    "6 - Main Notes/Setting up the dynamic states.md",
-    "6 - Main Notes/How to use a descriptor set.md",
-    "6 - Main Notes/Checking surface format.md",
+    "2 - Source Material/Article/VulkanDev.md",
+    "6 - Main Notes/Command buffer states.md",
+    "6 - Main Notes/Setting up the pipeline layout with a descriptor.md",
+    "6 - Main Notes/Vulkan Layers aren't extensions.md",
+    "6 - Main Notes/What is a vulkan surface.md",
+    "6 - Main Notes/What are staging buffers.md",
+    "6 - Main Notes/Compiling shaders with vulkan.md",
     "6 - Main Notes/Querying surface capabilities.md",
-    "6 - Main Notes/Setting up the swapchain extension.md",
-    "6 - Main Notes/Checking surface and swapchain compability.md",
-    "6 - Main Notes/What is a swapchain.md",
-    "6 - Main Notes/Setting depth buffer attachments.md",
+    "6 - Main Notes/Reading in compiled shaders.md",
+    "6 - Main Notes/What is the graphics pipeline.md",
+    "6 - Main Notes/What is a descriptor set layout.md",
+    "2 - Source Material/Books/SPIR-V Reflection - Master Graphics Programming with Vulkan.md",
+    "6 - Main Notes/Creating uniform buffers.md",
+    "4 - Indexes/vulkan.md",
+    "6 - Main Notes/Creating the framebuffers.md",
     "6 - Main Notes/What is a framebuffer.md",
-    "6 - Main Notes/Creating an combined image sampler descriptor.md",
-    "6 - Main Notes/Creating a vulkan surface.md",
-    "6 - Main Notes/Destroying a vulkan surface.md",
-    "6 - Main Notes/Setting up the colour attachment descriptions.md",
+    "6 - Main Notes/Explicitly transitioning the depth image.md",
+    "6 - Main Notes/Setting up subpass dependencies with one subpass.md",
+    "6 - Main Notes/What are subpass dependencies.md",
+    "6 - Main Notes/What is a subpass.md",
+    "6 - Main Notes/Memory layout - BSS uninitialised data.md",
+    "4 - Indexes/OS.md",
+    "4 - Indexes/performance.md",
+    "6 - Main Notes/Storing bools out of bounds.md",
+    "6 - Main Notes/Aligning your structs for better performances.md",
+    "6 - Main Notes/Reducing struct memory alignment.md",
+    "push_constant_offset.png",
     "gltfJsonStructure.png",
     "memorybanks.png",
     "memorybanksgroups.png",
