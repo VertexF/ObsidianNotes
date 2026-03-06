@@ -1,6 +1,6 @@
 2026-02-13 10:33
 Status: #baby 
-Tags: [[vulkan]] [[draw calls]]
+Tags: [[vulkan]] [[indirect draw calls]]
 # Setting up an indexed indirect draw call
 
 When you want to use an indirect draw call, you first need to use the struct **VkDrawIndexedIndirectCommand**, this provide the information of the vertices and indices to draw.
@@ -11,5 +11,6 @@ Okay this is important, you don't create the **VkDrawIndexedIndirectCommand** on
 # References
 ##### Main Notes
 [[How to use an indexed indirect draw call]]
+[[Advantages of indirect draw calls]]
 #### Source Notes
 [[GPU Rendering and Multi-Draw Indirect]]

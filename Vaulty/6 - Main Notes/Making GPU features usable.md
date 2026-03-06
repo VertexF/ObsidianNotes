@@ -1,6 +1,6 @@
 2025-09-24 07:01
-Status: [[vulkan]] [[logical device]]
-Tags: #baby 
+Status: #baby
+Tags: [[vulkan]] [[logical device]] 
 # Making GPU features usable
 
 When you want to use some feature such as dynamic rendering or using uint8 types in shaders you need to request them before you create the logical device. **Make sure you have already checked if they are available on the hardware**. [[Checking for hardware suitability]] Don't request ray tracing on hardware that doesn't support it for example.

@@ -1,6 +1,8 @@
 # Reference Mastering Graphics Programming with Vulkan
 
-When you are using bindless you are still binding but you bind an list of resources that can be indexed into in the shaders. Basically every single desktop GPU support this, so use it. It makes using Vulkan easier to use. These resources will be mainly used for textures which all can be used across shaders. 
+When you are using bindless you are still binding but you bind an list of resources that can be indexed into in the shaders. Basically every single desktop GPU support this, so use it. It makes using Vulkan easier to use. These resources will be mainly used for textures which all can be used across shaders.
+
+You can go bindless for buffers but you honestly have to use something else like [VK_EXT_descriptor_heap](https://docs.vulkan.org/guide/latest/descriptor_heap.html) or [VK_EXT_descriptor_buffer](https://www.khronos.org/blog/vk-ext-descriptor-buffer)
 ##### Checking bindless is supported
 First thing you need to is make sure that **VK_EXT_descriptor_indexing** is supported. This is a device level so you need to query it at the device leve.
 
@@ -77,7 +79,7 @@ bindlessLayoutCreation.bindless = true;
 bindlessDescriptorSetLayoutHandle = createDescriptorSetLayout(bindlessLayoutCreation);
 ```
 
-Notice in the third argument we have **MAX_BINDLESS_RESOURCES** instead of one, this is to accomodate how many textures we can use per draw call. 
+Notice in the third argument we have **MAX_BINDLESS_RESOURCES** instead of one, this is to accomodate how many textures we can use per draw call. This can be much bigger than 1024 if you need more textures in a scene than that.
 
 Next we get the vulkan descriptor set to use later in the code base.
 
@@ -220,3 +222,5 @@ if (textureToUpdateBindless.size)
     }
 }
 ```
+
+Why are we doing this? Well we have array of textures that we are going to index into, so we need to update them when we are going to use them. This safe to do **IF** you do this before a draw call. It's also important to note we are doing update after bind here. We bind all the textures and then update them afterwards.

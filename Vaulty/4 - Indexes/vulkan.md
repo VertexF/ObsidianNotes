@@ -135,6 +135,9 @@
 ### Uniform Buffers
 [[Creating uniform buffers]]
 [[Updating uniform buffers]]
+### Buffer Device Address
+[[What is Buffer Device Address (BDA)]]
+[[Creating a BDA buffer]]
 ### Push Constants
 [[Using a push constants]]
 [[Push constant with offset data]]
@@ -151,6 +154,14 @@
 [[Creating an combined image sampler descriptor]]
 [[Creating basic texture coordinate]]
 [[Using textures within a shader]]
+### Bindless Textures
+[[What is bindless]]
+[[Enabling bindless textures]]
+[[Creating the bindless descriptor pool]]
+[[Creating a bindless descriptor set layout]]
+[[Updating a bindless descriptor set]]
+[[Setting up bindless textures in a shader]]
+[[Binding a bindless descriptor set]]
 ### Depth Testing
 [[3D geometry without the depth buffer]]
 [[Creating the depth image and view]]

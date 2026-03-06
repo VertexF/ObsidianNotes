@@ -70,3 +70,4 @@ static void createBuffer(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPr
 [[Creating the vertex buffer with staging buffers]]
 [[Creating uniform buffers]]
 #### Source Notes
+[[Drawing a triangle]]

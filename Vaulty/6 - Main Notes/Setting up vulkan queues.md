@@ -26,7 +26,8 @@ queueCreateInfo.pQueuePriorities = 1.f;
 ```
 # References
 ##### Main Notes
-Command Buffer note needed here.
+[[What are command buffers]]
+[[Setting up the command buffers]]
 [[Creating vulkan queues]]
 [[Making GPU features usable]]
 [[What is vulkan logical device]]

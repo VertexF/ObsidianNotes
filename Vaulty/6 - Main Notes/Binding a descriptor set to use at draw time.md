@@ -11,7 +11,7 @@ vkCmdBindDescriptorSets(commandBuffers[currentFrame], VK_PIPELINE_BIND_POINT_GRA
 
 2) Descriptor sets can be used in compute pipelines as well as graphics pipelines so set that with **VK_PIPELINE_BIND_POINT_GRAPHICS** 
 3) Next you need to specify the pipeline layout that the descriptor set is based on.
-4) The next three are to do with the index of the descriptor. So the forth argument is the telling vulkan what the first index is.
+4) The next three are to do with the index of the descriptor. So the forth argument is the telling vulkan what the set index is.
 5) This tells vulkan how many to bind at a time.
 6) Next is the actually array of descriptor sets to bind. 
 7) The next two are to do with dynamic descriptors and the offset into them. We aren't using them so the dynamic count is 0

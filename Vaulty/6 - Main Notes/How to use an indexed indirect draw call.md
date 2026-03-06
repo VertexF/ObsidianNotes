@@ -1,6 +1,6 @@
 2026-02-13 10:31
 Status: #baby 
-Tags: [[vulkan]] [[draw calls]]
+Tags: [[vulkan]] [[indirect draw calls]]
 # How to use an indexed indirect draw call
 
 We are assuming you have the foundational understanding here of [[Setting up an indexed indirect draw call]]

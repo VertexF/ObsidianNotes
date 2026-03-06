@@ -17,7 +17,7 @@ colourAttachmentRef.attachment = 0;
 colourAttachmentRef.layout = VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL;
 ```
 
-The **.layout** is the format of the output of the shader so this is an attachment optimal for the colour output, this will be different if your output is different in the shade. The **.attachment** is the `layout(location = 0)` number found in your shader.
+The **.layout** is the format of the output of the shader so this is an attachment optimal for the colour output, this will be different if your output is different in the shader. The **.attachment** is the `layout(location = 0)` number found in your shader.
 # References
 ##### Main Notes
 [[Setting up the subpass]]

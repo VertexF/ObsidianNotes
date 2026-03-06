@@ -7,3 +7,4 @@ Vulkan 1.2 really tried to get the shaders closer to be able to run C-like code 
 Historically floats were the only types you could use in shader code. DX10 int came out and that's it honestly.
 
 I don't understand memory well enough yet!
+##### Bindless
