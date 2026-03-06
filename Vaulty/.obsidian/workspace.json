@@ -247,7 +247,8 @@
               "title": "GPU Rendering and Multi-Draw Indirect"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -393,7 +394,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "d47d0ac0377a78e6",
+  "active": "ca700a2b4de0ac09",
   "lastOpenFiles": [
     "2 - Source Material/Article/VulkanDev.md",
     "6 - Main Notes/Command buffer states.md",
