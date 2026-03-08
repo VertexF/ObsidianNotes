@@ -15,7 +15,7 @@ ADD D, input[3]
 
 CPU designer have had this idea because typically most people do a tonne of the same operations. Maybe there is a way to do 1 operation for all these **ADD's** in one go with the data and writing into registers at the same time.
 ```c
-SUPER_ADD A,B,C,D input[0], input[1], input[0], input[1]
+SUPER_ADD A,B,C,D input[0], input[1], input[2], input[3]
 ```
 
 So x64 ASM you have the SSE, or Streaming SIMD Extensions which came out first to do this. So the most basic SSE instruction is **PADDD** said P-ADD-D The extra **D** is because it's a D word meaning it's a 32-bit adding operation and **P** means packed, because we are packing things together. 

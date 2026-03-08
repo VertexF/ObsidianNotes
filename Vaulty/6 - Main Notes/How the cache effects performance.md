@@ -55,7 +55,7 @@ void __attribute__((target("avx2"))) addAVXSIMD(uint32_t count, uint32_t *input)
 3) Buffer size of 262144 which fits in the L3 cache, the adds per clock is 4.003
 4) Buffer size of 33554432 which fits in the main memory, the adds per clock is 1.4462
 
-As you can see going from 13.38 to 1.4462 is terrible considering the work you have to go through to get this point. This is actually one of the hardest ones to improve improve performance but it can give a huge speed up if you can nail it.
+As you can see going from 13.38 to 1.4462 is terrible considering the work you have to go through to get this point. This is actually one of the hardest ones to improve performance but it can give a huge speed up if you can nail it.
 # References
 ##### Main Notes
 [[What is the cache]]

@@ -46,7 +46,7 @@ for(int i = 0; i < 4096; i+=4)
 
 Now we are adding things 4 at a time rather than 1 at a time. If you do this you'll get 0.99 adds per-cycle rather than 0.801 adds per cycle for both loops. However there is something else going on here.
 
-What ends up happening with this is that the CPU tries to do things in parallel with the CPUs **ILP** instruction level parallelism ability. What the CPU is able to do is it looks a the comparison and the add operation at the same time because **ADD a, b** and **COMPARE i, 4096** have nothing to do with each other.
+What ends up happening with this is that the CPU tries to do things in parallel with the CPUs **ILP** instruction level parallelism ability which why it's getting stuck at 1 add per cycle. What the CPU is able to do is it looks a the comparison and the add operation at the same time because **ADD a, b** and **COMPARE i, 4096** have nothing to do with each other.
 # References
 ##### Main Notes
 [[What does IPC or ILP mean]]

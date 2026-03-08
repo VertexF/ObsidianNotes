@@ -75,6 +75,11 @@
 [[Creating descriptor sets]]
 [[Creating an combined image sampler descriptor]]
 [[Binding a descriptor set to use at draw time]]
+### Descriptor Hardware
+[[The problem with descriptor]]
+[[The GPU hardware of descriptors]]
+[[Vulkan 1.0 descriptor set model]]
+[[The problem with descriptor heaps]]
 ### Graphics Pipeline
 [[What is the graphics pipeline]]
 >**Shaders**

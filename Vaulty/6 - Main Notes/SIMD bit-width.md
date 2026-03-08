@@ -19,5 +19,6 @@ You can use the bit-width in anyway you like.
 # References
 ##### Main Notes
 [[Introduction to SIMD]]
+[[How to use SIMD with a summation loop]]
 #### Source Notes
 [[Single Instruction, Multiple Data]]

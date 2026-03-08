@@ -1,6 +1,6 @@
 # Reference https://www.gfxstrand.net/faith/blog/2022/08/descriptors-are-hard/
 
-There is a problem with descriptor set layouts they are too close to the memory layout of the shader. If you have contraints your engine works around like having 32 UBOs and 128 textures, you set up different bindings in your shader for each and everything is chill. You typically want one giant descriptor set to rule them all.
+There is a problem with descriptor set layouts they are too close to the memory layout of the shader. If you have constrain your engine works around like having 32 UBOs and 128 textures, you set up different bindings in your shader for each and everything is chill. You typically want one giant descriptor set to rule them all.
 
 As soon as you want to use a different interface in your shader, everything breaks. If you want to avoid having rebinding descriptor sets over and over again you need different pipelines making handling pipelines in vulkan even harder. Now you have to now the pipeline layout before creating **ANY** pipelines. You can bind multiple materials together with [[Multiple descriptor sets]] but that's limited to vertex and fragment shaders, mixing materials doesn't work, which is what you really want.
 ##### The problem space
@@ -40,6 +40,5 @@ With SM6.6 in D3D12 Microsoft significantly improve flexibility and further embr
 A descriptor heap is just a very restrictive buffer. Meaning for AMD drivers just use of their debufer buffer bindings (resource and sampler heaps are seperate in D3D12) and implements a heap as a descriptor buffer.
 
 There is a downside to descriptor heap approach is that is forces some amount of extra indirection, especially with the SM6.6 bindless mdoel. First thing you need to do is load a heap index into a constant buffer and pass that to loadOp/storeOp. This allows the GPU to do the sequeence instruction that fetches the heap, after that it does some offset calculations and does the actual load and store operations for that corrisponding pointer. This can actually slow things down if there are a lot of operations happening, the compiler can remove some but it's not a given that will happen if you have a tonne of stuff.
-
-... Skipping some things because it's getting into the weeds.
 ###### Towards a better future
+In short descriptor heaps aren't the future because there is a lot of graphics driver overhead.

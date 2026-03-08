@@ -9,10 +9,12 @@ Lets use SIMD on this
 ```c
 int array[4096] = { /*random values in here*/ };
 void addNoSIMD(uint32_t count, uint32_t *input)
-int sum = 0;
-for(int i = 0; i < count; ++i)
 {
-	sum += input[i];
+	int sum = 0;
+	for(int i = 0; i < count; ++i)
+	{
+		sum += input[i];
+	}
 }
 ```
 
