@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "c1bda6860389e887",
+    "id": "8b60082c5074fc88",
     "type": "split",
     "children": [
       {
-        "id": "63f57354f8021957",
+        "id": "7921701183ebdfb1",
         "type": "tabs",
         "children": [
           {
-            "id": "ca441ebda13a6452",
+            "id": "5104b7414d8ddb6d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Transitioning image memory for texture mapping.md",
+                "file": "4 - Indexes/vulkan.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,103 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Transitioning image memory for texture mapping"
-            }
-          },
-          {
-            "id": "d7728cd75af18a29",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Setting up an indexed indirect draw call.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Setting up an indexed indirect draw call"
-            }
-          },
-          {
-            "id": "c05afbe866fed4a6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Setting up an indexed indirect draw call.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Setting up an indexed indirect draw call"
-            }
-          },
-          {
-            "id": "65ee99ce8609627d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/Books/Bindless - Mastering Graphics Programming with Vulkan.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Bindless - Mastering Graphics Programming with Vulkan"
-            }
-          },
-          {
-            "id": "ce9b23c4a976b103",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Binding a descriptor set to use at draw time.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Binding a descriptor set to use at draw time"
+              "title": "vulkan"
             }
           }
         ]
@@ -133,15 +37,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "e1ef3cd546307f78",
+    "id": "fb980126418c3ceb",
     "type": "split",
     "children": [
       {
-        "id": "49e8ffe6f3e65d72",
+        "id": "9605ee7e639a865e",
         "type": "tabs",
         "children": [
           {
-            "id": "7fb22585c6ec9e22",
+            "id": "21f8b06140de9a5e",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -154,7 +58,7 @@
             }
           },
           {
-            "id": "86c8a13cc85cf2b9",
+            "id": "c2cf5f75590cc8b8",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -171,7 +75,7 @@
             }
           },
           {
-            "id": "8a9d660c300db3c6",
+            "id": "8c309a1a42ff8d16",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -187,19 +91,20 @@
     "width": 300
   },
   "right": {
-    "id": "15b828cf075318f5",
+    "id": "b754e0c20500d1e8",
     "type": "split",
     "children": [
       {
-        "id": "edc30a5f1f618b12",
+        "id": "aba940906a648a61",
         "type": "tabs",
         "children": [
           {
-            "id": "24105a37bd4fc2f5",
+            "id": "8dde41f77c9492e5",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "4 - Indexes/vulkan.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -209,24 +114,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for vulkan"
             }
           },
           {
-            "id": "fe63e6750dca2d4c",
+            "id": "e3f5365d6c11718d",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "4 - Indexes/vulkan.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from vulkan"
             }
           },
           {
-            "id": "b82ae14a30856644",
+            "id": "e747a6c9b3790108",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -241,7 +147,7 @@
             }
           },
           {
-            "id": "78edabf8a028488f",
+            "id": "cd598977b51d90ac",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -254,19 +160,8 @@
               "icon": "lucide-list",
               "title": "Outline of vulkan"
             }
-          },
-          {
-            "id": "2a49149e9b51af74",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -275,52 +170,16 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ca441ebda13a6452",
-  "lastOpenFiles": [
-    "6 - Main Notes/Preparing the texture image.md",
-    "6 - Main Notes/Cleaning a Vulkan Instance.md",
-    "6 - Main Notes/How to use an indexed indirect draw call.md",
-    "6 - Main Notes/Setting up the multisampler.md",
-    "6 - Main Notes/Shader vertex input descriptions.md",
-    "6 - Main Notes/Setting up reverse perspective for your depth buffer.md",
-    "6 - Main Notes/Modern vulkan device level features.md",
-    "6 - Main Notes/How to debug instance creation.md",
-    "6 - Main Notes/Recreating the swapchain.md",
-    "6 - Main Notes/Creating an image view.md",
-    "6 - Main Notes/What are image views.md",
-    "6 - Main Notes/Updating things in bulk.md",
-    "6 - Main Notes/Setting up the attachment reference.md",
-    "6 - Main Notes/Updating a bindless descriptor set.md",
-    "6 - Main Notes/Making a basic createBuffer function.md",
-    "6 - Main Notes/Binding the vertex buffer and drawing.md",
-    "6 - Main Notes/Creating a descriptor set layout.md",
-    "6 - Main Notes/Introduction to texture mapping.md",
-    "6 - Main Notes/What is vulkan logical device.md",
-    "6 - Main Notes/Memory layout - The stack.md",
-    "6 - Main Notes/Checking surface and swapchain compability.md",
-    "6 - Main Notes/Moving data to helps alignment.md",
-    "6 - Main Notes/Creating a vulkan instance.md",
-    "6 - Main Notes/What is the graphics pipeline.md",
-    "6 - Main Notes/What is reverse-Z perspective.md",
-    "6 - Main Notes/Reading in compiled shaders.md",
-    "Untitled.canvas",
-    "push_constant_offset.png",
-    "gltfJsonStructure.png",
-    "memorybanks.png",
-    "memorybanksgroups.png",
-    "memorylayout.png",
-    "process.png",
-    "pagetablechunks.png",
-    "process-states.png"
-  ]
+  "active": "5104b7414d8ddb6d",
+  "lastOpenFiles": []
 }
