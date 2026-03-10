@@ -5,7 +5,7 @@ Tags: [[vulkan]] [[GPU hardware]] [[vulkan descriptors]]
 
 The hardware is all very different so vulkan solution was the descriptor set layout. With that descriptor set layout, the we get the bindings.
 
-For the fix hardware set up, it's pretty straight forward you set up a descriptor set layout and we map the fixed hardware slots to the hardware. With fixed bindings they are typically stored on the CPU-side and the actualy beindings get set as part of the **vkCmdBindDescriptorSets()** or **vkCmdDraw/Dispatch()** . For the other three these are allocated on the GPU memory. For heap descriptors the allocation may be just part of the descriptor set itself in the image or buffer view object to save memory.  
+For the fix hardware set up, it's pretty straight forward you set up a descriptor set layout and we map the fixed hardware slots to the hardware. With fixed bindings they are typically stored on the CPU-side and the actually beindings get set as part of the **vkCmdBindDescriptorSets()** or **vkCmdDraw/Dispatch()** . For the other three these are allocated on the GPU memory. For heap descriptors the allocation may be just part of the descriptor set itself in the image or buffer view object to save memory.  
 
 UBOs are weird and complicate things. They have fixed hardware bindings even on bindless hardware. This is because UBOs are the hottest of the hot paths and even small differences in UBO fetching can seriously slow things down. There a lot of complexity with this for example on Linux intel has different code paths the UBOs follow depending if they are doing update-after-bind (bindless), which shader stage you're in, what the other UBOs are doing. 
 

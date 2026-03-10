@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "8b60082c5074fc88",
+    "id": "ba380b98a76c419b",
     "type": "split",
     "children": [
       {
-        "id": "7921701183ebdfb1",
+        "id": "ec695af99eb7cbbf",
         "type": "tabs",
         "children": [
           {
-            "id": "5104b7414d8ddb6d",
+            "id": "a5ac7c8b220b34b4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Article/Descriptors are hard.md",
+                "file": "2 - Source Material/Article/LearnCpp - Cubemaps.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,49 +28,24 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Descriptors are hard"
-            }
-          },
-          {
-            "id": "f061932eaf81ea9e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 - Indexes/vulkan.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "vulkan"
+              "title": "LearnCpp - Cubemaps"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "fb980126418c3ceb",
+    "id": "a1282f82a80c6ef8",
     "type": "split",
     "children": [
       {
-        "id": "9605ee7e639a865e",
+        "id": "d244900fec4b2f36",
         "type": "tabs",
         "children": [
           {
-            "id": "21f8b06140de9a5e",
+            "id": "2e5fba718f13fc1f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -83,7 +58,7 @@
             }
           },
           {
-            "id": "c2cf5f75590cc8b8",
+            "id": "3e1a110348564cad",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -100,7 +75,7 @@
             }
           },
           {
-            "id": "8c309a1a42ff8d16",
+            "id": "0cdcebeabca3fb39",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -116,20 +91,20 @@
     "width": 300
   },
   "right": {
-    "id": "b754e0c20500d1e8",
+    "id": "1b428d64a7643f00",
     "type": "split",
     "children": [
       {
-        "id": "aba940906a648a61",
+        "id": "beae2718134b24df",
         "type": "tabs",
         "children": [
           {
-            "id": "8dde41f77c9492e5",
+            "id": "3088f493472125ef",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "4 - Indexes/vulkan.md",
+                "file": "2 - Source Material/Books/Vulkan Cookbook - Cubemap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,25 +114,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for vulkan"
+              "title": "Backlinks for Vulkan Cookbook - Cubemap"
             }
           },
           {
-            "id": "e3f5365d6c11718d",
+            "id": "aca1117a1fdaffac",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "4 - Indexes/vulkan.md",
+                "file": "2 - Source Material/Books/Vulkan Cookbook - Cubemap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from vulkan"
+              "title": "Outgoing links from Vulkan Cookbook - Cubemap"
             }
           },
           {
-            "id": "e747a6c9b3790108",
+            "id": "0347aaeb3e8e8b43",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -172,18 +147,18 @@
             }
           },
           {
-            "id": "cd598977b51d90ac",
+            "id": "8b271dd787e850cb",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 - Indexes/vulkan.md",
+                "file": "2 - Source Material/Books/Vulkan Cookbook - Cubemap.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of vulkan"
+              "title": "Outline of Vulkan Cookbook - Cubemap"
             }
           }
         ]
@@ -205,41 +180,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f061932eaf81ea9e",
+  "active": "a5ac7c8b220b34b4",
   "lastOpenFiles": [
+    "2 - Source Material/Books/Vulkan Cookbook - Cubemap.md",
+    "4 - Indexes/vulkan.md",
     "6 - Main Notes/The problem with descriptor.md",
     "6 - Main Notes/The GPU hardware of descriptors.md",
     "6 - Main Notes/Vulkan 1.0 descriptor set model.md",
     "6 - Main Notes/The problem with descriptor heaps.md",
-    "4 - Indexes/vulkan.md",
-    "2 - Source Material/Article/Descriptors are hard.md",
-    "3 - Tags/GPU hardware.md",
-    "1 - Rough Notes/BDA notes from discord.md",
-    "6 - Main Notes/Creating a BDA buffer.md",
-    "6 - Main Notes/What is Buffer Device Address (BDA).md",
-    "6 - Main Notes/Introduction to multithreading.md",
     "4 - Indexes/performance.md",
-    "6 - Main Notes/How the cache effects performance.md",
-    "6 - Main Notes/Introduction to SIMD.md",
-    "6 - Main Notes/What is the cache.md",
-    "6 - Main Notes/SIMD bit-width.md",
-    "6 - Main Notes/How to use SIMD with a summation loop.md",
+    "6 - Main Notes/Introduction to multithreading.md",
     "6 - Main Notes/Solving for serial dependencies with SIMD.md",
-    "6 - Main Notes/Solving the serial dependency problem.md",
-    "2 - Source Material/Video/Multithreading.md",
-    "6 - Main Notes/The cost of loop over head.md",
-    "6 - Main Notes/What does IPC or ILP mean.md",
-    "6 - Main Notes/What is waste.md",
-    "6 - Main Notes/Performance Awareness Overview.md",
-    "6 - Main Notes/What is data oriented design.md",
-    "2 - Source Material/Video/Caching.md",
-    "push_constant_offset.png",
-    "gltfJsonStructure.png",
-    "memorybanks.png",
-    "memorybanksgroups.png",
-    "memorylayout.png",
-    "process.png",
-    "pagetablechunks.png",
-    "process-states.png"
+    "6 - Main Notes/SIMD bit-width.md",
+    "6 - Main Notes/Introduction to SIMD.md",
+    "6 - Main Notes/How the cache effects performance.md",
+    "2 - Source Material/Article/Depth buffering.md",
+    "2 - Source Material/Article/Descriptors are hard.md",
+    "2 - Source Material/Article/LearnCpp - Cubemaps.md",
+    "cubemaps_sampling.png",
+    "2 - Source Material/Article/Structure Member Alignment Padding and Data Packing.md"
   ]
 }
