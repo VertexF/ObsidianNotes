@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Article/LearnCpp - Cubemaps.md",
+                "file": "2 - Source Material/Video/Instruction Decoding on the 8086.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "LearnCpp - Cubemaps"
+              "title": "Instruction Decoding on the 8086"
             }
           }
         ]
@@ -182,6 +182,8 @@
   },
   "active": "a5ac7c8b220b34b4",
   "lastOpenFiles": [
+    "2 - Source Material/Article/LearnCpp - Cubemaps.md",
+    "2 - Source Material/Video/Instruction Decoding on the 8086.md",
     "2 - Source Material/Books/Vulkan Cookbook - Cubemap.md",
     "4 - Indexes/vulkan.md",
     "6 - Main Notes/The problem with descriptor.md",
@@ -196,7 +198,6 @@
     "6 - Main Notes/How the cache effects performance.md",
     "2 - Source Material/Article/Depth buffering.md",
     "2 - Source Material/Article/Descriptors are hard.md",
-    "2 - Source Material/Article/LearnCpp - Cubemaps.md",
     "cubemaps_sampling.png",
     "2 - Source Material/Article/Structure Member Alignment Padding and Data Packing.md"
   ]
