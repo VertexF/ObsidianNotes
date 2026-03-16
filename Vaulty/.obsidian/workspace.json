@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "Instruction Decoding on the 8086"
             }
+          },
+          {
+            "id": "fca3695c043d5894",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Video/Decoding Multiple Instructions and Suffixes.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Decoding Multiple Instructions and Suffixes"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -180,12 +205,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a5ac7c8b220b34b4",
+  "active": "2e5fba718f13fc1f",
   "lastOpenFiles": [
-    "2 - Source Material/Article/LearnCpp - Cubemaps.md",
     "2 - Source Material/Video/Instruction Decoding on the 8086.md",
-    "2 - Source Material/Books/Vulkan Cookbook - Cubemap.md",
+    "2 - Source Material/Video/Decoding Multiple Instructions and Suffixes.md",
+    "6 - Main Notes/Creating the depth image and view.md",
     "4 - Indexes/vulkan.md",
+    "6 - Main Notes/3D geometry without the depth buffer.md",
+    "6 - Main Notes/What are descriptor sets.md",
+    "6 - Main Notes/Checking to see if presentation is supported.md",
+    "6 - Main Notes/Creating uniform buffers.md",
+    "6 - Main Notes/Creating a descriptor set layout.md",
+    "6 - Main Notes/Creating the custom callback function for validation.md",
+    "6 - Main Notes/Creating vulkan queues.md",
+    "6 - Main Notes/Loading an image file.md",
+    "2 - Source Material/Article/LearnCpp - Cubemaps.md",
+    "2 - Source Material/Books/Vulkan Cookbook - Cubemap.md",
     "6 - Main Notes/The problem with descriptor.md",
     "6 - Main Notes/The GPU hardware of descriptors.md",
     "6 - Main Notes/Vulkan 1.0 descriptor set model.md",
@@ -198,7 +233,6 @@
     "6 - Main Notes/How the cache effects performance.md",
     "2 - Source Material/Article/Depth buffering.md",
     "2 - Source Material/Article/Descriptors are hard.md",
-    "cubemaps_sampling.png",
-    "2 - Source Material/Article/Structure Member Alignment Padding and Data Packing.md"
+    "cubemaps_sampling.png"
   ]
 }
