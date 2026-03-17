@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan buffer]]
 # Updating uniform buffers
 
-In this example we are updating the perspective of the vertices in the vertex shader. I wont explain any of the non-vulkan stuff apart from we have a camera here, perspective and model matrix we ar going to write
+In this example we are updating the perspective of the vertices in the vertex shader. I wont explain any of the non-vulkan stuff apart from we have a camera here, perspective and model matrix we are going to write
 
 ```c++
 //NOTE: startTime is OUTSIDE the render loop.
@@ -24,7 +24,7 @@ memcpy(uniformBuffersMapped[currentFrame], &modelData, sizeof(modelData));
 
 With our **memcpy** we are writing to our mapped memory with that pointer we left exposed.
 
-Passing tiny amounts of data to the using UBO isn't the most efficent. You'll want to use push constants to get this working as it works well with small amounts of memory. You'll need to be aware of the pros and cons of all buffer types to know which one to use.
+Passing tiny amounts of data to the using UBO isn't the most efficient. You'll want to use push constants to get this working as it works well with small amounts of memory. You'll need to be aware of the pros and cons of all buffer types to know which one to use.
 # References
 ##### Main Notes
 [[Creating uniform buffers]]

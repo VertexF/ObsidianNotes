@@ -5,7 +5,7 @@ Tags: [[vulkan]] [[depth testing]]
 
 This is part of the graphics pipeline is to do with testing if pixels are in front of another pixel. When setting up the graphics pipeline you can set this to null skipping this step.
 
-This is extremely familar to [[Setting up the colour attachment descriptions]] but we do it for depth instead. So lets get started
+This is extremely familiar to [[Setting up the colour attachment descriptions]] but we do it for depth instead. So lets get started
 
 ```c++
 VkAttachmentDescription depthAttachment{};
@@ -21,7 +21,7 @@ depthAttachment.finalLayout = VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL;
 
 The format is the **depth image itself**. Unlike the colour attachment description we don't care about **.storeOp** as it will not be used faster drawing has finished. Everything else explains itself.
 
-This is extactly the same as [[Setting up the attachment reference]] and [[Setting up the subpass]] we just add depth now.
+This is exactly the same as [[Setting up the attachment reference]] and [[Setting up the subpass]] we just add depth now.
 ```c++
 VkAttachmentReference depthAttachmentRef{};
 depthAttachmentRef.attachment = 1;

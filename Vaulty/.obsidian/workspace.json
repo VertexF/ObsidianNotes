@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "ba380b98a76c419b",
+    "id": "453ded4ea6538736",
     "type": "split",
     "children": [
       {
-        "id": "ec695af99eb7cbbf",
+        "id": "862ea63ddd55268e",
         "type": "tabs",
         "children": [
           {
-            "id": "a5ac7c8b220b34b4",
+            "id": "ac0105d97f9abb82",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,7 +32,7 @@
             }
           },
           {
-            "id": "fca3695c043d5894",
+            "id": "4fcef2335bece743",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -62,15 +62,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "a1282f82a80c6ef8",
+    "id": "d50e6c0599562711",
     "type": "split",
     "children": [
       {
-        "id": "d244900fec4b2f36",
+        "id": "438b40af5fe65ce7",
         "type": "tabs",
         "children": [
           {
-            "id": "2e5fba718f13fc1f",
+            "id": "7e4b5829b9be5ca4",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -83,7 +83,7 @@
             }
           },
           {
-            "id": "3e1a110348564cad",
+            "id": "858ce6a4fc20c651",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -100,7 +100,7 @@
             }
           },
           {
-            "id": "0cdcebeabca3fb39",
+            "id": "58a18bfc236858d6",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -116,20 +116,20 @@
     "width": 300
   },
   "right": {
-    "id": "1b428d64a7643f00",
+    "id": "d0dd6afa9e582494",
     "type": "split",
     "children": [
       {
-        "id": "beae2718134b24df",
+        "id": "816383be6db45dd5",
         "type": "tabs",
         "children": [
           {
-            "id": "3088f493472125ef",
+            "id": "f89eb6fdf6d10c03",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - Source Material/Books/Vulkan Cookbook - Cubemap.md",
+                "file": "2 - Source Material/Video/Decoding Multiple Instructions and Suffixes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,25 +139,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Vulkan Cookbook - Cubemap"
+              "title": "Backlinks for Decoding Multiple Instructions and Suffixes"
             }
           },
           {
-            "id": "aca1117a1fdaffac",
+            "id": "c976c77bed0f4392",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2 - Source Material/Books/Vulkan Cookbook - Cubemap.md",
+                "file": "2 - Source Material/Video/Decoding Multiple Instructions and Suffixes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Vulkan Cookbook - Cubemap"
+              "title": "Outgoing links from Decoding Multiple Instructions and Suffixes"
             }
           },
           {
-            "id": "0347aaeb3e8e8b43",
+            "id": "4aa1be59a55113cb",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -172,18 +172,18 @@
             }
           },
           {
-            "id": "8b271dd787e850cb",
+            "id": "9d368b809568febb",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - Source Material/Books/Vulkan Cookbook - Cubemap.md",
+                "file": "2 - Source Material/Video/Decoding Multiple Instructions and Suffixes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Vulkan Cookbook - Cubemap"
+              "title": "Outline of Decoding Multiple Instructions and Suffixes"
             }
           }
         ]
@@ -205,34 +205,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2e5fba718f13fc1f",
+  "active": "4fcef2335bece743",
   "lastOpenFiles": [
     "2 - Source Material/Video/Instruction Decoding on the 8086.md",
-    "2 - Source Material/Video/Decoding Multiple Instructions and Suffixes.md",
-    "6 - Main Notes/Creating the depth image and view.md",
-    "4 - Indexes/vulkan.md",
-    "6 - Main Notes/3D geometry without the depth buffer.md",
-    "6 - Main Notes/What are descriptor sets.md",
-    "6 - Main Notes/Checking to see if presentation is supported.md",
-    "6 - Main Notes/Creating uniform buffers.md",
-    "6 - Main Notes/Creating a descriptor set layout.md",
-    "6 - Main Notes/Creating the custom callback function for validation.md",
-    "6 - Main Notes/Creating vulkan queues.md",
-    "6 - Main Notes/Loading an image file.md",
-    "2 - Source Material/Article/LearnCpp - Cubemaps.md",
-    "2 - Source Material/Books/Vulkan Cookbook - Cubemap.md",
-    "6 - Main Notes/The problem with descriptor.md",
-    "6 - Main Notes/The GPU hardware of descriptors.md",
-    "6 - Main Notes/Vulkan 1.0 descriptor set model.md",
-    "6 - Main Notes/The problem with descriptor heaps.md",
-    "4 - Indexes/performance.md",
-    "6 - Main Notes/Introduction to multithreading.md",
-    "6 - Main Notes/Solving for serial dependencies with SIMD.md",
-    "6 - Main Notes/SIMD bit-width.md",
-    "6 - Main Notes/Introduction to SIMD.md",
-    "6 - Main Notes/How the cache effects performance.md",
-    "2 - Source Material/Article/Depth buffering.md",
-    "2 - Source Material/Article/Descriptors are hard.md",
-    "cubemaps_sampling.png"
+    "2 - Source Material/Video/Decoding Multiple Instructions and Suffixes.md"
   ]
 }

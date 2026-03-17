@@ -5,7 +5,7 @@ Tags: [[vulkan]] [[vulkan shaders]]
 
 Khronos SDK has a **vender-independent** compiler. The compiler checks your code is correct and when it's compiled you can **ship that code** with your game. This is the CORRECT thing to do.
 
-If you use the glslc.exe compiler it fits closer with the paramter formats with GCC and Clang, not only that you get `#includes` for free. These are both with the vulkan SDK.
+If you use the glslc.exe compiler it fits closer with the parameter formats with GCC and Clang, not only that you get `#includes` for free. These are both with the vulkan SDK.
 
 A simple way to compile the shader be like this. 
 ```batch
