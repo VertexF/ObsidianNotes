@@ -10,3 +10,8 @@
 [[Immediate to register move with an effective address calculation]]
 [[Signed displacement]]
 [[Accumulator to memory move]]
+
+### Athermic
+[[add, sub and cmp assembly instructions]]
+### Jumps
+[[Conditional jumps]]
