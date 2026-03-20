@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/add, sub and cmp assembly instructions.md",
+                "file": "6 - Main Notes/Effective address calculation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "add, sub and cmp assembly instructions"
+              "title": "Effective address calculation"
             }
           },
           {
@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Video/Opcode Patterns in 8086 Arithmetic.md",
+                "file": "6 - Main Notes/Effective address calculation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,83 +76,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Opcode Patterns in 8086 Arithmetic"
-            }
-          },
-          {
-            "id": "7bafbc35edfc65e1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Immediate to register move.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Immediate to register move"
-            }
-          },
-          {
-            "id": "fbfffb530d99bb49",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 - Indexes/assembly.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "assembly"
-            }
-          },
-          {
-            "id": "6779fe7b7c350b67",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Conditional jumps.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Conditional jumps"
+              "title": "Effective address calculation"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -301,32 +229,32 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fbfffb530d99bb49",
+  "active": "74fad28a9d445616",
   "lastOpenFiles": [
-    "2 - Source Material/Video/Opcode Patterns in 8086 Arithmetic.md",
-    "6 - Main Notes/Conditional jumps.md",
-    "6 - Main Notes/add, sub and cmp assembly instructions.md",
-    "6 - Main Notes/Immediate to register move.md",
     "4 - Indexes/assembly.md",
-    "2 - Source Material/Video/Render Passes in Vulkan.md",
-    "2 - Source Material/Video/Single Instruction, Multiple Data.md",
-    "2 - Source Material/Video/Vulkan 1.2 Explained.md",
-    "2 - Source Material/Video/Vulkanised 2023 Tutorial An Introduction to Vulkan.md",
-    "2 - Source Material/Video/What is virtual memory.md",
-    "2 - Source Material/Video/Welcome to Performance Aware.md",
-    "2 - Source Material/Video/Decoding Multiple Instructions and Suffixes.md",
-    "2 - Source Material/Video/Entity component system bad.md",
-    "2 - Source Material/Video/How to Learn Pretty Much Anything.md",
-    "2 - Source Material/Video/How to remember Everything You Read.md",
-    "2 - Source Material/Video/Intro to Data Oriented Design for Games.md",
-    "2 - Source Material/Video/Instruction Decoding on the 8086.md",
+    "6 - Main Notes/Low and high part of registers.md",
     "6 - Main Notes/Register to register move operation.md",
-    "6 - Main Notes/Effective address calculation.md",
-    "6 - Main Notes/Immediate to register move with an effective address calculation.md",
     "6 - Main Notes/Instruction decode with mov.md",
-    "6 - Main Notes/How to use SIMD with a summation loop.md",
+    "6 - Main Notes/Introduction to the 8086.md",
+    "2 - Source Material/Video/8086 Decoder Code Review.md",
+    "1 - Rough Notes/Casey Q&A 5.md",
+    "6 - Main Notes/add, sub and cmp assembly instructions.md",
+    "1 - Rough Notes/Casey Q&A 4.md",
+    "6 - Main Notes/Introduction to the instruction cache.md",
+    "6 - Main Notes/The instruction cache and performance.md",
     "4 - Indexes/performance.md",
+    "6 - Main Notes/How the CPU deals with decoding instructions.md",
+    "6 - Main Notes/Signed extension.md",
+    "6 - Main Notes/Immediate to register move with an effective address calculation.md",
+    "6 - Main Notes/Conditional jumps.md",
+    "2 - Source Material/Video/Opcode Patterns in 8086 Arithmetic.md",
+    "2 - Source Material/Video/Instruction Decoding on the 8086.md",
+    "6 - Main Notes/Effective address calculation.md",
+    "6 - Main Notes/Immediate to register move.md",
+    "6 - Main Notes/How to use SIMD with a summation loop.md",
     "6 - Main Notes/SIMD bit-width.md",
+    "2 - Source Material/Video/Single Instruction, Multiple Data.md",
+    "2 - Source Material/Video/Render Passes in Vulkan.md",
     "2 - Source Material/Video/Multithreading.md",
     "2 - Source Material/Video/Instructions Per Clock.md"
   ]

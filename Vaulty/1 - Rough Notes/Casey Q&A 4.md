@@ -1,4 +1,4 @@
-The resigister doesn't store the instruction in registers. Registers are only about data, there are some instruction decode caches which are like registers for instructions in newer CPUs. Instructions flow through a queue, but you also have trace caches.
+The registers don't store the instruction. Registers are only about data, there are some instruction decode caches which are like registers for instructions in newer CPUs. Instructions flow through a queue, but you also have trace caches.
 
 Trace caches are used when,
 1) You decode the instruction
@@ -11,5 +11,5 @@ People don't really talk about working with the instruction cache because it's v
 
 Up to skylake intel CPUs at least, you can natively run 16-bit instructions. However you can't just run them without using backwards compability thing. With something like hypervisor you can put the CPU in 8086 mode and it will start to execute 8086 instructions. It's a kernel level thing it's protected so you need the OS to put you in that mode.
 
-Modern CPUs have a lot more decoders running in parallel to decode instruction that then get stored in a trace cache if necessary. Each decoder can work on different part of the instruction too, so they aren't always working on seperate instructions. 
+Modern CPUs have a lot more decoders running in parallel to decode instruction that then get stored in a trace cache if necessary. Each decoder can work on different part of the instruction too, so they aren't always working on separate instructions. 
 

@@ -38,5 +38,6 @@ If you look at the [[Register to register move operation]] and [[Effective addre
 [[Register to register move operation]]
 [[Effective address calculation]]
 [[Conditional jumps]]
+[[Signed extension]]
 #### Source Notes
 [[Opcode Patterns in 8086 Arithmetic]]

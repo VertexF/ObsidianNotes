@@ -26,3 +26,5 @@
 [[Reducing struct memory alignment]]
 [[Storing bools out of bounds]]
 [[Moving data to helps alignment]]
+### Misc
+[[The instruction cache and performance]]
