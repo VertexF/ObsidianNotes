@@ -5,7 +5,7 @@ Tags: [[assembly]]
 
 Instruction decode is a piece of work the CPU has to do to turn instructions to a mechanical idea that the CPU can operate and do. 
 
-A mnemonic is a human friend way of representing what the CPU can do. So like **mov** for example is a mnemonic of a copy instruction that the CPU can do. Move actually means copy. If we want to copy something from one register to another you would write it as
+A mnemonic is a human friendly way of representing what the CPU can do. So like **mov** for example is a mnemonic of a copy instruction that the CPU can do. Move actually means copy. If we want to copy something from one register to another you would write it as
 
 ```c
 mov ax, bx

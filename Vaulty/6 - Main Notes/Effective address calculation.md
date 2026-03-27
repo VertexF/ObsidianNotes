@@ -34,6 +34,6 @@ Were we take a base pointer, in this case `bp` and do some addition on it. This 
 # References
 ##### Main Notes
 [[Register to register move operation]]
-[[Signed displacement]]
+[[Signed displacement for move]]
 #### Source Notes
 [[Decoding Multiple Instructions and Suffixes]]

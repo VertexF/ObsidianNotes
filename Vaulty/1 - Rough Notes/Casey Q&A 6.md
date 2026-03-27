@@ -1,0 +1,1 @@
+The icache is 32k typically. When you they need to fetch more instructions they can only flush, rather than replacing 1 instruction that's being used right now. That's pretty costly.

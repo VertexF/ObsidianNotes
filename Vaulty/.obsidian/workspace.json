@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Effective address calculation.md",
+                "file": "6 - Main Notes/Acquiring an image from the swapchain.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Effective address calculation"
+              "title": "Acquiring an image from the swapchain"
             }
           },
           {
@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Effective address calculation.md",
+                "file": "6 - Main Notes/Preparing the texture image.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,55 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Effective address calculation"
+              "title": "Preparing the texture image"
+            }
+          },
+          {
+            "id": "7bafbc35edfc65e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Process state.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Process state"
+            }
+          },
+          {
+            "id": "6779fe7b7c350b67",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Conditional jumps.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Conditional jumps"
             }
           }
         ],
@@ -231,31 +279,31 @@
   },
   "active": "74fad28a9d445616",
   "lastOpenFiles": [
-    "4 - Indexes/assembly.md",
-    "6 - Main Notes/Low and high part of registers.md",
-    "6 - Main Notes/Register to register move operation.md",
-    "6 - Main Notes/Instruction decode with mov.md",
-    "6 - Main Notes/Introduction to the 8086.md",
-    "2 - Source Material/Video/8086 Decoder Code Review.md",
-    "1 - Rough Notes/Casey Q&A 5.md",
-    "6 - Main Notes/add, sub and cmp assembly instructions.md",
-    "1 - Rough Notes/Casey Q&A 4.md",
-    "6 - Main Notes/Introduction to the instruction cache.md",
+    "6 - Main Notes/Setting up the command buffers.md",
     "6 - Main Notes/The instruction cache and performance.md",
-    "4 - Indexes/performance.md",
-    "6 - Main Notes/How the CPU deals with decoding instructions.md",
-    "6 - Main Notes/Signed extension.md",
-    "6 - Main Notes/Immediate to register move with an effective address calculation.md",
-    "6 - Main Notes/Conditional jumps.md",
-    "2 - Source Material/Video/Opcode Patterns in 8086 Arithmetic.md",
-    "2 - Source Material/Video/Instruction Decoding on the 8086.md",
-    "6 - Main Notes/Effective address calculation.md",
-    "6 - Main Notes/Immediate to register move.md",
-    "6 - Main Notes/How to use SIMD with a summation loop.md",
-    "6 - Main Notes/SIMD bit-width.md",
-    "2 - Source Material/Video/Single Instruction, Multiple Data.md",
-    "2 - Source Material/Video/Render Passes in Vulkan.md",
-    "2 - Source Material/Video/Multithreading.md",
-    "2 - Source Material/Video/Instructions Per Clock.md"
+    "6 - Main Notes/Vulkan 1.0 descriptor set model.md",
+    "6 - Main Notes/What is bindless.md",
+    "6 - Main Notes/Updating a bindless descriptor set.md",
+    "6 - Main Notes/Vulkan Layers aren't extensions.md",
+    "6 - Main Notes/What does IPC or ILP mean.md",
+    "6 - Main Notes/What are validation layers.md",
+    "6 - Main Notes/Why study at all.md",
+    "6 - Main Notes/Dealing with VK_ERROR_OUT_OF_DATE not being supported.md",
+    "6 - Main Notes/Dangling pointer with locally created arrays.md",
+    "6 - Main Notes/Customising validation layers externally.md",
+    "6 - Main Notes/How to use an indexed indirect draw call.md",
+    "6 - Main Notes/Creation of the shader module.md",
+    "6 - Main Notes/Loading an image file.md",
+    "6 - Main Notes/Major features that got introduces in C++17.md",
+    "6 - Main Notes/Setting up and running the vkCmdDraw command.md",
+    "6 - Main Notes/Setting up the vertex attributes descriptions.md",
+    "6 - Main Notes/Setting depth buffer attachments.md",
+    "6 - Main Notes/What is a index buffer.md",
+    "6 - Main Notes/Setting up extensions.md",
+    "6 - Main Notes/Introduction to multithreading.md",
+    "6 - Main Notes/Creating the bindless descriptor pool.md",
+    "6 - Main Notes/Memory layout - The stack.md",
+    "6 - Main Notes/Setting up the synchronisation objects.md",
+    "2 - Source Material/Books/The Abstraction - The Process.md"
   ]
 }

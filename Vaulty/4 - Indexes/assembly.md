@@ -8,7 +8,7 @@
 [[Byte encoding for effective address calculations]]
 [[Immediate to register move]]
 [[Immediate to register move with an effective address calculation]]
-[[Signed displacement]]
+[[Signed displacement for move]]
 [[Accumulator to memory move]]
 ### Athermic
 [[add, sub and cmp assembly instructions]]

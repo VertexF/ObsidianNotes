@@ -23,6 +23,6 @@ You can think of this as a cast. Then the assembler sets the **W** flag.
 # References
 ##### Main Notes
 [[Immediate to register move]]
-[[Signed displacement]]
+[[Signed displacement for move]]
 #### Source Notes
 [[Decoding Multiple Instructions and Suffixes]]

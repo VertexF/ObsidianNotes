@@ -44,7 +44,7 @@ int main()
 		
 		//After that, we reach the end of the if block.
 		//Now `ar` is popped of the stack.
-		//.pNext is now a dangling pointer, aka pointing to a piece of memory thas has been removed.
+		//.pNext is now a dangling pointer, aka pointing to a piece of memory that has been removed.
 	}
 	else 
 	{

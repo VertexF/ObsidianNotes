@@ -1,7 +1,7 @@
 2026-03-17 16:52
 Status: #baby 
 Tags: [[assembly]]
-# Signed displacement
+# Signed displacement for move
 
 When the assembler parses the instructions it encodes everything as unsigned, meaning if you say do 
 ```c
