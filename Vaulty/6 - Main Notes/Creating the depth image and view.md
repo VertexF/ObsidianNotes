@@ -11,7 +11,7 @@ When creating the depth image the same resolutation as the colour attachment whi
 
 Unlike with texture image we don't need to be specific to how we access the VkImage. If you remember the a texture image needs a VK_FORMAT_R8G8B8A8_SRGB to be able to be accessed in the fragment shader, but because we aren't going to be accessing the values directly in the fragment shader we have some flexibility. The formats you would want are:
 - **VK_FORMAT_D32_SFLOAT** for 32-bit float for depth.
-- **VK_FORMAT_F32_SFLOAT_8_UINT** for 32-bit signed flaot for depth and 8 bit stencil component
+- **VK_FORMAT_F32_SFLOAT_8_UINT** for 32-bit signed float for depth and 8 bit stencil component
 - **VK_FORMAT_D24_UNORM_S8_UINT** for 24-bit float for depth and 8 bit stencil component
 
 Like with colour formats not all these depth formats are supported. So lets begin by writing a helper function to work out what's support or not.
@@ -19,7 +19,7 @@ Like with colour formats not all these depth formats are supported. So lets begi
 ```c++
 static VkFormat findSupportedFormat(const std::vector<VkFormat>& candidtes, VkImageTiling tiling, VkFormatFeatureFlags features) 
 {
-    for (VkFormat format : candidtes) 
+    for (VkFormat format : candidates) 
     {
         VkFormatProperties properties;
         vkGetPhysicalDeviceFormatProperties(physicalDevice, format, &properties);
@@ -38,9 +38,9 @@ static VkFormat findSupportedFormat(const std::vector<VkFormat>& candidtes, VkIm
 }
 ```
 
-At a basic level this function loops through the vector **candidtes** and check to see if it support the either **VK_IMAGE_TILING_LINEAR** or **VK_IMAGE_TILING_OPTIMAL** with the `VkFormatProperties properties;` It's possible for the condition to be non-zero when doing the **AND** operation so we do an `==` operation to make sure that is the thing we want.
+At a basic level this function loops through the vector **candidates** and check to see if it support the either **VK_IMAGE_TILING_LINEAR** or **VK_IMAGE_TILING_OPTIMAL** with the `VkFormatProperties properties;` It's possible for the condition to be non-zero when doing the **AND** operation so we do an `==` operation to make sure that is the thing we want.
 
-What are these features though? Well first you need to know what the tiling is this is discussed in [[Creating a VkImage for texture mapping]] but basicly linear is for images you want in major-row order to change later and optimial is implementation defined order.
+What are these features though? Well first you need to know what the tiling is this is discussed in [[Creating a VkImage for texture mapping]] but basically linear is for images you want in major-row order to change later and optimial is implementation defined order.
 - **properties.linearTilingFeatures** this tells us that format supports linear tiling.
 - **properties.optimalTilingFeatures** this tell us that format supports optimal tiling
 - **properties.bufferFeatures** Uses cases that are supported for buffers.

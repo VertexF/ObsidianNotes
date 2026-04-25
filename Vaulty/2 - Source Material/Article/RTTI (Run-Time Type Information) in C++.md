@@ -1,0 +1,101 @@
+# Reference https://www.geeksforgeeks.org/cpp/rtti-run-time-type-information-in-cpp/
+
+RTTI - means run time type information. This is needed to be able to tell what the object is at run time. This is used when you're working with polymorphism/inheritance.
+
+It's used when you have a parent and a base with virtual functions. The RTTI allows C++ to work out the object type based on if they are compatible based on the v-table.
+
+You have two different concepts linked to this **Upcasting** and **Downcasting**.
+
+1) **Upcasting** means you are converting a child class to a parent class. This is 100% safe to do because the child class has everything a parent class has.
+2) **Downcasting** means you are converting a parent class to a child class. This requires us to do a runtime check to make sure these are valid.
+
+The downcasting is the issue when it comes to RTTI. Look at the comments for what works and what doesn't everything here compiles
+
+```c++
+class Colour
+{
+public:
+	Colour(char character) : characterofcolour(character)
+	{
+	}
+
+	virtual void printColour()
+	{
+		std::cout << "This function doesn't colour" << std::endl;
+	}
+protected:
+	char characterofcolour;
+};
+
+class Red final: public Colour
+{
+public:
+	Red(char character) : Colour(character)
+	{
+	}
+	virtual ~Red() = default;
+
+	virtual void printColour() override
+	{
+		std::cout << "This is the colour red" << std::endl;
+		std::cout << "The caracter value :" << characterofcolour << std::endl;
+	}
+
+	void print1()
+	{
+		std::cout << "Wow!" << std::endl;
+	}
+};
+
+class Blue final : public Colour
+{
+public:
+	Blue(char character) : Colour(character)
+	{
+	}
+	virtual ~Blue() = default;
+
+	virtual void printColour() override
+	{
+		std::cout << "This is the colour blue" << std::endl;
+		std::cout << "The caracter value :" << characterofcolour << std::endl;
+	}
+};
+
+int main() 
+{
+	//This downcasting works
+	Colour* colourBlue = new Blue{'B'};
+
+	colourBlue->printColour();
+	Blue* blue = dynamic_cast<Blue*>(colourBlue);
+	if (blue)
+	{
+		blue->printColour();
+	}
+
+	//This does not work! Pay attention to the new Colour constructor.
+	Colour* colourBlueTwo = new Colour{ 'N' };
+
+	colourBlueTwo->printColour();
+	Blue* blueTwo = dynamic_cast<Blue*>(colourBlueTwo);
+	if (blueTwo)
+	{
+		blue->printColour();
+	}
+
+	//This downcasting works even though the classes are different.
+	Colour* colourRed = new Red{ 'R' };
+
+	colourRed->printColour();
+	Red* red = dynamic_cast<Red*>(colourRed);
+	if (red)
+	{
+		red->printColour();
+	}
+
+	return 0;
+}
+```
+
+The reason you would want to have does this ever is because you can have something like an array of class pointers in a flat arrary that are all the parents of children. Then you just emplace back or whatever, the children class and everything works out.

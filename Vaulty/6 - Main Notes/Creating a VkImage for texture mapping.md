@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan textures]]
 # Creating a VkImage for texture mapping
 
-We need to convert the staging buffer to an image, you can use the buffer raw but it's slower. If you add the pixel data to the image the pixels are called texels which is pixels with corrdinates.
+We need to convert the staging buffer to an image, you can use the buffer raw but it's slower. If you add the pixel data to the image the pixels are called texels which is pixels with coordinates.
 
 So lets get started
 ```c++

@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan graphic pipeline]]
 # Setting up the input assembly
 
-The input assembly is how the vulkan should handle the vertices with a vertex buffer. You have the these enum types to interpret vertices
+The input assembly is how the vulkan should handle the vertices with a vertex buffer, you have to have this even if you don't use a vertex buffer. You have the these enum types to interpret vertices
 - **VK_PRIMITIVE_TOPOLOGY_POINT_LIST** - points from the vertices
 - **VK_PRIMITIVE_TOPOLOGY_LINE_LIST** - line from every 2 vertices without reuse
 - **VK_PRIMITIVE_TOPOLOGY_LINE_STRIP** - Basically a big continous line has reuse
@@ -20,7 +20,7 @@ inputAssembly.primitiveRestartEnable = VK_FALSE;
 
 Normally you have a vertex buffer and index buffer that describes vertices in sequence order. However, you can just an element buffer and you specify the indices yourself. Doing this can help with vertex optimisation reuse.
 
-If **.primitiveRestartEnable** is set to VK_TRUE, when using any of the `_STRIP` topologies, you can specify in the buffers special breaks for when you need to break the geometry with the indices `0xFFFF` and `0xFFFFFFFF` 
+If **.primitiveRestartEnable** is set to VK_TRUE, when using any of the `_STRIP` topologies, you can specify in the buffers special breaks for when you need to break the geometry with the indices `0xFFFF` and `0xFFFFFFFF`. There is a performance cost to doing this.
 # References
 ##### Main Notes
 [[Setting up the vertex inputs]]

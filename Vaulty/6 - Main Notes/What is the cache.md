@@ -17,7 +17,7 @@ void addNoSIMD(uint32_t count, uint32_t *input)
 }
 ```
 
-There are many other things that can be done to improve to improve how many adds you can do per cycle. You have to consider load and stores when it comes to algorithm. A load is when you get something from memory and a store is when you put something in memory.
+There are many other things that can be done to improve how many adds you can do per cycle. You have to consider load and stores when it comes to algorithm. A load is when you get something from memory and a store is when you put something in memory.
 
 If for example the value **input[0]** in a **ADD A, input[0]** isn't in the register to do the addition, we have to wait for that to happen first. This is another dependency when we do that operation on the load. This is what caching is concerned with.
 

@@ -56,36 +56,12 @@
             }
           },
           {
-            "id": "74fad28a9d445616",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Preparing the texture image.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Preparing the texture image"
-            }
-          },
-          {
             "id": "7bafbc35edfc65e1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Process state.md",
+                "file": "1 - Rough Notes/Casey Q&A 5.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +76,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Process state"
+              "title": "Casey Q&A 5"
+            }
+          },
+          {
+            "id": "5e7d7f6a5845d48e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Article/RTTI (Run-Time Type Information) in C++.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "RTTI (Run-Time Type Information) in C++"
             }
           },
           {
@@ -257,8 +257,19 @@
               "icon": "lucide-list",
               "title": "Outline of Decoding Multiple Instructions and Suffixes"
             }
+          },
+          {
+            "id": "a00aef1a4d3721fc",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -277,33 +288,33 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "74fad28a9d445616",
+  "active": "7bafbc35edfc65e1",
   "lastOpenFiles": [
-    "6 - Main Notes/Setting up the command buffers.md",
+    "1 - Rough Notes/Casey Q&A 4.md",
+    "1 - Rough Notes/Casey Q&A 5.md",
+    "1 - Rough Notes/Casey Q&A 6.md",
     "6 - Main Notes/The instruction cache and performance.md",
-    "6 - Main Notes/Vulkan 1.0 descriptor set model.md",
-    "6 - Main Notes/What is bindless.md",
-    "6 - Main Notes/Updating a bindless descriptor set.md",
-    "6 - Main Notes/Vulkan Layers aren't extensions.md",
-    "6 - Main Notes/What does IPC or ILP mean.md",
-    "6 - Main Notes/What are validation layers.md",
-    "6 - Main Notes/Why study at all.md",
-    "6 - Main Notes/Dealing with VK_ERROR_OUT_OF_DATE not being supported.md",
-    "6 - Main Notes/Dangling pointer with locally created arrays.md",
-    "6 - Main Notes/Customising validation layers externally.md",
-    "6 - Main Notes/How to use an indexed indirect draw call.md",
-    "6 - Main Notes/Creation of the shader module.md",
-    "6 - Main Notes/Loading an image file.md",
-    "6 - Main Notes/Major features that got introduces in C++17.md",
-    "6 - Main Notes/Setting up and running the vkCmdDraw command.md",
-    "6 - Main Notes/Setting up the vertex attributes descriptions.md",
-    "6 - Main Notes/Setting depth buffer attachments.md",
-    "6 - Main Notes/What is a index buffer.md",
-    "6 - Main Notes/Setting up extensions.md",
+    "4 - Indexes/performance.md",
     "6 - Main Notes/Introduction to multithreading.md",
+    "6 - Main Notes/What is the cache.md",
+    "6 - Main Notes/Solving for serial dependencies with SIMD.md",
+    "6 - Main Notes/How to use SIMD with a summation loop.md",
+    "6 - Main Notes/SIMD bit-width.md",
+    "6 - Main Notes/Introduction to SIMD.md",
+    "6 - Main Notes/After thoughts on IPC for a rolling sum.md",
+    "6 - Main Notes/Solving the serial dependency problem.md",
+    "6 - Main Notes/The cost of loop over head.md",
+    "6 - Main Notes/What does IPC or ILP mean.md",
+    "6 - Main Notes/Cleaning up a vulkan logical device and queues.md",
+    "6 - Main Notes/PACER - Analogous information.md",
+    "6 - Main Notes/Updating a bindless descriptor set.md",
+    "6 - Main Notes/Creating a bindless descriptor set layout.md",
     "6 - Main Notes/Creating the bindless descriptor pool.md",
-    "6 - Main Notes/Memory layout - The stack.md",
-    "6 - Main Notes/Setting up the synchronisation objects.md",
-    "2 - Source Material/Books/The Abstraction - The Process.md"
+    "6 - Main Notes/Enabling bindless textures.md",
+    "6 - Main Notes/What is bindless.md",
+    "6 - Main Notes/What is Buffer Device Address (BDA).md",
+    "6 - Main Notes/Creating the vertex buffer with staging buffers.md",
+    "6 - Main Notes/Performance Awareness Overview.md",
+    "6 - Main Notes/Creating descriptor sets.md"
   ]
 }

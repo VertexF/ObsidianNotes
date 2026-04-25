@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan buffer]] [[buffer device address]]
 # Creating a BDA buffer
 
-The first time is to make sure the VMA knows how to allocate buffer with the Buffer Device Address set up with an extra flag in the creation struct of the creation struct.
+Firstly you need to make sure the VMA knows how to allocate buffer with the Buffer Device Address set up with an extra flag in the creation struct of the creation struct.
 
 ```c++
 VmaAllocatorCreateInfo allocatorInfo{};

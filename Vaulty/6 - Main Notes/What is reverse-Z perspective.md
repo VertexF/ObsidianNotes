@@ -19,7 +19,7 @@ You can see for each depth value we lose tonne of values near the vertical asymp
 
 ![[reverse_Z_depth.png]]
 
-The depth values increase a 0 very quickly but this is where the line is levelling out to a constant value at the far plane. This massively improves the precision within the depth buffer. Espcially if you use 32-bit floats instead of 24 byte ints. This is called reverse-Z perspective!
+The depth values increase a 0 very quickly but this is where the line is levelling out to a constant value at the far plane. This massively improves the precision within the depth buffer. Especially if you use 32-bit floats instead of 24 byte ints. This is called reverse-Z perspective!
 # References
 ##### Main Notes
 [[Setting up reverse perspective for your depth buffer]]

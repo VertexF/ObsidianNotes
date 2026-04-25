@@ -5,7 +5,6 @@ Tags: [[vulkan]] [[vulkan descriptors]] [[vulkan textures]]
 
 Now this is a little interesting, because with bindless we can update thing after they are bound now we have a decision to make **WHEN** do you update textures with a **vkUpdateDescriptorSets**. Well if you're interested in data oriented design we have a optimisation you can make to update thing in bulk with [[Updating things in bulk]]. The idea here is we build a queue of textures that need to be updating and once they have been dealt with we remove them from the queue.
 
-
 ```c++
 //Load textures in texture here ^^
 if (gpu.bindlessSupported)
