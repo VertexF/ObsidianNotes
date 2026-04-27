@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Rough Notes/Casey Q&A 5.md",
+                "file": "2 - Source Material/Article/Yet another blog explaining Vulkan synchronization.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Casey Q&A 5"
+              "title": "Yet another blog explaining Vulkan synchronization"
             }
           },
           {
@@ -290,8 +290,14 @@
   },
   "active": "7bafbc35edfc65e1",
   "lastOpenFiles": [
-    "1 - Rough Notes/Casey Q&A 4.md",
+    "2 - Source Material/Stream lessons.md",
+    "2 - Source Material/Article/Yet another blog explaining Vulkan synchronization.md",
+    "6 - Main Notes/Acquiring an image from the swapchain.md",
+    "2 - Source Material/Video/Instruction Decoding on the 8086.md",
+    "2 - Source Material/Article/RTTI (Run-Time Type Information) in C++.md",
+    "vulkan-good-barrier-1024x771.Bl25au61.jpg",
     "1 - Rough Notes/Casey Q&A 5.md",
+    "1 - Rough Notes/Casey Q&A 4.md",
     "1 - Rough Notes/Casey Q&A 6.md",
     "6 - Main Notes/The instruction cache and performance.md",
     "4 - Indexes/performance.md",
@@ -310,11 +316,6 @@
     "6 - Main Notes/Updating a bindless descriptor set.md",
     "6 - Main Notes/Creating a bindless descriptor set layout.md",
     "6 - Main Notes/Creating the bindless descriptor pool.md",
-    "6 - Main Notes/Enabling bindless textures.md",
-    "6 - Main Notes/What is bindless.md",
-    "6 - Main Notes/What is Buffer Device Address (BDA).md",
-    "6 - Main Notes/Creating the vertex buffer with staging buffers.md",
-    "6 - Main Notes/Performance Awareness Overview.md",
-    "6 - Main Notes/Creating descriptor sets.md"
+    "6 - Main Notes/Enabling bindless textures.md"
   ]
 }
