@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "453ded4ea6538736",
+    "id": "ccb365170235b6a5",
     "type": "split",
     "children": [
       {
-        "id": "862ea63ddd55268e",
+        "id": "5a5b9bc4cc7713ee",
         "type": "tabs",
         "children": [
           {
-            "id": "ac0105d97f9abb82",
+            "id": "0a1402c2dc848937",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Video/Instruction Decoding on the 8086.md",
+                "file": "6 - Main Notes/Vulkan command categories.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Instruction Decoding on the 8086"
+              "title": "Vulkan command categories"
             }
           },
           {
-            "id": "c96a96835e374e20",
+            "id": "5a24fcae430c0301",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Acquiring an image from the swapchain.md",
+                "file": "2 - Source Material/Article/Vulkan synchronisation explained.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Acquiring an image from the swapchain"
+              "title": "Vulkan synchronisation explained"
             }
           },
           {
-            "id": "7bafbc35edfc65e1",
+            "id": "c9fa766d4784361f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Article/Yet another blog explaining Vulkan synchronization.md",
+                "file": "6 - Main Notes/The difference between source and destination stage mask.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,73 +76,34 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Yet another blog explaining Vulkan synchronization"
+              "title": "The difference between source and destination stage mask"
             }
           },
           {
-            "id": "5e7d7f6a5845d48e",
+            "id": "7697ab4e9033da60",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/Article/RTTI (Run-Time Type Information) in C++.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "RTTI (Run-Time Type Information) in C++"
-            }
-          },
-          {
-            "id": "6779fe7b7c350b67",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Conditional jumps.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Conditional jumps"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "d50e6c0599562711",
+    "id": "cfecc064a57b4c1a",
     "type": "split",
     "children": [
       {
-        "id": "438b40af5fe65ce7",
+        "id": "79257a646b66ac41",
         "type": "tabs",
         "children": [
           {
-            "id": "7e4b5829b9be5ca4",
+            "id": "e8254106aac6f452",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -155,7 +116,7 @@
             }
           },
           {
-            "id": "858ce6a4fc20c651",
+            "id": "287dcedcaf2d150b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -172,7 +133,7 @@
             }
           },
           {
-            "id": "58a18bfc236858d6",
+            "id": "a00039cbfb537ecf",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -188,20 +149,20 @@
     "width": 300
   },
   "right": {
-    "id": "d0dd6afa9e582494",
+    "id": "baff90f8f3035f27",
     "type": "split",
     "children": [
       {
-        "id": "816383be6db45dd5",
+        "id": "83c46cfb85091c9f",
         "type": "tabs",
         "children": [
           {
-            "id": "f89eb6fdf6d10c03",
+            "id": "c6231cc1e30c9bee",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - Source Material/Video/Decoding Multiple Instructions and Suffixes.md",
+                "file": "4 - Indexes/vulkan.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -211,25 +172,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Decoding Multiple Instructions and Suffixes"
+              "title": "Backlinks for vulkan"
             }
           },
           {
-            "id": "c976c77bed0f4392",
+            "id": "07e529faeddb5f17",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2 - Source Material/Video/Decoding Multiple Instructions and Suffixes.md",
+                "file": "4 - Indexes/vulkan.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Decoding Multiple Instructions and Suffixes"
+              "title": "Outgoing links from vulkan"
             }
           },
           {
-            "id": "4aa1be59a55113cb",
+            "id": "6e7951dcf35bd260",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -244,32 +205,21 @@
             }
           },
           {
-            "id": "9d368b809568febb",
+            "id": "5b6af8e60bd9c541",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - Source Material/Video/Decoding Multiple Instructions and Suffixes.md",
+                "file": "4 - Indexes/vulkan.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Decoding Multiple Instructions and Suffixes"
-            }
-          },
-          {
-            "id": "a00aef1a4d3721fc",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "Outline of vulkan"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -288,34 +238,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7bafbc35edfc65e1",
+  "active": "0a1402c2dc848937",
   "lastOpenFiles": [
-    "2 - Source Material/Stream lessons.md",
+    "4 - Indexes/vulkan.md",
+    "6 - Main Notes/The pipeline stages.md",
+    "2 - Source Material/Article/Vulkan synchronisation explained.md",
+    "6 - Main Notes/Getting started with jolt physics.md",
+    "3 - Tags/jolt.md",
+    "command_pipeline_stages.png",
     "2 - Source Material/Article/Yet another blog explaining Vulkan synchronization.md",
-    "6 - Main Notes/Acquiring an image from the swapchain.md",
-    "2 - Source Material/Video/Instruction Decoding on the 8086.md",
-    "2 - Source Material/Article/RTTI (Run-Time Type Information) in C++.md",
-    "vulkan-good-barrier-1024x771.Bl25au61.jpg",
-    "1 - Rough Notes/Casey Q&A 5.md",
-    "1 - Rough Notes/Casey Q&A 4.md",
-    "1 - Rough Notes/Casey Q&A 6.md",
-    "6 - Main Notes/The instruction cache and performance.md",
-    "4 - Indexes/performance.md",
-    "6 - Main Notes/Introduction to multithreading.md",
-    "6 - Main Notes/What is the cache.md",
-    "6 - Main Notes/Solving for serial dependencies with SIMD.md",
-    "6 - Main Notes/How to use SIMD with a summation loop.md",
-    "6 - Main Notes/SIMD bit-width.md",
-    "6 - Main Notes/Introduction to SIMD.md",
-    "6 - Main Notes/After thoughts on IPC for a rolling sum.md",
-    "6 - Main Notes/Solving the serial dependency problem.md",
-    "6 - Main Notes/The cost of loop over head.md",
-    "6 - Main Notes/What does IPC or ILP mean.md",
-    "6 - Main Notes/Cleaning up a vulkan logical device and queues.md",
-    "6 - Main Notes/PACER - Analogous information.md",
-    "6 - Main Notes/Updating a bindless descriptor set.md",
-    "6 - Main Notes/Creating a bindless descriptor set layout.md",
-    "6 - Main Notes/Creating the bindless descriptor pool.md",
-    "6 - Main Notes/Enabling bindless textures.md"
+    "6 - Main Notes/The difference between source and destination stage mask.md",
+    "6 - Main Notes/How to make GPU memory visible and available.md",
+    "6 - Main Notes/What are the access masks.md",
+    "6 - Main Notes/Vulkan command categories.md",
+    "6 - Main Notes/Synchronisation events aka split barriers.md",
+    "6 - Main Notes/Building a execution dependency chain.md",
+    "6 - Main Notes/Making non-global pipeline barriers.md",
+    "6 - Main Notes/Execution pipeline barrier example.md",
+    "6 - Main Notes/In-queue execution pipeline barriers.md",
+    "6 - Main Notes/What are pipeline barriers.md",
+    "6 - Main Notes/What are wait idle operations.md",
+    "6 - Main Notes/Vulkan command overlap.md",
+    "6 - Main Notes/Basic queue synchronisation.md",
+    "6 - Main Notes/Implicit synchronisation guarantees.md",
+    "2 - Source Material/Video/Vulkan Lecture Synchronization - Understand Fences, Semaphores, Barriers.md",
+    "6 - Main Notes/What are fences.md",
+    "top_of_pipe_and_bottom_of_pipe_barrier.png",
+    "6 - Main Notes/The theory  of synchronising a frame.md",
+    "6 - Main Notes/2026-04-27.md",
+    "6 - Main Notes/What are semaphores.md",
+    "2 - Source Material/Video/Vulkanised 2023 Tutorial An Introduction to Vulkan.md"
   ]
 }

@@ -12,7 +12,7 @@ depthStencil.depthTestEnable = VK_TRUE;
 depthStencil.depthWriteEnable = VK_TRUE;
 ```
 
-**.depthTestEnable** tells vulkan that new fragments should be discarded if they are less than/greater or equal to depending on the perspsective direction. The **.depthWriteEnable** is enabled to write the fragment to the depth buffer if the fragment passes.
+**.depthTestEnable** tells vulkan that new fragments should be discarded if they are less than/greater or equal to depending on the perspective direction. The **.depthWriteEnable** is enabled to write the fragment to the depth buffer if the fragment passes.
 
 ```c++
 depthStencil.depthCompareOp = VK_COMPARE_OP_LESS;

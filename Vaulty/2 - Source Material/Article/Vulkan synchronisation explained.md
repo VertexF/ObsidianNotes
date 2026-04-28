@@ -1,12 +1,63 @@
-# Reference https://themaister.net/blog/2019/08/14/yet-another-blog-explaining-vulkan-synchronization/
+# Reference 
+https://themaister.net/blog/2019/08/14/yet-another-blog-explaining-vulkan-synchronization/
+https://www.youtube.com/watch?v=GiKbGWI4M-Y
+https://gpuopen.com/learn/vulkan-barriers-explained/
+https://registry.khronos.org/vulkan/specs/latest/html/vkspec.html#synchronization
 
 Synchronisation is hard. If you want to debug synchronisation in vulkan you can turn it on in your Vulkan Configuration tool. This will allow validation layers to catch mistakes you're making.
-##### Pipeline barriers
-The whole point of these is to top overlapping of resources and/or memory from action commands. The memory exists at pipeline stage, meaning we set up a barrier between action commands on these stages.
+
+When we are talk about synchronisation we are concerned with **Actions commands** and what order they execute on the GPU. We use **Synchronisation commands** to do that. **State commands** are not effected by by synchronisation, as they change the state of the command buffer itself while recording, binding and setting up dynamic parts of the pipeline.  
+
+Here is a a short list of the different commands and there category.
+
+>**Action commands**
+ Graphics Pipeline Commands:  
+>>vkCmdDraw
+>>vkCmdIndexed
+>>vkCmdIndirect
+>>vkCmdDrawMeshTasksNV
+>>vkCmdClearAttachments
+ Compute Pipeline Commands:
+>>vkCmdDispatch
+>>vkCmdDispatchIndirect
+>>Ray Tracing Pipeline Commands:
+>>vkCmdTraceRaysKHR
+>>vkCmdTraceRaysIndirectKHR
+ Transfer Commands:
+>>vkCmdCopyBuffer
+>>vkCmdCopyImage
+>>vkCmdCopyBufferToImage
+>>vkCmdCopyImageToBuffer
+>>vkCmdCopyAccelerationStructureKHR
+>>vkCmdBlitImage
+>>vkCmdResolveImage
+>>vkCmdClearColorImage
+
+Each of the subcategories in this list use different queues to get the work done. 
+
+>**Sychronisation commands**
+>>vkCmdPipelineBarrier/2
+>>vkCmdSetEvents/2
+>>vkCmdWaitEvents/2
+>>vkCmdBeginRenderPass/2
+>>vkCmdEndRenderPass/2
+
+>**State commands**
+ Bind Commands:
+>>vkCmdBindDescriptorSets
+>>vkCmdBindPipeline
+>>vkCmdBindVertexBuffers
+>>vkCmdBindIndexBuffer
+ Other Commands:
+>>vkCmdPushConstants
+>>vkCmdPushDescriptorSetKHR
+>>vkCmdSetScissor
+>>vkCmdSetViewport
+>>vkCmdSetDepthBias
 ##### Implicit Synchronisation Guarantees
-When talking about synchronisation between commands it's important to note that vulkan has implicit synchronisation guarantees. This means that command recorded to a command buffer AND submission to a `vkQueueSubmit` ordering matters.
+When talking about synchronisation between commands it's important to note that vulkan has implicit synchronisation guarantees. This means that command recorded to a command buffer AND submission to a `vkQueueSubmit`ordering matters.
 ###### The Vulkan queue
-Synchronsation of queues in vulkan is basically the same as 1 queue. So a queue is just an abstraction of vulkan blasting through commands. 
+Synchronisation of queues in vulkan is basically the same as 1 queue. A queue is just an abstraction of vulkan blasting through commands. 
 ##### Command buffer misconceptions
 All commands are global to a queue so synchronisation to anything within that queue is global to all commands.
 ##### Commands overlap
@@ -14,24 +65,67 @@ When you're recording command to a command buffer, the order is important and pr
 
 This means that the actual execution of the commands is out of order, because starting a command isn't the same an executed command.
 
-The graphics driver may overlap command like vkDraw and vkDispatch action commands. This is were you would might need a barrier if the vkDispatch is dependent on vkDraw, but remember all action commands will finish executing at a unspecified time meaning that you'll like need more memory barriers.
+The graphics driver may overlap command like vkDraw and vkDispatch action commands. This is were you would might need a barrier if the vkDispatch is dependent on vkDraw, but remember all action commands will finish executing at a unspecified time meaning that you'll like need memory barriers anyway.
 
-Framebuffer operations inside a render pass happen in order which is an expection.
+Framebuffer operations inside a render pass happen in order which is an exception.
+##### Wait idle operations
+These are the heaviest of all synchronisation method, wait idle operations. This starts like anything else with a **vkQueueSubmit** command then the device starts working through the batch of commands and uses an appropriate queue to handle these commands. Once the commands have finished the queue goes to an **idle** state.
+
+We can wait on a queue going idle with 
+```c++
+VkQueue queue;
+vkQueueWaitIdle(queue);
+```
+
+You can also wait on the entire device with a similar command, but now you're waiting for all work to finish on the device before moving on.
+
+```C++
+VkDevice device;
+vkDeviceWaitIdle(device);
+```
+
+These are used to wait on the host side for device work to finish. 
+##### Fence operations
+Fences are similar to wait idle operations be allow finer control over how we are waiting. This starts like anything else with a **vkQueueSubmit** command then the device starts working through the batch of commands and uses an appropriate queue to handle these commands.
+
+Fences are signalled after a batch of work has finished working. Meaning that it's important to consider the batches you're sending the the **vkQueueSubmit**. So if we have a queue with more than 1 batch, the fence signal state is dependent **MOSTLY** on those commands in that batch.
+
+The typically case is if you have **cmd1**, **cmd2**, **cmd3** in a batch and **cmdx** which isn't in the batch that runs **AFTER** the batch of commands. Even if **cmdx** isn't finished the fence will be signalled if **cmd1**, **cmd2**, **cmd3**. 
+
+It's important to note there is an exception to this fence batch rule, if you have a command that isn't in the queue but runs before the **BEFORE** the batch **AND** the command takes longer than all the commands in the queue. The fence will be signalled when the slow command has finished.
+
+This is what the spec says about this *`Fence signal operations that are degined by vkQueueSubmit additionally include the first synchronisation scrope all commands that occur earlier in submission order.`* When we talk about **first synchronisation scope** we are talking about all the commands before the fence in the queue. The only thing in the **second synchronisation scope** is the fence operation itself and builds up the **execution dependency**.
+
+The two scopes build up an **execution dependency** between command batches. Which basically states that the first scope most finish before the second. 
+
+The scopes aren't exclusive to fences. First and second synchronisation scope and execution dependencies are how vulkan works with everything else.
+##### Semaphore
+A semaphore is used to synchronise things between batches of commands. So if I say have three commands in a batch I can set up a semaphore before and after these commands making sure they are synchronised. 
+
+The difference between a **fence** and a **semaphore** is where the waiting for a signal can happen. A semaphore can be waited on by another batch of work, that is work recorded into a command and submitted to a queue. So if you have a batch of draw command for example, that batch can wait on a semaphore before executing after submitted to **vkQueueSubmit**. As we are waiting for a batch of commands after a **vkQueueSubmit** we are waiting on the device and not the the host. A fence does the same thing but waits on the **host** side not on the device. So with a fence we are waiting for a signal to arrive after the batch of work has been completed on the device.
+
+A perfect time to use a semaphore is when you have a batch of commands in queues that need to be executed after each other.
+
+![[binarySemaphores.png]]
+
+In this example queue 1 signals a semaphore queue 2 waits on.
+##### Pipeline barriers
+The whole point of these is to stop overlapping of resources and/or memory from action commands. You generally have two types of pipeline barriers, memory and execution. The difference between is that execution **ONLY** cares about the order of action commands in a queue, memory cares about both memory AND execution order.  
 ###### Pipeline Stages
 Action command which are everything other than command buffer state change, synchronisation and indirect commands consist of multiple operations, which go pipeline stages. The pipeline stages that get executed to depend on the action command and the state of the command buffer.
 
-In the pipeline staged themselves aren't complete and strictly followed by the actual work. This is because some stages can be merged and in the `VK_PIPELINE_STAGE` some stages are left out.
+In the pipeline stage they themselves aren't strictly followed by the actual work. This is because some stages can be merged and in the`VK_PIPELINE_STAGE` some stages are left out. The graphics driver will do this and it's not something you have to worry about (in theory).
 
-You also have three special stages that have special access OR combinding stages.
+You also have three special stages that have special access OR combining stages.
 1) `VK_PIPELINE_STAGE_HOST_BIT`
 2) `VK_PIPELINE_STAGE_ALL_COMMANDS_BIT`
 3) `VK_PIPELINE_STAGE_ALL_GRAPHICS_BIT`
 
-A command you submit goes from `VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT` to `VK_PIPELINE_STAGE_BOTTOM_OF_PIPE_BIT` every single one. So we are adding synchronisation to the pipeline line stages for all commands.
+A command you submit goes from `VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT` or `VK_PIPELINE_STAGE_NONE` (**synch2**) to`VK_PIPELINE_STAGE_BOTTOM_OF_PIPE_BIT` or `VK_PIPELINE_STAGE_ALL_COMMANDS_BIT` (**synch2**). So we are adding synchronisation to the pipeline line stages for all commands to order the commands you care about
 ##### The mysterious TOP_OF_PIPE_BIT and BOTTOM_OF_PIPE_BIT stages. 
-`VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT` is actually were the command gets parsed and `VK_PIPELINE_STAGE_BOTTOM_OF_PIPE_BIT` is were the comamnd returns. In **synchronisation2** `TOP_OF_PIPE_BIT` is `NONE` and `BOTTOM_OF_PIPE_BIT` and `ALL_COMMANDS`.
+`VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT` is actually were the command gets parsed and `VK_PIPELINE_STAGE_BOTTOM_OF_PIPE_BIT` is were the command returns. In **synchronisation2** `TOP_OF_PIPE_BIT` is `NONE` and `BOTTOM_OF_PIPE_BIT` and `ALL_COMMANDS`.
 ##### In-queue execution barriers
-A execution barrier is a subset of memory barriers. An execution barrier is a pipeline barrier.
+An execution barrier is a pipeline barrier. A execution barrier is a subset of memory barriers.
 
 ```c++
 void vkCmdPipelineBarrier(
@@ -47,7 +141,7 @@ uint32_t imageMemoryBarrierCount,
 const VkImageMemoryBarrier*pImageMemoryBarriers);
 ```
 
-If we ignore the all the memory barrier flags in the function above you just have the **srcStageMask** and the **dstStageMask**. 
+If we ignore the all the memory barrier flags in the function above you just have the **srcStageMask** and the **dstStageMask**. Which are only interested in execution order.
 
 The **srcStageMask** and the **dstStageMask** are at the heart of synchronisation, in the command stream we have a before **srcStageMask** and **dstStageMask** for after.
 ##### The difference between the srcStageMask and dstStageMask
@@ -209,5 +303,4 @@ Here you can see 3 different types of barriers you can set up. Image and buffer 
 This will increase performance as your setting up hard synchronisation barriers for every time of memory that doesn't require it.
 
 It's important to note that render passes are just a very round about way for image memory barriers. As when you eventually finish working with render passes they output a VkImageView inside a VkFramebuffer that goes to the VkSwapchain.
-##### Swapchain synchronisation
-So when you aquire an image from swapchain you have undefined data in that VkImage. So you have to worry about transition the data back and forth between the acquired data. You just overwrite the image data anyway with the OUTPUT. 
+

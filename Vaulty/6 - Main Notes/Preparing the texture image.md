@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan textures]]
 # Preparing the texture image
 
-I'm gonna show the complete **createTextureImage** function to dementrate what needs to happen from beginning to end. I've written this notes in comments because it give maximal context to what's going on.
+I'm gonna show the complete **createTextureImage** function to demonstrate what needs to happen from beginning to end. I've written this notes in comments because it give maximal context to what's going on.
 ```c++
 static void createTextureImage(const char* path, VkImage& textureImage, VkDeviceMemory& textureImageMemory)
 {
@@ -52,7 +52,7 @@ static void createTextureImage(const char* path, VkImage& textureImage, VkDevice
 }
 ```
 
-Note this code be improved a lot. We are creating command buffers and waiting for the queue to go idle before we set up another one and repeat. You can flush and set up command buffers in away that everythings in 1 queue and submitted together.
+Note this code be improved a lot. We are creating command buffers and waiting for the queue to go idle before we set up another one and repeat. You can flush and set up command buffers in a way that everything's in 1 queue and submitted together.
 
 You'll also want to clean up the VkImage and VkDeviceMemory
 

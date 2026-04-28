@@ -18,7 +18,7 @@ if (vkCreatePipelineLayout(device, &pipelineLayoutCreateInfo, nullptr, &pipeline
 }
 ```
 
-This is extremely similar to [[Setting up an empty pipeline layout]] but we are just adding in our descriptor set layout we created eariler.
+This is extremely similar to [[Setting up an empty pipeline layout]] but we are just adding in our descriptor set layout we created earlier.
 # References
 ##### Main Notes
 [[What are descriptors]]

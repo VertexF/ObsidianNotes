@@ -62,7 +62,7 @@ The **currentFrame** should be set to 0 and index into command buffers, semaphor
 ##### Main Notes
 [[Setting up the command pool]]
 [[What are command buffers]]
-[[What is synchronisation in vulkan]]
+[[The theory  of synchronising a frame]]
 [[What are semaphores]]
 [[What are fences]]
 #### Source Notes

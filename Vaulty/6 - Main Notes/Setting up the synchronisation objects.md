@@ -50,7 +50,7 @@ for (uint32_t i = 0; i < maxFramesInFlight; ++i)
 ```
 # References
 ##### Main Notes
-[[What is synchronisation in vulkan]]
+[[The theory  of synchronising a frame]]
 [[What are semaphores]]
 [[What are fences]]
 [[Handling frames in flight]]
