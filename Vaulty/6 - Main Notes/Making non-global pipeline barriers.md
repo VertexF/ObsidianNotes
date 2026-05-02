@@ -1,6 +1,6 @@
 2026-04-27 13:57
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # Making non-global pipeline barriers
 
 When using synchronisation2 you can use `VkDependencyInfo` which restrict what the memory barrier/execution barrier operates under.

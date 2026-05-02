@@ -1,6 +1,6 @@
 2026-04-27 13:37
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # The difference between source and destination stage mask
 
 VkPipelineStageFlags **srcStageMask** and **dstStageMask** can be thought of one being the "consumer" stage (**srcStageMask**) and "producer" stage (**dstStageMask**). By specifying the source and target stages you tell the driver what operations need to finish before the transition can execute (the **srcStageMask**) and what can't have started yet (the **dstStageMask**).

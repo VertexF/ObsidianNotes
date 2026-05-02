@@ -1,6 +1,6 @@
 2025-11-07 13:28
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # The theory of synchronising a frame
 
 Synchronisation is hard. If you want to debug synchronisation in vulkan you can turn it on in your Vulkan Configuration tool. This will allow validation layers to catch mistakes you're making.

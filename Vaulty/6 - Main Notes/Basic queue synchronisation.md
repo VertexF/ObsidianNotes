@@ -1,6 +1,6 @@
 2026-04-27 12:20
 Status: #baby 
-Tags: [[vulkan]] [[vulkan queue]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan queue]] [[vulkan synchronisation]]
 # Basic queue synchronisation
 
 ###### The Vulkan queue

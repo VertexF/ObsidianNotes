@@ -1,6 +1,6 @@
 2026-04-27 12:25
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # What are wait idle operations
 
 These are the heaviest of all synchronisation method, wait idle operations. This starts like anything else with a **vkQueueSubmit** command then the device starts working through the batch of commands and uses an appropriate queue to handle these commands. Once the commands have finished the queue goes to an **idle** state.

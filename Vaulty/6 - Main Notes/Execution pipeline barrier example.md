@@ -1,6 +1,6 @@
 2026-04-27 13:50
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # Execution pipeline barrier example
 
 Here is an example of adding a memory barrier. Note that we are **NOT** looping through **vkCmdDispatch**

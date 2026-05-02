@@ -1,6 +1,6 @@
 2025-11-07 13:28
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # What is synchronisation in vulkan
 
 When you actually want to render a frame you need to do these things:

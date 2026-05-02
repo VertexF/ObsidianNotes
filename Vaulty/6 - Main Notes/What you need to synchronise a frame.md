@@ -1,6 +1,6 @@
 2025-11-07 13:48
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # What you need to synchronise a frame
 
 To synchronise a frame you'll need a fence to pause the host, to make sure that we are rendering and presenting has been completed. Remember we can't rerecord command buffers this would overwrite the command buffer while it's being used.

@@ -1,6 +1,6 @@
 2026-04-27 13:17
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # In-queue execution pipeline barriers
 
 An execution barrier is a pipeline barrier. A execution barrier is a subset of memory barriers.

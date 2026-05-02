@@ -1,6 +1,6 @@
 2025-11-07 14:03
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # Using a fence to synchronise the previous frame
 
 At the beginning of the drawing routine you'll need to wait for the previous frame. You do this with the **vkWaitForFence**

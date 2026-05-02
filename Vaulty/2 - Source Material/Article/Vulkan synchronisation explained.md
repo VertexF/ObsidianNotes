@@ -252,6 +252,16 @@ With these barriers you can build up a dependency chain, which is done by connec
 ```
 
 In this example, 4 most wait for 1, 2 and 6, 7 wait for 4 to finish. Which is because the transfer is a dummy operation in this example we are achieving the result of ordering the commands by this memory barrier.
+###### What is the EARLY_FRAGMENT_TESTS
+This is were the early depth/stencil tests happen. This isn't used that much when creating pipeline stages apart from when you need to do something with frame buffer self-dependencies with something like GL_ARB_texture_barrier. Interestingly, this is were the render pass and dynamic rendering perform depth/stencil do the loadOps. It may also discard fragment in it's pre-sample testing.
+###### What is the LATE_FRAGMENT_TESTS
+This is were the late depth/stencil tests happen. Interestingly, this is were the render pass and dynamic rendering perform depth/stencil do the storeOps. It may also discard fragment in it's pre-sample testing.
+##### Helpful tip on fragment test stages
+If you're waiting for the depth buffer for to have finished what do you want to wait for? If you need to access the depth/stencil buffers use `LATE_FRAGMENT_TESTS` as that will actually have written out the data in it's storeOp. This should be for the **srcStageMake**
+
+For the destination stage mask **dstStageMask** it's best to mask sure that the next command waits on both early and late so EARLY_FRAGMENT_TESTS | LATE_FRAGMENT_TESTS. This make absoluately sure that memory from the previous command has written out to the better before the next command continues forward.
+##### What is COLOR_ATTACH_OUTPUT
+This is were the loadOp, storeOp and MSAA resolve takes place, basically literally anything to do with the colour attachment. If you need a command to output to have written out colour you would want to use **srcStageMask** `COLOR_ATTACH_OUTPUT` and if the next command needs to wait to read from the previous commands output you'll want to set the **dstStageMask** to `COLOR_ATTACH_OUTPUT`.
 ##### Access mask
 These are used for memory barriers. Above here we have actually only been talking about execution barriers which is just concerned with the execution order of action commands. Memory barriers are also concerned with moving memory we need from the graphics cards L2 memory to L1 memory.
 
@@ -303,4 +313,72 @@ Here you can see 3 different types of barriers you can set up. Image and buffer 
 This will increase performance as your setting up hard synchronisation barriers for every time of memory that doesn't require it.
 
 It's important to note that render passes are just a very round about way for image memory barriers. As when you eventually finish working with render passes they output a VkImageView inside a VkFramebuffer that goes to the VkSwapchain.
+##### No TOP_OF_PIPE or BOTTOM_OF_PIPE with memory barrier.
+Doing this is completely meaningless. The `TOP_OF_PIPE/BOTTOM_OF_PIPE` are only for execution barriers which are strictly different than memory barriers. The reason is that these stages perform no accesses to memory when they are completed.
+##### Split memory barriers
+This concept is very similar to [[Building a execution dependency chain]] as we can also do the memory transfer over two different memory barriers. By making memory **available** in one memory barrier and make memory **visible** in another memory barrier.
+
+If you're using dynamic rendering or render passes without subpass dependencies. When ordering your work in queues for a frame this is what you'll need to do for your colour attachments. With work in the middle running the shaders.
+
+Here is an example of what a split memory barrier looks like, for a situation were a computer shader is writing to an SSBO and we later read from it in another compute shader. 
+```c++
+vkCmdDispatch();//writes to an SSBO, VK_ACCESS_SHADER_WRITE_BIT
+
+vkCmdPipelineBarrier(srcStageMask = COMPUTE, dstStageMask = TRANSFER, srcAccessMask = SHADER_WRITE_BIT, dstAccessMask = 0)
+
+vkCmdPipelineBarrier(srcStageMask = TRANSFER, dstStageMask = COMPUTE, srcAccessMask = 0, dstAccessMask = SHADER_READ_BIT)
+
+vkCmdDispatch();//read from the same SSBO, VK_ACCESS_SHADER_READ_BIT
+```
+
+Note that the stage masks cannot be 0 and the access masks can be 0.
+##### VkImageMemoryBarrier
+Just to start apart according to this [blog](https://themaister.net/blog/2019/08/14/yet-another-blog-explaining-vulkan-synchronization/) VkImage**Buffer**Barrier aren't interesting and no GPU really cares about them.
+
+When you're working `VkImageMemoryBarrier` you have to change the image layout at some point. 
+
+```c++
+typedef struct VkImageMemoryBarrier {
+    VkStructureType sType;
+    const void* pNext;
+    VkAccessFlags srcAccessMask;
+    VkAccessFlags dstAccessMask;
+    VkImageLayout oldLayout; //Layout change here
+    VkImageLayout newLayout; //and here
+    uint32_t srcQueueFamilyIndex;
+    uint32_t dstQueueFamilyIndex;
+    VkImage image;
+    VkImageSubresourceRange subresourceRange;
+} VkImageMemoryBarrier;
+```
+
+What's interesting is that the **newLayout** and the **oldLayout** happens inbetween making the memory available and visibe. 
+
+The rules state that memory that this is read/write operation and because of that the image must be available before the transition takes place. After the transition the memory is layout transition the memory is made **available** again BUT not **visible**. This transition happens on the L2 cache so the actual transitioning process is on the L2.
+##### Implicit memory guarantees when waiting for a semaphore
+Signalling a semaphore makes all memory available, waiting for a semaphore make memory visible. This basically means if you're ordering your synchronisation with semaphores you wont need memory barriers as it does the transition for you. If you have a pair of signal/wait they operate as full memory barriers.
+
+For example, if you have one queue that is 1 writes to an SSBO in a compute shader and that data gets consummed in a UBO in a fragment shader in queue 2. You can set up semaphores between these queue if they are `QUEUE_FAMILY_CONCURRENT`
+
+Queue 1 would look like this
+
+```c++
+vkCmdDispatch();
+vkQueueSubmit(signal = mySemaphore);
+```
+
+Note here we don't need a pipeline barrier, signallng the semaphore wait for all commands and writes this dispatch memory to be made available before semaphore is actually signalled.
+
+Queue 2 would look like this
+
+```c++
+vkCmdBeginRenderPass(); /*OR*/ vkCmdBeginRendering();
+vkCmdDraw();
+vkCmdEndRenderPass();/*OR*/ vkCmdEndRendering();
+vkQueueSubmit(wait = mySemaphore, pDstWaitStageMask = FRAGMENT_SHADER);
+```
+
+When we wait for a semaphore, we specify wich stages should wait on this semaphore in our case the FRAGMENT_SHADER stage. The semaphore is takes care of moving the memory layout safely to what we need which would be UNIFORM_READ_BIT which is nice.
+##### Execution dependency chain with semaphore
+Semaphores bcan build up exection dependencies just like in this pipeline barrier example [[Execution pipeline barrier example]] and because of that we an also [[Building a execution dependency chain|build an execution dependency chain]] in our semaphores. This is done with the **pDstWaitStageMask** in the `vkQueueSubmit();` which blocks certain stages from executing.
 

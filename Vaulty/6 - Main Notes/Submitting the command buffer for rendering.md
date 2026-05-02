@@ -1,6 +1,6 @@
 2025-11-07 14:08
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # Submitting the command buffer for rendering
 
 Queue submission and synchronisation is configured with **VkSubmitInfo**. 

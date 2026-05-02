@@ -8,31 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0a1402c2dc848937",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Vulkan command categories.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Vulkan command categories"
-            }
-          },
-          {
-            "id": "5a24fcae430c0301",
+            "id": "c9fa766d4784361f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -56,12 +32,12 @@
             }
           },
           {
-            "id": "c9fa766d4784361f",
+            "id": "8b23e3ceef582479",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/The difference between source and destination stage mask.md",
+                "file": "2 - Source Material/Article/Vulkan synchronisation explained.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,20 +52,83 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "The difference between source and destination stage mask"
+              "title": "Vulkan synchronisation explained"
             }
           },
           {
-            "id": "7697ab4e9033da60",
+            "id": "e42f3cfd947ed518",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/What are fences.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "What are fences"
+            }
+          },
+          {
+            "id": "1a955e59939fb75d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Article/Drawing a triangle.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Drawing a triangle"
+            }
+          },
+          {
+            "id": "3e015769226f76ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Push constant life time.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Push constant life time"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -238,35 +277,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a1402c2dc848937",
+  "active": "e42f3cfd947ed518",
   "lastOpenFiles": [
     "4 - Indexes/vulkan.md",
-    "6 - Main Notes/The pipeline stages.md",
-    "2 - Source Material/Article/Vulkan synchronisation explained.md",
-    "6 - Main Notes/Getting started with jolt physics.md",
-    "3 - Tags/jolt.md",
-    "command_pipeline_stages.png",
-    "2 - Source Material/Article/Yet another blog explaining Vulkan synchronization.md",
-    "6 - Main Notes/The difference between source and destination stage mask.md",
-    "6 - Main Notes/How to make GPU memory visible and available.md",
-    "6 - Main Notes/What are the access masks.md",
-    "6 - Main Notes/Vulkan command categories.md",
-    "6 - Main Notes/Synchronisation events aka split barriers.md",
-    "6 - Main Notes/Building a execution dependency chain.md",
-    "6 - Main Notes/Making non-global pipeline barriers.md",
-    "6 - Main Notes/Execution pipeline barrier example.md",
-    "6 - Main Notes/In-queue execution pipeline barriers.md",
-    "6 - Main Notes/What are pipeline barriers.md",
     "6 - Main Notes/What are wait idle operations.md",
     "6 - Main Notes/Vulkan command overlap.md",
     "6 - Main Notes/Basic queue synchronisation.md",
     "6 - Main Notes/Implicit synchronisation guarantees.md",
-    "2 - Source Material/Video/Vulkan Lecture Synchronization - Understand Fences, Semaphores, Barriers.md",
-    "6 - Main Notes/What are fences.md",
-    "top_of_pipe_and_bottom_of_pipe_barrier.png",
-    "6 - Main Notes/The theory  of synchronising a frame.md",
-    "6 - Main Notes/2026-04-27.md",
+    "6 - Main Notes/Vulkan command categories.md",
+    "4 - Indexes/OS.md",
+    "6 - Main Notes/What is a process.md",
+    "6 - Main Notes/Process state.md",
+    "6 - Main Notes/Aligning your structs for better performances.md",
+    "6 - Main Notes/PACER system overview.md",
+    "6 - Main Notes/What are image views.md",
+    "6 - Main Notes/Connecting custom debug function to Vulkan.md",
+    "6 - Main Notes/What are pipeline barriers.md",
+    "2 - Source Material/Article/Vulkan synchronisation explained.md",
+    "6 - Main Notes/Split memory barriers.md",
+    "6 - Main Notes/How GPU memory works.md",
+    "6 - Main Notes/The pipeline stages.md",
+    "4 - Indexes/performance.md",
+    "6 - Main Notes/Push constant life time.md",
+    "2 - Source Material/Article/Drawing a triangle.md",
+    "6 - Main Notes/Instance and device level validation.md",
+    "6 - Main Notes/What are validation layers.md",
+    "6 - Main Notes/Vulkan Layers aren't extensions.md",
+    "6 - Main Notes/No TOP_OF_PIPE and BOTTOM_OF_PIPE access masks.md",
     "6 - Main Notes/What are semaphores.md",
-    "2 - Source Material/Video/Vulkanised 2023 Tutorial An Introduction to Vulkan.md"
+    "command_pipeline_stages.png",
+    "top_of_pipe_and_bottom_of_pipe_barrier.png"
   ]
 }

@@ -1,11 +1,11 @@
 2026-04-27 14:00
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # Synchronisation events aka split barriers
 
 With events you can have a barrier that overlap work. You can use **VkEvents** to split up a memory barrier. The idea here is that the command inbetween that can overlap with other command before or after the set of commands.
 
-For example if I have a `vkCmd1` and `vkCmd2` which have dependency on each other. However while `vkCmd2` waits for `vkCmd1` to finish, we could have `vkCmdA` and `vkCmdB` while while the pause is happening.
+For example if I have a `vkCmd1` and `vkCmd2` which have dependency on each other. However while `vkCmd2` waits for `vkCmd1` to finish, we could have `vkCmdA` and `vkCmdB` while the pause is happening.
 
 ```c++
 vkCmd1;

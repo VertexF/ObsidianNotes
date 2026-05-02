@@ -1,6 +1,6 @@
 2026-04-27 12:17
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # Implicit synchronisation guarantees
 
 When talking about synchronisation between commands it's important to note that vulkan has implicit synchronisation guarantees. This means that command recorded to a command buffer AND submission to a `vkQueueSubmit`ordering matters.

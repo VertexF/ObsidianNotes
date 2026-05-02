@@ -1,6 +1,6 @@
 2026-04-27 13:08
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # The pipeline stages
 
 Action command which are everything other than command buffer state change, synchronisation and indirect commands consist of multiple operations, which go pipeline stages. The pipeline stages that get executed to depend on the action command and the state of the command buffer.

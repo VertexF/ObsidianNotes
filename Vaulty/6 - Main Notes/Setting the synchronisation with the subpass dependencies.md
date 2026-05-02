@@ -1,6 +1,6 @@
 2025-11-07 15:43
 Status: #baby 
-Tags: [[vulkan]] [[vulkan subpass]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan subpass]] [[vulkan synchronisation]]
 # Setting the synchronisation with the subpass dependencies
 
 You should have finished [[Setting up subpass dependencies with one subpass]] which will allow our subpass to behavour properly within our render pass instance. 

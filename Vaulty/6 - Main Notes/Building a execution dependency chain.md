@@ -1,6 +1,6 @@
 2026-04-27 13:58
 Status: #baby 
-Tags: [[vulkan]] [[vulkan sychronisation]]
+Tags: [[vulkan]] [[vulkan synchronisation]]
 # Building a execution dependency chain
 
 With these barriers you can build up a dependency chain, which is done by connecting the **dstStageMask** to the **srcStageMask**. For example, we can make the dependency between vkCmdDispatch that need to transfer data from one to another.
@@ -15,7 +15,7 @@ With these barriers you can build up a dependency chain, which is done by connec
 7 vkCmdDispatch
 ```
 
-In this example, 4 most wait for 1, 2 and 6, 7 wait for 4 to finish. Which is because the transfer is a dummy operation in this example we are achieving the result of ordering the commands by this memory barrier.
+In this example, 4 most wait for 1, 2 and 6, 7 wait for 4 to finish. Which is a transfer command in this example we are achieving the result of ordering the commands by this memory barrier.
 # References
 ##### Main Notes
 [[Synchronisation events aka split barriers]]

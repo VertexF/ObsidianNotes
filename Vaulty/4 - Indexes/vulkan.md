@@ -207,6 +207,7 @@
 [[What are wait idle operations]]
 [[What are fences]]
 [[What are semaphores]]
+[[Implicit memory guarantees when waiting for a semaphore]]
 [[What are pipeline barriers]]
 [[The pipeline stages]]
 [[In-queue execution pipeline barriers]]
@@ -214,9 +215,13 @@
 [[Execution pipeline barrier example]]
 [[Building a execution dependency chain]]
 [[Synchronisation events aka split barriers]]
+[[How GPU memory works]]
 [[What are the access masks]]
 [[How to make GPU memory visible and available]]
 [[Making non-global pipeline barriers]]
+[[No TOP_OF_PIPE and BOTTOM_OF_PIPE access masks]]
+[[Split memory barriers]]
+[[How memory layout transitions work]]
 
 [[The theory  of synchronising a frame]]
 Render pass based
