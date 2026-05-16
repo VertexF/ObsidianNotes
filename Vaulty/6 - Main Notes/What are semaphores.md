@@ -9,7 +9,7 @@ There are two types of semaphores **binary** and **timeline**. Timeline semphore
 
 Semaphores are different to barriers because they are interested in setting up barriers between group of action commands, rather than individual commands on the GPU.
 
-A binary semaphore can be either unsignalled or signalled. It begins unsignalled. The semaphore works a synchronisation command in the queue that queue signals the semaphore when the command is complete. Another command will wait on that semaphore until it is signalled to then go on and do it's work. Once the second command has started the semaphore goes back to unsignalled automatically.
+A binary semaphore can be either unsignalled or signalled. It begins unsignalled. The semaphore works a as synchronisation command in the queue that queue signals the semaphore when the command is complete. Another command will wait on that semaphore until it is signalled to then go on and do it's work. Once the second command has started the semaphore goes back to unsignalled automatically.
 
 So if you have a batch of draw commands for example, that batch can wait on a semaphore before executing after submitted to **vkQueueSubmit**. As we are waiting for a batch of commands after a **vkQueueSubmit** we are waiting on the device and not the the host. A fence does the same thing but waits on the **host** side not on the device. So with a fence we are waiting for a signal to arrive after the batch of work has been completed on the device.
 

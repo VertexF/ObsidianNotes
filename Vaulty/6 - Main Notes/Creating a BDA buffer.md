@@ -37,7 +37,7 @@ BufferHandle GPUDevice::createBindlessBuffer(const BufferCreation& creation)
     bufferInfo.size = creation.size > 0 ? creation.size : 1;
 
     VmaAllocationCreateInfo memoryInfo{};
-    memoryInfo.flags = VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT | VMA_ALLOCATION_CREATE_HOST_ACCESS_ALLOW_TRANSFER_INSTEAD_BIT | VMA_ALLOCATION_CREATE_MAPPED_BIT;
+    memoryInfo.flags = VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT;
     memoryInfo.usage = VMA_MEMORY_USAGE_AUTO;
 
     VmaAllocationInfo allocationInfo{};

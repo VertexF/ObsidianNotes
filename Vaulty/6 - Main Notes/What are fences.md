@@ -11,7 +11,7 @@ The typically case is if you have **cmd1**, **cmd2**, **cmd3** in a batch and **
 
 It's important to note there is an exception to this fence batch rule, if you have a command that isn't in the queue but runs before the **BEFORE** the batch **AND** the command takes longer than all the commands in the queue. The fence will be signalled when the slow command has finished.
 
-This is what the spec says about this *`Fence signal operations that are defined by vkQueueSubmit additionally include the first synchronisation scrope all commands that occur earlier in submission order.`* When we talk about **first synchronisation scope** we are talking about all the commands before the fence in the queue. The only thing in the **second synchronisation scope** is the fence operation itself and builds up the **execution dependency**.
+This is what the spec says about this *`Fence signal operations that are defined by vkQueueSubmit additionally include the first synchronisation scope all commands that occur earlier in submission order.`* When we talk about **first synchronisation scope** we are talking about all the commands before the fence in the queue. The only thing in the **second synchronisation scope** is the fence operation itself and builds up the **execution dependency**.
 
 The two scopes build up an **execution dependency** between command batches. Which basically states that the first scope most finish before the second. 
 

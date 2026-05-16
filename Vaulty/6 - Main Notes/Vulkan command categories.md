@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan synchronisation]] [[vulkan command buffers]]
 # Vulkan command categories
 
-When we are talk about synchronisation we are concerned with **Actions commands** and what order they execute on the GPU. We use **Synchronisation commands** to do that. **State commands** are not effected by by synchronisation, as they change the state of the command buffer itself while recording, binding and setting up dynamic parts of the pipeline.  
+When we are talk about synchronisation we are concerned with **Actions commands** and what order they execute on the GPU. We use **Synchronisation commands** to do that. **State commands** are not effected by synchronisation, as they change the state of the command buffer itself while recording, binding and setting up dynamic parts of the pipeline.  
 
 Here is a a short list of the different commands and there category.
 

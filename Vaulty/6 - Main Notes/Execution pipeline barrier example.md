@@ -24,6 +24,8 @@ With this barrier, the “before” set is commands {1, 2, 3}. The “after” s
 - #5
 
 If you want to dig into the examples to make sure to look through the example https://github.com/KhronosGroup/Vulkan-Docs/wiki/Synchronization-Examples to make sure you are doing what you want.
+
+Note we are waiting on the srcStageMask and not allowing any work to continue past dstStageMask. In this case because we are working with only **vkCmdDispatch** it's the `VK_PIPELINE_STAGE_COMPUTE_SHADER_BIT`
 # References
 ##### Main Notes
 [[The difference between source and destination stage mask]]

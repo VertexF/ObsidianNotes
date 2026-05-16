@@ -1,6 +1,6 @@
 2026-03-07 15:39
 Status: #baby 
-Tags: [[performance]]
+Tags: [[performance]] [[threading]]
 # Introduction to multithreading
 
 This is a very simple concept, if 1 computer can do something at speed, 2 computers can do something at a faster speed. That's how simply it started now CPU have inbuilt 2, 4, 8, 16 or 32 computers in it. This gives CPU the ability to run programs at the same time.
@@ -18,5 +18,6 @@ When you push the CPU to fall outside of the memory bandwidth it can get MUCH sl
 The multithreading can get as high as waste if you're working on something with like 96 cores on a server or something. 
 # References
 ##### Main Notes
+[[Introduction to how C++ threads works]]
 #### Source Notes
 [[Multithreading]]

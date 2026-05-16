@@ -40,7 +40,7 @@ Two things are important here. One that we are on a different set binding index 
 
 Second is that when we need to access something out of array we need to use the `nonuniformEXT()` which means that different threads can access this array at any point. The extension is required too for update after bind which is part of how you update a bindless descriptor.
 
-The rest is pretty straight forward the you index into the array using an integet **nonuniformEXT(textures.x)** and then you just sample into that texture with the **texture()** function.
+The rest is pretty straight forward the you index into the array using an integer **nonuniformEXT(textures.x)** and then you just sample into that texture with the **texture()** function.
 # References
 ##### Main Notes
 [[Binding a bindless descriptor set]]
