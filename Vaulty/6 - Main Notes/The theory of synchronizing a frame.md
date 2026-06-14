@@ -1,7 +1,7 @@
 2025-11-07 13:28
 Status: #baby 
 Tags: [[vulkan]] [[vulkan synchronisation]]
-# The theory of synchronising a frame
+# The theory of synchronizing a frame
 
 Synchronisation is hard. If you want to debug synchronisation in vulkan you can turn it on in your Vulkan Configuration tool. This will allow validation layers to catch mistakes you're making.
 
@@ -9,14 +9,14 @@ When you actually want to render a frame you need to do these things:
 1) Wait for the previous frame to finish.
 2) Acquire an image from the swapchain.
 3) Record a command buffer which draws the scene onto that image.
-4) Submit the recorded command buffer
+4) Submit the recorded command buffer so the GPU can do it's work.
 5) Present the swapchain image.
 
 This is the overview you need to keep in mind while other things are mentioned.
 
-With synchronisation everything explicit meaning that order of operation is up to us. We need to tell the driver what to do with all the synchronisation primitive. It's important to note that the GPU and CPU are asynchronous, meaning that a lot of vulkan functions will return before the work on the GPU is done.
+With synchronisation everything is explicit meaning that order of operation is up to us. We need to tell the driver what to do with all the synchronisation primitive. It's important to note that the GPU and CPU are asynchronous, meaning that a lot of vulkan functions will return before the work on the GPU is done.
 
-There are 3 major things with need to synchronise
+There are 3 major things you need to synchronise
 - Acquiring an image from the swapchain.
 - Executing commands that draw onto the acquired image.
 - Presenting images to the screen for presentation, then returning it to the swapchain.

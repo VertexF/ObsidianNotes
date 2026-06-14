@@ -7,18 +7,20 @@ This concept is very similar to [[Building a execution dependency chain]] as we 
 
 If you're using dynamic rendering or render passes without subpass dependencies. When ordering your work in queues for a frame this is what you'll need to do for your colour attachments. With work in the middle running the shaders.
 
-Here is an example of what a split memory barrier looks like, for a situation were a computer shader is writing to an SSBO and we later read from it in another compute shader. 
+Here is an example of what a split memory barrier looks like, for a situation were a compute shader is writing to an SSBO and we later read from it in another compute shader. 
 ```c++
 vkCmdDispatch();//writes to an SSBO, VK_ACCESS_SHADER_WRITE_BIT
 
 vkCmdPipelineBarrier(srcStageMask = COMPUTE, dstStageMask = TRANSFER, srcAccessMask = SHADER_WRITE_BIT, dstAccessMask = 0)
+
+//Other commands run.
 
 vkCmdPipelineBarrier(srcStageMask = TRANSFER, dstStageMask = COMPUTE, srcAccessMask = 0, dstAccessMask = SHADER_READ_BIT)
 
 vkCmdDispatch();//read from the same SSBO, VK_ACCESS_SHADER_READ_BIT
 ```
 
-Note that the stage masks cannot be 0 and the access masks can be 0.
+Note that the stage masks cannot be 0 and the access masks can be 0. When the access masks are 0 we are saying we don't care about what the memory state is in for either the L1 cache or L2 cache.
 # References
 ##### Main Notes
 [[Building a execution dependency chain]]

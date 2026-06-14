@@ -55,6 +55,7 @@
 [[Selecting a presentation mode]]
 [[Creating the swapchain]]
 [[Getting swapchain images]]
+[[Swapchain colour space format]]
 >**Swapchain Recreation**
 >[[Recreating the swapchain]]
 >[[When to recreate the swapchain image]]
@@ -115,6 +116,7 @@
 [[Making a basic createBuffer function]]
 [[Buffer alignment requirement]]
 [[Multiple descriptor sets]]
+[[CPU updating coherent buffers]]
 ### Vertex Buffers
 [[What is a vertex buffer]]
 [[Setting up vertex buffer data]]
@@ -143,6 +145,7 @@
 ### Buffer Device Address
 [[What is Buffer Device Address (BDA)]]
 [[Creating a BDA buffer]]
+[[Updating a BDA buffer]]
 ### Push Constants
 [[Using a push constants]]
 [[Push constant with offset data]]
@@ -198,8 +201,7 @@
 [[Advantages of indirect draw calls]]
 [[Setting up an indexed indirect draw call]]
 [[How to use an indexed indirect draw call]]
-### Synchronisation
-
+### Synchronization
 [[Vulkan command categories]]
 [[Implicit synchronisation guarantees]]
 [[Basic queue synchronisation]]
@@ -223,7 +225,7 @@
 [[Split memory barriers]]
 [[How memory layout transitions work]]
 
-[[The theory  of synchronising a frame]]
+[[The theory of synchronizing a frame]]
 Render pass based
 >[[What you need to synchronise a frame]]
 >[[Setting up the synchronisation objects]]

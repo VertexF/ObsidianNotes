@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan synchronisation]]
 # Making non-global pipeline barriers
 
-When using synchronisation2 you can use `VkDependencyInfo` which restrict what the memory barrier/execution barrier operates under.
+When using synchronization2 you can use `VkDependencyInfo` which restrict what the memory barrier/execution barrier operates under.
 
 ```c
 typedef struct VkDependencyInfo {
@@ -19,11 +19,11 @@ typedef struct VkDependencyInfo {
 } VkDependencyInfo;
 ```
 
-Here you can see 3 different types of barriers you can set up. Image and buffer are just used to restrict between buffer based action commands and image based action commands. The **VkMemoryBarrier2** is used for global barriers.
+Here you can see 3 different types of barriers than can be set up. Image and buffer are just used to restrict between buffer based action commands and image based action commands. The **VkMemoryBarrier2** is used for global barriers.
 
-This will increase performance as your setting up hard synchronisation barriers for every time of memory that doesn't require it.
+This will increase performance as your not setting up hard synchronisation barriers for every type of memory that doesn't require it.
 
-It's important to note that render passes are just a very round about way for image memory barriers. As when you eventually finish working with render passes they output a VkImageView inside a VkFramebuffer that goes to the VkSwapchain.
+It's important to note that render passes are just a very round about way to handle image memory barriers. As when you eventually finish working with render passes they output a VkImageView inside a VkFramebuffer that goes to the VkSwapchain.
 # References
 ##### Main Notes
 [[What are the access masks]]

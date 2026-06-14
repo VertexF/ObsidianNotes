@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan synchronisation]]
 # Execution pipeline barrier example
 
-Here is an example of adding a memory barrier. Note that we are **NOT** looping through **vkCmdDispatch**
+Here is an example of adding a memory barrier. Note that we are **NOT** looping through the **vkCmdDispatch** commands
 
 ```c++
 1 vkCmdDispatch
@@ -25,7 +25,7 @@ With this barrier, the “before” set is commands {1, 2, 3}. The “after” s
 
 If you want to dig into the examples to make sure to look through the example https://github.com/KhronosGroup/Vulkan-Docs/wiki/Synchronization-Examples to make sure you are doing what you want.
 
-Note we are waiting on the srcStageMask and not allowing any work to continue past dstStageMask. In this case because we are working with only **vkCmdDispatch** it's the `VK_PIPELINE_STAGE_COMPUTE_SHADER_BIT`
+Note we are waiting on the **srcStageMask** and not allowing any work to continue past **dstStageMask**. In this case because we are working with only **vkCmdDispatch** it's the `VK_PIPELINE_STAGE_COMPUTE_SHADER_BIT`
 # References
 ##### Main Notes
 [[The difference between source and destination stage mask]]

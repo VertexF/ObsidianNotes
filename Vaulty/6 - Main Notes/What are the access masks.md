@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan synchronisation]]
 # What are the access masks
 
-These are used for memory barriers. Above here we have actually only been talking about execution barriers which is just concerned with the execution order of action commands. Memory barriers are also concerned with moving memory we need from the graphics cards L2 memory to L1 memory.
+These are used for memory barriers. Above here we have actually only been talking about execution barriers which are just concerned with the execution order of action commands. Memory barriers are also concerned with moving memory we need from the graphic cards L2 memory to L1 memory.
 
 For example if we have an execution barrier that states that we need to wait for the `VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT` we might need to make sure that whatever data is available needs to become visible so we set the access mask to `VK_ACCESS_SHADER_READ_BIT`. 
 # References

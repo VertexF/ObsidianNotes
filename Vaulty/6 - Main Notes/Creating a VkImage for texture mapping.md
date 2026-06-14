@@ -72,7 +72,9 @@ imageInfo.samples = VK_SAMPLE_COUNT_1_BIT;
 imageInfo.flags = 0;
 ```
 
-We want to have 1_BIT to match the rasterizer graphics pipeline which is 1. The flag is used for sparse textures, this can be used for voxel textures. For example, if you have 3D textures are expensive to allocate so with the sparse data you can skip a lot of the "air" part of the texture.
+We want to have 1_BIT to match the rasterizer graphics pipeline which is 1. You need to at least set the `.samples` otherwise you'll get an error if you try to sample over texture in the fragment shader.
+
+The flag is used for sparse textures, this can be used for voxel textures. For example, if you have 3D textures are expensive to allocate so with the sparse data you can skip a lot of the "air" part of the texture.
 
 ```c++
 if (vkCreateImage(device, &imageInfo, nullptr, &textureImage) != VK_SUCCESS) 

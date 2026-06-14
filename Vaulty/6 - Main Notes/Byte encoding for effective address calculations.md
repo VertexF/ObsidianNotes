@@ -7,7 +7,7 @@ When you have the move bytes like this `100010`**DW** the **W** is for wide 8/16
 
 In the second byte MOD REG R/M you need both the **MOD** and the **R/M** field to encode what the memory is.
 
-The **R/M** field actually encodes the type of equation you have to do so is it an addition or what, that's in the **R/M**. The **MOD** field tells us if we have a displacement so the 27 in the `[bp+27]`.
+The **R/M** field actually encodes the type of equation you have and it has to be addtion. The **MOD** field tells us if we have a displacement so the 27 in the `[bp+27]`.
 
 So what does the MOD field tell us 
 
@@ -29,18 +29,18 @@ This value is in the displacement-low and displacement-high of the instruction. 
 
 The **R/M** field encodes the 8 equation for you to use. We don't need to know the displacement but what are the register address that are going to used in this operation. 
 
-|       | Register Encoding   | Register Encoding | Register Encoding |
-| ----- | ------------------- | ----------------- | ----------------- |
-| R/M   | MOD =`00`           | MOD =`01`         | MOD = `10`        |
-| `000` | `bx+si`             | `bx+si+D8`        | `bx+si+D16`       |
-| `001` | `bx+di`             | `bx+di+D8`        | `bx+di+D16`       |
-| `010` | `bp+si`             | `bp+si+D8`        | `bp+si+D16`       |
-| `011` | `bp+di`             | `bp+di+D8`        | `bp+di+D16`       |
-| `100` | `si`                | `si+D8`           | `si+D16`          |
-| `101` | `di`                | `di+D8`           | `di+D16`          |
-| `110` | **DIRECT ADDRESS**^ | `bp+D8`           | `bp+D16`          |
-| `111` | `bx`                | `bx+D8`           | `bx+D16`          |
-These are the equation are allowed to use in your instruction. It's important to note that **bp** (base pointer), **sp** (stack pointer), **si** (source index), **di** (destination index), have no 8-bits parts, they are 16-bits or bust.
+|       | Register Encoding   | Register Encoding | Register Encoding |     |
+| ----- | ------------------- | ----------------- | ----------------- | --- |
+| R/M   | MOD =`00`           | MOD =`01`         | MOD = `10`        |     |
+| `000` | `bx+si`             | `bx+si+D8`        | `bx+si+D16`       |     |
+| `001` | `bx+di`             | `bx+di+D8`        | `bx+di+D16`       |     |
+| `010` | `bp+si`             | `bp+si+D8`        | `bp+si+D16`       |     |
+| `011` | `bp+di`             | `bp+di+D8`        | `bp+di+D16`       |     |
+| `100` | `si`                | `si+D8`           | `si+D16`          |     |
+| `101` | `di`                | `di+D8`           | `di+D16`          |     |
+| `110` | **DIRECT ADDRESS**^ | `bp+D8`           | `bp+D16`          |     |
+| `111` | `bx`                | `bx+D8`           | `bx+D16`          |     |
+These equation are allowed to use in your instruction. It's important to note that **bp** (base pointer), **sp** (stack pointer), **si** (source index), **di** (destination index), have no 8-bits parts, they are 16-bits or bust.
 
 If you try to use `bp` with no effective address calculation, the **MOD** field is **NOT** `00`
 ```c

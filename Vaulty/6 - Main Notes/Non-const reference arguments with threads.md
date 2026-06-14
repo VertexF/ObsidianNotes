@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[threading]]
 # Non-const reference arguments with threads
 
-You can't have a non-const reference like this with `std::thread`
+You can't just use a regular non-const reference like this with `std::thread`
 
 ```c++
 void updateData(WidgetID id, WidgetData &data)

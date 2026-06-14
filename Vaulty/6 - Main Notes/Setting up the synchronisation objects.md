@@ -50,7 +50,7 @@ for (uint32_t i = 0; i < maxFramesInFlight; ++i)
 ```
 # References
 ##### Main Notes
-[[The theory  of synchronising a frame]]
+[[The theory of synchronizing a frame]]
 [[What are semaphores]]
 [[What are fences]]
 [[Handling frames in flight]]

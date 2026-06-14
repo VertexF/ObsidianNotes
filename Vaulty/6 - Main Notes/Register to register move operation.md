@@ -24,7 +24,7 @@ Since the destination and source need to be in order, we need to know were the r
 
 The **W** bit tells us if this is a 16-bit copy or a 8-bit copy. **W** stands for wide. The **W** tells us if the register we are copying to is 16-bit or 8. The [[Low and high part of registers|registers are either 8 or 16-bit]], so the tells us if we are using 8/16-bit. 
 
-Finally with **REG** and **R/M** are 3 bits which encode which register they are going to use. Include the **W** we know what register to move to what. 
+Finally with **REG** and **R/M** are 3 bits which encode which register they are going to use. Including the **W** field we know what register we are going to move to. 
 # References
 ##### Main Notes
 [[Low and high part of registers]]

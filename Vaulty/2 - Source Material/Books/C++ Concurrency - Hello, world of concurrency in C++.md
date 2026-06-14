@@ -1,6 +1,6 @@
 # Reference C++ConcurrencyinAction
 
-##### Hello, Concurrent World - Page 14
+##### Hello, Concurrent World
 When writing concurrent code it's basically the same as non-concurrent code, however functions will be running concurrently to the rest of the application. We just have to make sure shared resource between threads are safely accessed, this includes memory and CPU.
 
 Here we have hello world

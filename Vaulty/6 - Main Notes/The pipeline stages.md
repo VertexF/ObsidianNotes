@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan synchronisation]]
 # The pipeline stages
 
-Action command which are everything other than command buffer state change, synchronisation and indirect commands consist of multiple operations, which go pipeline stages. The pipeline stages that get executed to depend on the action command and the state of the command buffer.
+Action commands which are everything other than command buffer state changes, synchronisation and indirect commands consist of multiple operations, which go through pipeline stages. The pipeline stages that get executed depend on the action command and the state of the command buffer.
 
 In the pipeline stage they themselves aren't strictly followed by the actual work. This is because some stages can be merged and in the`VK_PIPELINE_STAGE` some stages are left out. The graphics driver will do this and it's not something you have to worry about (in theory).
 

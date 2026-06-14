@@ -64,4 +64,5 @@ Everything else is exactly the same expect that we now fetch the `bufferAddress`
 # References
 ##### Main Notes
 [[What is Buffer Device Address (BDA)]]
+[[Updating a BDA buffer]]
 #### Source Notes

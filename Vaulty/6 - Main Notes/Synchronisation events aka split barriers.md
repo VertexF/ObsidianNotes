@@ -3,9 +3,9 @@ Status: #baby
 Tags: [[vulkan]] [[vulkan synchronisation]]
 # Synchronisation events aka split barriers
 
-With events you can have a barrier that overlap work. You can use **VkEvents** to split up a memory barrier. The idea here is that the command inbetween that can overlap with other command before or after the set of commands.
+With events you can have a barrier that overlap work. You can use **VkEvents** to split up a memory barrier. The idea here is that commands inbetween can overlap with other command before or after the set of commands.
 
-For example if I have a `vkCmd1` and `vkCmd2` which have dependency on each other. However while `vkCmd2` waits for `vkCmd1` to finish, we could have `vkCmdA` and `vkCmdB` while the pause is happening.
+For example if I have a `vkCmd1` and `vkCmd2` which have dependency on each other. However while `vkCmd2` waits for `vkCmd1` to finish, we could have `vkCmdA` and `vkCmdB` running while the wait is happening..
 
 ```c++
 vkCmd1;
@@ -18,7 +18,7 @@ vkCmd2;
 
 Now `vkCmdA` and `vkCmdB` run whenever they like. 
 
-Not all GPUs take advantage of this feature but it can be very important for advanced compute work. The reason being if there is a gap that the barrier you can through something else that fills up the GPU with work.
+Not all GPUs take advantage of this feature but it can be very important for advanced compute work. The reason being is if there is a gap that the command can go through and fill up work we get a performance win.
 # References
 ##### Main Notes
 [[Building a execution dependency chain]]

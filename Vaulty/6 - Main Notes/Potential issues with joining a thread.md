@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[threading]]
 # Potential issues with joining a thread
 
-You should know that you need to call `join` or `detech` before the life time of the `std::thread` ends. You can much pretty call `detech` as soon as the thread starts. However, you need to be careful were you wait for a thread with `join()` If you get an early return due to an error or an exception thing might not join and you get an`std::terminate()` will closing your program.
+You should know that you need to call `join` or `detach` before the life time of the `std::thread` ends. You can much pretty call `detach` as soon as the thread starts. However, you need to be careful were you wait for a thread with `join()` If you get an early return due to an error or an exception thing might not join and you get an`std::terminate()` will closing your program.
 
 It's pretty simple but you need to be careful if you have branching code, you need to make sure that call `.join()` in both places.
 

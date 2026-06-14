@@ -62,7 +62,7 @@ The **currentFrame** should be set to 0 and index into command buffers, semaphor
 ##### Main Notes
 [[Setting up the command pool]]
 [[What are command buffers]]
-[[The theory  of synchronising a frame]]
+[[The theory of synchronizing a frame]]
 [[What are semaphores]]
 [[What are fences]]
 #### Source Notes

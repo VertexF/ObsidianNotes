@@ -12,5 +12,6 @@ The standard library make sure that when a thread tries to lock a thread it can'
 You can't just 100% rely on these, you need to structure your interface to your code to avoid race conditions as well. You have to be careful you don't end up with a **deadlock** and protecting too much or too little.
 # References
 ##### Main Notes
+[[The problem with pointer and reference access shared data]]
 #### Source Notes
 [[C++ Concurrency - Protected Shared Data]]

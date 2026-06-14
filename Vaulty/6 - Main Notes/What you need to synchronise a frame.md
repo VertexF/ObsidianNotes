@@ -25,6 +25,6 @@ If you want you can use timeline semaphores to simplify things a little as timel
 If you use dynamic rendering the synchronisation process can simplify things, it's recommended on Desktop GPUs this is because it removes **VkFrameBuffer** and **VkRenderPass** from the process of synchronisation. Synchronisation1 and Synchronisation2 are actually pretty similar and don't change much. So if possible use Synchronisation2 since you'll be moving forward with time.
 # References
 ##### Main Notes
-[[The theory  of synchronising a frame]]
+[[The theory of synchronizing a frame]]
 #### Source Notes
 [[Drawing a triangle]]

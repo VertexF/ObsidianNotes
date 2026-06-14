@@ -3,7 +3,6 @@ Status: #baby
 Tags: [[threading]]
 # Introduction to how C++ threads works
 
-##### Hello, Concurrent World
 When writing concurrent code it's basically the same as non-concurrent code, however functions will be running concurrently to the rest of the application. We just have to make sure shared resource between threads are safely accessed, this includes memory and CPU.
 
 Here we have hello world
@@ -42,7 +41,7 @@ We had to move out the printing code into something called an **initial function
 
 The main thread starts at `main()` our created thread starts at `print()` if we don't pause our main thread to wait for second thread it's possible we will reach the end of `main()` before `print()` has a chance to run. That's what the `t1.join();` is for it's telling our main thread to wait until our `t1` has finished printing to standard out has happened in the second thread.
 
-If the main thread has nothing to do you've planned things wrong. For this appli
+If the main thread has nothing to do you've planned things wrong. For this application, it's not worth threading because the main thread is doing nothing. Be aware of this.
 # References
 ##### Main Notes
 [[Introduction to multithreading]]

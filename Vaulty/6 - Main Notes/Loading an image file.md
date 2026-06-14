@@ -48,6 +48,8 @@ stbi_image_free(pixels);
 The creation of the staging buffer is exactly the same as [[Creating the vertex buffer with staging buffers]]
 
 Don't forget to free the pixels once the memcpy has happend.
+
+**NOTE** In 2026 things are moving away from using staging buffer. Vulkan has began work on making the host be able to access all GPU for uploading stuff.
 # References
 ##### Main Notes
 [[Introduction to texture mapping]]
