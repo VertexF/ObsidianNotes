@@ -32,7 +32,7 @@
             }
           },
           {
-            "id": "5611a8bc6b7749d6",
+            "id": "c5f7e6590f74798f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -55,7 +55,8 @@
               "title": "graphics theory"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -204,44 +205,44 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "94285727d32d4255",
+  "active": "c5f7e6590f74798f",
   "lastOpenFiles": [
-    "4 - Indexes/graphics theory.md",
-    "6 - Main Notes/Error in Monte Carlo estimators.md",
-    "6 - Main Notes/Reducing errors in the Monte Carlo estimator.md",
     "2 - Source Material/Books/Physically Based Rendering - Monte Carlo.md",
-    "6 - Main Notes/The Monte Carlo Estimator.md",
-    "6 - Main Notes/Comparing estimators.md",
-    "6 - Main Notes/Biased estimators.md",
-    "6 - Main Notes/Working out variance and the MSE for estimators.md",
-    "6 - Main Notes/Breaking down the light transport equation.md",
+    "4 - Indexes/graphics theory.md",
+    "6 - Main Notes/Multiple Importance sampling composition.md",
+    "6 - Main Notes/The single sampling model.md",
+    "6 - Main Notes/The power heuristics funciton.md",
+    "6 - Main Notes/The balance heuristic function.md",
+    "6 - Main Notes/How to solve the multiple Importance sampling issue.md",
+    "6 - Main Notes/The problem with Multiple Importance Sampling.md",
+    "3 - Tags/offline ray tracing.md",
+    "6 - Main Notes/What is importance sampling.md",
     "6 - Main Notes/Background and probability review.md",
-    "6 - Main Notes/Expected values.md",
-    "3 - Tags/maths.md",
+    "6 - Main Notes/How to calculate the mean of a continous function.md",
+    "6 - Main Notes/The problem with stratified sampling.md",
+    "6 - Main Notes/Variance in stratified sampling.md",
+    "6 - Main Notes/What is stratified sampling.md",
     "1 - Rough Notes/Stream stuff.md",
-    "converging-variance-2.png",
-    "6 - Main Notes/Adding weight to rays.md",
-    "6 - Main Notes/What is the light transport equation.md",
-    "6 - Main Notes/How basic ray tracing works.md",
-    "6 - Main Notes/Samples per pixel.md",
-    "6 - Main Notes/The short comings of a monte carlo approach for ray tracing.md",
-    "6 - Main Notes/Introduction to Monte Carlo.md",
-    "6 - Main Notes/Ray propagation.md",
-    "6 - Main Notes/What is stochastic progressive phonotic mapping.md",
+    "6 - Main Notes/Reducing errors in the Monte Carlo estimator.md",
+    "2 - Source Material/Books/Physically Based Rendering - Introduction.md",
     "6 - Main Notes/Indirect light transport for rays.md",
-    "6 - Main Notes/Light scattering at a surface.md",
-    "6 - Main Notes/Light visibitlity.md",
-    "6 - Main Notes/The theory of handling more than 1 light.md",
-    "6 - Main Notes/Light distribution.md",
+    "6 - Main Notes/What is stochastic progressive phonotic mapping.md",
+    "selection-of-points-2.png",
+    "piecewise-gauss-2.png",
+    "guassian-plotted-function-2.png",
+    "6 - Main Notes/The Monte Carlo Estimator.md",
+    "cleaner-stratified-image-2.png",
+    "noisy-image-2.png",
+    "6 - Main Notes/Working out variance and the MSE for estimators.md",
+    "6 - Main Notes/Biased estimators.md",
+    "6 - Main Notes/Comparing estimators.md",
+    "6 - Main Notes/Error in Monte Carlo estimators.md",
+    "6 - Main Notes/Ray-object Intersections.md",
+    "converging-variance-2.png",
     "graphic-for-converagence-2.png",
     "cosine-over1-pi-1.png",
     "monte-carlo-basic-ray-trace-2.png",
-    "What is the light transport equation",
-    "image-1.png",
-    "pointLight-1.png",
-    "pointLight.png",
-    "pha01f05.png",
-    "pha01f09.png",
-    "pha01f05.svg"
+    "6 - Main Notes/What is the light transport equation",
+    "image-1.png"
   ]
 }

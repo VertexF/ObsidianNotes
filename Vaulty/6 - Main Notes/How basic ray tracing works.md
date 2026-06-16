@@ -1,6 +1,6 @@
 2026-06-12 15:06
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # How basic ray tracing works
 
 You can't analytically solve the [[What is the light transport equation|light transport equation]], so to numerically solve this integration to figure out how much light is hitting the camera, you can do something like a basic Monte Carlo, were we just randomally select a series of points and we fire rays at them from the camera, following the ray through the scene if it comes back and how it changed.

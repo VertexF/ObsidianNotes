@@ -1,9 +1,9 @@
 2026-06-13 11:28
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Introduction to Monte Carlo
 
-When solving rendering equation like the **light transport equation** we need a method to go about solving these intergals that can be higher dimensional and discontinuous. Other method to solve intergals break down in this case but the **Monte Carlo** approach scales nicely with any type of intergal that we need to solving when rendering.
+When solving rendering equations like the **light transport equation** we need a method to go about solving these intergals that can be higher dimensional and discontinuous. Other method to solve intergals break down in this case but the **Monte Carlo** approach scales nicely with any type of intergal that we need to solving when rendering.
 
 What this means is that we just need to solve $f(x)$ for a given intergrand with Monte Carlo with a random value. This gives us an estimated value on a given integral.
 

@@ -1,6 +1,6 @@
 2026-06-12 08:41
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # The general approach to ray tracing
 
 The brute force approach would be to past rays out for each object in a scene until we are done. This is extremely slow even for offline ray tracers. 

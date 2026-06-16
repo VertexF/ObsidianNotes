@@ -1,6 +1,6 @@
 2026-06-12 09:07
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # What is stochastic progressive phonotic mapping
 
 Since 1980 we've been able use the recusive nature of ray tracing with the [[Indirect light transport for rays]] but with **stochastic progessive photon mapping (SPPM)** algorithms you are able to accurately simulate the focusing of light that passes through glass.

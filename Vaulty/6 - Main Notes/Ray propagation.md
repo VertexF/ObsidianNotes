@@ -1,6 +1,6 @@
 2026-06-12 09:16
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Ray propagation
 
 When working with rays you have to be aware that you're not always passing through a vacuum. Meaning that the surface like a sphere will **NOT** always equally distribute the lights power across the surface.

@@ -1,6 +1,6 @@
 2026-06-12 08:57
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Light visibitlity
 
 With ray tracing it's very easy to figure out if the light is casing a shadow from the point it's being shaded. We basically go in reverse for a given light source, we take a point on a surface and travel towards the light. These are called **shadow rays**. 

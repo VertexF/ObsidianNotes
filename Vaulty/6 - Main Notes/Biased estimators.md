@@ -1,6 +1,6 @@
 2026-06-14 14:12
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Biased estimators
 
 Not all estimators of a integal have the same expected value of the integal. These are considered **baised** estimators, where the difference is worked by a simple subtraction

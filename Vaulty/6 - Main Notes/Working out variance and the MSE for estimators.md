@@ -1,6 +1,6 @@
 2026-06-14 14:10
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Working out variance and the MSE for estimators
 
 Remember that an estimator is trying to work out the value of an intergal. The **mean squared error (MSE)** is defined as the expectation of the squared difference of an estimator and the true value.

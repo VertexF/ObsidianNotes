@@ -1,6 +1,6 @@
 2026-06-14 14:20
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Reducing errors in the Monte Carlo estimator
 
 We can remove some of the restrictions we have when we originally defined the [[The Monte Carlo Estimator]] This is important since carefully choosing the **probability density function (PDF)** were the samples are draw from, leads to a key technique for reducing errors in Monte Carlo. 

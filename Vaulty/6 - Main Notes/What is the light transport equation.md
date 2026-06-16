@@ -1,6 +1,6 @@
 2026-06-12 09:12
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # What is the light transport equation
 
 The amount of light that reaches the camera from a point is given by the sum of light emitted by an object and a light source, and the mount of light reflected. This idea is formalised in the **light transport equation** aka **rendering equation**

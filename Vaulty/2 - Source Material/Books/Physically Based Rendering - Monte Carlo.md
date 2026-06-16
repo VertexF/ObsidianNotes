@@ -169,4 +169,137 @@ One idea to reduce variance to worry about the placement of the samples to bette
 
 Stratified sampling subdivides the integration domain $\Lambda$ into n nonoverlapping regions called stratums and they complete the orignal domain
 $$\bigcup_{i=1}^{n}\Lambda_i = \Lambda$$
-To draw samples from $\Lambda$ in $n_i$ stratums with pixel density of $p_i$
+To draw samples from $\Lambda$ in $n_i$ stratums with pixel density of $p_i$ for each stratrum. Each area is divided into $k\times k$ grid and a sample is drawn uniformally within each grid. This avoids clumping samples together. 
+
+With [[Reducing errors in the Monte Carlo estimator|Monte Carlo estimator]] we can do this over a stratum $\Lambda_i$ 
+$$F_i = \frac{1}{n_i}\sum_{j= 1}^{n_i}\frac{f(X_{ij})}{p(X_{ij})}$$
+Were $X_{ij}$ within a nested for loop for each stratum by pixel density $p_i$ So if you add all the strata together you get this where $F=\sum_i v_i F_i$ where $v_i$ is the ith fractional volume.
+##### Variance in stratum sampling 
+So the true value of the integrand in stratum $i$ 
+$$\mu_i = E[f(X_{ij})] = \frac{1}{v_i}\int_{\Lambda_i}f(x)dx$$
+and the variance in this stratum
+$$\sigma_i^2=\frac{1}{v_i}\int_{\Lambda_i} (f(x) - \mu_i)^2dx$$
+This mean that if you take $\sigma_i^2$ and divide it by $\mu_i$ you get the variance per stratum. To get the overall variance you add them all together.
+$$V[F]=V[\sum v_iF_i]$$
+$$= \sum V[v_iF_i]$$
+$$=\sum v_{i}^2V[F_i]$$
+$$= \sum \frac{v_{i}^2\sigma_{i}^2}{n_i}$$
+If we make the reaonable assumption that the number of samples $n_i$ is proportional. Meaning the relationship between the samples and volume of stratum are the same. Then we can say that $n_i = v_i n$ and the variance of the over estimator is
+$$V[F_n] = \frac{1}{n}\sum v_i\sigma_{i}^2$$
+To compare this result to variance with a stratum. We need to choose a none stratified sample is the equivalent to choosing a ransom stratum $I$ then choosing a random sample $X$ in $\Lambda_I$. This would mean that $X$ is conditional on $I$. This become a condition proproability [[Background and probability review]] explain the basics.
+
+##### How to calculate the mean of a continous function
+To continue you need to understand thing you need to know what the **mean** of a function is over a continuous domain. 
+$$Q = \frac{1}{b-a} \int_{a}^{b}f(x)dx$$
+This states that over a continous function of $f(x)$ we take all the valus of $y$ that comes from $f(x)$ and add them all together. Then devide by the fraction. This is almost exactly the as the discrete version of meaning of **mean** we are just doing over a continous function, that's why we need to intergal over a domain of $[a, b]$ 
+$$V[F] = \frac{1}{n}[\sum v_io_i^2 + \sum v_i(\mu_i - Q)^2]$$
+ $Q$ is the mean of the $f$ over the whole domain. We are doing this compare the stratums expect value to the whole expected value over the entire domain.
+
+There are two things to notice about the equation.
+1) First because of the square, the right hand part can't be negative. 
+2) Second it should that stratified sampling can never increase the variance. 
+Stratification always reduces variance until the right-hand sum is exactly 0. When we have the same **mean** across the entire stratum, then the right-hand sum is 0. This means we need to increase the right hand-sum to improve the stratum based sampling. So the more different the **mean** of each stratum the better. So **compact** strata are desirable if one does not know anything about the function $f$. If the strata are wide, they will contain more variation (which is good) and will have $\mu_i$ close to the true **mean** of $Q$
+
+![[noisy-image-2.png]]
+![[cleaner-stratified-image-2.png]]
+
+We basically get these gains at almost no cost of computation. 
+##### The problem with stratified sampling
+The main downside of stratified sampling is that it suffers in the same way as standard numerical quadrature, it degrades with increased dimension. 
+
+For instance, if we had $D$ dimensions with $S$ strata per dimension that would require $S^D$ samples which becomes too expensive. 
+
+Fortunately, it's possible stratify some of the dimensions independenly and then randonly associate samples from different dimensions. When you do this you need to make sure that it is done in away that stratifies dimensions that tend to be most highly correlated in their effect on the value of the integrand.
+##### What is importance sampling
+Importances sampling takes advantage of the Monte Carlo estimator. [[Reducing errors in the Monte Carlo estimator]] 
+$$F_n = \frac{1}{n}\sum_{i = 1}^{n}\frac{f(X_i)}{p(X_i)}$$
+When you take the **probability density function (PDF)** and sample over it were the magnitude of the integrand is relatively large. This is one of the most commonly used and helpful way to reduce variance in rendering since it's easy apply and very effective.
+
+To see why the samplying distributions reduces variances let first look at a function that has a properation relation with a PDF $p(x) \propto f(x)$ or if $f(x)$ times a constant is equal to the PDF $p(x) = cf(x)$ To normalize the PDF it requires us to
+$$c = \frac{1}{\int f(x)dx}$$
+A normalized function is when the intergal is equal to 1 over the entire domain. Of course in our case we would need to know the integral of the value integral which what we estimating. If we could sample from this distribution wach of the sum, in the estimator we would have the value of
+$$\frac{f(X_i)}{p(X_i)} = \frac{1}{c} = \int f(x)dx$$
+The variance here is zero which is wrong. Since if we could just integrate the integal directly. However, if the density $p(x)$ can be found that is similar to the shaope to $f(x)$ the variance is reduced. 
+
+If we consider a function Gaussian function $f(x) = e^{-1000(x-1/2)^2}$ over the domain of $[0, 1]$ which would look like this
+
+![[guassian-plotted-function-2.png]]
+
+If we take the intergal over the function  $f(x) = e^{-1000(x-1/2)^2}$ and sample randomly with a standard Monte Carlo estimator the variance is about 0.0365 since it's very likely we select a value that is almost 0.
+
+Instead we could draw from a piecewise-constant distibution
+$$p(x) =  \lbrace{0.1 x \in [0, 0.45]}$$
+$$p(x) =  \lbrace{9.1 x \in [0.45, 0.55]}$$
+$$p(x) =  \lbrace{0.1 x \in [0.55, 1)}$$
+
+This is plotted below.
+![[piecewise-gauss-2.png]]
+
+So if this estimator is used instead of a regular Monte Carlo, we get about a 6.7x variance reduction, when selection 6 from this distrubtion.
+$$F_n = \frac{1}{n}\sum_{i = 1}^{n}\frac{f(X_i)}{p(X_i)}$$
+![[selection-of-points-2.png]]
+##### The problem with Importance Sampling
+The problem is pretty straight forward if you have the Monte Carlo estimator with a probability distribution function.
+$$F_n = \frac{1}{n}\sum_{i = 1}^{n}\frac{f(X_i)}{p(X_i)}$$
+It's possible that your PDF **probability density function** with a bad distribution and that the variance actually increases. 
+##### The problem with Multiple Importance Sampling
+When we are rendering we often are faced with integral result are a products of other integrals. So when you want to [[What is importance sampling|importance sampling]] you need to consider the products of the intergals. This is specially important with the [[What is the light transport equation|light transport equation]]. 
+
+So lets assume we have two good PDFs ($p_a$ and $p_b$) for the two functions ($f_a$ and $f_b$). In practice this wont normally be the case. Lets assume we use $p_a$ as our PDF. We would have something like this.
+$$\frac{f(X)}{p_a(X)} = \frac{f_a(X)f_b(X)}{p_a(X)} = cf_b(X)$$
+where $c$ is a constant equal to the interfal of $f_a$ since $p_a(x)$ and $f_a(x)$ are proportional $p_a(x) \propto f_a(x)$. In this case, the variance would proportional to the variance of $f_b$ which could be high. Usually, in real rendering situations when you selection 1 PDF like the variance is very high.
+
+We can't just add two estimators to together, with two different PDF because variance is additive means that you can't reduce the variance of a bad estimator by adding a good one to it.
+
+One shortcoming of **multiple Importance sampling (MIS)** 
+##### How to solve the multiple Importance sampling issue
+There is a a way with **multiple Importance sampling (MIS)** to solve this. This adds weight to our different PDFs for each intergand and by then we can select good samples that match the overall shape of the intergal. Specialised sampling routines that only account for unusual special cases are even encoraged, as they reduce variance when those cases occur with relatively little cost in general.
+
+So with two sampling distributions $p_a$ and $p_b$ and single sample taken from each one were $X$ over $p_a$ and $Y$ over $p_b$ you have this **Multiple Importance Sampling (MIS)** is
+$$F_n = \sum_{i = 1}^{n}(\frac{1}{n_i}\sum_{j=1}^{n_i}w_i(X_{ij})\frac{f(X_{ij})}{p_i(X_{ij})})$$
+The full set of conditions and weighting functions for the estimator to be unbiased are that they sum 1 $f(x) \neq 0, \sum_{i = 1}^{n} w_i(x) = 1$ and that $w_i(x) = 0$ if $p_i(x) = 0$
+
+So making the weighting function be $w_i(X) = 1/n$ you just get the same additive estimator issues you had earlier with [[The problem with Multiple Importance Sampling]] so you need to weighting function to be high when a sample reduces variance and low when it increases variance.
+##### The balance heuristic function
+So we need to fo something called a **balance heuristic function** which takes into account all the ways samples have been generated, rather than just the particular one that was used. This is what **balance heuristic function** looks like for the $i$th sampling technique:
+$$w_i(x) = \frac{n_ip_i(x)}{\sum_{j}n_ip_i(x)}$$
+So when you have two estimators $p_a$ and $p_b$ and you sample with this technique you get the estimator.
+$$\frac{f(X)}{p_a(X) + p_b(X)} + \frac{f(Y)}{p_a(Y) + p_b(Y)}$$
+Where $X$ and $Y$ are random samples, were $f$ is divided by the sum of the **PDFs** rather than just one that generated teh sample. Thus, if $p_a$ generates a sample with a low probability at a point where the $p_b$ has a higher probabilitym then dividing by $p_a(X) + p_b(X)$ reduces the sample's contribution. Meaning that in this situation $p_a$ is downwieght. As long as one of these functions has a probability of sampling a point that is large in the intergal the the **Multi Important Sampling (MIS)** weights can lead to a significan reduction in variance.
+
+So for most part you don't need more than 2 PDF when doing **Multi Important Sampling (MIS)** if one **PDF** that matches the integrand very well then, **MIS** can reduce the over variance. However **MIS** is better almost all the time so it's good to us. 
+
+The code would look like this
+```c++
+float balanceHeuristics(int sampleX, float probDistFuncA int sampleY float probDistFuncB)
+{
+	return (sampleX * probDistFuncA) / (sampleX * probDistFuncA + sampleY * probDistFuncB);
+}
+```
+##### The power heuristics
+The power heuristics reduces varianace even further. For an exponent $\beta$, the power heuristic is
+$$w_i(x) = \frac{(n_ip_i(x))^{\beta}}{\sum_{j} n_jp_j(x)}$$
+This is very similar to [[The balance heuristic function]] but it futher reduces contributions of relatively low probabilities. The implementation of $\beta = 2$ is completely fine.
+
+```c++
+float powerHeuristic(int sampleX, float probDistFuncA, int sampleY, float probDistFuncB)
+{
+	float f = sampleX * probDistFuncA;
+	float g = sampleY * probDistFuncB;
+	return f * f / (f * f) + (g * g);
+}
+```
+##### The single sample model
+You can single sample for a **Multi Important Sampling (MIS)** approach. So for  a sampling technique of $p_i$ is chosen from a set of techniques with the probability of $q_i$ and a sample $X$ is drawn from $p_i$ then the **single sample estimator** is
+$$\frac{w_i(X)}{q_i} \frac{f(X)}{p_i(X)}$$
+This given an unbiased estimate of the intergal. For a single sample model, the [[The balance heuristic function]] for the weighting function.
+##### MIS Compensation
+**Multiple importance sampling (MIS)** is done with PDF that are all valid for importance sampling the integrand with nonzero probability for generating a sample anywhere that the integrand is nonzero. However, not every PDF over has to be be nonzero if the functions nonzero. Only one must be.
+
+Now we have **MIS compensation** which can further reduce variance. It's motivated by the fact that if all the sampling distributions allocates some probability to sampling regions, where the intergrand's value is small, this leads the intergrand to be undersampled were it's high and over sampled were it's low.
+
+So since you can with MIS have one or more PDF be zero but not all. We can sharpen one or more (but not all) PDFs to have zero probability in areas they had probability.  A new sampling PDF $p'$ can be defined as
+$$p'(x) = \frac{\max(0, p(x) - \delta)}{\int \max(0, p(x) - \delta)dx}$$
+where $\delta$ is a fixed value.
+
+This is easy to add for a tabularized sampling distribution. This can be used to help with sampling environment map light sources.

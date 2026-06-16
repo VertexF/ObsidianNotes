@@ -1,6 +1,6 @@
 2026-06-12 09:06
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Indirect light transport for rays
 
 The recursive nature of ray tracing allows for indirect specular reflection. We do this by reflecting a ray at a surface normal at the intersection point if it's shiny. This can happen recursively, which all gets added back to the camera by following back the cameras ray eventually.

@@ -1,6 +1,6 @@
 2026-06-12 08:37
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Properties for ray tracers
 
 Just doing [[Ray-object Intersections]] for a given ray is not enough. We need to pass the properies of a given surface to the next part of the ray tracing algorithm. To shade the point we need to pass the geometric information as well. 

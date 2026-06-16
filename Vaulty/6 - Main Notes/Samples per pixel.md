@@ -1,6 +1,6 @@
 2026-06-12 15:01
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Samples per pixel
 
 You sample more per pixel with ray tracing to average out the result which increases accuracy. 

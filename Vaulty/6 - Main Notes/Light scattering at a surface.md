@@ -1,6 +1,6 @@
 2026-06-12 08:59
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Light scattering at a surface
 
 With a [[Ray-object Intersections]] found and the [[Light distribution]] worked out and the [[Light visibitlity]] of a surface worked out for all light. We can work out the location and incident lighthing.

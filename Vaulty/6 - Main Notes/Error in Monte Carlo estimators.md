@@ -1,6 +1,6 @@
 2026-06-14 14:05
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Error in Monte Carlo estimators
 
 Just because Monte Carlo converges at the right answer isn't enough we need to know how fast it finds the answer. The concept of **variance** is used to figure how far the estimator deviates from the expected value. 

@@ -1,6 +1,6 @@
 2026-06-12 08:28
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # How the camera works with ray tracing
 
 The **eye** of a viewing volume is the place at which the viewing volume begins. When it comes to what we can see, we are only interested in the light that comes from a plane, which is what we are looking.

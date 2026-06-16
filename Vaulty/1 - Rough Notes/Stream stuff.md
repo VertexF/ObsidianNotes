@@ -25,4 +25,6 @@
 	- I also need to consider how to release this game and stick to it.
 		- Release this game, and make another one that's better with better etc.
 8) Physically Based Rendering in Filament md.html is to help with PBR https://google.github.io/filament/main/filament.html It's the filament engine documentation.
+	1) Don't worry too much when they say things are "slow" you are targetting GPUs.
+	2) You also use full precision in the **BRDF** not half. 
 9) Better space rendering https://sebh.github.io/publications/egsr2020.pdf

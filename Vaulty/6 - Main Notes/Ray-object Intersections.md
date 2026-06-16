@@ -1,6 +1,6 @@
 2026-06-12 08:31
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Ray-object Intersections
 
 A renderer needs to figure out if, when and were something is hit from the camera. We are interested in what the ray hits first. This is to get the point at which we need to simulate light.

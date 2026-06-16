@@ -1,6 +1,6 @@
 2026-06-12 09:40
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Differences between CPU and GPU ray tracing
 
 The algorithms you writing in CPU and GPU are the same the biggest difference between the two is setup, pipelining. With non-RT stuff is more similar to the CPU raytracer, you just use a compute shader to do it, but queries are way less flexible and a lot slower.

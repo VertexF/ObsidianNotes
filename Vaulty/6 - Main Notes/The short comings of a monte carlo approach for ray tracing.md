@@ -1,6 +1,6 @@
 2026-06-12 15:12
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # The short comings of a monte carlo approach for ray tracing
 
 Following this method of [[Breaking down the light transport equation]] we have valid ray tracing but with many short comings. 

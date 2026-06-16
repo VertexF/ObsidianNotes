@@ -1,6 +1,6 @@
 2026-06-11 12:40
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # What is ray tracing
 
 This idea that in ray tracing is that send out infinitesimal rays of light through the scene until it interacts with a surface. 

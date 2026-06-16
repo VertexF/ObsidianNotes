@@ -1,6 +1,6 @@
 2026-06-14 14:08
 Status: #baby 
-Tags: [[graphics theory]] [[ray tracing]]
+Tags: [[graphics theory]] [[offline ray tracing]]
 # Comparing estimators
 
 The linear decrease in variance with the increasing number of samples makes it easy to compare estimators. How do we compare estimators then?

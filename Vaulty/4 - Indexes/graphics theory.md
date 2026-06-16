@@ -4,6 +4,7 @@
 ### Maths
 [[Background and probability review]]
 [[Expected values]]
+[[How to calculate the mean of a continous function]]
 ### Depth
 [[What is reverse-Z perspective]]
 ### PBR
@@ -14,7 +15,13 @@
 [[Simplifying the PBR equation for diffuse IBL]]
 [[The problem with LDR cubemaps in PBR]]
 [[Linear lighting vs High Dynmanic Range rendering]]
-### Ray tracing
+### Light theory
+[[Light distribution]]
+[[The theory of handling more than 1 light]]
+[[What is the light transport equation]]
+### BRDF
+[[What is the BRDF]]
+### Offline Ray tracing
 >**Introduction**
     [[What is ray tracing]]
     [[Differences between CPU and GPU ray tracing]]
@@ -41,12 +48,17 @@
     [[Comparing estimators]]
     [[Biased estimators]]
     [[Working out variance and the MSE for estimators]]
+   **Improving efficency of sampling**
+    [[What is stratified sampling]]
+    [[Variance in stratified sampling]]
+    [[The problem with stratified sampling]]
+    [[What is importance sampling]]
+    [[The problem with Multiple Importance Sampling]]
+    [[How to solve the multiple Importance sampling issue]]
+    [[The balance heuristic function]]
+    [[The power heuristics funciton]]
+    [[The single sampling model]]
+    [[Multiple Importance sampling composition]]
    **Misc**
     [[Samples per pixel]]
     [[Adding weight to rays]]
-### Light theory
-[[Light distribution]]
-[[The theory of handling more than 1 light]]
-[[What is the light transport equation]]
-### BRDF
-[[What is the BRDF]]
