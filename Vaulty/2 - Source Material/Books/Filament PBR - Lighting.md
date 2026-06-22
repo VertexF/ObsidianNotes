@@ -54,7 +54,7 @@ $$L_{out} = f(v,l)E$$
 ##### Directional lights
 The point of directional light is to simulate the environment like outdoors from the sun and moon. If a light source is far enough away and bright enough turn, the light basically turns into a directional light, where the light rays are paralell. 
 
-It's a good idea to use lux($lx$) unit for directional lights because it's easy to get these values online yourself. This also simplifies the luminance equation for [[Direct lighthing]]
+It's a good idea to use lux($lx$) unit for directional lights because it's easy to get these values online yourself. This also simplifies the luminance equation for [[Direct lighting theory]]
 $$L_{out} = f(v,l) E_{\bot} \left< n\cdot l \right>$$
 In this simplified equation the $E_{\bot}$ is the illuminance of the light source for a surface perpendicular to said light source. If this is simulating the sun $E_{\bot}$ is the illuminance of the sun for the surface perpendicular to the sun.
 
@@ -93,7 +93,7 @@ $$\Phi = \int_{\Omega} I dl = \int_{0}^{2\pi} \int_{0}^{\pi} I d\theta d\phi = 4
 $$I = \frac{\Phi}{4 \pi}$$
 In this case $d$ is distance. When we are intergating over a steradian, it's a double intergral because of the third dimentionality of steradians. We can simply derive the value over set steradian and use that instead of doing an intergation. 
 
-Remember here we are trying to add lighthing to our BRDF by multiplying [[Punctual lights|luminous intensity divided by (distance sqaured)]] $d^2$. So with that in mind we throwing in our lighting equation + BRDF + the direction of the light we get this.
+Remember here we are trying to add lighthing to our BRDF by multiplying [[Punctual lights theory|luminous intensity divided by (distance sqaured)]] $d^2$. So with that in mind we throwing in our lighting equation + BRDF + the direction of the light we get this.
 
 $$L_{out} = f(v,l)\frac{\Phi}{4\pi d^2} \left< n \cdot l \right>$$
 
@@ -115,7 +115,7 @@ float pointLight(float lightRange, float lumens, float distance)
 A spot light is defined by a position in space, a direction vector and two cone angles, $\theta_{inner}$ and $\theta_{outer}$ The two angle are used to define the angular falloff attenuation of the spot light. So the light equation must take into account both the inverse square law and these two angles to properly evalute the luminance attenuation.
 ![[diagram_spot_light.png]]
 
-Just like with [[The spot light theory]] you can work this equation out with the $\theta_{outer}$ the outer angle of the spot light's cone range in the domain of $[0, \pi]$ 
+Just like with [[The spot light]] you can work this equation out with the $\theta_{outer}$ the outer angle of the spot light's cone range in the domain of $[0, \pi]$ 
 $$\Phi = \int_{\Omega} I dl = \int_{0}^{2\pi} \int_{0}^{\theta_{outer}} I d\theta d\phi = 2 \pi (1 - cos\frac{\theta_{outer}}{2})I$$
 $$I = \frac{\Phi}{2 \pi (1 - cos\frac{\theta_{outer}}{2})}$$
 So with equation as you decrease the outer cone aperture, the illumination level increases. ![[screenshot_spot_light_focused.png]]
@@ -125,23 +125,14 @@ $$\Phi = \pi I$$
 $$I = \frac{\Phi}{\pi}$$
 This equation can also be considered physically based if the spot's reflector is replaced with a matte, diffuse mask that absorbs light perfectly.
 
-There are two equation one with a light absorber and one with a light reflector.
+There are two equations one with a light absorber and one with a light reflector.
 1) This is with a light absorber.
 $$L_{out} = f(v,l) \frac{\Phi}{\pi d^2} \left< n\cdot l\right> \lambda(l)$$
 2) This is with a light reflector.
 $$L_{out} = f(v,l) \frac{\Phi}{2 \pi (1 - cos\frac{\theta_{outer}}{2}) d^2} \left< n \cdot l \right> \lambda(l)$$
 The $\lambda(l)$ in equations above is the spot's angle attenuation factor
 $$\lambda(l) = \frac{l \cdot spotDirection - cos\theta_{outer}}{cos\theta_{inner} - cos\theta_{outer}}$$
-##### Attenuation function
-We can't use the standard mathematical equation, this is unfortunately impractical implementation purposes
-1) The division by the square distance can lead to divides by 0, when an object touches the light source.
-2) The influence sphere of each light is infinite. ($\frac{I}{d^2}$ is asymptotic, it never reaches 0) which mean that to correctly shade a pixel we need to evaluate every light in the world.
-The first issue can be solved easily by setting we can make the assumption that we are have an area light with a small area of 1cm.
-$$E = \frac{I}{max(d^2, {0.01}^2)}$$
-The second issue we need to introduce an influence radius for each light. This allows us to use the debug sphere to show the influence. We can also cull light more aggrestively using this extra piece of information, we also in theory manually tweak the radius of the light.
 
-Mathematically, the illuminance of a light should smoothly reach zero at the limit definied by a influence radius. In this [paper](Brian Karis, 2013. Real Shading in Unreal Engine 4. [https://blog.selfshadow.com/publications/s2013-shading-course/karis/s2013_pbs_epic_notes_v2.pdf](https://blog.selfshadow.com/publications/s2013-shading-course/karis/s2013_pbs_epic_notes_v2.pdf)) we take the inverse square function and we use a function that allow the ligths influence to remain unaffected. We have this in with this equation were the radius $r$ 
-$$E = \frac{I}{max(d^2, {0.01}^2)} \left< 1 - \frac{d^4}{r^4} \right>^2$$
 ```c
 float getSquareFalloffAttenuation(vec3 posToLight, float lightInvRadius)
 {
@@ -179,3 +170,16 @@ vec3 evaluatePunctualLight()
     return luminance;
 }
 ```
+
+To correctly work with spot lights, you need to surround your spot in a point light hence the sphere of influence. [[Attuation function]]
+##### Attenuation function
+We can't use the standard mathematical equation, this is because it's impractical implement.
+1) The division by the square distance can lead to divides by 0, when an object touches the light source.
+2) The influence sphere of each light is infinite. ($\frac{I}{d^2}$ is asymptotic, it never reaches 0) which mean that to correctly shade a pixel we need to evaluate every light in the world.
+The first issue that we are have can be solved by making the assumption that we are have an area light with a small area of 1cm.
+$$E = \frac{I}{max(d^2, {0.01}^2)}$$
+The second issue we need to introduce a sphere influence each light. This allows us to use the debug sphere to show the influence. We can also cull lights more aggrestively using this extra piece of information.  With a influence sphere you can manually tweak the radius of the light which might help out artists.
+
+Mathematically, the illuminance of a light should smoothly reach zero at the limit definied by a influence radius. In this [paper](Brian Karis, 2013. Real Shading in Unreal Engine 4. [https://blog.selfshadow.com/publications/s2013-shading-course/karis/s2013_pbs_epic_notes_v2.pdf](https://blog.selfshadow.com/publications/s2013-shading-course/karis/s2013_pbs_epic_notes_v2.pdf)) we take the inverse square function and we use a function that allow the ligths influence to remain unaffected. We have this in with this equation were the radius $r$
+$$E = \frac{I}{max(d^2, {0.01}^2)} \left< 1 - \frac{d^4}{r^4} \right>^2$$
+Note this equation is purely for the sphere of influence and it's nothing to do with a spot light itself. 

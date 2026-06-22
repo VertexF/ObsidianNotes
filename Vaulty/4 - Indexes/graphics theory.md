@@ -18,9 +18,17 @@
 ### Light theory
 [[Light distribution]]
 [[Lighting unit basics]]
-[[Mesuring light basics]]
+[[Light unit measuring basics]]
 [[The theory of handling more than 1 light]]
 [[What is the light transport equation]]
+
+[[Direct lighting theory]]
+[[The directional light]]
+[[Punctual lights theory]]
+[[The point light]]
+[[The spot light]]
+[[Attenuation function]]
+
 ### BRDF
 [[What is the BRDF]]
 [[Introduction to BRDF]]
@@ -33,6 +41,8 @@
 [[Lambert diffuse BRDF]]
 [[Energy issues with Cook-Torrance BRDF]]
 [[How to preserve energy for specular]]
+
+[[Connecting offline raytracing to real time lighting]]
 ### Offline Ray tracing
 >**Introduction**
     [[What is ray tracing]]

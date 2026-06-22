@@ -45,6 +45,11 @@ Look online to learn specific lighthing luminous efficacy or the luminous effici
 # References
 ##### Main Notes
 [[Light distribution]]
-[[Mesuring light basics]]
+[[Light unit measuring basics]]
+[[The point light]]
+[[The spot light]]
+[[The directional light]]
+[[Direct lighting theory]]
+[[Attenuation function]]
 #### Source Notes
 [[Filament PBR - Lighting]]

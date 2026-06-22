@@ -17,10 +17,11 @@
 6) Potentially a good interface design is NVRHI for graphics.
 
 7) What does the engine/game need.
-	- **2D renderer for UI and other stuff.**
 	- **More entity interaction, for example if you crash into a rock something needs to happen.**
-	- Everything is too dark.
-		- Use the most basic techniques and slowly improve the rendering with time.
+		- The player needs to die/win.
+		- Need particles for point collision detection.
+	- **2D renderer for UI and other stuff.**
+		- After that we need mouse hit detection for 2D stuff.
 	- Now I really need to think about what the MVP is, and get out of the door.
 	- I also need to consider how to release this game and stick to it.
 		- Release this game, and make another one that's better with better etc.
