@@ -11,7 +11,7 @@ This given an unbiased estimate of the intergal. For a single sample model, the 
 [[Multiple Importance sampling composition]]
 [[What is importance sampling]]
 [[The problem with Multiple Importance Sampling]]
-[[How to solve the multiple Importance sampling issue]]
+[[How to solve the Multiple Importance Sampling issue]]
 [[The balance heuristic function]]
 [[The power heuristics funciton]]
 #### Source Notes

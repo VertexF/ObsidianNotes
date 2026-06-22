@@ -1,6 +1,6 @@
 2026-06-08 11:52
 Status: #baby 
-Tags: [[vulkan]] [[graphics theory]] [[physically based renderer]]
+Tags: [[vulkan]] [[graphics theory]] [[physically based rendering]]
 # Swapchain colour space format
 
 When you are dealing HDR/LDR images and doing some kind of lighthing in a fragment like PBR. You have to be careful that the swapchain image format isn't already coverting your image to linear space, as you can do this twice by accident making everything look grey.

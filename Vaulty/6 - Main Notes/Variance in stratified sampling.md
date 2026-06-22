@@ -10,6 +10,7 @@ $$\sigma_i^2=\frac{1}{v_i}\int_{\Lambda_i} (f(x) - \mu_i)^2dx$$
 This mean that if you take $\sigma_i^2$ and divide it by $\mu_i$ you get the variance per stratum. To get the overall variance you add them all together.
 $$V[F]=V[\sum v_iF_i]$$
 $$= \sum V[v_iF_i]$$
+You can see how this alegbric set works in [[Error in Monte Carlo estimators]]
 $$=\sum v_{i}^2V[F_i]$$
 $$= \sum \frac{v_{i}^2\sigma_{i}^2}{n_i}$$
 If we make the reaonable assumption that the number of samples $n_i$ is proportional. Meaning the relationship between the samples and volume of stratum are the same. Then we can say that $n_i = v_i n$ and the variance of the over estimator is

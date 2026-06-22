@@ -1,6 +1,6 @@
 2026-06-08 10:24
 Status: #baby 
-Tags: [[graphics theory]] [[physically based renderer]] [[image based lighting]]
+Tags: [[graphics theory]] [[physically based rendering]] [[image based lighting]]
 # Simplifying the PBR equation for diffuse IBL
 
 If you already have a processed cubemap this gets easier to work out. We can visualise every texel of cubemap as one single emitting light source. Based on the PBR equation we can sample over a cubemap and get our the scene radiance based from that direction.

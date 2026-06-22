@@ -1,7 +1,7 @@
 2026-06-16 12:33
 Status: #baby 
 Tags: [[graphics theory]] [[offline ray tracing]]
-# How to solve the multiple Importance sampling issue
+# How to solve the Multiple Importance Sampling issue
 
 There is a a way with **multiple Importance sampling (MIS)** to solve this. This adds weight to our different PDFs for each intergand and by then we can select good samples that match the overall shape of the intergal. Specialised sampling routines that only account for unusual special cases are even encoraged, as they reduce variance when those cases occur with relatively little cost in general.
 

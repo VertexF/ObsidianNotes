@@ -17,10 +17,22 @@
 [[Linear lighting vs High Dynmanic Range rendering]]
 ### Light theory
 [[Light distribution]]
+[[Lighting unit basics]]
+[[Mesuring light basics]]
 [[The theory of handling more than 1 light]]
 [[What is the light transport equation]]
 ### BRDF
 [[What is the BRDF]]
+[[Introduction to BRDF]]
+[[What are dielectrics and conductors]]
+[[What is specular BRDF]]
+[[Normal distribution function (specular D)]]
+[[Geometric shadowing(specular G)]]
+[[Geometric shadowing(specular G) for mobile GPUs]]
+[[Fresnel (specular F)]]
+[[Lambert diffuse BRDF]]
+[[Energy issues with Cook-Torrance BRDF]]
+[[How to preserve energy for specular]]
 ### Offline Ray tracing
 >**Introduction**
     [[What is ray tracing]]
@@ -54,7 +66,7 @@
     [[The problem with stratified sampling]]
     [[What is importance sampling]]
     [[The problem with Multiple Importance Sampling]]
-    [[How to solve the multiple Importance sampling issue]]
+    [[How to solve the Multiple Importance Sampling issue]]
     [[The balance heuristic function]]
     [[The power heuristics funciton]]
     [[The single sampling model]]

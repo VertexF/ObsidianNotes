@@ -17,6 +17,6 @@ This is easy to add for a tabularized sampling distribution. This can be used to
 [[Multiple Importance sampling composition]]
 [[What is importance sampling]]
 [[The problem with Multiple Importance Sampling]]
-[[How to solve the multiple Importance sampling issue]]
+[[How to solve the Multiple Importance Sampling issue]]
 #### Source Notes
 [[Physically Based Rendering - Monte Carlo]]

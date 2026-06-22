@@ -1,6 +1,6 @@
 2026-06-08 11:38
 Status: #baby 
-Tags: [[graphics theory]] [[physically based renderer]] [[image based lighting]]
+Tags: [[graphics theory]] [[physically based rendering]] [[image based lighting]]
 # Linear lighting vs High Dynmanic Range rendering
 
 If you are using PBR all it's inputs needs to be [[What is linear space|linear]], when you are lighing the scene in linear space. This means you need to be careful with how you handle gamma correction to get your lighting correct.

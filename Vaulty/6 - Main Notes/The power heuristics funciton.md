@@ -18,5 +18,6 @@ float powerHeuristic(int sampleX, float probDistFuncA, int sampleY, float probDi
 # References
 ##### Main Notes
 [[The balance heuristic function]]
+[[The single sampling model]]
 #### Source Notes
 [[Physically Based Rendering - Monte Carlo]]

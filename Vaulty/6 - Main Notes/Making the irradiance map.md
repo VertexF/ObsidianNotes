@@ -1,6 +1,6 @@
 2026-06-08 10:25
 Status: #baby 
-Tags: [[graphics theory]] [[physically based renderer]] [[image based lighting]]
+Tags: [[graphics theory]] [[physically based rendering]] [[image based lighting]]
 # Making the irradiance map
 
 We'll want to do the convolution by solving the integral for each output $\omega_0$ sample direction. We do this by grabbing a bunch of $\omega_i$ and work them out and sample the average, over the hemisphere $\Omega$ . The hemisphere we need to build up is a bunch of sample in the direction of $\omega_i$ and it oriented towards the output sample of $\omega_0$ direction we are convoluting.

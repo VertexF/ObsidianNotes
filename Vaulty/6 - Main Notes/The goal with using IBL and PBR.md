@@ -1,6 +1,6 @@
 2026-06-08 10:21
 Status: #baby 
-Tags: [[graphics theory]] [[physically based renderer]] [[image based lighting]]
+Tags: [[graphics theory]] [[physically based rendering]] [[image based lighting]]
 # The goal with using IBL and PBR
 
 We can start to introduce the PBR with IBL if we look at the PBR equation:

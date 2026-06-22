@@ -11,7 +11,7 @@ It's possible with the the first part $L_e(P, \vec{\omega_o})$ **emitted radianc
 
 The second part $\int\limits_{S^2} f(P,\vec{\omega_o}, \vec{\omega_i}) L_i(P,\vec{\omega_i}) | \cos(\theta_i) | d\vec{\omega_i}$ has a lot more going on so now we use a random direction vector $\vec{\omega'}$ . We do this because we have to work out the light value with the BSDF over the hemisphere which is extremely expensive when considering EVERY possible ray. 
 
-So by selectin a random direction of $\vec{\omega'}$ we have equal propability over all possible directions. After that we can estimate the integral and we can compute the weighted product of the BSDF which describe the light scattering properties of the material a point **P**, the $L_i(P,\vec{\omega_i})$ the **incident spectral radiance** and the cosine factor for the angle of the surface at point **P**
+So by selecting a random direction of $\vec{\omega'}$ we have equal propability over all possible directions. After that we can estimate the integral and we can compute the weighted product of the BSDF which describe the light scattering properties of the material a point **P**, the $L_i(P,\vec{\omega_i})$ the **incident spectral radiance** and the cosine factor for the angle of the surface at point **P**
 $$\int\limits_{S^2} f(P,\vec{\omega_o}, \vec{\omega_i}) L_i(P,\vec{\omega_i}) | \cos(\theta_i) | d\vec{\omega_i} \approx \frac{f(P, \vec{\omega_o}, \vec{\omega'})L_i(P, \vec{\omega'})|\cos(\theta')|}{1/4\pi} $$In other words we randomly get the direction $\vec{\omega'}$ estimating the value of the integral requires evaluating the terms in the intergrand for the direction then scale that by $4\pi$.
 
 The intergrand is just everything after the intergal and before the differential part in an intergral. 

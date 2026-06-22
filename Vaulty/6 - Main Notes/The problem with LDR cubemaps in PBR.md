@@ -1,6 +1,6 @@
 2026-06-08 11:49
 Status: #baby 
-Tags: [[graphics theory]] [[physically based renderer]] [[image based lighting]]
+Tags: [[graphics theory]] [[physically based rendering]] [[image based lighting]]
 # The problem with LDR cubemaps in PBR
 
 So it is very important for PBR that you deal with HDR properly both for colour [[Linear lighting vs High Dynmanic Range rendering]] and your vulkan swapchain is in the colour space format you expect [[Swapchain colour space format]]. This is because the PBR taking is taking in real physcially properties. Without working in HDR you can't work out the relative intensity of something like a small lightblub and the sun for example.
