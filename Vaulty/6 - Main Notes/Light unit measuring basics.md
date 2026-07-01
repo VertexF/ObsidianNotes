@@ -5,14 +5,12 @@ Tags: [[graphics theory]] [[light theory]]
 
 One advantage of using phyiscal light units is that we have ability validate our equation.
 
-When we are talking about measuring **Luminace** we are measuring candela per meter squared which intersects on a plane with a stridian [[Lighting unit basics]] of 5 degree in picture below.
+When we are talking about measuring **Luminace** we are measuring candela per meter squared which intersects on a plane with a stridian [[Lighting unit basics]]. In the picture below we are working out Lumiance using a angle 5 degree.
 
 ![[measuring-tool-for-lumance-2.png]]
 
 So with this we can work out the intensity of light when using the inverse of the inverse square law of light, if we know the distance.
 $$I = E \cdot d^2$$
-
-This might not be as important as just matching the real world lights to get nice accurate lighthing.
 # References
 ##### Main Notes
 [[Lighting unit basics]]

@@ -41,7 +41,7 @@ So the **cumulative distribution function(CDF)** is defined by the intergal over
 Think about it like this with the set $X_i \in \{1, 2, 3, 4, 5, 6\}$ in this uniform distribution of selecting number out of this set. If we only intergate over and up to the values of 2. Then the **cumulative distribution function(CDF)** will be $\frac{1}{3}$ if you integate over the whole of the uniform distribution the (**CDF**) will be 1.
 
 So lets write that down mathemically, so the chances of a values falling within a range of a given value over a **probability density function (PDF)** is written as
-$$Pr\{x \in[a, b]\} = \int_{a}^{b}p(x)dx = P(b) - P(a)$$This follows the funimental theorem of calculus.
+$$Pr\{x \in[a, b]\} = \int_{a}^{b}p(x)dx = P(b) - P(a)$$This follows the fundamental theorem of calculus.
 
 Finally the **proabability mass function (PMF)** and **probability density function** are the same. The latter is for discrete values like, 1, 2, 3 and the other is for continuous values like all the real values over the domain of $[0, 1]$.
 # References

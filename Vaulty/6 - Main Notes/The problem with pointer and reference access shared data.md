@@ -3,9 +3,9 @@ Status: #baby
 Tags: [[threading]]
 # The problem with pointer and reference access shared data
 
-This is complication that can happen if you pass in a pointer **INTO** a function that's dealing with shared data. Whather you using OOP or strict DOD it's bad. You need to consider how you access data.
+This is complication that can happen if you pass in a pointer **INTO** a function that's dealing with shared data. Whether you using OOP or strict DOD it's bad. You need to consider how to you access data.
 
-Not passing pointer and reference to protected data outside the scope of a lock. This can be by return from the function, storing them externally visible memory, or by pass in them by arguments.
+Not passing pointer and reference to protected data outside the scope of a lock. This can be by returned from the function, stored externally, making the memory visible, or by pass non-const  reference/pointer in them by arguments.
 
 ```c++
 struct Data

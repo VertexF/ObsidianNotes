@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3c45f53a143102c9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/Books/Filament PBR - Lighting.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Filament PBR - Lighting"
-            }
-          },
-          {
             "id": "31a21ff0dafc8e18",
             "type": "leaf",
             "state": {
@@ -56,12 +32,12 @@
             }
           },
           {
-            "id": "3aa553d92077fdec",
+            "id": "a16886fd40340a0f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Indexes/graphics theory.md",
+                "file": "2 - Source Material/Books/Foundations of Game Engine Developemt - Maths.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "graphics theory"
+              "title": "Foundations of Game Engine Developemt - Maths"
             }
           },
           {
-            "id": "5c7166f0c325c70b",
+            "id": "815e088dae88760d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Lighting unit basics.md",
+                "file": "6 - Main Notes/The directional light.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,82 +76,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Lighting unit basics"
-            }
-          },
-          {
-            "id": "5a37eff63b02c777",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Light unit measuring basics.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Light unit measuring basics"
-            }
-          },
-          {
-            "id": "472e066c04f4b120",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/Books/Filament PBR - Lighting.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Filament PBR - Lighting"
-            }
-          },
-          {
-            "id": "2a65e693123b06bc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Punctual lights theory.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Punctual lights theory"
+              "title": "The directional light"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -232,7 +137,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5
+    "width": 300.5,
+    "collapsed": true
   },
   "right": {
     "id": "baff90f8f3035f27",
@@ -335,44 +241,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3c45f53a143102c9",
+  "active": "a16886fd40340a0f",
   "lastOpenFiles": [
-    "4 - Indexes/graphics theory.md",
-    "2 - Source Material/Books/Filament PBR - Lighting.md",
-    "6 - Main Notes/Punctual lights theory.md",
-    "6 - Main Notes/Lighting unit basics.md",
-    "6 - Main Notes/The spot light.md",
-    "6 - Main Notes/The point light.md",
-    "6 - Main Notes/Direct lighting theory.md",
     "6 - Main Notes/The directional light.md",
-    "6 - Main Notes/Light unit measuring basics.md",
+    "vector-projection-rejection-2.png",
+    "2 - Source Material/Books/Foundations of Game Engine Developemt - Maths.md",
     "6 - Main Notes/Connecting offline raytracing to real time lighting.md",
-    "6 - Main Notes/Attenuation function.md",
-    "6 - Main Notes/Mesuring light basics.md",
-    "6 - Main Notes/How to solve the Multiple Importance Sampling issue.md",
-    "1 - Rough Notes/Stream stuff.md",
-    "2 - Source Material/Article/Texture mapping.md",
-    "6 - Main Notes/What is importance sampling.md",
-    "6 - Main Notes/The problem with Multiple Importance Sampling.md",
+    "4 - Indexes/graphics theory.md",
+    "6 - Main Notes/Adding weight to rays.md",
+    "6 - Main Notes/Samples per pixel.md",
     "6 - Main Notes/Multiple Importance sampling composition.md",
+    "6 - Main Notes/The single sampling model.md",
+    "6 - Main Notes/The power heuristics funciton.md",
+    "6 - Main Notes/The balance heuristic function.md",
+    "6 - Main Notes/How to solve the Multiple Importance Sampling issue.md",
+    "6 - Main Notes/The problem with Multiple Importance Sampling.md",
+    "6 - Main Notes/What is importance sampling.md",
+    "6 - Main Notes/The problem with stratified sampling.md",
+    "6 - Main Notes/Variance in stratified sampling.md",
+    "6 - Main Notes/What is stratified sampling.md",
+    "6 - Main Notes/Working out variance and the MSE for estimators.md",
+    "6 - Main Notes/Biased estimators.md",
+    "6 - Main Notes/Comparing estimators.md",
+    "6 - Main Notes/The Monte Carlo Estimator.md",
     "6 - Main Notes/Reducing errors in the Monte Carlo estimator.md",
-    "6 - Main Notes/Using textures within a shader.md",
-    "6 - Main Notes/Creating basic texture coordinate.md",
-    "4 - Indexes/vulkan.md",
-    "6 - Main Notes/Creating an combined image sampler descriptor.md",
-    "6 - Main Notes/Destroying a image view.md",
-    "2 - Source Material/Article/Drawing a triangle.md",
-    "6 - Main Notes/Creating a sampler.md",
+    "6 - Main Notes/How basic ray tracing works.md",
+    "6 - Main Notes/Background and probability review.md",
+    "matrix-mult-to-B-2.png",
+    "6 - Main Notes/Error in Monte Carlo estimators.md",
+    "6 - Main Notes/The short comings of a monte carlo approach for ray tracing.md",
+    "texture_coordinates.png",
+    "texture_coordinate_wrong.png",
+    "astroid-picture.png",
     "Angle_solide_coordonnees.svg.png",
     "screenshot_spot_light_focused.png",
     "diagram_spot_light.png",
     "diagram_point_light.png",
     "measuring-tool-for-lumance-2.png",
-    "material_furnace_energy_loss.png",
-    "material_metallic_energy_preservation.png",
-    "material_metallic_energy_loss.png",
-    "diagram_single_vs_multi_scatter.png",
-    "diagram_lambert_vs_disney.png",
     "6 - Main Notes/What is the light transport equation"
   ]
 }

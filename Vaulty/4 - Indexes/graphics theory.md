@@ -16,18 +16,22 @@
 [[The problem with LDR cubemaps in PBR]]
 [[Linear lighting vs High Dynmanic Range rendering]]
 ### Light theory
-[[Light distribution]]
-[[Lighting unit basics]]
-[[Light unit measuring basics]]
-[[The theory of handling more than 1 light]]
-[[What is the light transport equation]]
-
-[[Direct lighting theory]]
-[[The directional light]]
-[[Punctual lights theory]]
-[[The point light]]
-[[The spot light]]
-[[Attenuation function]]
+>**Theory**
+    [[Light distribution]]
+    [[Lighting unit basics]]
+    [[Light unit measuring basics]]
+    [[The theory of handling more than 1 light]]
+    [[What is the light transport equation]]
+   **Direct lighting**
+    [[Direct lighting theory]]
+    [[The directional light]]
+    [[Punctual lights theory]]
+    [[The point light]]
+    [[The spot light]]
+    [[Attenuation function]]
+   **Indirect lighting**
+    [[What is ambient light]]
+    [[Adding ambient occlusion]]
 
 ### BRDF
 [[What is the BRDF]]

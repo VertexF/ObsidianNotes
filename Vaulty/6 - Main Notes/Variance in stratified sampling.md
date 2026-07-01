@@ -8,15 +8,15 @@ $$\mu_i = E[f(X_{ij})] = \frac{1}{v_i}\int_{\Lambda_i}f(x)dx$$
 and the variance in this stratum
 $$\sigma_i^2=\frac{1}{v_i}\int_{\Lambda_i} (f(x) - \mu_i)^2dx$$
 This mean that if you take $\sigma_i^2$ and divide it by $\mu_i$ you get the variance per stratum. To get the overall variance you add them all together.
-$$V[F]=V[\sum v_iF_i]$$
+$$V[F]=V\left[\sum v_iF_i \right]$$
 $$= \sum V[v_iF_i]$$
 You can see how this alegbric set works in [[Error in Monte Carlo estimators]]
 $$=\sum v_{i}^2V[F_i]$$
 $$= \sum \frac{v_{i}^2\sigma_{i}^2}{n_i}$$
-If we make the reaonable assumption that the number of samples $n_i$ is proportional. Meaning the relationship between the samples and volume of stratum are the same. Then we can say that $n_i = v_i n$ and the variance of the over estimator is
+If we make the reasonable assumption that the number of samples $n_i$ is proportional. Meaning the relationship between the samples and volume of stratum are the same. Then we can say that $n_i = v_i n$ and the variance of the over estimator is
 $$V[F_n] = \frac{1}{n}\sum v_i\sigma_{i}^2$$
 To compare this result to variance with a stratum. We need to choose a none stratified sample is the equivalent to choosing a ransom stratum $I$ then choosing a random sample $X$ in $\Lambda_I$. This would mean that $X$ is conditional on $I$. This become a condition proproability [[Background and probability review]] explain the basics.
-$$V[F] = \frac{1}{n}[\sum v_io_i^2 + \sum v_i(\mu_i - Q)^2]$$
+$$V[F] = \frac{1}{n}\left[\sum v_io_i^2 + \sum v_i(\mu_i - Q)^2 \right]$$
  $Q$ is the mean of the $f$ over the whole domain. We are doing this compare the stratums expect value to the whole expected value over the entire domain.
 
 There are two things to notice about the equation.

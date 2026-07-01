@@ -26,7 +26,7 @@ If the **BSDF** returns 0 that means that we have a non-transmissive surface. Me
 
 With the $|\cos(\theta')|$ and the surface normal we can compute the absolute dot function which return the absolute value of the dot product between 2 vector. That's because $\vec{a} \cdot \vec{b} = ||\vec{a}||||\vec{b}||\cos(\theta)$ that's why we care about the surface normal, and if they are normalised which they should be then $\hat{a} \cdot \hat{b} = \cos(\theta)$
 
-Finally we need to generate a new ray from the intersection point at the position of $\vec{\omega}'$ offset enough that the float point precision isn't an issue, this is to avoid a second collision with same object again. Doing this with recurision completes the approxated function.
+Finally we need to generate a new ray from the intersection point at the position of $\vec{\omega}'$ offset enough that the float point precision isn't an issue, this is to avoid a second collision with same object again. Doing this with recurision completes the approximated function.
 # References
 ##### Main Notes
 [[Introduction to Monte Carlo]]

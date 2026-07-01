@@ -11,7 +11,7 @@ $$\Phi = \int_{\Omega} I dl = \int_{0}^{2\pi} \int_{0}^{\pi} I d\theta d\phi = 4
 $$I = \frac{\Phi}{4 \pi}$$
 In this case $d$ is distance. When we are intergating over a steradian, it's a double intergral because of the third dimentionality of steradians. We can simply derive the value over set steradian and use that instead of doing an intergation. 
 
-Remember here we are trying to add lighthing to our BRDF by multiplying [[Punctual lights theory|luminous intensity divided by (distance sqaured)]] $d^2$. So with that in mind we throwing in our lighting equation + BRDF + the direction of the light we get this.
+Remember here we are trying to add lighting to our BRDF by multiplying [[Punctual lights theory|luminous intensity divided by (distance sqaured)]] $d^2$. So with that in mind we throw that into our lighting equation + BRDF + the direction of the light we get this.
 
 $$L_{out} = f(v,l)\frac{\Phi}{4\pi d^2} \left< n \cdot l \right>$$
 

@@ -3,9 +3,7 @@ Status: #baby
 Tags: [[graphics theory]] [[light theory]]
 # Lighting unit basics
 
-It's a good to have lights have coherent lighthing units that all follow the same system. You have two different lighting types 
-
-Direct lighting and indirect lighthing.
+It's a good to have lights that have coherent lighting units that all follows the same system. You have two different lighting types direct lighting and indirect lighthing.
 
 | Photometric terms   | Notation   | Unit                             |
 | ------------------- | ---------- | -------------------------------- |
@@ -22,11 +20,11 @@ Candela $cd$ is a standard unit that cares about the luminous power over a solid
 
 ![[Angle_solide_coordonnees.svg.png]]
 
-A solid angle is expressed in a dimensionless called steradian an $sr$ unit. Hence the $cd = \frac{lm}{sr}$ for working our the luminous power over a solid angle. If we we to measure solid we would use steradian. Think about it as steradian is to a sphere what a radian is to a circle.
+A solid angle is expressed in a dimensionless steradian an $sr$ unit. Hence the $cd = \frac{lm}{sr}$ for working our the luminous power over a solid angle. If we were to measure solid angles we would use steradians. Think about steradians like a steradian to a sphere what a radian is to a circle.
 
 Lumiance is a measure of the luminous intensity per unit area of light travelling in a given direction using a solid angle. That's also why we are mesuring $\frac{cd}{m^2}$ per unit area vs travelled over a solid angle.
 
-So it's good idea to make sure your lights map to real world light units. Here table of common lights and the unit you should try to use. 
+So it's good idea to make sure your lights map to real world light units. Here table of common lights of units you should try to use. 
 
 | Light type             | Unit                                   |
 | ---------------------- | -------------------------------------- |
@@ -39,9 +37,9 @@ So it's good idea to make sure your lights map to real world light units. Here t
 | Image based light      | Luminance ($\frac{cd}{m^2}$)           |
 So if want to use watts to work with light brightness you can use this formular to go from lumen over watts to just lumens. Artist for some reason like to use watts.
 $$\Phi = \Phi_e \eta = W \frac{lm}{W}$$
-So $\eta$ is luminous efficacy of the light expressed in lumens per watt. The maximum possible luminous efficacy is $683\frac{lm}{W}$ We can also just use $V$ also called luminous coefficient. As this is a power using the number of photons per watt.
+So $\eta$ is luminous efficacy of the light expressed in lumens per watt. The maximum possible luminous efficacy is $683\frac{lm}{W}$ We can also just use $V$ also called luminous coefficient. As this is the power using the number of photons per watt.
 $$\Phi = \Phi_e 683 \times V$$
-Look online to learn specific lighthing luminous efficacy or the luminous efficiency if you're using a coherent lighting system.
+Look online to learn specific lighting luminous efficacy or the luminous efficiency if you're using a coherent lighting system.
 # References
 ##### Main Notes
 [[Light distribution]]

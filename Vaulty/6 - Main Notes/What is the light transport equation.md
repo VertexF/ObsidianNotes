@@ -3,9 +3,9 @@ Status: #baby
 Tags: [[graphics theory]] [[offline ray tracing]]
 # What is the light transport equation
 
-The amount of light that reaches the camera from a point is given by the sum of light emitted by an object and a light source, and the mount of light reflected. This idea is formalised in the **light transport equation** aka **rendering equation**
+The amount of light that reaches the camera from a point is given by the sum of light emitted by an object and a light source, and the mount of light reflected back from that point. This idea is formalised in the **light transport equation** aka **rendering equation**
 
-This measures light with respect to radiance, a radiometric unit. The output for the equation is $L_o(P, \vec{\omega_o})$ which states that from point **P** and direction $\vec{\omega_o}$ is emitted radiance at the point of direction $L_e(P, \vec{\omega_o})$ which is the **emitted light radiance** function.
+This measures light with respect to radiance, a radiometric unit. The output for the equation is $L_o(P, \vec{\omega_o})$ which states that from point **P** and direction $\vec{\omega_o}$ is emitted radiance at the point of a given direction $L_e(P, \vec{\omega_o})$ which is the **emitted light radiance** function.
 
 Next we do this over all the incident radiance from all direction over a hemasphere from point **P** scaled by the [[What is the BRDF|BRDF]] $f_r(P,\vec{\omega_o}, \vec{\omega_i})$ and the cosine term:
 

@@ -7,7 +7,7 @@ We can now define the Monte Carlo estimator as something that approximates the v
 $$F_n = \frac{b - a}{n}\sum_{i = 1}^{n}f(X_i)$$
 The $F_n$ is equal to the integral. This is also for a 1D intergal. 
 
-If we consider the whole range of the domain we can do some alegbraic manipulation. We also need to make sure that we understand that **probability density function (PDF)** corresponding to the random variable $X_i$ must be equal to $1/(b-a)$ since $p$ must not only be a constant but also integrate to 1 over the whole domain $[a, b]$
+If we consider the whole range of the domain we can do some algebraic manipulation. We also need to make sure that we understand that **probability density function (PDF)** corresponding to the random variable $X_i$ must be equal to $1/(b-a)$ since $p$ must not only be a constant but also integrate to 1 over the whole domain $[a, b]$
 
 We are asking here what is the expect value of the result of the intergal.
 $$E[F_n] = E[\frac{b - a}{n}\sum_{i = 1}^{n}f(X_i)]$$

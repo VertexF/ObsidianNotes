@@ -171,7 +171,7 @@ vec3 evaluatePunctualLight()
 }
 ```
 
-To correctly work with spot lights, you need to surround your spot in a point light hence the sphere of influence. [[Attuation function]]
+To correctly work with spot lights, you need to surround your spot in a point light hence the sphere of influence. [[Attenuation function]]
 ##### Attenuation function
 We can't use the standard mathematical equation, this is because it's impractical implement.
 1) The division by the square distance can lead to divides by 0, when an object touches the light source.

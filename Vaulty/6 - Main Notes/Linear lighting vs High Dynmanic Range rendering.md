@@ -22,7 +22,7 @@ So there are three ways to fix this.
 
 These things needs to be done before gamma correction. You can simplify apply a Reinhard operator at the end of your fragment shader to correct the colours in your PBR solution.
 
-The Reinhard operator works way better when you have some ambient lighthing in your scene. This also means you want to do any tonemapping in HDR not LDR otherwise things look grey.
+The Reinhard operator works way better when you have some ambient lighting in your scene. This also means you want to do any tonemapping in HDR not LDR otherwise things look grey.
 
 If you've done either just a conversion to LDR from HDR or a tonemap (or both tonemap -> HDR to LDR) then the gamma correction can be done correctly. Meaning that your colour output will be correct for high and low light intensities (in theory). 
 # References

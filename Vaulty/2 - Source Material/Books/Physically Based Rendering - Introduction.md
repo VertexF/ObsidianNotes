@@ -53,8 +53,6 @@ So for something like a pointer light the geometry distribution of light is simp
 
 We need to worry about the amount of light power being desposited on the differential area surrounding the interaction pointer **p** We will talk about point to drill the basic concepts. This picture the general idea.
 
-![[pha01f05.svg|533]]
-
 We will assume that point light has some power $\Phi$ associated with it and it radiates light equally in all direction. This means that the power-per area on a unit sphere surround the light is $\Phi/4\pi$ 
 
 If we have a sphere that account for the power, that gets larger and further away from the point light we lose power at a rate of $1/r^2$ this is the inverse square law.
@@ -72,7 +70,7 @@ With ray tracing it's very easy to figure out if the light is casing a shadow fr
 
 This works exactly the same as [[Ray-object Intersections]] but when we hit something we have a shadow rather than something we need to distribute power to. If there no blocking object the light constributes to the surface.
 ##### Light scattering at surface
-With [[Ray-object Intersections]] found and the [[Light distribution]] worked out and the [[Visibility]] of a surface worked out for all light. We can work out the location and incident lighthing.
+With [[Ray-object Intersections]] found and the [[Light distribution]] worked out and the [[Light visibitlity]] of a surface worked out for all light. We can work out the location and incident lighthing.
 
 We need to work out how much light is scatter back down the ray to the camera. This is the incident lighting effect. 
 
@@ -96,7 +94,7 @@ With hardware based ray tracing you can specify a limited to the amount of recus
 
 If you do this in a compute shader, you'll need to maintain your own stack for the recursion.
 ###### What is stochastic progressive phonotic mapping
-Since 1980 we've been able use the recusive nature of ray tracing with [[Indirect light transport]] but with **stochastic progessive photon mapping (SPPM)** algorithms you are able to accurately simulate the focusing of light that passes through glass.
+Since 1980 we've been able use the recusive nature of ray tracing with [[Indirect light transport for rays]] but with **stochastic progessive photon mapping (SPPM)** algorithms you are able to accurately simulate the focusing of light that passes through glass.
 
 Here we aren't using **SPPM** and you can see the shadows are all black
 ![[black_shadows-1.png]]
