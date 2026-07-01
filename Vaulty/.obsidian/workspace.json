@@ -30,57 +30,8 @@
               "icon": "lucide-file",
               "title": "Connecting offline raytracing to real time lighting"
             }
-          },
-          {
-            "id": "a16886fd40340a0f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/Books/Foundations of Game Engine Developemt - Maths.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Foundations of Game Engine Developemt - Maths"
-            }
-          },
-          {
-            "id": "815e088dae88760d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/The directional light.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "The directional light"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -137,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5,
-    "collapsed": true
+    "width": 300.5
   },
   "right": {
     "id": "baff90f8f3035f27",
@@ -217,8 +167,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           }
         ],
@@ -241,11 +191,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a16886fd40340a0f",
+  "active": "31a21ff0dafc8e18",
   "lastOpenFiles": [
+    "1 - Rough Notes/Stream stuff.md",
     "6 - Main Notes/The directional light.md",
-    "vector-projection-rejection-2.png",
+    "6 - Main Notes/Typically Neovim commands.md",
+    "6 - Main Notes/Typically tmux commands.md",
+    "3 - Tags/Linux Development.md",
     "2 - Source Material/Books/Foundations of Game Engine Developemt - Maths.md",
+    "vector-projection-rejection-2.png",
     "6 - Main Notes/Connecting offline raytracing to real time lighting.md",
     "4 - Indexes/graphics theory.md",
     "6 - Main Notes/Adding weight to rays.md",
@@ -266,10 +220,7 @@
     "6 - Main Notes/The Monte Carlo Estimator.md",
     "6 - Main Notes/Reducing errors in the Monte Carlo estimator.md",
     "6 - Main Notes/How basic ray tracing works.md",
-    "6 - Main Notes/Background and probability review.md",
     "matrix-mult-to-B-2.png",
-    "6 - Main Notes/Error in Monte Carlo estimators.md",
-    "6 - Main Notes/The short comings of a monte carlo approach for ray tracing.md",
     "texture_coordinates.png",
     "texture_coordinate_wrong.png",
     "astroid-picture.png",
