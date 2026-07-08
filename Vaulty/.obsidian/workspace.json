@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Connecting offline raytracing to real time lighting.md",
+                "file": "1 - Rough Notes/Question - How do you go about deleting instanced objects from the scene.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,8 +28,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Connecting offline raytracing to real time lighting"
+              "title": "Question - How do you go about deleting instanced objects from the scene"
             }
+<<<<<<< Updated upstream
+=======
+          },
+          {
+            "id": "71f4fb61ce6cf146",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Books/Foundations of Game Engine Development - Graphics.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Foundations of Game Engine Development - Graphics"
+            }
+          },
+          {
+            "id": "16e2577648e5ff2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 - Indexes/graphics theory.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "graphics theory"
+            }
+>>>>>>> Stashed changes
           }
         ]
       }
@@ -191,6 +242,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
+<<<<<<< Updated upstream
   "active": "31a21ff0dafc8e18",
   "lastOpenFiles": [
     "1 - Rough Notes/Stream stuff.md",
@@ -201,18 +253,36 @@
     "2 - Source Material/Books/Foundations of Game Engine Developemt - Maths.md",
     "vector-projection-rejection-2.png",
     "6 - Main Notes/Connecting offline raytracing to real time lighting.md",
+=======
+  "active": "71f4fb61ce6cf146",
+  "lastOpenFiles": [
+>>>>>>> Stashed changes
     "4 - Indexes/graphics theory.md",
-    "6 - Main Notes/Adding weight to rays.md",
-    "6 - Main Notes/Samples per pixel.md",
-    "6 - Main Notes/Multiple Importance sampling composition.md",
-    "6 - Main Notes/The single sampling model.md",
-    "6 - Main Notes/The power heuristics funciton.md",
-    "6 - Main Notes/The balance heuristic function.md",
-    "6 - Main Notes/How to solve the Multiple Importance Sampling issue.md",
-    "6 - Main Notes/The problem with Multiple Importance Sampling.md",
-    "6 - Main Notes/What is importance sampling.md",
-    "6 - Main Notes/The problem with stratified sampling.md",
+    "2 - Source Material/Books/Foundations of Game Engine Development - Graphics.md",
+    "1 - Rough Notes/Question - How do you go about deleting instanced objects from the scene.md",
+    "billboard-2.png",
+    "6 - Main Notes/Visual studio profiler.md",
+    "6 - Main Notes/The problem with LDR cubemaps in PBR.md",
+    "1 - Rough Notes/Stream stuff.md",
+    "6 - Main Notes/The difference between source and destination stage mask.md",
+    "4 - Indexes/vulkan.md",
+    "6 - Main Notes/Execution pipeline barrier example.md",
+    "6 - Main Notes/What are semaphores.md",
+    "6 - Main Notes/What are pipeline barriers.md",
+    "6 - Main Notes/Implicit memory guarantees when waiting for a semaphore.md",
+    "6 - Main Notes/What are fences.md",
+    "6 - Main Notes/What are wait idle operations.md",
+    "6 - Main Notes/Vulkan command overlap.md",
+    "6 - Main Notes/Basic queue synchronisation.md",
+    "6 - Main Notes/Implicit synchronisation guarantees.md",
+    "6 - Main Notes/Vulkan command categories.md",
+    "6 - Main Notes/Transitioning image memory for texture mapping.md",
+    "1 - Rough Notes/Roadmap.md",
+    "6 - Main Notes/Using a push constants.md",
+    "6 - Main Notes/pha01f05.svg.md",
+    "6 - Main Notes/Indirect light transport for rays.md",
     "6 - Main Notes/Variance in stratified sampling.md",
+<<<<<<< Updated upstream
     "6 - Main Notes/What is stratified sampling.md",
     "6 - Main Notes/Working out variance and the MSE for estimators.md",
     "6 - Main Notes/Biased estimators.md",
@@ -220,6 +290,11 @@
     "6 - Main Notes/The Monte Carlo Estimator.md",
     "6 - Main Notes/Reducing errors in the Monte Carlo estimator.md",
     "6 - Main Notes/How basic ray tracing works.md",
+=======
+    "6 - Main Notes/Creating a descriptor set layout.md",
+    "6 - Main Notes/Filling up a vertex buffer with CPU visibility.md",
+    "vector-projection-rejection-2.png",
+>>>>>>> Stashed changes
     "matrix-mult-to-B-2.png",
     "texture_coordinates.png",
     "texture_coordinate_wrong.png",
@@ -228,7 +303,6 @@
     "screenshot_spot_light_focused.png",
     "diagram_spot_light.png",
     "diagram_point_light.png",
-    "measuring-tool-for-lumance-2.png",
     "6 - Main Notes/What is the light transport equation"
   ]
 }

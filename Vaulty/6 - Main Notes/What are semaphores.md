@@ -7,7 +7,7 @@ Semaphores are used to order commands within a queue and synchronise different q
 
 There are two types of semaphores **binary** and **timeline**. Timeline semphores are cored in 1.2 and needs an extension to get this working in early versions. Binary semaphores are the simplest and require less set up but can do less. 
 
-Semaphores are  different to barriers because they are interested in setting up barriers between group of action commands, rather than individual commands on the GPU.
+Semaphores are different to barriers because they are interested in setting up barriers between group of action commands, rather than individual commands on the GPU.
 
 A binary semaphore can be either unsignalled or signalled. It begins unsignalled. The semaphore works as a synchronization command in the queue that queue signals the semaphore when the command is complete. Another command will wait on that semaphore until it is signalled to then go on and do it's work. Once the second command has started the semaphore goes back to unsignalled automatically.
 

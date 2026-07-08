@@ -45,6 +45,8 @@ for (uint32_t i = 0; i < totalDucks; ++i)
 ```
 
 The last element here `&i` is the thing we are writing and uploading to the shader. The size and offset the same, as when we set then up. It's important to know that you need to have the **VkPipelineLayout** as part of the command structure.
+
+If you allocate the entire push constant buffer, you don't have to worry about the sizing what you're pushing to the push constant. Meaning that different shaders can have different push constants content within them. As long as on the CPU you're pushing the correct data, everything should would. To switch these things around you just bind a different pipeline.
 # References
 ##### Main Notes
 [[Push constant with offset data]]
