@@ -11,6 +11,6 @@ This is one way to load things into shaders you can use other ways. It requires 
 [[Shader vertex input descriptions]]
 [[Setting up binding descriptions]]
 [[Setting up the vertex attributes descriptions]]
-[[Setting up the a buffer]]
+[[Setting up a vulkan buffer]]
 #### Source Notes
 [[Vertex buffer]]

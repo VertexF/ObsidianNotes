@@ -1,6 +1,6 @@
 2026-07-01 16:49
 Status: #baby 
-Tags: [[Linux Development]]
+Tags: [[linux development]]
 # Typically Neovim commands
 
 This allows you to go through a source to select. `:Exp` 

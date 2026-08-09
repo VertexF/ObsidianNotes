@@ -1,7 +1,7 @@
 2025-11-16 14:40
 Status: #baby 
 Tags: [[vulkan]] [[vulkan buffer]]
-# Setting up the a buffer
+# Setting up a vulkan buffer
 
 In this example I will use a vertex buffer set up but any type of buffer goes through the same thing.
 

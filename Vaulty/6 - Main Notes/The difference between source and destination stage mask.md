@@ -19,9 +19,9 @@ When you add this execution barrier you are saying that every action command nee
 
 ![[top_of_pipe_and_bottom_of_pipe_barrier.png]]
 
-Let use a better example lets say you want a vertex shader that stores data via and`imageStore` and you want that to be consumed by a compute shader. In this case you wouldn't want to wait for the fragment shader to finish so we let piece of work pass through. If there is a computer shader command we must wait for the vertex shader to finish. 
+Let use a better example lets say you want a vertex shader that stores data via and`imageStore` and you want that to be consumed by a compute shader. In this case you wouldn't want to wait for the fragment shader to finish so we let piece of work pass through. If there is a compute shader command we must wait for the vertex shader to finish. 
 
-The way to express this is to have the **srcStageMask** to be `VK_PIPELINE_STAGE_VERTEX_SHADER_BIT` and the consumer `VK_PIPELINE_COMPUTE_SHADER_BIT` be the **dstStageMask**
+The way to express this is to have the **srcStageMask** to be `VK_PIPELINE_STAGE_VERTEX_SHADER_BIT` and the consumer and the`VK_PIPELINE_COMPUTE_SHADER_BIT` be the **dstStageMask**
 
 ```c++
 vkCmdPipelineBarrier(
@@ -31,7 +31,9 @@ VK_PIPELINE_COMPUTE_SHADER_BIT, // destination stage
 /* remaining parameters omitted */);
 ```
 
-The idea here is that we have 2 action commands which execute at different pipeline stages. They execute the green parts or may just skip them. 
+The idea here is that we have 2 action commands which execute at different pipeline stages meaning that our fragment shader can run after the vertex shader whever it because the compute shader isn't dependent on that.
+
+You may be thinking that the first command has a compute pipeline stage does that get blocked too? All action commands have to go through each stage but in our case the command that runs the vertex shader does a no-op on it's own compute shader pipeline staging meaning that it's just ignored. You never have to worry about action commands blocking themselves because they typically do one thing. 
 ![[vulkan-good-barrier-1024x771.Bl25au61.jpg]]
 
 So in the first command we are skipping over the compute shader part of the command because the command does a noop on that pipeline stage so nothing is needed to be waited on.

@@ -5,10 +5,10 @@ Tags: [[vulkan]] [[indirect draw calls]]
 
 A common idea when it comes to rendering, you iterate through each model to draw in a scene and bind there resource such as vertex buffers, index buffer and descriptors before the draw call. One thing to note is that this isn't free in command buffer generation such as **vkCmdBindVertexBuffer** and rendering.
 
-You could use indirect draw calls instead introduces in Vulkan 1.2 which queries and GPU buffer to get it's draw paramters.
+You could use indirect draw calls count which was instead introduces in Vulkan 1.2 which queries and GPU buffer to get it's draw paramters.
 
 You have two advantages here:
-1) Draw calls can be generating on the GPU such as in compute shader (which can do additional work to cull things.)
+1) Draw calls can be generated on the GPU such as in compute shader (which can do additional work to cull things.)
 2) Using an array of draw calls can be called once, reducing the command buffer overhead.
 # References
 ##### Main Notes

@@ -17,7 +17,7 @@ When using one buffer to load memory into the buffer you need to be aware that t
 You need to worry about this because the GPU doesn't guarantee when it will be uploaded because of caching. Correctly we use **VK_MEMORY_PROPERTY_HOST_COHERNET_BIT** which is slower. The only thing we can be sure about is that it will be available when we get to the **vkQueueSubmit**.
 # References
 ##### Main Notes
-[[Setting up the a buffer]]
+[[Setting up a vulkan buffer]]
 [[Allocating data to a buffer]]
 #### Source Notes
 [[Vertex buffer]]

@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[graphics theory]] [[BRDF]]
 # What is the BRDF
 
-Each object in a scene has a material tied to it, which describes the apperabce properties at each point on a surface. The **bidirectional reflectance distribution function (BRDF)** tell us how much energy is reflected from the incoming $\vec{\omega_i}$ to an outgoing direction $\hat{\omega_o}$ for [[Light scattering at a surface]]
+Each object in a scene has a material tied to it, which describes the apperabce properties at each point on a surface. The **bidirectional reflectance distribution function (BRDF)** tell us how much energy is reflected from the incoming $\vec{\omega_i}$ to an outgoing direction $\vec{\omega_o}$ for [[Light scattering at a surface]]
 
 I will refer to the **BRDF** function as $f_r(P,\vec{\omega_o}, \vec{\omega_i})$ by conversion the direction are unit vector. This really helps with the calculations.
 

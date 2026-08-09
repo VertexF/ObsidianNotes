@@ -19,7 +19,7 @@ We also need to change the **vkCmdDraw** to actually set the vertices size which
 # References
 ##### Main Notes
 [[Setting up and running the vkCmdDraw command]]
-[[Setting up the a buffer]]
+[[Setting up a vulkan buffer]]
 [[Filling up a vertex buffer with CPU visibility]]
 #### Source Notes
 [[Vertex buffer]]

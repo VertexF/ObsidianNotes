@@ -2,11 +2,31 @@
 [[What is linear space]]
 [[Swapchain colour space format]]
 ### Maths
+**Basic Maths**
+[[Finding the square root of decimals]]
+[[Angle relationships]]
+[[The triangle inequality theorm]]
+**Monte Carlo Background maths**
 [[Background and probability review]]
 [[Expected values]]
 [[How to calculate the mean of a continous function]]
+**Vector Maths**
+[[Vector projection]]
+[[Vector rejection]]
+**Normal Matrics**
+[[Normal vector maths]]
+[[The problem with transform normal vectors]]
+[[Handling normal vectors when transformed]]
+[[The adjungate normal matrix]]
+**Geometry - Lines**
+[[Parametric lines]]
 ### Depth
 [[What is reverse-Z perspective]]
+### Particles
+>  **Billboards**
+> 	 [[What are billboards]]
+> 	 [[Spherical billboards]]
+
 ### PBR
 [[What is Physically Based Rendering]]
 ### IBL
@@ -15,6 +35,7 @@
 [[Simplifying the PBR equation for diffuse IBL]]
 [[The problem with LDR cubemaps in PBR]]
 [[Linear lighting vs High Dynmanic Range rendering]]
+[[HDR image formats]]
 ### Light theory
 >**Theory**
     [[Light distribution]]
@@ -46,7 +67,7 @@
 [[Energy issues with Cook-Torrance BRDF]]
 [[How to preserve energy for specular]]
 
-[[Connecting offline raytracing to real time lighting]]
+[[Difference between BDRF and BSDF]]
 ### Offline Ray tracing
 >**Introduction**
     [[What is ray tracing]]

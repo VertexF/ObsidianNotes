@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "ccb365170235b6a5",
+    "id": "0d2486c35953dfdc",
     "type": "split",
     "children": [
       {
-        "id": "1e1f14846d1a263e",
+        "id": "7b3c5c8041da8fac",
         "type": "tabs",
         "children": [
           {
-            "id": "31a21ff0dafc8e18",
+            "id": "a3f379b7f34f2a2a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Rough Notes/Question - How do you go about deleting instanced objects from the scene.md",
+                "file": "6 - Main Notes/Angle relationships.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,42 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Question - How do you go about deleting instanced objects from the scene"
-            }
-<<<<<<< Updated upstream
-=======
-          },
-          {
-            "id": "71f4fb61ce6cf146",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/Books/Foundations of Game Engine Development - Graphics.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Foundations of Game Engine Development - Graphics"
+              "title": "Angle relationships"
             }
           },
           {
-            "id": "16e2577648e5ff2c",
+            "id": "c8412f9b9ee329c0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Indexes/graphics theory.md",
+                "file": "2 - Source Material/Books/C++ Concurrency - Protected Shared Data.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -78,38 +52,194 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "graphics theory"
+              "title": "C++ Concurrency - Protected Shared Data"
             }
->>>>>>> Stashed changes
+          },
+          {
+            "id": "2137db799b77d5fa",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "1495103a201c79d8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Rough Notes/Stream stuff.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Stream stuff"
+            }
+          },
+          {
+            "id": "dd1ccc29a85c629c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Article/Grade 8 Math - Khan Academy.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Grade 8 Math - Khan Academy"
+            }
+          },
+          {
+            "id": "003b4c6d71d8bba0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/The adjungate normal matrix.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "The adjungate normal matrix"
+            }
+          },
+          {
+            "id": "3aa799ea659d365e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Immediate to register move.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Immediate to register move"
+            }
+          },
+          {
+            "id": "522f7f626fa58999",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/The spot light.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "The spot light"
+            }
+          },
+          {
+            "id": "5f682849210e98c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Article/Grade 8 Math - Khan Academy.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Grade 8 Math - Khan Academy"
+            }
           }
-        ]
+        ],
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "cfecc064a57b4c1a",
+    "id": "673269bdff107819",
     "type": "split",
     "children": [
       {
-        "id": "79257a646b66ac41",
+        "id": "5cc629a9e5c358e9",
         "type": "tabs",
         "children": [
           {
-            "id": "e8254106aac6f452",
+            "id": "9569f31a9ed87616",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
             }
           },
           {
-            "id": "287dcedcaf2d150b",
+            "id": "89946b7acc650767",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -126,7 +256,7 @@
             }
           },
           {
-            "id": "a00039cbfb537ecf",
+            "id": "03936ef144205406",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -139,23 +269,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5
+    "width": 300
   },
   "right": {
-    "id": "baff90f8f3035f27",
+    "id": "3918cf74ef333371",
     "type": "split",
     "children": [
       {
-        "id": "83c46cfb85091c9f",
+        "id": "e46e91a1055db6a5",
         "type": "tabs",
         "children": [
           {
-            "id": "c6231cc1e30c9bee",
+            "id": "219307151312eab7",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "4 - Indexes/vulkan.md",
+                "file": "2 - Source Material/Books/Foundations of Game Engine Development - Graphics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,25 +295,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for vulkan"
+              "title": "Backlinks for Foundations of Game Engine Development - Graphics"
             }
           },
           {
-            "id": "07e529faeddb5f17",
+            "id": "e242a5dab15148ef",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "4 - Indexes/vulkan.md",
+                "file": "2 - Source Material/Books/Foundations of Game Engine Development - Graphics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from vulkan"
+              "title": "Outgoing links from Foundations of Game Engine Development - Graphics"
             }
           },
           {
-            "id": "6e7951dcf35bd260",
+            "id": "d0a11d1fec4fdeaf",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -198,32 +328,21 @@
             }
           },
           {
-            "id": "5b6af8e60bd9c541",
+            "id": "ea27f18531812218",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 - Indexes/vulkan.md",
+                "file": "2 - Source Material/Books/Foundations of Game Engine Development - Graphics.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of vulkan"
-            }
-          },
-          {
-            "id": "872a78751a9ca502",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "title": "Outline of Foundations of Game Engine Development - Graphics"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -242,67 +361,39 @@
       "obsidian-git:Open Git source control": false
     }
   },
-<<<<<<< Updated upstream
-  "active": "31a21ff0dafc8e18",
+  "active": "5f682849210e98c1",
   "lastOpenFiles": [
-    "1 - Rough Notes/Stream stuff.md",
-    "6 - Main Notes/The directional light.md",
-    "6 - Main Notes/Typically Neovim commands.md",
-    "6 - Main Notes/Typically tmux commands.md",
-    "3 - Tags/Linux Development.md",
-    "2 - Source Material/Books/Foundations of Game Engine Developemt - Maths.md",
-    "vector-projection-rejection-2.png",
-    "6 - Main Notes/Connecting offline raytracing to real time lighting.md",
-=======
-  "active": "71f4fb61ce6cf146",
-  "lastOpenFiles": [
->>>>>>> Stashed changes
+    "6 - Main Notes/Finding the square root of decimals.md",
+    "6 - Main Notes/Angle relationships.md",
+    "6 - Main Notes/How to calculate the mean of a continous function.md",
+    "6 - Main Notes/The spot light.md",
     "4 - Indexes/graphics theory.md",
-    "2 - Source Material/Books/Foundations of Game Engine Development - Graphics.md",
-    "1 - Rough Notes/Question - How do you go about deleting instanced objects from the scene.md",
-    "billboard-2.png",
-    "6 - Main Notes/Visual studio profiler.md",
-    "6 - Main Notes/The problem with LDR cubemaps in PBR.md",
+    "6 - Main Notes/The adjungate normal matrix.md",
     "1 - Rough Notes/Stream stuff.md",
-    "6 - Main Notes/The difference between source and destination stage mask.md",
-    "4 - Indexes/vulkan.md",
-    "6 - Main Notes/Execution pipeline barrier example.md",
-    "6 - Main Notes/What are semaphores.md",
-    "6 - Main Notes/What are pipeline barriers.md",
-    "6 - Main Notes/Implicit memory guarantees when waiting for a semaphore.md",
-    "6 - Main Notes/What are fences.md",
-    "6 - Main Notes/What are wait idle operations.md",
-    "6 - Main Notes/Vulkan command overlap.md",
-    "6 - Main Notes/Basic queue synchronisation.md",
-    "6 - Main Notes/Implicit synchronisation guarantees.md",
-    "6 - Main Notes/Vulkan command categories.md",
-    "6 - Main Notes/Transitioning image memory for texture mapping.md",
-    "1 - Rough Notes/Roadmap.md",
-    "6 - Main Notes/Using a push constants.md",
-    "6 - Main Notes/pha01f05.svg.md",
-    "6 - Main Notes/Indirect light transport for rays.md",
-    "6 - Main Notes/Variance in stratified sampling.md",
-<<<<<<< Updated upstream
-    "6 - Main Notes/What is stratified sampling.md",
-    "6 - Main Notes/Working out variance and the MSE for estimators.md",
-    "6 - Main Notes/Biased estimators.md",
-    "6 - Main Notes/Comparing estimators.md",
-    "6 - Main Notes/The Monte Carlo Estimator.md",
-    "6 - Main Notes/Reducing errors in the Monte Carlo estimator.md",
-    "6 - Main Notes/How basic ray tracing works.md",
-=======
-    "6 - Main Notes/Creating a descriptor set layout.md",
-    "6 - Main Notes/Filling up a vertex buffer with CPU visibility.md",
-    "vector-projection-rejection-2.png",
->>>>>>> Stashed changes
-    "matrix-mult-to-B-2.png",
-    "texture_coordinates.png",
-    "texture_coordinate_wrong.png",
-    "astroid-picture.png",
-    "Angle_solide_coordonnees.svg.png",
-    "screenshot_spot_light_focused.png",
-    "diagram_spot_light.png",
-    "diagram_point_light.png",
-    "6 - Main Notes/What is the light transport equation"
+    "2 - Source Material/Article/Grade 8 Math - Khan Academy.md",
+    "6 - Main Notes/Byte encoding for effective address calculations.md",
+    "6 - Main Notes/Geometric shadowing(specular G).md",
+    "3 - Tags/maths.md",
+    "6 - Main Notes/The triangle inequality theorm.md",
+    "4 - Indexes/threading.md",
+    "basicTriangleOfX.png",
+    "verticalAngles.png",
+    "sumplementaryAngles.png",
+    "complementaryAngles.png",
+    "ajdacentAngles.png",
+    "2 - Source Material/KTX texture compression.md",
+    "2 - Source Material/Books/Bindless - Mastering Graphics Programming with Vulkan.md",
+    "2 - Source Material/Books/C++ Concurrency - Hello, world of concurrency in C++.md",
+    "2 - Source Material/Books/C++ Concurrency - Managing Threads.md",
+    "2 - Source Material/Books/C++ Concurrency - Protected Shared Data.md",
+    "2 - Source Material/Books/Filament PBR - Lighting.md",
+    "2 - Source Material/Books/Filament PBR - Materials.md",
+    "2 - Source Material/Books/Foundations of Game Engine Developemt - Maths.md",
+    "2 - Source Material/Books/Foundations of Game Engine Development - Graphics.md",
+    "2 - Source Material/Books/GPU Zen 3 - Mult-mega Particle System.md",
+    "2 - Source Material/Books/Introduction to operation systems - source note.md",
+    "2 - Source Material/Books/Physically Based Rendering - Introduction.md",
+    "2 - Source Material/Books/Physically Based Rendering - Monte Carlo.md",
+    "Universal-GPU-Compressed-Textures.png"
   ]
 }

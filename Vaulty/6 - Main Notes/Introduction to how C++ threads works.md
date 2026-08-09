@@ -35,7 +35,7 @@ int main()
 }
 ```
 
-Thing for handling threads can be found in the `#include <thread>` where as stuff for handling  shared data can be found in a different header.
+Things for handling threads can be found in the `#include <thread>` where as stuff for handling  shared data can be found in a different header.
 
 We had to move out the printing code into something called an **initial function** these are taken into thread object via the constructor. The main threads or the initial thread **initial function** is literally `int main()`. For every other thread we create we create it with an **initial function** like we did with like `std::thread t1(print);`
 

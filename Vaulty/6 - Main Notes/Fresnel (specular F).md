@@ -10,7 +10,7 @@ The steeper the angles get, the more specular the surface gets. This image shows
 
 You also need to have the **index of refaction (IOR)** of the material. So in our note when we are talking the normal incidence, (when we are perpendicular to the surface.) We say that the amount reflected back $f_0$ can be derived from the **IOR**. The amount reflected by a grazing is $f_{90}$ which approaches 100% on smooths materials.
 
-So Fresnel is interested in how light reflects and refact at the inteface between two different mediums. It's also concerned with the ratio reflect and transmitted energy. We have a inexpensive approximation of the Fresnel with schlick approximation.
+So Fresnel is interested in how light reflects and refact at the interface between two different mediums. It's also concerned with the ratio reflect and transmitted energy. We have a inexpensive approximation of the Fresnel with schlick approximation.
 $$F_{Schlick}(v,h,f_0,f_{90}) = f_0 + (f_{90} - f_0)(1 - v \cdot h)^5$$
 
 The $f_0$ constant represents the specular reflectance at a normal incidence (when we are perpendicular to the surface) and is achromatic for dieletrics and chromatic for metals. In GLSL we can use `pow` and removes a few multiplications.
@@ -34,7 +34,7 @@ vec3 fresnelSchlick(float v, vec3 f0)
 }
 ``` 
 
-For example when you work out the specular componenet of the BDRF
+For example when you work out the specular componenet of the BRDF
 
 ```c
 vec3 specular = (D * G * F);

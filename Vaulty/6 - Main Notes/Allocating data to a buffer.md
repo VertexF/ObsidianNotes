@@ -79,11 +79,13 @@ We then bind, then sets the vertex buffer and memory to be linked together.
 
 Right now there is nothing in the memory so you'll need to fill the buffer with something before you use it. So next you need [[Copying buffer data over|copy memory]].
 ### **WARNING**
-We are allocating memory "incorrectly" here. You're meant to allocate memory objects all together and offset into that memory because you have a hard limit of something like 4096 objects you can allocate. You can do this work yourself in vulkan or start using the VMA https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator 
+We are allocating memory "incorrectly" here. You're meant to allocate memory objects all together and offset into that memory because you have a hard limit of something like 4096 objects you can allocate. You can do this work yourself in vulkan or start using the VMA https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator This is how you would do this [[Using VMA to create a host visible buffer]]
 # References
 ##### Main Notes
 [[Copying buffer data over]]
 [[Filling up a vertex buffer with CPU visibility]]
+[[Using VMA to create a host visible buffer]]
+[[Setting up VMA]]
 [[What is a vertex buffer]]
 #### Source Notes
 [[Vertex buffer]]

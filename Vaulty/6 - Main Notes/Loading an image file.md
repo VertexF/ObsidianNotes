@@ -53,6 +53,7 @@ Don't forget to free the pixels once the memcpy has happend.
 # References
 ##### Main Notes
 [[Introduction to texture mapping]]
+[[Creating a texture with KTX file]]
 [[Creating the vertex buffer with staging buffers]]
 #### Source Notes
 [[Texture mapping]]

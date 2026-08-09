@@ -20,7 +20,7 @@ memcpy(data, vertices.data(), size_t(bufferSize));
 vkUnmapMemory(device, stagingBufferMemory);
 ```
 
-Okay so the **createBuffer** is a help function that creates a buffer, selects the memory type and binds it. You can find more about that in the [[Setting up the a buffer]] and [[Allocating data to a buffer]] The arguments for this function are:
+Okay so the **createBuffer** is a help function that creates a buffer, selects the memory type and binds it. You can find more about that in the [[Setting up a vulkan buffer]] and [[Allocating data to a buffer]] The arguments for this function are:
 1) **VkDeviceSize** which takes in the size of the buffer. 
 2) **VkBufferUsageFlags** This tells the function what the buffer is going to be used for. 
 3) **VkMemoryPropertyFlags** This tell the function the memory type we are interested in. 
@@ -35,7 +35,7 @@ Remember since the **VkMemoryPropertyFlags** is host visible and coherent we can
 # References
 ##### Main Notes
 [[What are staging buffers]]
-[[Setting up the a buffer]]
+[[Setting up a vulkan buffer]]
 [[Allocating data to a buffer]] 
 #### Source Notes
 [[Vertex buffer]]

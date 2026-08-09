@@ -5,7 +5,7 @@ Tags: [[threading]]
 
 Detach means that the thread runs in the background and there is no way of communicating with it, meaning that you can't wait for it to be completed. The ownership actually is passed over to the C++ runtime library.
 
-This threads are meant to do tasks that more or less happen across the life time of the program, like clearing up unused caches, optimising data structures. If you have another way of knowing when the threads works has been completed, then you can use it there as well as a fire-and-forget type deal.
+This threads are meant to do tasks that more or less happen across the life time of the program, like cleaning up unused caches, optimising data structures. If you have another way of knowing when the threads works has been completed, then you can use it there as well as a fire-and-forget type deal.
 
 You can also use `joinable()` to check if you can `detach()` a thread too.
 

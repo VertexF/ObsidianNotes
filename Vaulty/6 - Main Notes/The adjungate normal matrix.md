@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[maths]]
 # The adjungate normal matrix
 
-So since we are aware that the normal vector stores the gradients and not the distance to scale, we need to treat the normal vector like a 1 colume row matrix, as described in [[Handling normal vectors when transformed]] To do this we can just invert the matrix.
+So since we are aware that the normal vector stores the gradients and not the distance to scale, we need to treat the normal vector like a 1 row matrix, as described in [[Handling normal vectors when transformed]] To do this we can just invert the matrix.
 
 If we two vector $\vec{t}$ and $\vec{s}$ which are two tangent vector, we can take these and do a cross project and get normal vector. Assumming we take into account this $Mv = v_{x}\vec{a} + v_{y}\vec{b} + v_{y}\vec{c}$  were a, b and c are all colume vectors from matrix $M$ we can rewrite out $n^B = Ms \times Mt$ as
 $$n^B = (s_{x}M_{[0]} + s_{y}M_{[1]} + s_{z}M_{[2]}) \times (t_{x}M_{[0]} + t_{y}M_{[1]} + t_{z}M_{[2]})$$

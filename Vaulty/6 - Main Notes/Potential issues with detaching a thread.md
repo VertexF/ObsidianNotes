@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[threading]]
 # Potential issues with detaching a thread
 
-Once you've created a `std::thread` you need to decide to allow the main thread to wait for it with a `join` or `detach` it. If don't decide before you program finishes running the thread with terminate with `std::terminate` meaning the program hard closes. You have to decide!
+Once you've created a `std::thread` you need to decide to allow the main thread to wait for it with a `join` or `detach` it. If you don't decide before you program finishes running the thread with terminate with `std::terminate` meaning the program hard closes. You have to decide!
 
 Detaching a thread puts that thread in state were the actual `std::thread` can be destroyed by it's destructor but the thread will continue to do stuff and stop on it's own. 
 
@@ -52,7 +52,7 @@ int main()
 }
 ```
 
-This is a mistake in single threaded code as well but it might not show signs of something going wrong. This is all because we are still referencing `localState` causing UB. Read the comments to see why.
+This is a mistake in single threaded code as well but it might not show signs of something going wrong. This is all because we are still referencing `localState` causing UB. Read the comments to see why. Also note because the stack frames are much larger in debug, this will likely be a release only bug.
 
 You can try and avoid this UB by copying all the shared data to function/object. Be very careful of pointers and references, especially if they are pointing to local variables. Unless you know for sure that the thread is going to finish before the function/scope ends.
 # References

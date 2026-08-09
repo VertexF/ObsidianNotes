@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[threading]]
 # Launching a thread
 
-If you want to use objects say like a physics struct and have that launch a thread you need to us the () operator `operation()` this allows C++ to treat your object as if it's a function.
+If you want to use objects say like a physics struct and have that launch a thread by passing in a [[What are functors|functor]] this allows C++ to treat your object as if it's a function.
 
 ```c++
 struct Work 
@@ -44,5 +44,6 @@ This is because when you type the code `work();` in this case it will run whatev
 [[Potential issues with detaching a thread]]
 [[Basics of waiting for a thread]]
 [[Introduction to multithreading]]
+[[What are functors]]
 #### Source Notes
 [[C++ Concurrency - Managing Threads]]

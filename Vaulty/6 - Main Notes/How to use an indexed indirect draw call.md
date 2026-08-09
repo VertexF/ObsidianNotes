@@ -5,9 +5,9 @@ Tags: [[vulkan]] [[indirect draw calls]]
 
 We are assuming you have the foundational understanding here of [[Setting up an indexed indirect draw call]]
 
-These are the steps how the indirect buffer would work for a compute shader that builds up the **VkDrawIndexedIndirectCommand**. It first writes out the buffer in the compute shader and is read in on the vertex shader.
+These are the steps on how the indirect buffer would work for a compute shader that builds up the **VkDrawIndexedIndirectCommand** struct. It first writes out the buffer in the compute shader and is read in on the vertex shader.
 
-It's important to note that I've left in the barriers here because it's important because we are writing to a buffer. 
+It's important to note that I've left in the barriers here because it's important because it's important for synchronisation. 
 ```c++
 VkBufferMemoryBarrier2 fillBarriers[] =
 {

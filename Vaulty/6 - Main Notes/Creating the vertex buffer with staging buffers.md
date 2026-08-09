@@ -47,6 +47,6 @@ The pattern is pretty solid so this pattern could be used for other types of buf
 [[Copying buffer data over]]
 [[Allocating data to a buffer]]
 [[Filling up a vertex buffer with CPU visibility]]
-[[Setting up the a buffer]]
+[[Setting up a vulkan buffer]]
 #### Source Notes
 [[Vertex buffer]]

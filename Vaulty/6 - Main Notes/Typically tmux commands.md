@@ -1,6 +1,6 @@
 2026-07-01 19:12
 Status: #baby 
-Tags: [[Linux Development]]
+Tags: [[linux development]]
 # Typically tmux commands
 
 If you want start a tmux session you need to you just start `tmux`

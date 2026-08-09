@@ -76,6 +76,7 @@
 [[Creating descriptor sets]]
 [[Creating an combined image sampler descriptor]]
 [[Binding a descriptor set to use at draw time]]
+[[What are push descriptors]]
 ### Descriptor Hardware
 [[The problem with descriptor]]
 [[The GPU hardware of descriptors]]
@@ -111,12 +112,18 @@
 
 [[Handling frames in flight]]
 ## Buffers
-[[Setting up the a buffer]]
-[[Allocating data to a buffer]]
-[[Making a basic createBuffer function]]
-[[Buffer alignment requirement]]
-[[Multiple descriptor sets]]
+[[Setting up a vulkan buffer]]
 [[CPU updating coherent buffers]]
+>**Raw Buffers**
+	[[Allocating data to a buffer]]
+	[[Making a basic createBuffer function]]
+	[[Buffer alignment requirement]]
+	[[Multiple descriptor sets]]
+>**VMA Buffers**
+	[[Setting up VMA]]
+	[[Using VMA to create a host visible buffer]]
+	[[Hidden issues with VMA host visible buffers]]
+	[[Using VMA to create a GPU buffer]]
 ### Vertex Buffers
 [[What is a vertex buffer]]
 [[Setting up vertex buffer data]]
@@ -157,6 +164,10 @@
 [[Transitioning image memory for texture mapping]]
 [[Preparing the texture image]]
 [[Creating a texture image view]]
+[[Using VMA to create an image]]
+[[Setting up the KTX library]]
+[[What is KTX]]
+[[Creating a texture with KTX file]]
 [[What are samplers]]
 [[Creating a sampler]]
 [[Creating an combined image sampler descriptor]]

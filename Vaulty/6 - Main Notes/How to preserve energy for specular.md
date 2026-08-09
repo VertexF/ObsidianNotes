@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[graphics theory]] [[physically based rendering]]
 # How to preserve energy for specular
 
-We can use a white furnace, a uniform lighting environment set to pure white, to validate the energy preservation property of a BRDF. When you do this pure reflective metnals are indistinguishable from the background, no matter the roughness of said surface. 
+We can use a white furnace, a uniform lighting environment set to pure white, to validate the energy preservation property of a BRDF. When you do this pure reflective metals are indistinguishable from the background, no matter the roughness of said surface. 
 
 ![[material_furnace_energy_loss.png]]
 This should what a surface looks with specular BRDF presented in [[Energy issues with Cook-Torrance BRDF]]  
@@ -22,7 +22,7 @@ The new lobe is combined $f_r$ with the orignal single scattering lobe, which is
 $$f_{r}(l,v) = f_{ss}(l,v) + f_{ms}(l,v)$$
 So according to Emmanuel Turquin, Lagarde and Golubev makes the observation that the $F_{avg}$ can be just $f_{0}$ with the addtion of applying energy compensation by adding scaled GGX specular
 $$f_{ms}(l,v) = f_{0} \frac{1 - E(l)}{E(l)} f_{ss}(l,v)$$
-So we of course can pre-compute $E(l)$ via a lookup table it can also be shared with image-based lighting for pre-integration. So multiscattering energy compensations equation is
+So we of course we can pre-compute $E(l)$ via a lookup table it can also be shared with image-based lighting for pre-integration. So multiscattering energy compensations equation is
 $$f_r(l,v) = f_{ss}(l,v) + f_{0} \left( \frac{1}{r} - 1 \right) f_{ss}(l,v)$$
 Where $r$ is defined as
 $$r = \int_{\Omega} D(l,v) V(l,v) \left< n \cdot l\right> dl$$

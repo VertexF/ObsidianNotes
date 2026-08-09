@@ -12,7 +12,7 @@ So BRDF is made up of two component $f_d$ and $f_r$  this would look something l
 
 We would write the BRDF as $f(v, l) = f_d(v, l) + f_r(v, l)$ we of course would need to intergate over a hemisphere to solve this under rendering equation.
 
-A microfacet BRDF this a good BRDF for our purposes. This talks about things aren't smooth at the micro level. They are made up of randonly aligned planar surface fragments called microfacts. Only the microfacet whose normal is oriented halfway between the light direction and view direction will reflect visible light. ![[diagram_macrosurface.png]]
+A microfacet BRDF this a good BRDF for our purposes. This talks about things aren't smooth at the micro level. They are made up of randomly aligned planar surface fragments called microfacts. Only the microfacet whose normal is oriented halfway between the light direction and view direction will reflect visible light. ![[diagram_macrosurface.png]]
 
 Not all microfacets with a properly oriented normal will contribute reflect because of shadow and masking.![[diagram_shadowing_masking.png]]
 
