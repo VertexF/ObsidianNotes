@@ -28,13 +28,13 @@ $$v_{0} = p - r_{x}\vec{x} + r_{y}\vec{y} \space \space \space \space \space v_{
 $$v_{2} = p + r_{x}\vec{x} - r_{y}\vec{y} \space \space \space \space \space v_{3} = p - r_{x}\vec{x} - r_{y}\vec{y}$$
 If $M_{o}$ contains a scale then $\vec{x}$ and $\vec{y}$ these need to be normalised. For objects made of a single billboard. 
 
-![[billboard-2.png]]
-
-For a single billboard it is often the case that $p$ lies at the object-space origin. This means that the vertex positions are simply a sums of differentces of $r_{x}\vec{x}$ and $r_{y}\vec{y}$. This doesn't work for particle systems as that contains a large number of independent billboards, there is different point $p$ representing the centre of each particle.
+For a single billboard it is often the case that $p$ lies at the object-space origin. This means that the vertex positions are simply a sums of differences of $r_{x}\vec{x}$ and $r_{y}\vec{y}$. This doesn't work for particle systems as that contains a large number of independent billboards, there is different point $p$ representing the centre of each particle.
 $$v_{0} = p - r_{x}\vec{x} + r_{y}\vec{y} \space \space \space \space \space v_{1} = p + r_{x}\vec{x} + r_{y}\vec{y}$$
 $$v_{2} = p + r_{x}\vec{x} - r_{y}\vec{y} \space \space \space \space \space v_{3} = p - r_{x}\vec{x} - r_{y}\vec{y}$$
 These equations only produce billboards that face only the x-y plane of the camera and not actual positions of the camera expect in those cases when the billboard lies at the centre of the viewport. This is actually mostly good enough from a visual standpoint, especially when the billboards are small in size. 
 
+This is exactly what's happening here with picture a)
+![[billboard-2.png]]
 This is what it would look like in code
 ```c
 const vec3 pos[4] = vec3[4]
@@ -73,5 +73,5 @@ void main()
     
 }
 ```
-
+##### A more accurate spherical billboard 
 If you want things to be more accurate you need to do more work. 
