@@ -17,6 +17,8 @@ This starts an ssh-agent to add ssh keys to things.
 ```shell
 eval "$(ssh-agent -s)"
 ```
+
+You need to do `Ctrl+b` followed by `:kill-session` end a tmux session.
 # References
 ##### Main Notes
 [[Typically Neovim commands]]

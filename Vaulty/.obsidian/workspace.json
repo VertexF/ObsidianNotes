@@ -8,89 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a3f379b7f34f2a2a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Angle relationships.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Angle relationships"
-            }
-          },
-          {
-            "id": "c8412f9b9ee329c0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/Books/C++ Concurrency - Protected Shared Data.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "C++ Concurrency - Protected Shared Data"
-            }
-          },
-          {
-            "id": "2137db799b77d5fa",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "1495103a201c79d8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Rough Notes/Stream stuff.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Stream stuff"
-            }
-          },
-          {
-            "id": "dd1ccc29a85c629c",
+            "id": "211894d58973c665",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -114,12 +32,12 @@
             }
           },
           {
-            "id": "003b4c6d71d8bba0",
+            "id": "90fa8df730f27666",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/The adjungate normal matrix.md",
+                "file": "2 - Source Material/KTX texture compression.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -134,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "The adjungate normal matrix"
+              "title": "KTX texture compression"
             }
           },
           {
-            "id": "3aa799ea659d365e",
+            "id": "6c8eb030fa746033",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Immediate to register move.md",
+                "file": "6 - Main Notes/Typically tmux commands.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -158,59 +76,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Immediate to register move"
-            }
-          },
-          {
-            "id": "522f7f626fa58999",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/The spot light.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "The spot light"
-            }
-          },
-          {
-            "id": "5f682849210e98c1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/Article/Grade 8 Math - Khan Academy.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Grade 8 Math - Khan Academy"
+              "title": "Typically tmux commands"
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -361,16 +231,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5f682849210e98c1",
+  "active": "6c8eb030fa746033",
   "lastOpenFiles": [
-    "6 - Main Notes/Finding the square root of decimals.md",
-    "6 - Main Notes/Angle relationships.md",
-    "6 - Main Notes/How to calculate the mean of a continous function.md",
-    "6 - Main Notes/The spot light.md",
-    "4 - Indexes/graphics theory.md",
-    "6 - Main Notes/The adjungate normal matrix.md",
-    "1 - Rough Notes/Stream stuff.md",
+    "6 - Main Notes/Typically Neovim commands.md",
+    "6 - Main Notes/Typically tmux commands.md",
     "2 - Source Material/Article/Grade 8 Math - Khan Academy.md",
+    "2 - Source Material/KTX texture compression.md",
+    "3 - Tags/Linux Development.md",
+    "6 - Main Notes/Angle relationships.md",
+    "2 - Source Material/Books/C++ Concurrency - Protected Shared Data.md",
+    "1 - Rough Notes/Stream stuff.md",
+    "6 - Main Notes/The spot light.md",
+    "6 - Main Notes/Immediate to register move.md",
+    "6 - Main Notes/The adjungate normal matrix.md",
+    "6 - Main Notes/Finding the square root of decimals.md",
+    "6 - Main Notes/How to calculate the mean of a continous function.md",
+    "4 - Indexes/graphics theory.md",
     "6 - Main Notes/Byte encoding for effective address calculations.md",
     "6 - Main Notes/Geometric shadowing(specular G).md",
     "3 - Tags/maths.md",
@@ -381,19 +257,13 @@
     "sumplementaryAngles.png",
     "complementaryAngles.png",
     "ajdacentAngles.png",
-    "2 - Source Material/KTX texture compression.md",
     "2 - Source Material/Books/Bindless - Mastering Graphics Programming with Vulkan.md",
     "2 - Source Material/Books/C++ Concurrency - Hello, world of concurrency in C++.md",
     "2 - Source Material/Books/C++ Concurrency - Managing Threads.md",
-    "2 - Source Material/Books/C++ Concurrency - Protected Shared Data.md",
     "2 - Source Material/Books/Filament PBR - Lighting.md",
     "2 - Source Material/Books/Filament PBR - Materials.md",
     "2 - Source Material/Books/Foundations of Game Engine Developemt - Maths.md",
     "2 - Source Material/Books/Foundations of Game Engine Development - Graphics.md",
-    "2 - Source Material/Books/GPU Zen 3 - Mult-mega Particle System.md",
-    "2 - Source Material/Books/Introduction to operation systems - source note.md",
-    "2 - Source Material/Books/Physically Based Rendering - Introduction.md",
-    "2 - Source Material/Books/Physically Based Rendering - Monte Carlo.md",
     "Universal-GPU-Compressed-Textures.png"
   ]
 }

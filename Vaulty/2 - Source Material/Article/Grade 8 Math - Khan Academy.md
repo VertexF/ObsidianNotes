@@ -46,3 +46,18 @@ I state this so explictly because you have multiply both sides by any number to 
 $${2 \dfrac{1}{4}} :1  = {\dfrac{9}{4}} : 1$$
 Then multiply it by four we would get.
 $$ \big({\dfrac{9}{4}} : 1 \big) \times 4 = 9 : 4$$
+##### Point slope intercept form
+Now this is to do with straight line equations. The slop intersept form of a straight line looks like this  $y - y_{1} = m(x - x_{1})$ This allows us to work to find a point on the line straight a way. You need to apply the point slope intercept for correctly to get out the points. For example
+$$y+2 = -2(x-3)$$
+Since $x_{1}$ and $y_{1}$ are known to use if you look at the $y - y_{1} = m(x - x_{1})$ we can get a point that sits on the line. **BE CAREFUL** if you notice that $y_{1}$ and $x_{1}$ are negative. Meaning we would have to do this:
+$$y--2 = -2(x-3)$$
+To get the point $(-3, -2)$ out of the point slope intercept form.
+##### Notes on slope for straight lines
+The equation is 
+$$\frac{rise}{run} = \frac{y_{2} - y_{1}}{x_{2} - x_{1}}$$
+The order of the points can be in any order so $(y_{1}, x_{1})$ and $(y_{2}, x_{2})$  meaning they can be reversed in the fraction as long as the $(x_{1}, y_{1})$ are in the correct places. Also meaning that if you're reading a graph and getting points from it, it doesn't matter what points you pick.
+
+For both point slop intercept form and y-intercept form the slope is written slope straight into the formula. If the slope is $m$ then the slope for both types of straight like equations is $y = 2x + 9$ or $y - 2 = 2(x + 10)$ the slope is $2$.
+
+If you have a slope of something and you want to plot it on a graph it. You need to consider the delta and y and x to make it easier.
+$$m = \frac{\Delta{y}}{\Delta{x}}$$ So if the slope is $\frac{1}{3}$ plot $3$ in the $x$ direction and $1$ in the $y$ direction. Or if the slope is $4$ then the change is for the graph is $\frac{4}{1}$ so you move $1$ in the $x$ and $4$ in the $y$. 
