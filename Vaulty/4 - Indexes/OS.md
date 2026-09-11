@@ -12,5 +12,8 @@
 [[Memory layout - The stack]]
 [[Three problems with physical memory]]
 [[Introduction to paging]]
+[[Multi-level paging]]
 ### Hardware
 [[What is a memory block]]
+### Misc
+[[Power of two and modulo masking properties]]

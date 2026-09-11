@@ -49,6 +49,7 @@ To do the address translation from 1 virtual address to a physical address, you 
 
 For example with this table and the virtual address of 0x00003385
 Page Table (from entry 0 down to the max size)
+```
   (       0)  0x80000018
   (       1)  0x00000000
   (       2)  0x00000000
@@ -65,7 +66,7 @@ Page Table (from entry 0 down to the max size)
   (      13)  0x00000000
   (      14)  0x00000000
   (      15)  0x80000008
-
+```
 Virtual Address Trace
   VA 0x00003385 (decimal:    13189)
 
@@ -78,4 +79,5 @@ We take `0xf` which is = 15 that tells us which the physical frame we need to lo
 Finally you take the offset from the virtual address and add it to the starting position of the physical frames value so $15360 + 901 = 16261$ or $(15 * 1024) + 901 = 16261$ which is the location in memory were 0x00003385 truly lives.
 # References
 ##### Main Notes
+[[Multi-level paging]]
 #### Source Notes

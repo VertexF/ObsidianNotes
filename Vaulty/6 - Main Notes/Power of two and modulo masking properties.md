@@ -1,6 +1,6 @@
 2026-09-08 15:26
 Status: #baby 
-Tags: [[computer science]]
+Tags: [[OS]]
 # Power of two and modulo masking properties
 
 If you have a power of 2 number which can be written in binary as a single digit 1 at some place with no other 1 (apart from zero) `0010` or 

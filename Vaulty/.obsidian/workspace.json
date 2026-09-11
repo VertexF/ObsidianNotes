@@ -224,12 +224,12 @@
             }
           },
           {
-            "id": "e8cb159cc54c1b10",
+            "id": "5a4ba3cf066812ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Tags/computer science.md",
+                "file": "6 - Main Notes/Multi-level paging.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -244,11 +244,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "computer science"
+              "title": "Multi-level paging"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -399,24 +399,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "43b47daafb9223ea",
+  "active": "5a4ba3cf066812ee",
   "lastOpenFiles": [
-    "2 - Source Material/Article/An Intruction Order Independent Transpacy.md",
+    "6 - Main Notes/Introduction to paging.md",
+    "6 - Main Notes/Multi-level paging.md",
+    "4 - Indexes/OS.md",
     "6 - Main Notes/Power of two and modulo masking properties.md",
+    "2 - Source Material/Article/An Intruction Order Independent Transpacy.md",
+    "6 - Main Notes/Effective address calculation.md",
+    "6 - Main Notes/Memory layout - Text section.md",
     "3 - Tags/computer science.md",
     "6 - Main Notes/2026-09-08.md",
-    "4 - Indexes/OS.md",
     "6 - Main Notes/The slope for straight lines.md",
     "4 - Indexes/graphics theory.md",
     "6 - Main Notes/Finding the square root of decimals.md",
     "6 - Main Notes/Rate and proportional relationships.md",
-    "6 - Main Notes/Effective address calculation.md",
-    "6 - Main Notes/Introduction to paging.md",
     "4 - Indexes/assembly.md",
     "6 - Main Notes/Low and high part of registers.md",
     "6 - Main Notes/Register to register move operation.md",
     "6 - Main Notes/Instruction decode with mov.md",
-    "6 - Main Notes/Memory layout - Text section.md",
     "6 - Main Notes/Volume of 3D shapes.md",
     "2 - Source Material/Article/Grade 8 Math - Khan Academy.md",
     "image-2.png",
@@ -430,7 +431,6 @@
     "6 - Main Notes/Typically Neovim commands.md",
     "3 - Tags/Linux Development.md",
     "6 - Main Notes/Angle relationships.md",
-    "2 - Source Material/Books/C++ Concurrency - Protected Shared Data.md",
     "basicTriangleOfX.png",
     "verticalAngles.png",
     "sumplementaryAngles.png",
