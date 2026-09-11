@@ -56,12 +56,12 @@
             }
           },
           {
-            "id": "6c8eb030fa746033",
+            "id": "acaf3baffb8f7d57",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Typically tmux commands.md",
+                "file": "6 - Main Notes/The slope for straight lines.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,11 +76,179 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Typically tmux commands"
+              "title": "The slope for straight lines"
+            }
+          },
+          {
+            "id": "7247c17d37920ec0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 - Indexes/OS.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "OS"
+            }
+          },
+          {
+            "id": "b152aad89f77dbd8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Memory layout - Text section.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Memory layout - Text section"
+            }
+          },
+          {
+            "id": "43b47daafb9223ea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Introduction to paging.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Introduction to paging"
+            }
+          },
+          {
+            "id": "d305d86458d0f0ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Effective address calculation.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Effective address calculation"
+            }
+          },
+          {
+            "id": "f8b94515580b7876",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Source Material/Article/An Intruction Order Independent Transpacy.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "An Intruction Order Independent Transpacy"
+            }
+          },
+          {
+            "id": "39caf706e22decc5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Power of two and modulo masking properties.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Power of two and modulo masking properties"
+            }
+          },
+          {
+            "id": "e8cb159cc54c1b10",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 - Tags/computer science.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "computer science"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -231,39 +399,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6c8eb030fa746033",
+  "active": "43b47daafb9223ea",
   "lastOpenFiles": [
-    "6 - Main Notes/Typically Neovim commands.md",
-    "6 - Main Notes/Typically tmux commands.md",
+    "2 - Source Material/Article/An Intruction Order Independent Transpacy.md",
+    "6 - Main Notes/Power of two and modulo masking properties.md",
+    "3 - Tags/computer science.md",
+    "6 - Main Notes/2026-09-08.md",
+    "4 - Indexes/OS.md",
+    "6 - Main Notes/The slope for straight lines.md",
+    "4 - Indexes/graphics theory.md",
+    "6 - Main Notes/Finding the square root of decimals.md",
+    "6 - Main Notes/Rate and proportional relationships.md",
+    "6 - Main Notes/Effective address calculation.md",
+    "6 - Main Notes/Introduction to paging.md",
+    "4 - Indexes/assembly.md",
+    "6 - Main Notes/Low and high part of registers.md",
+    "6 - Main Notes/Register to register move operation.md",
+    "6 - Main Notes/Instruction decode with mov.md",
+    "6 - Main Notes/Memory layout - Text section.md",
+    "6 - Main Notes/Volume of 3D shapes.md",
     "2 - Source Material/Article/Grade 8 Math - Khan Academy.md",
+    "image-2.png",
     "2 - Source Material/KTX texture compression.md",
+    "cyclinder volume.png",
+    "sphere volume.png",
+    "cone Volume.png",
+    "6 - Main Notes/Point slope intercept form.md",
+    "6 - Main Notes/Standard form of a straight line equation.md",
+    "6 - Main Notes/Typically tmux commands.md",
+    "6 - Main Notes/Typically Neovim commands.md",
     "3 - Tags/Linux Development.md",
     "6 - Main Notes/Angle relationships.md",
     "2 - Source Material/Books/C++ Concurrency - Protected Shared Data.md",
-    "1 - Rough Notes/Stream stuff.md",
-    "6 - Main Notes/The spot light.md",
-    "6 - Main Notes/Immediate to register move.md",
-    "6 - Main Notes/The adjungate normal matrix.md",
-    "6 - Main Notes/Finding the square root of decimals.md",
-    "6 - Main Notes/How to calculate the mean of a continous function.md",
-    "4 - Indexes/graphics theory.md",
-    "6 - Main Notes/Byte encoding for effective address calculations.md",
-    "6 - Main Notes/Geometric shadowing(specular G).md",
-    "3 - Tags/maths.md",
-    "6 - Main Notes/The triangle inequality theorm.md",
-    "4 - Indexes/threading.md",
     "basicTriangleOfX.png",
     "verticalAngles.png",
     "sumplementaryAngles.png",
     "complementaryAngles.png",
     "ajdacentAngles.png",
-    "2 - Source Material/Books/Bindless - Mastering Graphics Programming with Vulkan.md",
-    "2 - Source Material/Books/C++ Concurrency - Hello, world of concurrency in C++.md",
-    "2 - Source Material/Books/C++ Concurrency - Managing Threads.md",
-    "2 - Source Material/Books/Filament PBR - Lighting.md",
-    "2 - Source Material/Books/Filament PBR - Materials.md",
-    "2 - Source Material/Books/Foundations of Game Engine Developemt - Maths.md",
-    "2 - Source Material/Books/Foundations of Game Engine Development - Graphics.md",
     "Universal-GPU-Compressed-Textures.png"
   ]
 }

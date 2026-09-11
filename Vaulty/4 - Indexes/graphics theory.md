@@ -3,7 +3,12 @@
 [[Swapchain colour space format]]
 ### Maths
 **Basic Maths**
+[[Rate and proportional relationships]]
 [[Finding the square root of decimals]]
+[[The slope for straight lines]]
+[[Standard form of a straight line equation]]
+[[Point slope intercept form]]
+[[Volume of 3D shapes]]
 [[Angle relationships]]
 [[The triangle inequality theorm]]
 **Monte Carlo Background maths**

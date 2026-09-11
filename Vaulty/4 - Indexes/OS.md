@@ -11,5 +11,6 @@
 [[Memory layout - The heap]]
 [[Memory layout - The stack]]
 [[Three problems with physical memory]]
+[[Introduction to paging]]
 ### Hardware
 [[What is a memory block]]
