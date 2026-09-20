@@ -8,84 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "211894d58973c665",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/Article/Grade 8 Math - Khan Academy.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Grade 8 Math - Khan Academy"
-            }
-          },
-          {
-            "id": "90fa8df730f27666",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Source Material/KTX texture compression.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "KTX texture compression"
-            }
-          },
-          {
-            "id": "acaf3baffb8f7d57",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/The slope for straight lines.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "The slope for straight lines"
-            }
-          },
-          {
             "id": "7247c17d37920ec0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Indexes/OS.md",
+                "file": "6 - Main Notes/Making a block lock with a queue.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "OS"
+              "title": "Making a block lock with a queue"
             }
           },
           {
-            "id": "b152aad89f77dbd8",
+            "id": "373769ad56bfb501",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Memory layout - Text section.md",
+                "file": "6 - Main Notes/What is swap exchange.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -124,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Memory layout - Text section"
+              "title": "What is swap exchange"
             }
           },
           {
-            "id": "43b47daafb9223ea",
+            "id": "d8b5d1104175ecd0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Introduction to paging.md",
+                "file": "6 - Main Notes/Making a block lock with a queue.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -148,16 +76,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Introduction to paging"
+              "title": "Making a block lock with a queue"
             }
           },
           {
-            "id": "d305d86458d0f0ce",
+            "id": "5b92a601cc0767ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Effective address calculation.md",
+                "file": "6 - Main Notes/Making a test-and-set spin lock.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -172,16 +100,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Effective address calculation"
+              "title": "Making a test-and-set spin lock"
             }
           },
           {
-            "id": "f8b94515580b7876",
+            "id": "82b1db087d1a0165",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Article/An Intruction Order Independent Transpacy.md",
+                "file": "6 - Main Notes/What is swap exchange.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -196,16 +124,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "An Intruction Order Independent Transpacy"
+              "title": "What is swap exchange"
             }
           },
           {
-            "id": "39caf706e22decc5",
+            "id": "402ad1a3ed10aef0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Power of two and modulo masking properties.md",
+                "file": "6 - Main Notes/What is fetch-and-add.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -220,16 +148,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Power of two and modulo masking properties"
+              "title": "What is fetch-and-add"
             }
           },
           {
-            "id": "5a4ba3cf066812ee",
+            "id": "b0d88524bc582301",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Multi-level paging.md",
+                "file": "6 - Main Notes/Making a ticket spin lock.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -244,11 +172,82 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Multi-level paging"
+              "title": "Making a ticket spin lock"
+            }
+          },
+          {
+            "id": "b50228c31fbc6efa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/What is load-linked.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "What is load-linked"
+            }
+          },
+          {
+            "id": "a2329e47596ba8e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/What is conditional store.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "What is conditional store"
+            }
+          },
+          {
+            "id": "beb7cb9ee473bb34",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Making a spin lock with load-link and conditional store.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Making a spin lock with load-link and conditional store"
             }
           }
-        ],
-        "currentTab": 9
+        ]
       }
     ],
     "direction": "vertical"
@@ -399,14 +398,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5a4ba3cf066812ee",
+  "active": "7247c17d37920ec0",
   "lastOpenFiles": [
-    "6 - Main Notes/Introduction to paging.md",
-    "6 - Main Notes/Multi-level paging.md",
     "4 - Indexes/OS.md",
+    "6 - Main Notes/Making a spin lock with load-link and conditional store.md",
+    "6 - Main Notes/What is conditional store.md",
+    "6 - Main Notes/What is load-linked.md",
+    "6 - Main Notes/What is swap exchange.md",
+    "6 - Main Notes/What is fetch-and-add.md",
+    "6 - Main Notes/Making a ticket spin lock.md",
+    "6 - Main Notes/Making a test-and-set spin lock.md",
+    "6 - Main Notes/Making a block lock with a queue.md",
+    "6 - Main Notes/Multi-level paging.md",
     "6 - Main Notes/Power of two and modulo masking properties.md",
     "2 - Source Material/Article/An Intruction Order Independent Transpacy.md",
     "6 - Main Notes/Effective address calculation.md",
+    "6 - Main Notes/Introduction to paging.md",
     "6 - Main Notes/Memory layout - Text section.md",
     "3 - Tags/computer science.md",
     "6 - Main Notes/2026-09-08.md",
@@ -419,18 +426,10 @@
     "6 - Main Notes/Register to register move operation.md",
     "6 - Main Notes/Instruction decode with mov.md",
     "6 - Main Notes/Volume of 3D shapes.md",
-    "2 - Source Material/Article/Grade 8 Math - Khan Academy.md",
     "image-2.png",
-    "2 - Source Material/KTX texture compression.md",
     "cyclinder volume.png",
     "sphere volume.png",
     "cone Volume.png",
-    "6 - Main Notes/Point slope intercept form.md",
-    "6 - Main Notes/Standard form of a straight line equation.md",
-    "6 - Main Notes/Typically tmux commands.md",
-    "6 - Main Notes/Typically Neovim commands.md",
-    "3 - Tags/Linux Development.md",
-    "6 - Main Notes/Angle relationships.md",
     "basicTriangleOfX.png",
     "verticalAngles.png",
     "sumplementaryAngles.png",
