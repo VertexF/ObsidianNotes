@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Source Material/Article/Grade 8 Math - Khan Academy.md",
+                "file": "6 - Main Notes/Vulkan command overlap.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Grade 8 Math - Khan Academy"
+              "title": "Vulkan command overlap"
             }
           },
           {
@@ -78,9 +78,57 @@
               "icon": "lucide-file",
               "title": "Typically tmux commands"
             }
+          },
+          {
+            "id": "08aa4ba3f9e13cb8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Thread string arguments.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Thread string arguments"
+            }
+          },
+          {
+            "id": "b40026620537f8e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 - Indexes/graphics theory.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "graphics theory"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -231,39 +279,39 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6c8eb030fa746033",
+  "active": "b40026620537f8e5",
   "lastOpenFiles": [
-    "6 - Main Notes/Typically Neovim commands.md",
-    "6 - Main Notes/Typically tmux commands.md",
-    "2 - Source Material/Article/Grade 8 Math - Khan Academy.md",
-    "2 - Source Material/KTX texture compression.md",
-    "3 - Tags/Linux Development.md",
-    "6 - Main Notes/Angle relationships.md",
-    "2 - Source Material/Books/C++ Concurrency - Protected Shared Data.md",
-    "1 - Rough Notes/Stream stuff.md",
-    "6 - Main Notes/The spot light.md",
-    "6 - Main Notes/Immediate to register move.md",
-    "6 - Main Notes/The adjungate normal matrix.md",
-    "6 - Main Notes/Finding the square root of decimals.md",
-    "6 - Main Notes/How to calculate the mean of a continous function.md",
-    "4 - Indexes/graphics theory.md",
-    "6 - Main Notes/Byte encoding for effective address calculations.md",
-    "6 - Main Notes/Geometric shadowing(specular G).md",
-    "3 - Tags/maths.md",
-    "6 - Main Notes/The triangle inequality theorm.md",
+    "6 - Main Notes/Thread string arguments.md",
+    "6 - Main Notes/Passing argument basics with threads.md",
     "4 - Indexes/threading.md",
+    "6 - Main Notes/Vulkan command overlap.md",
+    "4 - Indexes/vulkan.md",
+    "6 - Main Notes/Basic queue synchronisation.md",
+    "6 - Main Notes/Implicit synchronisation guarantees.md",
+    "6 - Main Notes/Vulkan command categories.md",
+    "6 - Main Notes/What are fences.md",
+    "3 - Tags/vulkan synchronisation.md",
+    "6 - Main Notes/Setting the synchronisation with the subpass dependencies.md",
+    "6 - Main Notes/What is a descriptor set layout.md",
+    "6 - Main Notes/Properties for ray tracers.md",
+    "4 - Indexes/graphics theory.md",
+    "6 - Main Notes/Ray-object Intersections.md",
+    "6 - Main Notes/How the camera works with ray tracing.md",
+    "6 - Main Notes/Basics of ray tracing.md",
+    "6 - Main Notes/Differences between CPU and GPU ray tracing.md",
+    "6 - Main Notes/What is ray tracing.md",
+    "6 - Main Notes/Direct lighting theory.md",
+    "6 - Main Notes/Light distribution.md",
+    "6 - Main Notes/Simplifying the PBR equation for diffuse IBL.md",
+    "6 - Main Notes/Linear lighting vs High Dynmanic Range rendering.md",
+    "6 - Main Notes/The problem with LDR cubemaps in PBR.md",
+    "6 - Main Notes/Parametric lines.md",
+    "6 - Main Notes/HDR image formats.md",
     "basicTriangleOfX.png",
     "verticalAngles.png",
     "sumplementaryAngles.png",
     "complementaryAngles.png",
     "ajdacentAngles.png",
-    "2 - Source Material/Books/Bindless - Mastering Graphics Programming with Vulkan.md",
-    "2 - Source Material/Books/C++ Concurrency - Hello, world of concurrency in C++.md",
-    "2 - Source Material/Books/C++ Concurrency - Managing Threads.md",
-    "2 - Source Material/Books/Filament PBR - Lighting.md",
-    "2 - Source Material/Books/Filament PBR - Materials.md",
-    "2 - Source Material/Books/Foundations of Game Engine Developemt - Maths.md",
-    "2 - Source Material/Books/Foundations of Game Engine Development - Graphics.md",
     "Universal-GPU-Compressed-Textures.png"
   ]
 }

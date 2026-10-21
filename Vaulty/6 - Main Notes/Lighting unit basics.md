@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[graphics theory]] [[light theory]]
 # Lighting unit basics
 
-It's a good to have lights that have coherent lighting units that all follows the same system. You have two different lighting types direct lighting and indirect lighthing.
+It's a good to have lights that have coherent lighting units that all follows the same system. You have two different lighting types direct lighting and indirect lighting.
 
 | Photometric terms   | Notation   | Unit                             |
 | ------------------- | ---------- | -------------------------------- |
