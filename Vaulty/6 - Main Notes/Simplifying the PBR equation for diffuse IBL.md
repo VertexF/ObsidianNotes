@@ -20,7 +20,7 @@ $$L_o(p,\omega_o) =
 		k_d\frac{c}{\pi} \int\limits_{\Omega} L_i(p,\omega_i) n \cdot \omega_i  d\omega_i$$
 This means that the integral it's only depenent on $\omega_i$ (assuming that $p$ is at the centre of the environment map). With this knowledge, we can calculate or pre-compute a new cubemap that stores in each sample direction (or texel) with $\omega_0$ and the result of the diffuse integral's will result in convolution. 
 
-Convolution in maths measn we are taking 2 function that produces a third as a integral product of two functions $f*g$ if both f and g are functions.
+Convolution in maths means we are taking 2 function that produces a third as a integral product of two functions $f*g$ if both f and g are functions.
 
 Here what we are doing is considering all the data in a solution set and applying some kind of computation to every piece data in that same set. In our case the set is the scene's radiance or environment map. Meaning when we are considering a single sample from the cubemap we have to consider all other samples that get sampled over the hemasphere.
 # References

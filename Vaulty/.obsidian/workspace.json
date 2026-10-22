@@ -13,6 +13,209 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                "file": "6 - Main Notes/Vulkan command overlap.md",
+=======
+                "file": "6 - Main Notes/Making a block lock with a queue.md",
+>>>>>>> a44a41ee30a1936a54c4a018d6e1bf2865aee58a
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+<<<<<<< HEAD
+              "title": "Vulkan command overlap"
+=======
+              "title": "Making a block lock with a queue"
+>>>>>>> a44a41ee30a1936a54c4a018d6e1bf2865aee58a
+            }
+          },
+          {
+            "id": "373769ad56bfb501",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/What is swap exchange.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "What is swap exchange"
+            }
+          },
+          {
+            "id": "d8b5d1104175ecd0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Making a block lock with a queue.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Making a block lock with a queue"
+            }
+          },
+          {
+            "id": "5b92a601cc0767ef",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Making a test-and-set spin lock.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Making a test-and-set spin lock"
+            }
+          },
+          {
+            "id": "82b1db087d1a0165",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/What is swap exchange.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "What is swap exchange"
+            }
+          },
+          {
+            "id": "402ad1a3ed10aef0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/What is fetch-and-add.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "What is fetch-and-add"
+            }
+          },
+          {
+            "id": "b0d88524bc582301",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Making a ticket spin lock.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Making a ticket spin lock"
+            }
+          },
+          {
+            "id": "b50228c31fbc6efa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/What is load-linked.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "What is load-linked"
+            }
+          },
+          {
+            "id": "a2329e47596ba8e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+>>>>>>> 18fbb434cdd7ec254a54ada7e7f6b3252bff69b3
                 "file": "6 - Main Notes/What is conditional store.md",
                 "mode": "source",
                 "source": false,
@@ -102,9 +305,66 @@
               "icon": "lucide-file",
               "title": "Typically tmux commands"
             }
+          },
+          {
+            "id": "08aa4ba3f9e13cb8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Thread string arguments.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Thread string arguments"
+            }
+          },
+          {
+            "id": "b40026620537f8e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 - Indexes/graphics theory.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "graphics theory"
+            }
           }
+<<<<<<< HEAD
         ],
         "currentTab": 3
+=======
+<<<<<<< HEAD
+        ],
+        "currentTab": 4
+=======
+        ]
+>>>>>>> a44a41ee30a1936a54c4a018d6e1bf2865aee58a
+>>>>>>> 18fbb434cdd7ec254a54ada7e7f6b3252bff69b3
       }
     ],
     "direction": "vertical"
@@ -255,7 +515,41 @@
       "obsidian-git:Open Git source control": false
     }
   },
+<<<<<<< HEAD
   "active": "cf26e16a27a8d3fa",
+=======
+<<<<<<< HEAD
+  "active": "b40026620537f8e5",
+  "lastOpenFiles": [
+    "6 - Main Notes/Thread string arguments.md",
+    "6 - Main Notes/Passing argument basics with threads.md",
+    "4 - Indexes/threading.md",
+    "6 - Main Notes/Vulkan command overlap.md",
+    "4 - Indexes/vulkan.md",
+    "6 - Main Notes/Basic queue synchronisation.md",
+    "6 - Main Notes/Implicit synchronisation guarantees.md",
+    "6 - Main Notes/Vulkan command categories.md",
+    "6 - Main Notes/What are fences.md",
+    "3 - Tags/vulkan synchronisation.md",
+    "6 - Main Notes/Setting the synchronisation with the subpass dependencies.md",
+    "6 - Main Notes/What is a descriptor set layout.md",
+    "6 - Main Notes/Properties for ray tracers.md",
+    "4 - Indexes/graphics theory.md",
+    "6 - Main Notes/Ray-object Intersections.md",
+    "6 - Main Notes/How the camera works with ray tracing.md",
+    "6 - Main Notes/Basics of ray tracing.md",
+    "6 - Main Notes/Differences between CPU and GPU ray tracing.md",
+    "6 - Main Notes/What is ray tracing.md",
+    "6 - Main Notes/Direct lighting theory.md",
+    "6 - Main Notes/Light distribution.md",
+    "6 - Main Notes/Simplifying the PBR equation for diffuse IBL.md",
+    "6 - Main Notes/Linear lighting vs High Dynmanic Range rendering.md",
+    "6 - Main Notes/The problem with LDR cubemaps in PBR.md",
+    "6 - Main Notes/Parametric lines.md",
+    "6 - Main Notes/HDR image formats.md",
+=======
+  "active": "7247c17d37920ec0",
+>>>>>>> 18fbb434cdd7ec254a54ada7e7f6b3252bff69b3
   "lastOpenFiles": [
     "6 - Main Notes/Introduction to BRDF.md",
     "6 - Main Notes/What is the BRDF.md",
@@ -287,6 +581,7 @@
     "cyclinder volume.png",
     "sphere volume.png",
     "cone Volume.png",
+>>>>>>> a44a41ee30a1936a54c4a018d6e1bf2865aee58a
     "basicTriangleOfX.png",
     "verticalAngles.png",
     "sumplementaryAngles.png",

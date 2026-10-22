@@ -16,7 +16,7 @@ Without these options you don't compress any of the textures when simply running
 So when you are trying to support compressed textures there are three format concepts you need to be aware of.
 1) **Container format** You need KTX wrap the transmission format data. This is just the meta about a particular image, such as dimensions, compression type, how to transcode that data into a GPU-compatible pixel format.
 2) **Transmission format** This is the highly compressed representation of pixel data layed out in a way that can be easily transcoded to one or more GPU compressed formats. Like **ETC1S** or **UASTC**
-3) **GPU compressed pixel format** A compressed representation of pixel data unstood by the GPU. Such as **BCn**, **ASTC**, **ETC** and **PVRTC1**.
+3) **GPU compressed pixel format** A compressed representation of pixel data understood by the GPU. Such as **BCn**, **ASTC**, **ETC** and **PVRTC1**.
 
 You can read, write and transcode `.ktx2` stuff with the with [KTX-Software](https://github.com/KhronosGroup/KTX-Software/): Includes [downloadable binary packages](https://github.com/KhronosGroup/KTX-Software/releases) and WebAssembly builds.
 ##### Block-based compression
@@ -47,7 +47,7 @@ The dimensions of subquent mip levels follows the truncating division by 2 rule.
 | 7         | 1 x 1              | 1 x 1                  |
 You can have a mip levels like`25x50` which fill up an entire compressed block but that's not always the case. Sometimes you need to pad data but this pixels cannot be access by sampling.
 ##### ETC1S / BasisLZ Codec
-ETC1S/BasisLZ is a hybrid compression schme that rearranges ECT1S texture block data with some LZ-style lossless compression. It priorities luma information which gets a very storage/transmission efficiency for things like colours textures. It's not as good for things like normals maps but I'm sure it's fine.
+ETC1S/BasisLZ is a hybrid compression scheme that rearranges ECT1S texture block data with some LZ-style lossless compression. It priorities luma information which gets a very storage/transmission efficiency for things like colours textures. It's not as good for things like normals maps but I'm sure it's fine.
 
 After decoding the LZ compression, you can losslessly repack into ETC1 texture blocks or transcode into another block-compressed format.
 ##### Data layout for ETC1S

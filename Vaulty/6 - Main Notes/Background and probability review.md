@@ -10,7 +10,7 @@ When rolling a dice, you are selecting from a set of numbers randomly $X_i \in \
 You can have **joint probability** of $p(X,Y)$ of two random variables which don't depend each other, you can work out the probability as a product of 2 functions.
 $$p(X,Y) = p(X)p(Y)$$
 
-If you have a **dependent** random variable. For example say, if we are randomly picking out a marbles from a bag and these marbles are coloured differently. Picking one out affects the probability for picking out another. In this case of joint probability we have two marbes of $X$ and $Y$. The conditional probability of $Y$ is given a value of $X$ is written as
+If you have a **dependent** random variable. For example say, if we are randomly picking out a marbles from a bag and these marbles are coloured differently. Picking one out affects the probability for picking out another. In this case of joint probability we have two marbles of $X$ and $Y$. The conditional probability of $Y$ is given a value of $X$ is written as
 
 $$p(X, Y) = p(X)p(X|Y)$$
 There might be situation is were a variable $X$ is conditional on many random values. 
