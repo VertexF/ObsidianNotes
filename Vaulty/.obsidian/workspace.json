@@ -13,198 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Making a block lock with a queue.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Making a block lock with a queue"
-            }
-          },
-          {
-            "id": "373769ad56bfb501",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/What is swap exchange.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "What is swap exchange"
-            }
-          },
-          {
-            "id": "d8b5d1104175ecd0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Making a block lock with a queue.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Making a block lock with a queue"
-            }
-          },
-          {
-            "id": "5b92a601cc0767ef",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Making a test-and-set spin lock.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Making a test-and-set spin lock"
-            }
-          },
-          {
-            "id": "82b1db087d1a0165",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/What is swap exchange.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "What is swap exchange"
-            }
-          },
-          {
-            "id": "402ad1a3ed10aef0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/What is fetch-and-add.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "What is fetch-and-add"
-            }
-          },
-          {
-            "id": "b0d88524bc582301",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/Making a ticket spin lock.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Making a ticket spin lock"
-            }
-          },
-          {
-            "id": "b50228c31fbc6efa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6 - Main Notes/What is load-linked.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "What is load-linked"
-            }
-          },
-          {
-            "id": "a2329e47596ba8e5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "6 - Main Notes/What is conditional store.md",
                 "mode": "source",
                 "source": false,
@@ -224,12 +32,12 @@
             }
           },
           {
-            "id": "beb7cb9ee473bb34",
+            "id": "012ff7dcf7cd963b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Main Notes/Making a spin lock with load-link and conditional store.md",
+                "file": "6 - Main Notes/The problem with transform normal vectors.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -244,10 +52,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Making a spin lock with load-link and conditional store"
+              "title": "The problem with transform normal vectors"
+            }
+          },
+          {
+            "id": "0eb1864d6cdee1b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Introduction to BRDF.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Introduction to BRDF"
+            }
+          },
+          {
+            "id": "cf26e16a27a8d3fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6 - Main Notes/Typically tmux commands.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Typically tmux commands"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -398,34 +255,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7247c17d37920ec0",
+  "active": "cf26e16a27a8d3fa",
   "lastOpenFiles": [
-    "4 - Indexes/OS.md",
-    "6 - Main Notes/Making a spin lock with load-link and conditional store.md",
+    "6 - Main Notes/Introduction to BRDF.md",
+    "6 - Main Notes/What is the BRDF.md",
+    "3 - Tags/BRDF.md",
+    "6 - Main Notes/The goal with using IBL and PBR.md",
+    "6 - Main Notes/The problem with transform normal vectors.md",
     "6 - Main Notes/What is conditional store.md",
-    "6 - Main Notes/What is load-linked.md",
-    "6 - Main Notes/What is swap exchange.md",
+    "4 - Indexes/OS.md",
+    "6 - Main Notes/What is a memory block.md",
+    "6 - Main Notes/Making a block lock with a queue.md",
     "6 - Main Notes/What is fetch-and-add.md",
     "6 - Main Notes/Making a ticket spin lock.md",
-    "6 - Main Notes/Making a test-and-set spin lock.md",
-    "6 - Main Notes/Making a block lock with a queue.md",
-    "6 - Main Notes/Multi-level paging.md",
-    "6 - Main Notes/Power of two and modulo masking properties.md",
-    "2 - Source Material/Article/An Intruction Order Independent Transpacy.md",
-    "6 - Main Notes/Effective address calculation.md",
-    "6 - Main Notes/Introduction to paging.md",
-    "6 - Main Notes/Memory layout - Text section.md",
-    "3 - Tags/computer science.md",
-    "6 - Main Notes/2026-09-08.md",
-    "6 - Main Notes/The slope for straight lines.md",
-    "4 - Indexes/graphics theory.md",
-    "6 - Main Notes/Finding the square root of decimals.md",
-    "6 - Main Notes/Rate and proportional relationships.md",
+    "6 - Main Notes/Making a spin lock with load-link and conditional store.md",
+    "6 - Main Notes/What is load-linked.md",
+    "6 - Main Notes/What is swap exchange.md",
     "4 - Indexes/assembly.md",
-    "6 - Main Notes/Low and high part of registers.md",
-    "6 - Main Notes/Register to register move operation.md",
-    "6 - Main Notes/Instruction decode with mov.md",
-    "6 - Main Notes/Volume of 3D shapes.md",
+    "4 - Indexes/threading.md",
+    "6 - Main Notes/Introduction to mutex and locking.md",
+    "6 - Main Notes/Making a test-and-set spin lock.md",
+    "6 - Main Notes/Typically tmux commands.md",
+    "6 - Main Notes/Simplifying the PBR equation for diffuse IBL.md",
+    "6 - Main Notes/The adjungate normal matrix.md",
+    "6 - Main Notes/Handling normal vectors when transformed.md",
+    "2 - Source Material/Books/Foundations of Game Engine Development - Maths.md",
+    "3 - Tags/Linux Development.md",
+    "4 - Indexes/graphics theory.md",
+    "6 - Main Notes/What is Image Based Lighting.md",
     "image-2.png",
     "cyclinder volume.png",
     "sphere volume.png",

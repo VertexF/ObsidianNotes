@@ -13,4 +13,4 @@ Here we are project a vector from $\vec{a}$ onto $\vec{b}$ We are dividing by $b
 [[Vector rejection]]
 [[Parametric lines]]
 #### Source Notes
-[[Foundations of Game Engine Developemt - Maths]]
+[[Foundations of Game Engine Development - Maths]]

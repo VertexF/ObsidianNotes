@@ -3,8 +3,7 @@ Status: #baby
 Tags: [[OS]]
 # Power of two and modulo masking properties
 
-If you have a power of 2 number which can be written in binary as a single digit 1 at some place with no other 1 (apart from zero) `0010` or 
-`0010 0000 0000` for example.
+If you have a power of 2 number which can be written in binary as a single digit 1 at some place with no other 1 (apart from zero) `0010` or  `0010 0000 0000` for example.
 
 If you do a modulo operation with one of these powers of 2 numbers you actually end up masking off all the binary digits include were the 1 lines and everything to the right.
 

@@ -5,8 +5,6 @@ Tags: [[linux development]]
 
 If you want start a tmux session you need to you just start `tmux`
 
-To send tmux session you need to type in a `tmux kill-session` within a tmux session.
-
 To split the window you type vertically  `ctrl + b` follows by `%` horizontal is the same but `ctrl + b` follows by `"` 
 
 To switch panels you just go `ctrl + b` follows by the arrow keys `->` `<-` `^` `v` If you want to switch between your last active window you can type `ctrl + b` follows by `;` 
@@ -18,7 +16,9 @@ This starts an ssh-agent to add ssh keys to things.
 eval "$(ssh-agent -s)"
 ```
 
-You need to do `Ctrl+b` followed by `:kill-session` end a tmux session.
+You need to do `Ctrl+b` followed by `:kill-session` end a tmux session or you can close tmux with `ctrl b` follow by `&`
+
+To close a plane, you need to use `ctrl b` follow by `x`
 # References
 ##### Main Notes
 [[Typically Neovim commands]]

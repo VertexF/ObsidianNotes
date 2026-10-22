@@ -28,7 +28,7 @@ We take the virtual address and get and split it up into 2 chunks.
 The virtual page number and the offset.
 To work out offset we need to know how many bits we need for each physical frame. If we have a page size of 1KB then we have $2^{10}$ bits needed to represent that value.
 
-Meaning our virtual address needs to have an offset of 10 bits to cross the whole physical frame top to bottom. Next we need to work out the physical frame number from the virtual address. Which the bits remain that are right to offset.
+Meaning our virtual address needs to have an offset of 10 bits to cover the whole physical frame top to bottom. Next we need to work out the physical frame number from the virtual address. Which the bits remain that are right to offset.
 
 VPN      offset
 (?? bits)(10 bits) 
@@ -74,9 +74,9 @@ We take 0x00003385 covert it to binary `0000_0000_0000_0000_0011_0011_1000_0101`
 
 Then we look up the page table entry in page table at entry 12 which is `0x8000000f` if it's not all `0x000000000` then it's valid. The `0x8` at the beginning are just status bits we can ignore for now.
 
-We take `0xf` which is = 15 that tells us which the physical frame we need to look up. We know how big the physical frame is so to get to the beginning of that physical frame position in RAM we multiply the the $15 * 1024$ (PFN * Physical Frame Size) which will get you to location 15360
+We take `0xf` which is = 15 that tells us which the physical frame we need to look up. We know how big the physical frame is so to get to the beginning of that physical frame position in RAM we multiply the the $15 * 1024$ which is the same as (PFN * Physical Frame Size) which will get you to location 15360
 
-Finally you take the offset from the virtual address and add it to the starting position of the physical frames value so $15360 + 901 = 16261$ or $(15 * 1024) + 901 = 16261$ which is the location in memory were 0x00003385 truly lives.
+Finally you take the offset from the virtual address and add it to the starting position of the physical frames value so $15360 + 901 = 16261$ the complete calculation is $(15 * 1024) + 901 = 16261$ which is the location in memory were 0x00003385 truly lives.
 # References
 ##### Main Notes
 [[Multi-level paging]]

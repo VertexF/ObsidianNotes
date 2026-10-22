@@ -17,4 +17,4 @@ If you add these rejection and projection together original vector if the projec
 [[Vector projection]]
 [[Parametric lines]]
 #### Source Notes
-[[Foundations of Game Engine Developemt - Maths]]
+[[Foundations of Game Engine Development - Maths]]

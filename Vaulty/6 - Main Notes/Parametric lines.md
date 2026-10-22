@@ -11,4 +11,4 @@ $$L(t) = p + t\vec{v}$$Were $\vec{v}$ is just $p_{2} - p_{1}$ it's often the cas
 ##### Main Notes
 [[Vector projection]]
 #### Source Notes
-[[Foundations of Game Engine Developemt - Maths]]
+[[Foundations of Game Engine Development - Maths]]
