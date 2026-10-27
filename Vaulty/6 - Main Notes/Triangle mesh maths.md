@@ -10,4 +10,4 @@ So $V$ is the number of vertices, $E$ is the number of edges and $F$ is the numb
 ##### Main Notes
 [[Normal vector maths]]
 #### Source Notes
-[[Foundations of Game Engine Developemt - Maths]]
+[[Foundations of Game Engine Development - Maths]]

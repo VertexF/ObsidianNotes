@@ -17,4 +17,4 @@ If you do the cross product differently you can end up a normal vector that face
 ##### Main Notes
 [[Triangle mesh maths]]
 #### Source Notes
-[[Foundations of Game Engine Developemt - Maths]]
+[[Foundations of Game Engine Development - Maths]]

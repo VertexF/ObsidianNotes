@@ -30,7 +30,7 @@ void lock(Lock* lock)
 {
 	while(compareAndExchange((&lock->guard, 1) == 1)
 	{
-		//Aquire guard lock by spinning.
+		//Acquire guard lock by spinning.
 	}
 	
 	if(lock->flag == 0)
@@ -50,7 +50,7 @@ void unlock(Lock* lock)
 {
 	while(compareAndExchange((&lock->guard, 1) == 1)
 	{
-		//Aquire guard lock by spinning.
+		//Acquire guard lock by spinning.
 	}
 	
 	if(queueEmpty(lock->queue))

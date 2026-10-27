@@ -18,7 +18,7 @@ If you look at the lambert term which is a constant term (the colour $c$ the ref
 
 $$L_o(p,\omega_o) = 
 		k_d\frac{c}{\pi} \int\limits_{\Omega} L_i(p,\omega_i) n \cdot \omega_i  d\omega_i$$
-This means that the integral it's only depenent on $\omega_i$ (assuming that $p$ is at the centre of the environment map). With this knowledge, we can calculate or pre-compute a new cubemap that stores in each sample direction (or texel) with $\omega_0$  and the result of the diffuse integral's will result in convolution. 
+This means that the integral it's only depenent on $\omega_i$ (assuming that $p$ is at the centre of the environment map). With this knowledge, we can calculate or pre-compute a new cubemap that stores in each sample direction (or texel) with $\omega_0$ and the result of the diffuse integral's will result in convolution. 
 
 Convolution in maths means we are taking 2 function that produces a third as a integral product of two functions $f*g$ if both f and g are functions.
 

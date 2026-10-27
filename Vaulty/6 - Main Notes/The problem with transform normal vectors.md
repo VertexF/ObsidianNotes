@@ -12,4 +12,4 @@ If we scale a model non-uniformly this scales normal vectors in away that destro
 [[Handling normal vectors when transformed]]
 [[The adjungate normal matrix]]
 #### Source Notes
-[[Foundations of Game Engine Developemt - Maths]]
+[[Foundations of Game Engine Development - Maths]]
