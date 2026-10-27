@@ -19,6 +19,8 @@ eval "$(ssh-agent -s)"
 You need to do `Ctrl+b` followed by `:kill-session` end a tmux session or you can close tmux with `ctrl b` follow by `&`
 
 To close a plane, you need to use `ctrl b` follow by `x`
+
+To make things scroll Ctrl-b then `[` then you can use your normal navigation keys to scroll around (eg. Up Arrow or PgDn). Press q to quit scroll mode.
 # References
 ##### Main Notes
 [[Typically Neovim commands]]
