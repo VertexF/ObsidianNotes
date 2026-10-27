@@ -11,6 +11,7 @@
 [[Volume of 3D shapes]]
 [[Angle relationships]]
 [[The triangle inequality theorm]]
+[[Quadratic standard form to vertex form]]
 **Monte Carlo Background maths**
 [[Background and probability review]]
 [[Expected values]]

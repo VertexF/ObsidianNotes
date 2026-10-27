@@ -18,7 +18,7 @@ Apparent benefits
 2) It's for designers because of the tooling it provides.
 3) Has HUGE performant benefits.
 
-These are promotted because of the comerical game engine space but the benefits are more of a half truth.
+These are promoted because of the commerical game engine space but the benefits are more of a half truth.
 
 What's actually true when it comes to game development
 1) Not all the benefits are exclusive to ECS's
@@ -266,3 +266,5 @@ This allows for components to be updated in parallel with other components.
 This isn't as good as you think the complexity is so high because the system depenencies are so difficult to get right, and making everything generic as possible means adding new features affects everything in your entities.
 
 This also doesn't increase the cache locality of things, that happens if your data is tightly packed in arrays in contiguously in memory.
+
+[[Entity system]]
