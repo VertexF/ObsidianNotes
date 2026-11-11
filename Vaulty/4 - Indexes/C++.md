@@ -7,3 +7,5 @@
 [[What is the one definition rule]]
 [[What is inlining in C++]]
 [[What are functors]]
+### DSA
+[[First-In First-Out (FIFO) Building a queue]]

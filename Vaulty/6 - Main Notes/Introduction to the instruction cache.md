@@ -3,7 +3,7 @@ Status: #baby
 Tags: [[CPU]]
 # Introduction to the instruction cache
 
-The registers don't store the instruction. Registers are only about data, there are some instruction decode caches which are like registers for instructions in newer CPUs. Instructions flow through a queue, but you also have trace caches.
+The data registers don't store the instruction. Data registers are only about data, there are some instruction decode caches which are like registers for instructions in newer CPUs. Instructions flow through a queue, but you also have trace caches.
 
 Trace caches are used when,
 1) You decode the instruction
